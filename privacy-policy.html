@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- All CSS Links -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="css/odometer.min.css"> -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/output.css">
+
+    <title>Floww</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="img/logo/floww-logo-favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader-area text-center left-0 right-0 top-0 bottom-0 bg-white fixed z-9999">
+        <div class="preloader absolute -mt-20 left-0 right-0 top-1/2 m-auto -translate-y-2/4">
+            <div class="waviy font-bold text-50px">
+                <span class="text-black-color inline-block relative">F</span>
+                <span class="text-primary-color inline-block relative">L</span>
+                <span class="text-black-color inline-block relative">O</span>
+                <span class="text-primary-color inline-block relative">W</span>
+                <span class="text-black-color inline-block relative">W</span>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Navbar Area -->
+    <div class="navbar-area relative z-2 black-navbar bg-[#070707]">
+        <div class="togy-responsive-nav lg:hidden">
+            <div class="container">
+                <div class="togy-responsive-menu">
+                    <div class="logo">
+                        <a href="https://gofloww.co">
+                            <img src="img/logo/logo.png" alt="logo" style="width: 132px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="togy-nav hidden lg:block">
+            <div class="container xl:max-w-full 3xl:max-w-[1700px]">
+                <nav class="navbar flex flex-wrap">
+                    <a class="navbar-brand self-center" href="https://gofloww.co">
+                        <img src="img/logo/logo.png" alt="logo" style="width: 132px;">
+                    </a>
+                    <div class="flex self-center grow basis-auto">
+                        <ul class="self-center flex flex-row ml-auto mr-auto">
+                            <li class="mr-12 xl:mr-15 relative group">
+                                <a href="#"
+                                    class="active block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Home</a>
+                                <!-- <ul
+                                    class="absolute bg-white left-0 w-[250px] rounded-sm top-84 z-99 shadow-dropdown pt-10 pb-10 opacity-0 invisible ease-in duration-300 group-hover:opacity-100 group-hover:visible">
+                                    <li>
+                                        <a href="index.html"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Project
+                                            Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="index-2.html"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Product
+                                            Landing</a>
+                                    </li>
+                                    <li>
+                                        <a href="index-3.html"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Customer
+                                            Support</a>
+                                    </li>
+                                </ul> -->
+                            </li>
+                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                                <a href="#"
+                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Brands</a>
+                            </li>
+                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                                <a href="#"
+                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Integrations</a>
+                            </li>
+                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                                <a href="#"
+                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">About
+                                    Us</a>
+                            </li>
+                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                                <a href="#"
+                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">FAQs</a>
+                            </li>
+                        </ul>
+                        <div class="self-center">
+                            <a href=""
+                                class="inline-block font-black font-semibold text-13px md:text-14px lg:text-15px rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">
+                                Login / SignUp</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar Area -->
+
+    <!-- Navbar for Responsive -->
+    <div class="navbar-for-responsive hidden">
+        <div class="mean-menu">
+            <ul class="navbar-nav">
+                <li>
+                    <a href="#" class="active">Home</a>
+                    <!-- <ul>
+                        <li>
+                            <a href="index.html">Project Management</a>
+                        </li>
+                        <li>
+                            <a href="index-2.html">Product Landing</a>
+                        </li>
+                        <li>
+                            <a href="index-3.html">Customer Support</a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li>
+                    <a href="#">Brands</a>
+                </li>
+                <li>
+                    <a href="#">Integrations</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">FAQs</a>
+                </li>
+            </ul>
+            <div class="absolute right-45 top-3 md:top-1 md:right-50">
+                <a href=""
+                    class="inline-block font-semibold text-11px md:text-14px lg:text-15px rounded-sm text-white pt-13 pb-10 pl-15 pr-15 md:pl-25 md:pr-25 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Login
+                    / SignUp</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar for Responsive -->
+
+
+    <!-- Page Title Area -->
+    <div class="relative z-1 text-center pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100">
+        <div class="container">
+            <h1 class="font-black text-25px md:text-35px lg:text-40px xl:text-48px 2xl:text-54px text-black-color mb-8">
+                Privacy <span class="text-primary-color">Policy</span></h1>
+            <p
+                class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8 text-optional-color">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet nulla duis ac. Id massa
+                scelerisque venenatis, massa gravida donec orci.</p>
+        </div>
+        <div class="left-0 top-25 absolute -z-1 hidden xl:inline"><img src="img/website/shape34.png"
+                class="animate-custom-movebounce w-[100px]" alt="shape"></div>
+        <div class="right-0 bottom-20 absolute -z-1 hidden xl:inline"><img src="img/website/shape35.png"
+                class="animate-custom-movebounce" alt="shape"></div>
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- Privacy Policy Area -->
+    <div class="pb-60 md:pb-80 lg:pb-100">
+        <div class="container">
+            <div class="xl:max-w-[1110px] xl:ml-auto xl:mr-auto">
+                <h3 class="font-black text-18px md:text-22px lg:text-24px mb-12">Our website</h3>
+                <p
+                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
+                    Our website address is: <strong>https://gofloww.co/</strong></p>
+                <h3 class="font-black text-18px md:text-22px lg:text-24px mt-25 mb-12">Intellectual property indemnity
+                </h3>
+                <p
+                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
+                    We may collect personal identification information from Users in a variety of ways, including, but
+                    not limited to, when Users visit our site, subscribe to the newsletter, fill out a form, and in
+                    connection with other activities, services, features or resources we make <strong>available</strong>
+                    on our Site. Users may be asked for, as appropriate, name, email address, mailing address, phone
+                    number, company name. We will collect personal identification information from Users only if they
+                    voluntarily consent such information to us. Users can always refuse to supply personally
+                    identification information, except that it may prevent them from engaging in certain Site related.
+                </p>
+                <h3 class="font-black text-18px md:text-22px lg:text-24px mt-25 mb-12">General permission to use and
+                    access and use limitations</h3>
+                <p
+                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
+                    This site is provided by <strong>Togy</strong>. <strong>Togy</strong> collects information in
+                    several ways from different parts of this site.</p>
+                <p
+                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
+                    <strong>1.</strong> Complimentary ground shipping within 1 to 7 business days<br>
+                    <strong>2.</strong> In-store collection available within 1 to 7 business days<br>
+                    <strong>3.</strong> Next-day and Express delivery options also available<br>
+                    <strong>4.</strong> Purchases are delivered in an orange box tied with a Bolduc ribbon, with the
+                    exception of certain items<br>
+                    <strong>5.</strong> See the delivery FAQs for details on shipping methods, costs and delivery times
+                </p>
+                <h3 class="font-black text-18px md:text-22px lg:text-24px mt-25 mb-12">Limitation of liability</h3>
+                <p
+                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
+                    <strong>Togy</strong> accepts the following payment methods:</p>
+                <h3 class="font-black text-18px md:text-22px lg:text-24px mt-25 mb-12">Linking to this Site</h3>
+                <p
+                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
+                    Items returned within 14 days of their original shipment date in same as new condition will be
+                    eligible for a full refund or store credit. Refunds will be charged back form of payment used for
+                    purchase. Customer is responsible for shipping charges when making returns and shipping/handling
+                    fees of original purchase is non-refundable.</p>
+                <h3 class="font-black text-18px md:text-22px lg:text-24px mt-25 mb-12">Intellectual property</h3>
+                <p
+                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget euismod erat, sit amet vulputate
+                    enim. Etiam enim tellus, maximus vel augue sed, pharetra hendrerit orci. Vivamus sed massa in nibh
+                    imperdiet mattis quis sed augue. Pellentesque erat metus, vestibulum nec nisl.</p>
+                <h3 class="font-black text-18px md:text-22px lg:text-24px mt-25 mb-12">Security and storage</h3>
+                <p
+                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget euismod erat, sit amet vulputate
+                    enim. Etiam enim tellus.</p>
+                <p
+                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
+                    Last updated: March 20, 2022 at 24:00 pm</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Privacy Policy Area -->
+
+
+    <!-- Support Area -->
+    <div
+        class="support-area relative bg-secondary-gradient-color z-2 pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100">
+        <div class="container">
+            <div class="grid gap-18 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+                <div class="support-content xl:col-span-2">
+                    <h2 class="font-black text-22px md:text-30px lg:text-34px xl:text-40px mb-12 text-white">Grow with
+                        Floww</h2>
+                    <p class="text-13px md:text-15px lg:text-16px md:max-w-[700px] leading-7 md:leading-8 text-white">
+                        Our team is here to provide you with personalized and outstanding service. We also offer a range
+                        of self-learning tools in our support center:</p>
+                </div>
+                <div class="support-btn self-center lg:text-right">
+                    <a href=""
+                        class="inline-block font-semibold text-13px md:text-15px rounded-sm text-white pt-17 pb-13 pl-25 md:pl-35 pr-25 md:pr-35 bg-gradient-color hover:bg-white hover:bg-none hover:text-black-color ease-in duration-300">Get
+                        in Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="top-[-35%] left-[2%] 2xl:top-[-12%] absolute -z-1 hidden xl:inline"><img
+                src="img/website/shape12.png" class="animate-custom-movebounce" alt="shape"></div>
+        <div class="right-[10%] bottom-[-30.4%] absolute -z-1 hidden xl:inline"><img src="img/website/shape13.png"
+                class="animate-custom-moveleftbounce" alt="shape"></div>
+        <div class="top-[20%] left-[52%] absolute -z-1 hidden lg:inline"><img src="img/website/shape14.png"
+                class="animate-custom-rotateme" alt="shape"></div>
+    </div>
+    <!-- End Support Area -->
+
+    <!-- Footer Area -->
+    <footer class="footer-area pt-60 lg:pt-100 pb-60 lg:pb-100 relative z-1 bg-[#070707]">
+        <div class="container">
+            <div class="grid gap-25 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+                <div class="single-footer-widget">
+                    <a href="index-6.html" class="logo inline-block mb-20 lg:mb-25">
+                        <img src="img/logo/logo.png" alt="logo" style="width: 132px;">
+                    </a>
+                    <img src="img/website/footer.png" alt="footer-image">
+                </div>
+                <div class="single-footer-widget md:pl-25">
+                    <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
+                        Services
+                    </h3>
+                    <ul>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="services-details.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Web Design
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="services-details.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Web Development
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="services-details.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Social Marketing
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="services-details.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Wordpress
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="services-details.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Content Writing
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="single-footer-widget">
+                    <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
+                        Quick Links
+                    </h3>
+                    <ul>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="about.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="portfolio.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="pricing.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Pricing Plan
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="faq.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="index.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Download Apps
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="single-footer-widget md:-ml-35">
+                    <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
+                        Contact Us
+                    </h3>
+                    <ul>
+                        <li
+                            class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
+                            <img src="img/website/phone-call.svg" class="absolute top-0 md:top-2 left-0" alt="icon">
+                            <span class="font-medium text-white">Call Us:</span>
+                            <a href="tel:+(323)750-1234" class="text-[#e1e1e1] transition hover:text-white">+(323)
+                                750-1234</a>
+                        </li>
+                        <li
+                            class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
+                            <img src="img/website/location-pin.svg" class="absolute top-0 md:top-2 left-0" alt="icon">
+                            <span class="font-medium text-white">Address:</span>
+                            <a href="#" target="_blank" class="text-[#e1e1e1] transition hover:text-white">+7011 Vermont
+                                Ave, Los Angeles, CA 90044 </a>
+                        </li>
+                        <li
+                            class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
+                            <img src="img/website/email.svg" class="absolute top-0 md:top-2 left-0" alt="icon">
+                            <span class="font-medium text-white">Mail Us:</span>
+                            <a href="mailto:prakhar@gmail.com">prakhar@gmail.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mt-15 md:mt-25">
+                        <li class="inline-block mr-5 last:mr-0">
+                            <a href="#" target="_blank"
+                                class="block w-35 rounded-full transition relative h-35 bg-[#4267B2] text-center hover:opacity-90">
+                                <img src="img/website/white-facebook.svg"
+                                    class="w-8 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="facebook">
+                            </a>
+                        </li>
+                        <li class="inline-block mr-5 last:mr-0">
+                            <a href="#" target="_blank"
+                                class="block w-35 rounded-full transition relative h-35 bg-[#1DA1F2] text-center hover:opacity-90">
+                                <img src="img/website/white-twitter.svg"
+                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="twitter">
+                            </a>
+                        </li>
+                        <li class="inline-block mr-5 last:mr-0">
+                            <a href="#" target="_blank"
+                                class="block w-35 rounded-full transition relative h-35 bg-[#2867B2] text-center hover:opacity-90">
+                                <img src="img/website/white-linkedin.svg"
+                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                            </a>
+                        </li>
+                        <li class="inline-block mr-5 last:mr-0">
+                            <a href="#" target="_blank"
+                                class="block w-35 rounded-full transition relative h-35 bg-instagram-gradient-color text-center hover:opacity-90">
+                                <img src="img/website/white-instagram.svg"
+                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                                    alt="instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right-[7%] bottom-[6%] absolute -z-1 hidden lg:inline"><img src="img/website/shape15.png"
+                class="animate-custom-rotateme" alt="shape"></div>
+    </footer>
+    <!-- End Footer Area -->
+
+    <!-- Copyright Area -->
+    <div class="copyright-area pt-25 md:pt-35 pb-25 md:pb-35 text-center lg:text-left bg-[#0f1216]">
+        <div class="container">
+            <div class="grid gap-5 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
+                <div class="copyright">
+                    <p class="text-13px md:text-15px lg:text-16px text-[#e1e1e1]">&copy;2022 <span
+                            class="font-semibold text-primary-color">Togy</span>. All rights reserved by <a
+                            href="https://envytheme.com/" class="font-semibold bg-primary-gradient-color"
+                            target="_blank">EnvyTheme</a></p>
+                </div>
+                <div class="copyright-info self-center">
+                    <ul class="lg:text-right">
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a href="privacy-policy.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a href="privacy-policy.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white">
+                                Security
+                            </a>
+                        </li>
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a href="terms-conditions.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white">
+                                Terms & Conditions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Copyright Area -->
+
+    <!-- Go Top -->
+    <div
+        class="progress-wrap bg-white rounded-full block z-50 cursor-pointer fixed w-[3rem] h-[3rem] right-24 bottom-24 opacity-0 invisible">
+        <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-24 w-24 text-center m-auto absolute left-0 right-0 top-1/2 -translate-y-2/4" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+        </svg>
+    </div>
+
+    <!-- All JS Links -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- <script src="js/appear.min.js"></script> -->
+    <!-- <script src="js/odometer.min.js"></script> -->
+    <!-- <script src="js/magnific-popup.min.js"></script> -->
+    <script src="js/meanmenu.min.js"></script>
+    <!-- <script src="js/wow.min.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
