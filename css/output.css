@@ -2072,7 +2072,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-tertiary-color {
   --tw-text-opacity: 1;
-  color: var(--floww-orange-color);
+  color: var(--floww-primary-color);
 }
 
 .text-white {
