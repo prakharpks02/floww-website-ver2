@@ -1340,7 +1340,7 @@ Banner Area Style
   position: relative;
   height: 555px;
   overflow: hidden;
-  background-image: url(../img/banner-bg-1.jpg);
+  background-image: url(../img/storefront/banner-bg-1.jpg);
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1356,7 +1356,7 @@ Banner Area Style
 }
 
 .banner-area.banner-area-style-two {
-  background-image: url(../img/banner-bg-2.jpg);
+  background-image: url(../img/storefront/banner-bg-2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1377,7 +1377,7 @@ Banner Area Style
 
 .banner-area.banner-area-style-three {
   background-color: #ffffff;
-  background-image: url(../img/banner-bg-3.png);
+  background-image: url(../img/storefront/banner-bg-3.png);
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1829,7 +1829,7 @@ Logistics Solutions Area Style
 }
 
 .logistics-solutions-img {
-  background-image: url(../img/logistics-solutions-img.jpg);
+  background-image: url(../img/storefront/logistics-solutions-img.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
