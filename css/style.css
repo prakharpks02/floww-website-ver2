@@ -1928,12 +1928,10 @@ Counter Solutions Area Style
 }
 
 .single-counter .count-title h2 {
-  font-size: 70px;
+  font-size: 40px;
   color: var(--theme-color);
   margin-bottom: 0;
   line-height: 1;
-  margin-bottom: -5px;
-  margin-top: -18px;
 }
 
 .single-counter .count-title h2 .target {

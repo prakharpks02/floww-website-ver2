@@ -3,7 +3,7 @@ const PageDict = {
         'facebook': 'https://facebook.com/floww.deliveryAPIs/',
         'instagram': 'https://instagram.com/floww.delivery_api/',
         'twitter': 'N/A',
-        'logo': 'img/logo/logo.png',
+        'logo': 'img/logo/tmos.png',
         'favicon': 'img/logo/favicon.ico',
         'contactNo': '9910530300',
         'email': 'prakhar@gmail.com',
@@ -14,8 +14,8 @@ const PageDict = {
     },
     'hero': {
         'tagline': 'Your Delivery Partner',
-        'heading': 'Your Customers deserve the new age delivery',
-        'subheading': 'The delivery can not be something you can not overlook',
+        'heading': 'India\'s Biggest Delivery Partner',
+        'subheading': 'Expand Your Base Of Happy Customers With Our Reliable, Convenient And Cost-Effective Hyperlocal Delivery Platform. We are hyperlocal delivery company that offers an array of delivery services for all your business needs.',
         'image': 'img/storefront/banner-bg-1.jpg'
     },
     'special': {
@@ -97,10 +97,10 @@ const PageDict = {
         ]
     },
     'numbers': {
-        'years': '10',
-        'vehicles': '20',
-        'deliveries': '45000',
-        'clients': '60'
+        'years': '12',
+        'vehicles': '120',
+        'deliveries': '4.5 lacs',
+        'clients': '120'
     },
     'fleet': {
         'smallHeading': 'Our Fleet',
@@ -108,17 +108,17 @@ const PageDict = {
         'list': [{
                 'name': 'Tata Ace 400',
                 'description': '4 Tonne | 45x20x25 ft',
-                'image': 'img/storefront/team-img-1.jpg'
+                'image': 'img/storefront/tata-ace.jpg'
             },
             {
-                'name': 'Tata Ace 400',
-                'description': '4 Tonne | 45x20x25 ft',
-                'image': 'img/storefront/team-img-1.jpg'
+                'name': 'Mahindra Blazo 37',
+                'description': '10 Tonne | 75x30x25 ft',
+                'image': 'img/storefront/mahindra-blazo.jpg'
             },
             {
-                'name': 'Tata Ace 400',
-                'description': '4 Tonne | 45x20x25 ft',
-                'image': 'img/storefront/team-img-1.jpg'
+                'name': 'Force Shaktiman 200',
+                'description': '5 Tonne | 45x20x25 ft',
+                'image': 'img/storefront/force-shaktiman.png'
             }
         ]
     }
@@ -287,10 +287,10 @@ function FillPage(dictValue) {
     solutionsList[0].innerHTML = tempSolutionsList;
 
     // Numbers Banner
-    numbersYears[0] = dictValue.numbers.years;
-    numbersVehicles[0] = dictValue.numbers.vehicles;
-    numbersDeliveries[0] = dictValue.numbers.deliveries;
-    numbersClients[0] = dictValue.numbers.clients;
+    numbersYears[0].innerHTML = dictValue.numbers.years;
+    numbersVehicles[0].innerHTML = dictValue.numbers.vehicles;
+    numbersDeliveries[0].innerHTML = dictValue.numbers.deliveries;
+    numbersClients[0].innerHTML = dictValue.numbers.clients;
 
     // Fleet Banner
     fleetSmallHeading[0].innerHTML = dictValue.fleet.smallHeading;
@@ -299,7 +299,7 @@ function FillPage(dictValue) {
     for (i = 0; i < dictValue.fleet.list.length; i++) {
         tempFleetList = tempFleetList + `
         <div class="single-team-member">
-            <img src="${dictValue.fleet.list[i].image}" alt="Image">
+            <img src="${dictValue.fleet.list[i].image}" alt="Image" style="height:180px !important;">
 
             <div class="team-content">
                 <h3>${dictValue.fleet.list[i].name}</h3>
