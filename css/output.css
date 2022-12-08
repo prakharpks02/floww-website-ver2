@@ -2334,6 +2334,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 /* Overview Area CSS */
 
+.overview-image {
+  margin: auto;
+  height: fit-content;
+  height: -moz-fit-content;
+}
+
 .overview-image img {
   filter: drop-shadow(15px 15px 40px rgba(0, 0, 0, 0.1)) drop-shadow(-15px -15px 40px rgba(0, 0, 0, 0.15));
 }
