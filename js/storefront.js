@@ -10,7 +10,8 @@ const PageDict = {
         'address': 'C-903, Signature Park, Wakad, Pune - 411033',
         'alternateNo': '9910530300',
         'companyName': 'Blaze Logistics',
-        'policy': 'N/A'
+        'policy': 'N/A',
+        'themeColor': '#00ceb1'
     },
     'hero': {
         'tagline': 'Your Delivery Partner',
@@ -125,6 +126,30 @@ const PageDict = {
 }
 
 
+// --------------------------------------- Major Functions
+function VendorNotFound() {
+    document.getElementById('no-vendor-found-id').classList.remove('hide');
+    //document.getElementById('website-page-id').classList.add('hide');
+    document.getElementsByTagName('header')[0].classList.add('hide');
+}
+
+function LoaderDeactivate() {
+    $('.preloader').addClass('preloader-deactivate');
+}
+
+
+function ContactMeButton() {
+    if (vendor_contact_no_global == 'None') {
+        window.open("https://backend.gofloww.co/login/", "_blank");
+    } else {
+        window.open('tel:' + vendor_contact_no_global);
+    };
+}
+
+function OrderNowButton() {
+    window.open('https://gofloww.co/place-order?vendor-id=' + queryVendorId, '_blank');
+}
+
 
 
 function FillPage(dictValue) {
@@ -229,6 +254,9 @@ function FillPage(dictValue) {
         policy[0].href = dictValue.company.policy;
     }
 
+    // Color
+    document.documentElement.style.setProperty('--theme-color', dictValue.company.themeColor);
+
     // Hero Banner
     heroTagline[0].innerHTML = dictValue.hero.tagline;
     heroHeading[0].innerHTML = dictValue.hero.heading;
@@ -311,4 +339,65 @@ function FillPage(dictValue) {
 
 }
 
-window.onload = FillPage(PageDict);
+function CallApi() {
+
+    if (queryVendorId == 'None') {
+        VendorNotFound();
+        LoaderDeactivate();
+    } else {
+
+        $.ajax({
+            url: "https://backend.gofloww.co/api/v1/website/get-delivery-vendor-details/",
+            type: "get",
+            data: {
+                vendorId: queryVendorId
+            },
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (xhr) {
+                console.log(xhr);
+                VendorNotFound();
+                LoaderDeactivate();
+                window.alert('Server Error, Please Try Again!');
+            }
+        });
+
+        axios.get(globalApiUrl + '/api/v1/website/get-delivery-vendor-details/', {
+                params: {
+                    vendorId: queryVendorId,
+                }
+            })
+            .then(function (response) {
+                let responseData = JSON.parse(response.data);
+                console.log(responseData);
+
+                if (responseData.status == 'failure') {
+                    VendorNotFound();
+                    LoaderDeactivate();
+                } else {
+                    vendor_contact_no_global = responseData.variable.contact_no;
+
+                    if (vendor_contact_no_global == 'None') {
+                        ctt_no.innerHTML = `<a href="https://backend.gofloww.co/login/" class="refer_foot" target="_blank">Login to Contact</a>`;
+                        ctt_no_mob.innerHTML = `<a href="https://backend.gofloww.co/login/" class="refer_foot_mob_2" target="_blank">Login to Contact</a>`;
+                    } else {
+                        ctt_no.innerHTML = vendor_contact_no_global;
+                        ctt_no_mob.innerHTML = vendor_contact_no_global;
+                    }
+
+                    AssignVariables(responseData.variable);
+                    LoaderDeactivate();
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+                VendorNotFound();
+                LoaderDeactivate();
+                window.alert('Server Error, Please Try Again!');
+            });
+    }
+}
+
+
+window.onload = CallApi();

@@ -25,9 +25,12 @@
     <!-- Odometer Min CSS -->
     <!-- <link rel="stylesheet" href="css/odometer.min.css"> -->
     <!-- Style CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/storefront.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Jquery Min JS -->
+    <script src="js/jquery.min.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/ico" href="img/logo/favicon.ico" class="value-img-favicon">
@@ -37,11 +40,11 @@
 
 <body>
     <!-- Start Preloader Area -->
-    <!-- <div class="preloader">
+    <div class="preloader">
         <div class="lds-ripple">
-            <div class="pl-spark-1 pl-spark-2"></div>
+            <img src="img/logo/new-preloader.gif" alt="loader">
         </div>
-    </div> -->
+    </div>
     <!-- End Preloader Area -->
 
     <!-- Start Header Area -->
@@ -1367,17 +1370,82 @@
     <!-- End Copy Right Area -->
 
     <!-- Start Go Top Area -->
-    <!-- <div class="go-top">
+    <div class="go-top">
         <i class="ri-arrow-up-s-fill"></i>
         <i class="ri-arrow-up-s-fill"></i>
-    </div> -->
+    </div>
     <!-- End Go Top Area -->
 
+    <!-- No vendor Area -->
+    <div class="no-vendor-found-container hide" id="no-vendor-found-id">
+        <div class="no-vendor-found-internal-container">
+            <img class="not-found-image" src="img/storefront/error404.jpeg">
+            <div class="not-found-homepage-container">
+                <button class="not-found-homepage-button" onclick="window.location.href='/search'">Find More Companies
+                    Here</button>
+            </div>
+        </div>
+    </div>
+    <!-- End No vendor Area -->
+
+
+
+    <!-- JS Content Here -->
+
+    <!-- All JS files start here -->
+
+    <script>
+        // function getCookie(name) {
+        //     let cookieValue = null;
+
+        //     if (document.cookie && document.cookie !== '')
+        //     {
+        //         const cookies = document.cookie.split(';');
+        //         for (let i = 0; i < cookies.length; i++)
+        //         {
+        //             const cookie = cookies[i].trim();
+
+        //             // Does this cookie string begin with the name we want?
+        //             if (cookie.substring(0, name.length + 1) === (name + '='))
+        //             {
+        //                 cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+
+        //                 break;
+        //             }
+        //         }
+        //     }
+
+        //     return cookieValue;
+        // }
+
+        function GetQueryParams(paramName) {
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            returnValue = '';
+            if (urlSearchParams.has(paramName))
+            {
+                returnValue = urlSearchParams.get(paramName);
+            } else
+            {
+                returnValue = 'None';
+            }
+            return returnValue;
+        }
+
+        const queryVendorId = GetQueryParams('vendor-id');
+        console.log(queryVendorId);
+
+        //let tokenVal = getCookie('floww-token');
+
+        // if (tokenVal)
+        // {
+        //     let authTokenStr = "Token " + tokenVal;
+        //     axios.defaults.headers.common['Authorization'] = authTokenStr;
+        // }
+
+    </script>
 
     <!-- Floww JS -->
     <script src="js/storefront.js"></script>
-    <!-- Jquery Min JS -->
-    <script src="js/jquery.min.js"></script>
     <!-- Meanmenu Min JS -->
     <script src="js/meanmenu.min.js"></script>
     <!-- Owl Carousel Min JS -->
