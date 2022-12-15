@@ -342,7 +342,7 @@ function FillPage(dictValue) {
 function CallApi() {
 
     if (queryVendorId == 'None') {
-        VendorNotFound();
+        //VendorNotFound();
         LoaderDeactivate();
     } else {
 
@@ -397,6 +397,7 @@ function CallApi() {
                 window.alert('Server Error, Please Try Again!');
             });
     }
+    FillPage(PageDict);
 }
 
 

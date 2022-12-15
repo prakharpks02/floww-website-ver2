@@ -1,0 +1,318 @@
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+/* Removing Select option z-index bug in Bulma */
+.select:not(.is-multiple):not(.is-loading)::after {
+    z-index: 2 !important;
+}
+
+html {
+    overflow: hidden;
+}
+
+.text-width-limiter {
+    width: 100%;
+    display:inline-block;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.desktop-view-toggle {
+    display: none !important;
+}
+
+.mobile-view-toggle {
+    display: block !important;
+    max-height: 90%;
+    overflow-y: auto;
+    margin-top: 5px;
+    margin-bottom: 15px !important;
+}
+
+.label {
+    color: grey !important;
+    font-size: 1.5vh !important;
+    margin-bottom: 0px !important;
+}
+
+
+/* Loading Animation CSS */
+
+.hide {
+    display: none;
+}
+
+.loading-animation-container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.loading-animation-element {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow-y: auto;
+	height: 150px;
+}
+
+
+/* Pop Up Animation CSS */
+
+.pop-up-external-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.795);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.pop-up-internal-container {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow-y: auto;
+    background-color: white;
+    box-shadow: 4px;
+}
+
+
+/* Basic css for the whole page */
+
+.full-page-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------------------------------- Overlay form Container */
+
+.content-overlay {
+    background-color: #fff5ee;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.overlay-cross-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 3%;
+    margin-right: 3%;
+    cursor: pointer;
+    color: rgb(105, 105, 105);
+}
+
+/* Order Form */
+
+.order-form-outer-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.order-form-container {
+    width: 600px;
+    margin: auto;
+    /* height: 770px; */
+    border-radius: 10px;
+    background-color: white;
+    padding: 15px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 5px !important;
+}
+
+/* .base-order-form-container {
+    height: fit-content;
+} */
+
+.internal-order-form-container {
+    margin-top: 15px;
+}
+
+.add-button-per-order-form {
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.quote-button-per-order-container {
+    width: 100%;
+}
+
+.per-order-list-container {
+    width: 95%;
+    height: 150px;
+    background-color: rgb(214, 214, 214);
+    overflow-y: auto;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* .per-order-list-card {
+    border-bottom: grey 1px solid;
+} */
+
+.per-order-form-container {
+    position: relative;
+}
+
+.per-order-list-container-mobile {
+    width: 600px;
+    height: 100%;
+    background-color: white;
+    overflow-y: auto;
+    margin: auto;
+    border-radius: 10px;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    padding-top: 70px;
+}
+
+.excel-reponse-container-mobile {
+    width: 80%;
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: auto !important;
+    margin-top: 20px !important;
+    border-radius: 5px;
+    margin-bottom: 10px !important;
+}
+
+.view-list-floating-icon {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    z-index: 3;
+}
+
+.view-list-floating-number {
+    background-color: #1e92fb;
+    border-radius: 30px;
+    padding: 5px !important;
+    width: 30px !important;
+    height: 30px !important;
+    color: white;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 870px), (max-height: 780px) {
+
+    .desktop-view-toggle {
+        display: none !important;
+    }
+
+    .mobile-view-toggle {
+        display: block !important;
+    }
+
+    .order-form-container {
+        width: 500px;
+        max-height: 95%;
+    }
+
+    .per-order-list-container-mobile {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .order-form-container {
+        width: 95%;
+    }
+
+    .per-order-list-container-mobile {
+        width: 100%;
+    }
+}
+
+
+/* ------------------------------ No Vendor Found Div */
+
+.no-vendor-found-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+.no-vendor-found-internal-container {
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.not-found-image {
+    width: 100%;
+    padding: auto;
+    height: 300px;
+}
+
+.not-found-homepage-container {
+    margin: auto;
+    width: 200px;
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
+.not-found-homepage-button {
+    border: none;
+    padding: 15px;
+    background-color: aqua;
+    border-radius: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    margin: auto;
+}
