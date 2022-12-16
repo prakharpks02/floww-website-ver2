@@ -1715,6 +1715,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: linear-gradient(90deg, #E65C00 0%, #F9D423 100%);
 }
 
+.bg-blue-gradient-color {
+  background-image: linear-gradient(90deg, var(--floww-primary-color) 67.19%, var(--floww-secondary-color) 100%);
+}
+
 .contact-us-button-hover:hover {
   background-color: rgb(190, 190, 190) !important;
 }
