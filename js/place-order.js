@@ -352,7 +352,7 @@ var app1 = new Vue({
                                 app1.excelError.type = 'Server Error';
                                 ExcelErrorBox();
                                 ToogleLoadingAnimation();
-                                // window.alert('System Update in Progress, please WhatsApp your excel to +918976291804');
+                                // window.alert('System Update in Progress, please WhatsApp your excel to +918879138857');
                             });
                     });
                 })
@@ -360,7 +360,7 @@ var app1 = new Vue({
                     app1.excelError.type = 'Server Error';
                     ExcelErrorBox();
                     ToogleLoadingAnimation();
-                    // window.alert('System Update in Progress, please WhatsApp your excel to +918976291804');
+                    // window.alert('System Update in Progress, please WhatsApp your excel to +918879138857');
                 });
             // axios.post(globalApiUrl + '/api/v1/3pl-form/excel-order-upload/', {
             //         vendorCode: app1.orderForm.vendorCode,
@@ -384,7 +384,7 @@ var app1 = new Vue({
             //         app1.loadingStatus = false;
             //         app1.excelError = true;
             //         ToogleLoadingAnimation();
-            //         window.alert('System Update in Progress, please WhatsApp your excel to +918976291804');
+            //         window.alert('System Update in Progress, please WhatsApp your excel to +918879138857');
             //     });
         },
         CheckQueryParam: function () {

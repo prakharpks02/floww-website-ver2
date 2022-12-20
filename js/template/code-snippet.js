@@ -377,7 +377,7 @@
                             "z-index": "100"
                         },
                         attrs: {
-                            href: "https://docs.instadapp.io",
+                            href: "https://gofloww.co/api-doc",
                             target: "_blank",
                             rel: "noopener noreferrer"
                         }
@@ -745,7 +745,7 @@
                             color: "#fcc659"
                         },
                         attrs: {
-                            href: "https://docs.instadapp.io",
+                            href: "https://gofloww.co/api-doc",
                             target: "_blank",
                             rel: "noopener noreferrer"
                         }
