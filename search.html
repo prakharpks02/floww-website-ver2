@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- SEO Tags -->
+    <meta name="title" content="floww Search - Find Your Delivery Partner"/>
+    <meta name="description" content="floww Search is the easiest way to find the best delivery companies as per your needs. Choose from the pool of verified delivery companies and seamlessly integrate them with your system using standardized APIs"/>
+    <meta name="keywords" content="floww Delivery, Delivery api, Delivery app api, API delivery platform, Delivery solutions api, Delivery api documentation, Delivery api integration, Ecommerce api free"/>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK6MTWL5ZZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JK6MTWL5ZZ');
+    </script>
+
+
+    <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/logo/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+
+    <!-- Importing Major 3rd Party File links -->
+
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <!--   Calling Bulma from local file   -->
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <!--   Calling Vue from local file   -->
+    <script type="text/javascript" src="js/axios.min.js"></script>
+    <!--   Calling Axios from local file   -->
+
+    <title>floww Search - Find Your Delivery Partner</title>
+</head>
+
+<body>
+
+    <h1 style="z-index: -1; opacity: 0;">floww Search is the easiest way to find the best delivery companies as per your needs. Choose from the pool of verified delivery companies and seamlessly integrate them with your system using standardized APIs</h1>
+    <div class="full-page-container" id="search-page-id">
+
+        <div class="header-container">
+            <div class="header-left-container">
+                <a href="/">
+                    <img src="img/logo/logo.png"
+                        alt="floww Logo, Biggest API marketplace for 3PL" class="desktop-view-toggle">
+                    <img src="img/logo/logo.png" class="mobile-view-toggle">
+                </a>
+            </div>
+
+            <div class="header-right-container">
+
+                <div class="column" v-if="!userAuth">
+                    <a class="button is-info" v-on:click="LoginFunction">
+                        Login | SignUp
+                    </a>
+                </div>
+
+                <div class="header-content-container profile-dropdown-container" v-if="userAuth">
+                    <span class="button is-rounded profile-dropbtn">{{userContactNo}} <i class="down-arrow"></i></span>
+                    <div class="profile-dropdown-content has-text-centered">
+                        <a class="" href="/my-orders" target="_blank">My Orders</a>
+                        <a class="" @click="GetApiKey">Get API Key</a>
+                        <a class="" @click="LogoutButton">Logout</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div class="search-body-container">
+
+                <div class="search-bar-container">
+                    <div class="location-filter-container">
+                        <div class="select is-rounded location-filter-body">
+                            <select v-model="location" v-on:change="GetVendorList">
+                                <option hidden value="empty" selected disabled>Select City</option>
+                                <option v-for="city in vendorCities" :value="city.id">{{city.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Better Select Option at https://codepen.io/THEORLAN2/pen/Kaewmw -->
+
+                    <div class="tag-filter-container">
+                        <div class="select is-rounded tag-filter-body">
+                            <select v-model="tagSelected" v-on:change="GetVendorList">
+                                <option hidden value="empty" selected disabled>Select Tag</option>
+                                <option v-for="tag in filterTags" :value="tag.id">{{tag.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="filter-text-container has-text-centered">
+                        <span>Showing <span class="tag is-medium">{{vendorList.length}}</span> 3PL providers in <span
+                                class="tag is-medium">{{tagNames[location]}} <button class="delete is-small"
+                                    @click="RemoveLocation()"></button></span> with <span
+                                class="tag is-medium">{{tagNames[tagSelected]}} <button class="delete is-small"
+                                    @click="RemoveTag()"></button></span></span>
+                    </div>
+                </div>
+
+                <div class="search-load-container" v-if="searchLoading">
+                    <div class="search-load-content">
+                        <div class="search-load-element"></div>
+                    </div>
+                </div>
+
+                <div class="search-list-container">
+                    <div class="search-list-empty-text" v-if="vendorList.length == 0">
+                        <span>No Vendors to Show. Please change City or Tag</span>
+                    </div>
+
+                    <vendor-card-component v-for="vendor in vendorList" :vendordata="vendor" :tagnames="tagNames" :userauth="userAuth"
+                        @request-delivery="RequestDelivery(vendor.vendorCode, vendor.name)"></vendor-card-component>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="documentation-container">
+            <div class="documentation-body-container">
+
+            </div>
+        </div>
+
+        <div class="documentation-toggle-container">
+
+        </div>
+
+        <!-- ---------------------------------Overlay Starts here---------------------- -->
+
+        <div class="content-overlay" v-if="contentOverlay">
+
+            <div class="overlay-cross-container">
+                <span class="icon">
+                    <i class="fa fa-times fa-2x" v-on:click="CloseOverlay"></i>
+                </span>
+            </div>
+
+            <!-- ---------------------Email Form Container -->
+
+            <div class="email-form-container" v-if="formType=='email'">
+                <p class="subtitle">
+                    Please provide your email ID, so we can send you the API Key on your email.
+                </p>
+                <p class="help has-text-danger" v-if="emailForm.error!='none'">{{emailForm.error}}</p>
+
+                <p>
+                <div class="field">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="e.g. Happy Farms"
+                            v-model="emailForm.companyName">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <input class="input" type="email" placeholder="e.g. jake2021@gmail.com"
+                            v-model="emailForm.email">
+                    </div>
+                </div>
+                <div class="control">
+                    <button class="button is-primary" @click="SubmitEmail">Submit</button>
+                </div>
+                </p>
+            </div>
+
+            <!-- --------------------Order Form Container -->
+
+            <div class="order-form-container" v-if="formType=='order'">
+
+                <p>Requesting delivery from <span class="subtitle has-text-primary">{{orderForm.vendorName}}</span></p>
+
+                <br>
+
+                <!-- Desktop View of Order Form -->
+                <div class="desktop-view-toggle">
+
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Company Name OR Your Name"
+                                        v-model="orderForm.companyName">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="select is-rounded tag-filter-body">
+                                    <select v-model="orderForm.productType">
+                                        <option hidden value="" selected disabled>Select Product</option>
+                                        <option v-for="product in productTags" :value="product.id">{{product.name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="columns is-vcentered">
+
+                        <div class="column">
+                            <div class="field">
+                                <label class="label">Delivery Date</label>
+                                <div class="control">
+                                    <input class="input" type="date" v-on:change="ChangeDeliveryDate($event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="field">
+                                <label class="label">Request Services</label>
+                                <div class="field has-addons">
+                                    <div class="select tag-filter-body">
+                                        <select id="request-service-tag-desktop">
+                                            <option hidden value="empty" selected disabled>Select Tag</option>
+                                            <option v-for="tag in serviceTags" :value="tag.id">{{tag.name}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-info"
+                                            v-on:click="AddServiceTag('desktop')">Add</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <hr style="margin-top: 5px; margin-bottom: 5px;">
+
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" value="perOrder" v-model="orderForm.orderType">
+                            Per Order Delivery
+                        </label>
+                        <label class="radio">
+                            <input type="radio" value="rental" v-model="orderForm.orderType">
+                            Vehicle Rental
+                        </label>
+                    </div>
+
+                    <div class="internal-order-form-container" v-if="orderForm.orderType=='perOrder'">
+                        <div class="per-order-form-container">
+
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" v-model="pickupCheckbox">
+                                        Keep the same pickup address and number
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input pickup-address-field" type="text"
+                                                placeholder="Pickup Address" v-model="orderTempElement.pickup">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" type="number" placeholder="Pickup Contact No"
+                                                v-model="orderTempElement.pickupNo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input drop-address-field" type="text"
+                                                placeholder="Drop Address" v-model="orderTempElement.drop">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" type="number" placeholder="Drop Contact No"
+                                                v-model="orderTempElement.dropNo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field" style="width: 150px;">
+                                        <div class="control">
+                                            <input class="input" type="number" placeholder="Weight in Kg"
+                                                v-model="orderTempElement.weight">
+                                        </div>
+                                    </div>
+
+                                    <div class="field" style="width: 400px;">
+                                        <div class="control is-expanded">
+                                            <input class="input" type="text" placeholder="Instruction or Description"
+                                                v-model="orderTempElement.instruction">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="control add-button-per-order-form">
+                                <button class="button is-info" @click="AddOrder">Add</button>
+                            </div>
+
+                        </div>
+
+                        <br>
+
+                        <div class="per-order-list-container">
+                            <div class="per-order-list-card" v-for="order in orderForm.orderList">
+                                <p class="per-order-list-element">{{order.pickupNo}} - {{order.pickup}}</p>
+                                <p class="per-order-list-element">{{order.dropNo}} - {{order.drop}}</p>
+                                <p>Weight - {{order.weight}} kg | <span :title="order.instruction">Hover to See
+                                        Instruction</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="internal-order-form-container" v-if="orderForm.orderType=='rental'">
+                        <div class="select is-rounded">
+                            <select v-model="orderForm.rentalPlan">
+                                <option hidden value="N/A" selected disabled>Select Plan</option>
+                                <option v-for="plan in rentalPlans" :value="plan.id">{{plan.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="control add-button-per-order-form">
+                        <button class="button is-info" v-on:click="SubmitOrderForm">Submit</button>
+                        <button class="button is-warning" v-on:click="GetCostEstimate">Cost Estimate</button>
+                    </div>
+                </div>
+
+
+
+                <!-- Mobile View of Order Form -->
+                <div class="mobile-view-toggle">
+
+                    <div class="base-order-form-container" v-if="orderFormMobile.formStatus ==='base'">
+                        <div class="field">
+                            <label class="label">Company Name / Your Name</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="e.g. Amazon"
+                                    v-model="orderForm.companyName">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Product Description</label>
+
+                            <div class="select is-rounded tag-filter-body">
+                                <select v-model="orderForm.productType">
+                                    <option hidden value="" selected disabled>Select Product</option>
+                                    <option v-for="product in productTags" :value="product.id">{{product.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Delivery Date</label>
+                            <div class="control">
+                                <input class="input" type="date" v-on:change="ChangeDeliveryDate($event)">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Request Services</label>
+                            <div class="field has-addons">
+                                <div class="select tag-filter-body">
+                                    <select id="request-service-tag-mobile">
+                                        <option hidden value="empty" selected disabled>Select Tag</option>
+                                        <option v-for="tag in serviceTags" :value="tag.id">{{tag.name}}</option>
+                                    </select>
+                                </div>
+                                <div class="control">
+                                    <button class="button is-info" v-on:click="AddServiceTag('mobile')">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="control" style="position: relative;">
+                            <button class="button is-info" style="position: absolute; right: 5px;"
+                                @click="OrderFormMobileNext">Next</button>
+                            <p class="help has-text-danger" style="position: absolute; left: 5px;"
+                                v-if="orderFormMobile.error1">
+                                Please fill all 3 fields</p>
+                        </div>
+
+                    </div>
+
+                    <div class="advance-order-form-container" v-if="orderFormMobile.formStatus ==='advance'">
+
+                        <div class="control">
+                            <label class="radio">
+                                <input type="radio" value="perOrder" v-model="orderForm.orderType">
+                                Per Order Delivery
+                            </label>
+                            <label class="radio">
+                                <input type="radio" value="rental" v-model="orderForm.orderType">
+                                Vehicle Rental
+                            </label>
+                        </div>
+
+                        <div class="internal-order-form-container" v-if="orderForm.orderType=='perOrder'">
+                            <div class="per-order-form-container">
+
+                                <div class="field">
+                                    <div class="control">
+                                        <label class="checkbox">
+                                            <input type="checkbox" v-model="pickupCheckbox">
+                                            Keep the same pickup address and number
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="columns is-gapless is-mobile">
+                                    <div class="column">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input pickup-address-field" type="text"
+                                                    placeholder="Pickup Address" v-model="orderTempElement.pickup">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="column is-5" style="margin-left: 5px;">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input" type="number" placeholder="Pickup No"
+                                                    v-model="orderTempElement.pickupNo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="columns is-gapless is-mobile">
+                                    <div class="column">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input drop-address-field" type="text"
+                                                    placeholder="Drop Address" v-model="orderTempElement.drop">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="column is-5" style="margin-left: 5px;">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input" type="number" placeholder="Drop Contact No"
+                                                    v-model="orderTempElement.dropNo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="columns is-gapless is-mobile">
+                                    <div class="column is-4">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input" type="number" placeholder="Weight in Kg"
+                                                    v-model="orderTempElement.weight">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="column" style="margin-left: 5px;">
+                                        <div class="field">
+                                            <div class="control is-expanded">
+                                                <input class="input" type="text"
+                                                    placeholder="Instruction or Description"
+                                                    v-model="orderTempElement.instruction">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="control add-button-per-order-form">
+                                    <button class="button is-info" @click="AddOrder">Add</button>
+                                    <button class="button is-info" onclick="ToggleViewList(this)">View List</button>
+                                </div>
+
+                                <div class="per-order-list-container-mobile hide" id="mobile-per-order-list-container">
+                                    <div class="per-order-list-card" v-for="order in orderForm.orderList">
+                                        <p class="per-order-list-element">{{order.pickupNo}} - {{order.pickup}}</p>
+                                        <p class="per-order-list-element">{{order.dropNo}} - {{order.drop}}</p>
+                                        <p>Weight - {{order.weight}} kg | <span :title="order.instruction">Hover to See
+                                                Instruction</span></p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="internal-order-form-container" v-if="orderForm.orderType=='rental'">
+                            <div class="select is-rounded">
+                                <select v-model="orderForm.rentalPlan">
+                                    <option hidden value="N/A" selected disabled>Select Plan</option>
+                                    <option v-for="plan in rentalPlans" :value="plan.id">{{plan.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="control add-button-per-order-form">
+                            <button class="button is-info" v-on:click="orderFormMobile.formStatus='base'">Back</button>
+                            <button class="button is-info" v-on:click="SubmitOrderForm">Submit</button>
+                            <button class="button is-warning" v-on:click="GetCostEstimate">Cost Estimate</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="page-load-overlay">
+            <div class="search-load-content">
+                <div class="search-load-element"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- All JS files start here -->
+
+    <script>
+        function getCookie(name) {
+            let cookieValue = null;
+
+            if (document.cookie && document.cookie !== '')
+            {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++)
+                {
+                    const cookie = cookies[i].trim();
+
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '='))
+                    {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+
+                        break;
+                    }
+                }
+            }
+
+            return cookieValue;
+        }
+
+        function GetQueryParams(paramName) {
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            returnValue = '';
+            if(urlSearchParams.has(paramName)){
+                returnValue = urlSearchParams.get(paramName);
+            } else {
+                returnValue = 'None';
+            }
+            return returnValue;
+        }
+
+        let tokenVal = getCookie('floww-token');
+
+        if (tokenVal) {
+            let authTokenStr = "Token " + tokenVal;
+            axios.defaults.headers.common['Authorization'] = authTokenStr;
+        }
+
+    </script>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAVcyVFjXhbFtR3dqbfoFWtHx0doqT7leE"></script>
+    <!-- Google Address Autocomplete Places -->
+
+    <script src="js/countryCode.js"></script>
+    <!-- Country Code JS file -->
+
+    <script src="js/flowwVariables.js"></script>
+    <!-- Floww custom Dictionaries JS file -->
+
+    <script src="js/search.js"></script>
+
+</body>
+
+</html>

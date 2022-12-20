@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/logo/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="css/playground.css">
+
+    <!-- Importing Major 3rd Party File links -->
+
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <!--   Calling Bulma from local file   -->
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <!--   Calling Vue from local file   -->
+    <script type="text/javascript" src="js/axios.min.js"></script>
+    <!--   Calling Axios from local file   -->
+
+    <!-- <script type="text/javascript" src="{% static 'platform_app/js/aws.s3.js' %}"></script> -->
+    <!--   Calling AWS S3 from local file   -->
+
+    <!-- Add the entire Firebase JavaScript SDK -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script> -->
+
+    <title>floww Playground</title>
+</head>
+
+<body>
+
+    <div class="full-page-container" id="search-page-id">
+
+        <div class="header-container">
+            <div class="header-left-container">
+                <a href="/">
+                    <img src="img/logo/logo.png"
+                        alt="floww Logo, Biggest API marketplace for 3PL" class="desktop-view-toggle">
+                    <img src="img/logo/logo.png" class="mobile-view-toggle">
+                </a>
+            </div>
+
+            <div class="header-right-container">
+                <div class="field has-addons">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Paste Token Here" v-model="tokenInput">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info" v-on:click="SetToken">
+                            Set Token
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="playground-container columns">
+
+            <div class="api-list-container column">
+                <div class="api-card-container box" v-for="api in apiUrlList">
+                    <p>{{api.url}}</p>
+                    <p>{{api.type}}</p>
+                    <button class="button" v-on:click="ViewForm(api,$event)">Show Form</button>
+
+                </div>
+            </div>
+
+            <div class="api-io-container column">
+
+                <div class="api-form-container box">
+                    <ul>
+                        <li v-for="(parameter, index) in selectedApi.parameterNames">
+                            <input class="input" :placeholder="parameter.name" v-model="formInput[index]">
+                            <br><br>
+
+                        </li>
+                    </ul>
+                    <button class="button is-warning" v-on:click="SubmitForm"
+                        :disabled="formInput.length==0">Submit</button>
+                </div>
+
+                <div class="api-response-container box">
+                    <p>
+                        status code - {{statusCode}}
+                    </p>
+
+                    <p>
+                        Headers -
+                    <p><code>
+                            {{headerInfo}}
+                        </code></p>
+                    </p>
+
+                    <div class="columns" style="margin-bottom: 0; width: fit-content;">
+                        <div class="column">
+                            <span>Response -</span>
+                        </div>
+                        <div class="column">
+                            <div class="copy-button-tooltip">
+                                <button v-on:click="CopyResponse($event)" onmouseout="CleanCopyButton(this)"
+                                    class="button is-warning is-small">
+                                    <span class="copy-button-tooltiptext">Click to Copy</span>Copy Response
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <p class="response-code-container"><code>
+                            {{responseBody}}
+                        </code>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="page-load-overlay">
+            <div class="search-load-content">
+                <div class="search-load-element"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- All JS files start here -->
+
+    <!-- <script src="js/countryCode.js"></script> -->
+    <!-- Country Code JS file -->
+
+    <script src="js/flowwVariables.js"></script>
+    <!-- Floww custom Dictionaries JS file -->
+
+    <script src="js/playground.js"></script>
+
+</body>
+
+</html>

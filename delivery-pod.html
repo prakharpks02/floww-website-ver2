@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- SEO Tags -->
+    <meta name="title" content="floww - Manage all your orders from single place" />
+    <meta name="description"
+        content="floww Search is the easiest way to find the best delivery companies as per your needs. Choose from the pool of verified delivery companies and seamlessly integrate them with your system using standardized APIs" />
+    <meta name="keywords"
+        content="floww Delivery, Delivery api, Delivery app api, API delivery platform, Delivery solutions api, Delivery api documentation, Delivery api integration, Ecommerce api free" />
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK6MTWL5ZZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JK6MTWL5ZZ');
+    </script> -->
+
+
+    <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/logo/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="css/delivery-pod.css">
+
+    <!-- Importing Major 3rd Party File links -->
+
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <!--   Calling Bulma from local file   -->
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <!--   Calling Vue from local file   -->
+    <script type="text/javascript" src="js/axios.min.js"></script>
+    <!--   Calling Axios from local file   -->
+
+    <title>floww - Track Order</title>
+</head>
+
+<body>
+
+    <div class="full-page-container" id="main-page-id">
+
+        <div class="task-detail-container" style="margin-top: 0;">
+
+            <div class="task-detail-internal-container">
+
+                <p class=" has-text-centered" style="margin-bottom: 20px;">
+                    Delivery by : <span class="has-text-weight-semibold" style="font-size: 3vh;">{{orderDetail.vendorName}}</span>
+                </p>
+
+                <p class="page-label-container">Order Placed on</p>
+                <p class="page-value-container">{{orderDetail.placedTimestamp}}</p>
+
+                <p class="page-label-container">Company Name</p>
+                <p class="page-value-container">{{orderDetail.placedBy}}</p>
+
+                <p class="page-label-container">Pickup</p>
+                <p class="page-value-container">{{orderDetail.pickupAddress}}</p>
+                <p class="page-value-container">{{orderDetail.pickupContactNo}}</p>
+
+                <p class="page-label-container">Drop</p>
+                <p class="page-value-container">{{orderDetail.dropAddress}}</p>
+                <p class="page-value-container">{{orderDetail.dropContactNo}}</p>
+
+
+                <p class="page-label-container">Weight</p>
+                <p class="page-value-container">{{orderDetail.weight}}</p>
+                <p class="page-label-container">Instruction</p>
+                <p class="page-value-container">{{orderDetail.instructions}}</p>
+
+                <div class="level is-mobile" style="margin-top: 20px;">
+                    <div class="level-item">
+                        <span v-if="orderDetail.status=='delivered'" style="text-transform: uppercase;" class="tag"
+                            :class="{'is-success':orderDetail.status=='delivered', 'is-warning':orderDetail.status=='requested'}">{{orderDetail.status}}</span>
+                        <button v-if="orderDetail.status!='delivered'" class="button"
+                            v-on:click="OrderDelivered(orderDetail.orderId)">Confirm Delivery</button>
+                    </div>
+
+                    <div class="level-item">
+                        <div class="control">
+                            <button class="button is-primary"
+                                v-on:click="ContactTransporter(orderDetail.vendorContact)">
+                                <span class="icon">
+                                    <i class="fa fa-whatsapp"></i>
+                                </span>
+                                <span>Contact Transporter</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- -------------------------- Loading Animation For Every Page -------------------------- -->
+    <div class="loading-animation-container" id="loading-animation-id">
+        <img class="loading-animation-element" src="img/website/new-preloader.gif" alt="floww Page Loading">
+    </div>
+
+
+    <!-- All JS files start here -->
+
+    <script>
+        function GetQueryParams(paramName) {
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            returnValue = '';
+            if (urlSearchParams.has(paramName))
+            {
+                returnValue = urlSearchParams.get(paramName);
+            } else
+            {
+                returnValue = 'None';
+            }
+            return returnValue;
+        }
+
+        const globalQueryOrderId = GetQueryParams('order-id');
+        const globalQueryTaskId = GetQueryParams('task-id');
+        console.log(globalQueryOrderId + ' & ' + globalQueryTaskId);
+
+    </script>
+
+    <script src="js/flowwVariables.js"></script>
+    <!-- Floww custom Dictionaries JS file -->
+
+    <script src="js/delivery-pod.js"></script>
+
+</body>
+
+</html>

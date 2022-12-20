@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- SEO Tags -->
+    <meta name="title" content="floww - Manage all your orders from single place" />
+    <meta name="description"
+        content="floww Search is the easiest way to find the best delivery companies as per your needs. Choose from the pool of verified delivery companies and seamlessly integrate them with your system using standardized APIs" />
+    <meta name="keywords"
+        content="floww Delivery, Delivery api, Delivery app api, API delivery platform, Delivery solutions api, Delivery api documentation, Delivery api integration, Ecommerce api free" />
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK6MTWL5ZZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JK6MTWL5ZZ');
+    </script> -->
+
+
+    <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/logo/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="css/track-order.css">
+
+    <!-- Importing Major 3rd Party File links -->
+
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <!--   Calling Bulma from local file   -->
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <!--   Calling Vue from local file   -->
+    <script type="text/javascript" src="js/axios.min.js"></script>
+    <!--   Calling Axios from local file   -->
+
+    <title>floww - Track Order</title>
+</head>
+
+<body>
+
+    <div class="full-page-container" id="main-page-id">
+
+        <div class="task-detail-container">
+
+            <div class="task-detail-internal-container box" v-if="orderDetail.version=='ver1'">
+
+                <div class="header-container">
+                    <div class="level is-mobile">
+                        <div class="level-left">
+                            <div class="level-item" style="width: 120px !important;margin: 0;">
+                                <a :href="orderDetail.vendorWebsite" target="_blank">
+                                    <img :src="orderDetail.logoLink" class="logo-image-element">
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="level-item" style="justify-content:left; padding-left: 10px;">
+                            <div class="columns is-multiline is-gapless">
+                                <div class="column is-full">
+                                    <p class="subtitle"
+                                        style="font-size: 2.2vh; text-transform: uppercase; color: black;">
+                                        {{orderDetail.vendorName}}</p>
+                                    <!-- <p class=""
+                                        style="text-transform: uppercase; font-weight: 700; color: rgb(134, 134, 134);">
+                                        #{{orderDetail.orderId}}</p> -->
+                                </div>
+                                <div class="column is-full" style="margin-top: 10px;">
+                                    <a class="button is-light is-small is-rounded is-inverted"
+                                        :href="orderDetail.vendorWebsite" target="_blank"
+                                        style="font-size: medium; font-weight: 500; height: 25px; width: 80px; margin-right: 10px;">Website</a>
+                                    <a class="button is-light is-small is-rounded is-inverted"
+                                        style="font-size: medium; font-weight: 500; height: 25px; width: 80px;"
+                                        :href="'tel:+91'+orderDetail.vendorContact">Contact</a>
+                                </div>
+                                <!-- <div class="column is-full has-text-right">
+
+                                </div> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="body-outer-container">
+
+                    <div class="body-container">
+                        <p class="help">Delivery to:</p>
+                        <p class="subtitle" style="margin-bottom: 2px !important;">{{orderDetail.customerName}} <a
+                                :href="'tel:+91'+orderDetail.customerNo"><span
+                                    style="color: grey;">({{orderDetail.customerNo}})</span></a></p>
+                        <p style="color: grey; font-size:small;">{{orderDetail.dropAddress}}</p>
+
+                        <hr class="hr-custom-element">
+
+                        <p><span style="font-weight:600; font-size:small;">Shipped By:</span> {{orderDetail.agentName}}
+                            <a :href="'tel:+91'+orderDetail.agentNo">({{orderDetail.agentNo}})</a>
+                        </p>
+                        <p>Expected Delivery By: {{orderDetail.deliveryDate}}</p>
+                        <br>
+
+                    </div>
+
+                    <div class="product-container">
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <p>{{orderDetail.instruction}}</p>
+                            </div>
+                            <div class="column is-3 has-text-centered">
+                                <p><span v-if="orderDetail.productCost!='N/A'">₹</span> {{orderDetail.productCost}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="body-container order-status-container" v-if="orderDetail.status != 'cancelled'">
+
+                        <div class="columns is-multiline has-text-centered is-vcentered">
+                            <div class="column">
+                                <button class="button" style="pointer-events: none !important;"
+                                    :class="{'is-success':orderDetail.statusList.placed!='-'}">Ordered</button>
+                                <span class="help"
+                                    style="text-transform: lowercase;">{{orderDetail.statusList.placed}}</span>
+                            </div>
+                            <div class="column">
+                                <button class="button" style="pointer-events: none !important;"
+                                    :class="{'is-success':orderDetail.statusList.assigned!='-'}">Shipped</button>
+                                <span class="help"
+                                    style="text-transform: lowercase;">{{orderDetail.statusList.assigned}}</span>
+                            </div>
+                            <div class="column">
+                                <button class="button" style="pointer-events: none !important;"
+                                    :class="{'is-success':orderDetail.statusList.enroute!='-'}">Enroute</button>
+                                <span class="help"
+                                    style="text-transform: lowercase;">{{orderDetail.statusList.enroute}}</span>
+                            </div>
+                            <div class="column">
+                                <button class="button" style="pointer-events: none !important;"
+                                    :class="{'is-success':orderDetail.statusList.delivered!='-'}">Delivered</button>
+                                <span class="help"
+                                    style="text-transform: lowercase;">{{orderDetail.statusList.delivered}}</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="body-container has-text-centered" v-if="orderDetail.status == 'cancelled'">
+                        <p class="subtitle has-text-danger">This order has been cancelled</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="task-detail-internal-container box" v-if="orderDetail.version=='ver0'">
+
+                <div class="body-outer-container">
+
+                    <div class="body-container">
+
+                        <p class="" style="text-transform: uppercase; font-weight: 700; color: rgb(134, 134, 134);">
+                            #{{orderDetail.orderId}}</p>
+                        <p class="help">Delivery to:</p>
+                        <p class="subtitle" style="margin-bottom: 2px !important;">{{orderDetail.customerName}} <a
+                                :href="'tel:+91'+orderDetail.customerNo"><span
+                                    style="color: grey;">({{orderDetail.customerNo}})</span></a></p>
+                        <p style="color: grey; font-size:small;">{{orderDetail.dropAddress}}</p>
+
+                        <hr class="hr-custom-element">
+
+                        <p><span style="font-weight:600; font-size:small;">Shipped By:</span> {{orderDetail.agentName}}
+                            <a :href="'tel:+91'+orderDetail.agentNo">({{orderDetail.agentNo}})</a>
+                        </p>
+                        <p>Expected Delivery By: {{orderDetail.deliveryDate}}</p>
+                        <br>
+                        <a class="button is-rounded"
+                            style="pointer-events: none !important; text-transform: capitalize;"
+                            :class="{'is-success':orderDetail.status=='delivered','is-danger':orderDetail.status=='cancelled'}">{{orderDetail.status}}</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <span class="help has-text-centered">Powered by <a href="https://gofloww.co" target="_blank">
+                    <img style="width: 100px; transform: translateY(8px);" src="img/logo/logo.png">
+                </a>
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- -------------------------- Loading Animation For Every Page -------------------------- -->
+    <div class="loading-animation-container" id="loading-animation-id">
+        <img class="loading-animation-element" src="img/website/new-preloader.gif" alt="floww Page Loading">
+    </div>
+
+
+    <!-- All JS files start here -->
+
+    <script>
+        function GetQueryParams(paramName) {
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            returnValue = '';
+            if (urlSearchParams.has(paramName))
+            {
+                returnValue = urlSearchParams.get(paramName);
+            } else
+            {
+                returnValue = 'None';
+            }
+            return returnValue;
+        }
+
+        const globalQueryOrderId = GetQueryParams('order-id');
+        console.log(globalQueryOrderId);
+
+    </script>
+
+    <script src="js/flowwVariables.js"></script>
+    <!-- Floww custom Dictionaries JS file -->
+
+    <script src="js/track-order.js"></script>
+
+</body>
+
+</html>

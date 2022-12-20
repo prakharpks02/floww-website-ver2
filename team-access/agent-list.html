@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="/js/vue.js"></script>
+    <!--   Calling Vue from local file   -->
+    <script type="text/javascript" src="/js/axios.min.js"></script>
+    <!--   Calling Axios from local file   -->
+
+    <link rel="stylesheet" type="text/css" href="/css/bulma.css">
+    <!--   Calling Bulma from local file   -->
+
+    <title>Agent List floww</title>
+
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .loading-animation-container {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 3;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .loading-animation-element {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            overflow-y: auto;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="" id="main-page-id">
+        <div class="box">
+            <div class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <p class="title">Delivery Fleet List ([[agentList.length]])</p>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <div class="level-item">
+                        <a class="button is-warning" href="/team-access" target="_blank">Transporter List</a>
+                    </div>
+                    <div class="level-item">
+                        <a class="button is-link" href="/team-access/order-list" target="_blank">Order List</a>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table is-hoverable is-fullwidth has-text-centered">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Agent Id</th>
+                        <th>Agent Name</th>
+                        <th>Contact No</th>
+                        <th>Transporter</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr is="agent-row-component" v-for="agent in agentList" :agentdata="agent"></tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <!-- -------------------------- Loading Animation For Every Page -------------------------- -->
+    <div class="loading-animation-container" id="loading-animation-id">
+        <img class="loading-animation-element" src="/img/website/new-preloader.gif" alt="floww Page Loading">
+    </div>
+
+    <!-- JS for Page starts here -->
+
+    <script src="/js/flowwVariables.js"></script>
+    <!-- Floww custom Dictionaries JS file -->
+
+    <script src="/js/agent-list-page-internal.js"></script>
+</body>
+
+</html>

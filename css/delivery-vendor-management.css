@@ -1,0 +1,261 @@
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+/* Removing Select option z-index bug in Bulma */
+.select:not(.is-multiple):not(.is-loading)::after {
+    z-index: 2 !important;
+}
+
+html {
+    overflow: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+/* Loading Animation CSS */
+
+.loading-animation-container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.loading-animation-element {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow-y: auto;
+	height: 150px;
+}
+
+/* -------------------------- Page CSS starts here */
+
+.full-page-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.header-container {
+    width: 90%;
+    height: 60px;
+    margin: auto;
+}
+
+.header-logo-container {
+    width: 80px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.task-detail-container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 2;
+    position: relative;
+    margin-top: -100px;
+}
+
+.task-detail-internal-container {
+    width: 70%;
+    height: 80%;
+    overflow-y: auto;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.order-list-container {
+    width: 70%;
+    max-height: 85%;
+    overflow-y: auto;
+    margin: auto;
+    padding: 10px !important;
+}
+
+.order-card-container {
+    border-bottom: #a8bbbf 2px solid;
+}
+
+.page-label-container {
+    font-size: 10px;
+    font-weight: 600;
+    background-color: #a2ffff;
+    width: fit-content;
+    width: -moz-fit-content;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.has-text-right .page-label-container {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.page-value-container {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.order-list-item {
+    /* height: 70px !important; */
+    padding: 5px !important;
+    margin-bottom: 10px !important;
+}
+
+.share-whatsapp-container {
+    width: 100%;
+}
+
+/* Overlay Css */
+
+.overlay-cross-container {
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin-top: 3%;
+	margin-right: 3%;
+	cursor: pointer;
+}
+
+
+@media (max-width: 768px),
+(max-height: 768px) {
+    .task-detail-internal-container {
+        width: 350px;
+        height: 90%;
+        /* overflow-y: auto;
+        margin: auto; */
+    }
+
+    .order-list-container {
+        width: 350px;
+        height: 90%;
+        overflow-y: auto;
+        margin: auto;
+    }
+}
+
+
+
+/* Nicepage CSS ------------------------- */
+
+.order-id-span {
+    pointer-events: initial;
+    text-align: left;
+    box-sizing: border-box;
+    line-height: 1;
+    display: table;
+    align-self: flex-start;
+    word-wrap: break-word;
+    position: relative;
+    color: #555c66 !important;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 0.6rem;
+    font-weight: 500;
+}
+
+.contact-no-span {
+    pointer-events: initial;
+    box-sizing: border-box;
+    color: inherit;
+    font-family: Roboto,sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-align: center;
+    word-wrap: break-word;
+    position: relative;
+    padding: 0;
+    /* margin: 14px 96px 0 127px; */
+    font-weight: 700;
+    margin-top: -7px;
+    margin-left: 0;
+}
+
+.delivered-status-span {
+    pointer-events: initial;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    border: 0 none transparent;
+    outline-width: 0;
+    font-style: initial;
+    white-space: nowrap;
+    user-select: none;
+    vertical-align: middle;
+    text-align: center;
+    align-self: flex-start;
+    position: relative;
+    border-radius: 50px !important;
+    border-width: 0;
+    color: #111111 !important;
+    background-color: #72efe9 !important;
+    border-style: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    margin-top: -15px;
+    padding: 3px 22px 3px 20px;
+}
+
+.date-span {
+    pointer-events: initial;
+    box-sizing: border-box;
+    padding: 0;
+    text-align: right;
+    word-wrap: break-word;
+    position: relative;
+    color: #858e99 !important;
+    width: auto;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: -60px;
+}
+
+.address-span {
+    pointer-events: initial;
+    box-sizing: border-box;
+    padding: 0;
+    text-align: left;
+    word-wrap: break-word;
+    position: relative;
+    color: #999999 !important;
+    font-size: 0.75rem;
+    width: auto;
+    /* margin-top: 3px;
+    margin-right: 10px; */
+}

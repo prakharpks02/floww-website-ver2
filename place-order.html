@@ -29,7 +29,7 @@
     <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/logo/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" type="text/css" href="css/storefront-form.css">
+    <link rel="stylesheet" type="text/css" href="css/place-order.css">
 
     <!-- Importing Major 3rd Party File links -->
 
@@ -47,7 +47,7 @@
     <!-- Add the entire Firebase JavaScript SDK -->
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
 
-    <title>floww Storefront</title>
+    <title>floww Place Order</title>
 </head>
 
 <body>
@@ -66,13 +66,197 @@
             <div class="order-form-outer-container">
                 <div class="order-form-container">
 
+                    <span>Requesting delivery from <span
+                            class="subtitle has-text-primary">{{orderForm.vendorName}}</span></span>
+
                     <br>
+
+                    <!-- Desktop View of Order Form -->
+                    <!-- <div class="desktop-view-toggle">
+
+                        <div class="field is-horizontal">
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input" type="text" placeholder="Company Name OR Your Name"
+                                            v-model="orderForm.companyName">
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="select is-rounded tag-filter-body">
+                                        <select v-model="orderForm.productType">
+                                            <option hidden value="" selected disabled>Select Product</option>
+                                            <option v-for="product in productTags" :value="product.id">{{product.name}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field" style="width: 200px;">
+                            <input class="input" type="number" v-model="orderForm.contactNo"
+                                onKeyPress="if(this.value.length==10) return false;" placeholder="Your Contact Number">
+                        </div>
+
+                        <div class="columns is-vcentered">
+
+                            <div class="column">
+                                <div class="field">
+                                    <label class="label">Delivery Date</label>
+                                    <div class="control">
+                                        <input class="input" type="date" v-on:change="ChangeDeliveryDate($event)">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <div class="field">
+                                    <label class="label">Request Services</label>
+                                    <div class="field has-addons">
+                                        <div class="select tag-filter-body">
+                                            <select id="request-service-tag-desktop">
+                                                <option hidden value="" selected disabled>Select Tag</option>
+                                                <option v-for="tag in serviceTags" :value="tag.id">{{tag.name}}</option>
+                                            </select>
+                                        </div>
+                                        <div class="control">
+                                            <button class="button is-info"
+                                                v-on:click="AddServiceTag('desktop')">Add</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <hr style="margin-top: 5px; margin-bottom: 5px;">
+
+                        <div class="control">
+                            <label class="radio">
+                                <input type="radio" value="perOrder" v-model="orderForm.orderType">
+                                Per Order Delivery
+                            </label>
+                            <label class="radio">
+                                <input type="radio" value="rental" v-model="orderForm.orderType">
+                                Vehicle Rental
+                            </label>
+                        </div>
+
+                        <div class="internal-order-form-container" v-if="orderForm.orderType=='perOrder'">
+                            <div class="per-order-form-container">
+
+                                <div class="field">
+                                    <div class="control">
+                                        <label class="checkbox">
+                                            <input type="checkbox" v-model="pickupCheckbox">
+                                            Keep the same pickup address and number
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input pickup-address-field" type="text"
+                                                    placeholder="Pickup Address" v-model="orderTempElement.pickup">
+                                            </div>
+                                        </div>
+
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input" type="number" placeholder="Pickup Contact No"
+                                                    onKeyPress="if(this.value.length==10) return false;"
+                                                    v-model="orderTempElement.pickupNo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input drop-address-field" type="text"
+                                                    placeholder="Drop Address" v-model="orderTempElement.drop">
+                                            </div>
+                                        </div>
+
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input" type="number" placeholder="Drop Contact No"
+                                                    onKeyPress="if(this.value.length==10) return false;"
+                                                    v-model="orderTempElement.dropNo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field" style="width: 150px;">
+                                            <div class="control">
+                                                <input class="input" type="number" placeholder="Weight in Kg"
+                                                    v-model="orderTempElement.weight">
+                                            </div>
+                                        </div>
+
+                                        <div class="field" style="width: 400px;">
+                                            <div class="control is-expanded">
+                                                <input class="input" type="text"
+                                                    placeholder="Instruction or Description"
+                                                    v-model="orderTempElement.instruction">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="control add-button-per-order-form">
+                                    <button class="button is-info" @click="AddOrder">Add</button>
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="per-order-list-container">
+                                <div class="per-order-list-card" v-for="order in orderForm.orderList">
+                                    <p class="per-order-list-element">{{order.pickupNo}} - {{order.pickup}}</p>
+                                    <p class="per-order-list-element">{{order.dropNo}} - {{order.drop}}</p>
+                                    <p>Weight - {{order.weight}} kg | <span :title="order.instruction">Hover to See
+                                            Instruction</span></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="internal-order-form-container" v-if="orderForm.orderType=='rental'">
+                            <div class="select is-rounded">
+                                <select v-model="orderForm.rentalPlan">
+                                    <option hidden value="N/A" selected disabled>Select Plan</option>
+                                    <option v-for="plan in rentalPlans" :value="plan.id">{{plan.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="control add-button-per-order-form">
+                            <input type="file" id="excelUpload" name="excelUpload" v-on:change="UploadExcelDocument"
+                                accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                            <button class="button is-info" v-on:click="SubmitOrderForm">Submit</button>
+                            <button class="button is-warning" v-on:click="GetCostEstimate">Cost Estimate</button>
+                        </div>
+                    </div> -->
+
 
 
                     <!-- Mobile View of Order Form -->
                     <div class="mobile-view-toggle box" style="padding-top: 15px;">
 
-                        <!-- <div class="" style="width: fit-content; margin:auto; margin-bottom: 10px;">
+                        <div class="" style="width: fit-content; margin:auto; margin-bottom: 10px;">
                             <div class="buttons has-addons">
                                 <button class="button is-inverted is-light" id="place-order-toggle-id"
                                     onclick="SelectPlaceOrder()">Place Order</button>
@@ -86,7 +270,7 @@
                                     </span>
                                 </button>
                             </div>
-                        </div> -->
+                        </div>
 
 
                         <div id="place-order-container-id">
@@ -460,7 +644,7 @@
 
     </div>
 
-    <!-- <div class="no-vendor-found-container hide" id="no-vendor-found-id">
+    <div class="no-vendor-found-container hide" id="no-vendor-found-id">
         <div class="no-vendor-found-internal-container">
             <img class="not-found-image" src="img/website/error404.jpeg">
             <div class="not-found-homepage-container">
@@ -469,7 +653,7 @@
                     Here</button>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <div class="no-vendor-found-container hide" id="success-order-place-id">
         <div class="no-vendor-found-internal-container">
@@ -484,7 +668,7 @@
         </div>
     </div>
 
-    <!-- <div class="pop-up-external-container hide" id="pop-up-id">
+    <div class="pop-up-external-container hide" id="pop-up-id">
         <div class="pop-up-internal-container box has-text-centered">
             <p class="subtitle">Cost Estimated:</p>
             <p id="pop-up-content-header-id" class="title"></p>
@@ -492,12 +676,12 @@
             <br>
             <a class="button" onclick="ClosePopUp()">Ok</a>
         </div>
-    </div> -->
+    </div>
 
 
     <!-- -------------------------- Loading Animation For Every Page -------------------------- -->
     <div class="loading-animation-container" id="loading-animation-id">
-        <img class="loading-animation-element" src="img/logo/new-preloader.gif" alt="floww Page Loading">
+        <img class="loading-animation-element" src="img/website/new-preloader.gif" alt="floww Page Loading">
     </div>
 
 
@@ -505,51 +689,51 @@
     <!-- All JS files start here -->
 
     <script>
-        // var globalVendorId = '';
+        var globalVendorId = '';
 
-        // function getCookie(name) {
-        //     let cookieValue = null;
+        function getCookie(name) {
+            let cookieValue = null;
 
-        //     if (document.cookie && document.cookie !== '')
-        //     {
-        //         const cookies = document.cookie.split(';');
-        //         for (let i = 0; i < cookies.length; i++)
-        //         {
-        //             const cookie = cookies[i].trim();
+            if (document.cookie && document.cookie !== '')
+            {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++)
+                {
+                    const cookie = cookies[i].trim();
 
-        //             // Does this cookie string begin with the name we want?
-        //             if (cookie.substring(0, name.length + 1) === (name + '='))
-        //             {
-        //                 cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '='))
+                    {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
 
-        //                 break;
-        //             }
-        //         }
-        //     }
+                        break;
+                    }
+                }
+            }
 
-        //     return cookieValue;
-        // }
+            return cookieValue;
+        }
 
-        // function GetQueryParams(paramName) {
-        //     const urlSearchParams = new URLSearchParams(window.location.search);
-        //     returnValue = '';
-        //     if (urlSearchParams.has(paramName))
-        //     {
-        //         returnValue = urlSearchParams.get(paramName);
-        //     } else
-        //     {
-        //         returnValue = 'None';
-        //     }
-        //     return returnValue;
-        // }
+        function GetQueryParams(paramName) {
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            returnValue = '';
+            if (urlSearchParams.has(paramName))
+            {
+                returnValue = urlSearchParams.get(paramName);
+            } else
+            {
+                returnValue = 'None';
+            }
+            return returnValue;
+        }
 
-        // let tokenVal = getCookie('floww-token');
+        let tokenVal = getCookie('floww-token');
 
-        // if (tokenVal)
-        // {
-        //     let authTokenStr = "Token " + tokenVal;
-        //     axios.defaults.headers.common['Authorization'] = authTokenStr;
-        // }
+        if (tokenVal)
+        {
+            let authTokenStr = "Token " + tokenVal;
+            axios.defaults.headers.common['Authorization'] = authTokenStr;
+        }
 
     </script>
 
@@ -560,10 +744,10 @@
     <script src="js/countryCode.js"></script>
     <!-- Country Code JS file -->
 
-    <!-- <script src="js/flowwVariables.js"></script> -->
+    <script src="js/flowwVariables.js"></script>
     <!-- Floww custom Dictionaries JS file -->
 
-    <script src="js/storefront-form.js"></script>
+    <script src="js/place-order.js"></script>
 
 </body>
 
