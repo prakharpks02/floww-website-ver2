@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <link rel="preload" href="/js/code-snippet.js" as="script">
+    <link rel="preload" href="js/template/code-snippet.js" as="script">
 </head>
 
 <body>
@@ -85,7 +85,9 @@
                                 </ul> -->
                             </li>
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <span style="position: absolute; top: 25%; right: 20%; transform: translateX(100%); font-size: 10px; font-weight: 700; width: 100px;" class="text-primary-color">New</span>
+                                <span
+                                    style="position: absolute; top: 25%; right: 20%; transform: translateX(100%); font-size: 10px; font-weight: 700; width: 100px;"
+                                    class="text-primary-color">New</span>
                                 <a onclick="window.alert('Coming Soon')" style="cursor: pointer;"
                                     class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Brands</a>
                             </li>
@@ -138,7 +140,9 @@
                     </ul> -->
                 </li>
                 <li>
-                    <a onclick="window.alert('Coming Soon')" style="cursor: pointer; position: relative;">Brands <span style="font-size: 10px; font-weight: 700; width: 100px; position: absolute; top: 5px;" class="text-primary-color">New</span></a>
+                    <a onclick="window.alert('Coming Soon')" style="cursor: pointer; position: relative;">Brands <span
+                            style="font-size: 10px; font-weight: 700; width: 100px; position: absolute; top: 5px;"
+                            class="text-primary-color">New</span></a>
                 </li>
                 <li>
                     <a href="/integrations" class="active">Integrations</a>
@@ -418,7 +422,7 @@
                             Step 1
                             <p
                                 class="lg:text-16px md:text-15px text-13px font-normal leading-7 md:leading-8 text-optional-color mt-7">
-                                Generate API key from Floww Console or Floww mobile app.</p>
+                                Generate API key from Floww Console or Floww mobile app or contact us at <a class="text-tertiary-color" href="mailto:info@gofloww.co">info@gofloww.co</a>.</p>
                         </li>
                         <li
                             class="text-black-color mb-15 md:mb-20 pl-40 relative text-13px md:text-15px lg:text-20px font-bold last:mb-0">
@@ -442,7 +446,7 @@
                         </li>
                     </ul>
                     <br>
-                    <a href="pricing.html"
+                    <a href="api-doc" target="_blank"
                         class="inline-block font-semibold text-13px md:text-14px lg:text-15px rounded-sm text-white pt-15 pb-14 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-primary-btn ease-in duration-300">Read
                         Docs</a>
                 </div>
@@ -564,30 +568,72 @@
                     </style>
                     <div class="code-box-custom" data-v-aca89e78>
                         <ol class="code-box-custom-2" data-v-aca89e78>
-                            <li data-v-aca89e78><span style="color: #7a92f6" data-v-aca89e78>let</span> spells =
-                                <span style="color: #7a92f6" data-v-aca89e78>dsa.Spell()</span>
+                            <li data-v-aca89e78><span style="color: #7a92f6" data-v-aca89e78>curl</span> -X POST \
+                                <!-- <span style="color: #7a92f6" data-v-aca89e78>dsa.Spell()</span> -->
                             </li>
-                            <li data-v-aca89e78></li>
-                            <li data-v-aca89e78>spells.add({</li>
-                            <li data-v-aca89e78>&nbsp;&nbsp;connector: <span class="text-orange-500"
-                                    data-v-aca89e78>&nbsp;"maker"</span>,</li>
-                            <li data-v-aca89e78>&nbsp;&nbsp;method: <span style="color: #fcc659"
-                                    data-v-aca89e78>&nbsp;"open"</span>,</li>
-                            <li data-v-aca89e78>&nbsp;&nbsp;args: <span class="text-orange-500"
+                            <li data-v-aca89e78><span style="color: #7a92f6" data-v-aca89e78>-H</span> 'Authorization:
+                                Token <span style="color: #fcc659" data-v-aca89e78>[API_KEY]</span>' \</li>
+                            <li data-v-aca89e78><span style="color: #7a92f6" data-v-aca89e78>-H</span> 'Content-Type:
+                                application/json' \</li>
+                            <li data-v-aca89e78><span style="color: #7a92f6" data-v-aca89e78>-d</span> '{</li>
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;"vendorCode": “<span style="color: #fcc659"
+                                    data-v-aca89e78>VEN4234</span>”</li>
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;"orderType": “<span style="color: #fcc659"
+                                    data-v-aca89e78>perOrder</span>”</li>
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;"orderList": [</li>
+                            <!-- Order Dictionary Starts -->
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"pickup":"<span
+                                    style="color: #fcc659" data-v-aca89e78>F-205, Twin Tower, Mumbai</span>”,
+                                "pickupPincode":</li>
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span
+                                    style="color: #fcc659" data-v-aca89e78>400076</span>”, "pickupNo":"<span
+                                    style="color: #fcc659" data-v-aca89e78>9090909090</span>”, "drop":"<span
+                                    style="color: #fcc659" data-v-aca89e78>C-401,</span></li>
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                    style="color: #fcc659" data-v-aca89e78>Shalimar Garden, Mumbai</span>”,
+                                "dropPincode":"<span style="color: #fcc659" data-v-aca89e78>400082</span>”,</li>
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"dropNo":"<span
+                                    style="color: #fcc659" data-v-aca89e78>9090909090</span>”, "weight":<span
+                                    style="color: #fcc659" data-v-aca89e78>1.2</span>, "instructions":</li>
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span
+                                    style="color: #fcc659" data-v-aca89e78>Deliver to Watchman</span>”},</li>
+
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"pickup":"<span
+                                    style="color: #fcc659" data-v-aca89e78>F-205, Twin Tower, Mumbai</span>”,
+                                "pickupPincode":</li>
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span
+                                    style="color: #fcc659" data-v-aca89e78>400076</span>”, "pickupNo":"<span
+                                    style="color: #fcc659" data-v-aca89e78>9090909090</span>”, "drop":"<span
+                                    style="color: #fcc659" data-v-aca89e78>C-401,</span></li>
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                    style="color: #fcc659" data-v-aca89e78>Shalimar Garden, Mumbai</span>”,
+                                "dropPincode":"<span style="color: #fcc659" data-v-aca89e78>400082</span>”,</li>
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"dropNo":"<span
+                                    style="color: #fcc659" data-v-aca89e78>9090909090</span>”, "weight":<span
+                                    style="color: #fcc659" data-v-aca89e78>1.2</span>, "instructions":</li>
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span
+                                    style="color: #fcc659" data-v-aca89e78>Deliver to Watchman</span>”},</li>
+
+                            <!-- Order Dictionary Starts -->
+                            <li data-v-aca89e78>&nbsp;&nbsp;&nbsp;&nbsp;]</li>
+                            <li data-v-aca89e78>}</li>
+                            <li data-v-aca89e78>"https://gofloww.co/api/v1/get-cost-estimate"</li>
+
+                            <!-- <li data-v-aca89e78>&nbsp;&nbsp;args: <span class="text-orange-500"
                                     data-v-aca89e78>&nbsp;["ETH-A"]</span>,</li>
                             <li data-v-aca89e78>})</li>
                             <li data-v-aca89e78></li>
                             <li data-v-aca89e78>spells.<span style="color: #7a92f6" data-v-aca89e78>cast()</span>
-                            </li>
+                            </li> -->
                         </ol>
                         <hr class="" data-v-aca89e78>
-                        <h6 class="" data-v-aca89e78>Make DeFi better for everyone</h6>
+                        <h6 class="" data-v-aca89e78>Make Logistics better for everyone</h6>
                         <p class="" data-v-aca89e78>
-                            Create powerful use cases for your users with just javascript code, without worrying about
-                            smart contracts &amp;
-                            expensive audits.
-                        </p> <a href="https://gofloww.co/api-doc" target="_blank" class=""
-                            style="color: #fcc659" data-v-aca89e78>
+                            Create powerful use cases for your supply chain with just floww APIs without worrying about
+                            end point management, vendor connection &amp;
+                            data correction.
+                        </p> <a href="https://gofloww.co/api-doc" target="_blank" class="" style="color: #fcc659"
+                            data-v-aca89e78>
                             Learn more
                             <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" class="ml-2" data-v-aca89e78>
