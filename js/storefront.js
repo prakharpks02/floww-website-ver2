@@ -153,6 +153,7 @@ function OrderNowButton() {
 
 
 function FillPage(dictValue) {
+    let pageTitle = document.querySelector('title');
     let facebook = document.getElementsByClassName('value-facebook');
     let instagram = document.getElementsByClassName('value-instagram');
     let twitter = document.getElementsByClassName('value-twitter');
@@ -190,6 +191,9 @@ function FillPage(dictValue) {
     let fleetSmallHeading = document.getElementsByClassName('value-fleet-small-heading');
     let fleetHeading = document.getElementsByClassName('value-fleet-heading');
     let fleetList = document.getElementsByClassName('value-fleet-list');
+
+
+    pageTitle.textContent = dictValue.company.companyName;
 
     // Facebook
     if (dictValue.company.facebook == 'N/A') {
