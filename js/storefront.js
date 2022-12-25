@@ -396,6 +396,8 @@ function CallApi() {
         //         LoaderDeactivate();
         //         window.alert('Server Error, Please Try Again!');
         //     });
+
+        LoaderDeactivate();
     }
     FillPage(PageDict);
 }
