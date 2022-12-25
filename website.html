@@ -1,1393 +1,521 @@
-<!doctype html>
-<html lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap Min CSS -->
-    <link rel="stylesheet" href="css/template/bootstrap.min.css">
-    <!-- Owl Theme Default Min CSS -->
-    <link rel="stylesheet" href="css/template/owl.theme.default.min.css">
-    <!-- Owl Carousel Min CSS -->
-    <link rel="stylesheet" href="css/template/owl.carousel.min.css">
-    <!-- Remixicon CSS -->
-    <link rel="stylesheet" href="css/template/remixicon.css">
-    <!-- Flaticon CSS -->
-    <link rel="stylesheet" href="css/template/flaticon.css">
-    <!-- Meanmenu Min CSS -->
-    <link rel="stylesheet" href="css/template/meanmenu.min.css">
-    <!-- Animate Min CSS -->
-    <link rel="stylesheet" href="css/template/animate.min.css">
-    <!-- Magnific Popup Min CSS -->
-    <!-- <link rel="stylesheet" href="css/magnific-popup.min.css"> -->
-    <!-- Odometer Min CSS -->
-    <!-- <link rel="stylesheet" href="css/odometer.min.css"> -->
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="css/template/storefront.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/template/responsive.css">
+    <!-- SEO Tags -->
+    <meta name="title" content="floww Search - Find Your Delivery Partner" />
+    <meta name="description"
+        content="floww Search is the easiest way to find the best delivery companies as per your needs. Choose from the pool of verified delivery companies and seamlessly integrate them with your system using standardized APIs" />
+    <meta name="keywords"
+        content="floww Delivery, Delivery api, Delivery app api, API delivery platform, Delivery solutions api, Delivery api documentation, Delivery api integration, Ecommerce api free" />
 
-    <!-- Jquery Min JS -->
-    <script src="js/template/jquery.min.js"></script>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/ico" href="img/logo/favicon.ico" class="value-img-favicon">
-    <!-- Title -->
-    <title></title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK6MTWL5ZZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JK6MTWL5ZZ');
+    </script>
+
+    <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/logo/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="css/website.css">
+    <link rel="stylesheet" type="text/css" href="css/website-style.css">
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <!--   Calling Vue from local file   -->
+    <script type="text/javascript" src="js/axios.min.js"></script>
+    <!--   Calling Axios from local file   -->
+
+    <link rel='stylesheet' href='theme-css/fontawsome-5-all.min.css' type='text/css' media='all' />
+    <!-- Calling FontAwesome 5 form local file -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+
+    <title>Delivery Vendor Website</title>
 </head>
 
 <body>
-    <!-- Start Preloader Area -->
-    <div class="preloader">
-        <div class="lds-ripple">
-            <img src="img/logo/new-preloader.gif" alt="loader">
-        </div>
-    </div>
-    <!-- End Preloader Area -->
 
-    <!-- Start Header Area -->
-    <header class="header-area">
-        <!-- Start Top Header -->
-        <div class="top-header">
+    <div class="full-page-container" id="website-page-id">
+
+
+        <img class="loader" src="img/website-new/new-preloader.gif" alt="loader">
+
+
+        <section class="section header is-desktop">
+            <div class="nav bg-light">
+
+                <div class="left-container-nav">
+                    <img src="img/website-new/TMoS-Logo-Round.png" class="logo option" alt="Tmos_logo" />
+                    <h3 class="name"></h3>
+                    <i class="fas fa-check-circle fa-1x verified"></i>
+                </div>
+
+                <div class="right-container-nav">
+                    <a href="#home-section-id" class="option2 link">Home</a>
+                    <a href="#detail-section-id" class="option3 link">Details</a>
+                    <a href="#services-section-id" class="option4 link">Services</a>
+                    <a href="#integration-section-id" class="option5 link">Integrations</a>
+                    <a href="#pricing-section-id" class="option6 link">Pricing</a>
+
+                    <button type="button" class="btn-default" onclick="ContactMeButton()">
+                        <i class="fas fa-phone-alt"></i>&ensp;Contact me
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section header-mob is-mobile">
+            <div class="nav bg-light nav-mob">
+                <div class="left-container-nav-mob">
+                    <img src="img/website-new/TMoS-Logo-Round.png" class="logo-mob" alt="Tmos_logo" />
+                    <h3 class="name-mob"></h3>
+                    <i class="fas fa-check-circle fa-1x verified-mob"></i>
+                </div>
+
+                <button class="nav-toggle " type="button"><i class="fa fa-bars fa-2x"></i></button>
+                <div class="option-list-mob">
+                    <a><i class="fas fa-times fa-2x "></i></a>
+                    <a href="#home-section-id-mob" class="option1-mob link-mob">Home</a>
+                    <a href="#detail-section-id-mob" class="option2-mob link-mob">Details</a>
+                    <a href="#services-section-id-mob" class="option3-mob link-mob">Services</a>
+                    <a href="#integration-section-id-mob" class="option4-mob link-mob">Integrations</a>
+                    <a href="#pricing-section-id-mob" class="option5-mob link-mob">Pricing</a>
+                </div>
+        </section>
+
+        <section class="section tile_1_desk" id="home-section-id">
+
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6">
-                        <ul class="header-left-content">
-                            <li>
-                                <a class="value-facebook" href="" target="_blank">
-                                    <i class="ri-facebook-fill"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="value-instagram" href="" target="_blank">
-                                    <i class="ri-instagram-line"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="value-twitter" href="" target="_blank">
-                                    <i class="ri-twitter-fill"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header-right-content">
-                            <!-- <ul class="my-account">
-                                <li>
-                                    <a href="#" class="dropdown-control">
-                                        <i class="ri-user-line"></i>
-                                        My account
-                                        <i class="ri-arrow-down-s-line"></i>
-                                    </a>
-
-                                    <ul class="my-account-link">
-                                        <li>
-                                            <a href="my-account.html">My Account</a>
-                                        </li>
-                                        <li>
-                                            <a href="log-in.html">Log In</a>
-                                        </li>
-                                        <li>
-                                            <a href="register.html">Register</a>
-                                        </li>
-                                        <li>
-                                            <a href="request-quote.html">Request Quote</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul> -->
-
-                            <div class="languages-switcher">
-                                <i class="ri-global-line"></i>
-                                <select>
-                                    <option value="1">English</option>
-                                    <!-- <option value="2">العربيّة</option>
-                                    <option value="3">Deutsch</option>
-                                    <option value="4">Português</option>
-                                    <option value="5">简体中文</option> -->
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                <img class="curve_bg" src="img/website-new/curve-background-small.png" alt="bg_curve">
+                <img class="scooter" src="img/website-new/DB-on-scooter-small.png" alt="scooter">
+                <div class="h1"></div>
+                <div class="h2"></div>
+                <div class="btns">
+                    <!-- Popular tags are added here -->
                 </div>
-            </div>
-        </div>
-        <!-- Start Top Header -->
-
-        <!-- Start Navbar Area -->
-        <div class="navbar-area">
-            <div class="mobile-responsive-nav">
-                <div class="container">
-                    <div class="mobile-responsive-menu">
-                        <div class="logo">
-                            <a href="#">
-                                <img class="value-img-logo" src="img/logo/logo.png" alt="logo" style="width: 130px;">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="desktop-nav">
-                <div class="container">
-                    <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="#">
-                            <img class="value-img-logo" src="img/logo/logo.png" alt="logo" style="width: 142px;">
-                        </a>
-
-                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a href="#home-page-id" class="nav-link active">
-                                        Home
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="#choose-page-id" class="nav-link">About</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="#services-page-id" class="nav-link">
-                                        Services
-                                    </a>
-                                </li>
-
-                                <!-- <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Pages
-                                        <i class="ri-arrow-down-s-line"></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="team.html" class="nav-link">Team</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link">
-                                                User
-                                                <i class="ri-arrow-down-s-line"></i>
-                                            </a>
-
-                                            <ul class="dropdown-menu">
-                                                <li class="nav-item">
-                                                    <a href="my-account.html" class="nav-link">My Account</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="log-in.html" class="nav-link">Log In</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="register.html" class="nav-link">Register</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="request-quote.html" class="nav-link">Request A Quote</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="testimonials.html" class="nav-link">Testimonials </a>
-                                        </li>
-                                    </ul>
-                                </li> -->
-
-                                <li class="nav-item">
-                                    <a href="#fleet-page-id" class="nav-link">
-                                        Fleet
-                                        <!-- <i class="ri-arrow-down-s-line"></i> -->
-                                    </a>
-
-                                    <!-- <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="blog.html" class="nav-link">Blog</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="blog-details.html" class="nav-link">Blog Details</a>
-                                        </li>
-                                    </ul> -->
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="#footer-page-id" class="nav-link">Contact</a>
-                                </li>
-                            </ul>
-
-                            <div class="others-options">
-                                <ul>
-                                    <li>
-                                        <a href="tel:+1-(514)-312-5678" class="default-btn value-contact-no">
-                                            <span>
-                                                +1 (514) 312-5678
-                                                <i class="ri-phone-fill"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-
-            <div class="others-option-for-responsive">
-                <div class="container">
-                    <div class="dot-menu">
-                        <div class="inner">
-                            <div class="circle circle-one"></div>
-                            <div class="circle circle-two"></div>
-                            <div class="circle circle-three"></div>
-                        </div>
-                    </div>
-
-                    <div class="container">
-                        <div class="option-inner">
-                            <div class="others-option justify-content-center d-flex align-items-center">
-                                <ul>
-                                    <!-- <li>
-                                        <div class="option-item">
-                                            <i class="search-btn ri-search-line"></i>
-                                            <i class="close-btn ri-close-line"></i>
-
-                                            <div class="search-overlay search-popup">
-                                                <div class='search-box'>
-                                                    <form class="search-form">
-                                                        <input class="search-input" name="search" placeholder="Search"
-                                                            type="text">
-
-                                                        <button class="search-button" type="submit">
-                                                            <i class="ri-search-line"></i>
-                                                        </button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li> -->
-                                    <li>
-                                        <a href="tel:+1-(514)-312-5678" class="default-btn value-contact-no">
-                                            <span>
-                                                +1 (514) 312-5678
-                                                <i class="ri-phone-fill"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Navbar Area -->
-    </header>
-    <!-- End Header Area -->
-
-    <!-- Start Banner Area -->
-    <section class="banner-area value-hero-image" id="home-page-id">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="container">
-                    <div class="banner-content">
-                        <span class="top-title value-hero-tagline">Welcome to Matro</span>
-                        <h1 class="value-hero-heading">We are Matro transport and logistics company</h1>
-
-                        <p class="value-hero-subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                            nisi optio quasi alias sequi,
-                            porro cupiditate adipisci tenetur quaerat neque? Tempore consectetur</p>
-
-                        <div class="banner-btn">
-                            <a href="#" class="default-btn">
-                                <span>
-                                    <span>Request quotes</span>
-                                    <i class="ri-send-plane-2-fill"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="shape shape-1">
-            <img src="img/storefront/banner-shape-1.png" alt="Images">
-        </div>
-    </section>
-    <!-- End Banner Area -->
-
-    <!-- Start About Us Area -->
-    <section class="about-us-area bg-color ptb-100" id="about-page-id">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <h2 class="value-special-heading">We provide transport & logistics services to deliver customer
-                            success</h2>
-                        <p class="value-special-subheading">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Exercitationem, beatae aut dolorem
-                            iure error tempore officia quisquam repudiandae sed! Mollitia aliquid est, minima natus
-                            neque ex quo explicabo fuga ea consectetur, adipisicing elit exercitationem</p>
-                    </div>
+                <div class="h4">Delivery Starting From <span class="rupee"></span><span class="price"></span><span
+                        class="star">*</span></div>
+                <div class="btn_order">
+                    <button type="button" class="order_btn" onclick="OrderNowButton()"><i
+                            class="fas fa-paper-plane"></i> &nbsp; Order Now</button>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="about-year-content">
-                        <div class="about-year">
-                            <img class="value-special-image" src="img/storefront/about-year.png" alt="Images">
-                        </div>
+        </section>
 
-                        <h3 class="value-special-image-text">Year’s of experience in transport and logistics services
-                        </h3>
-                    </div>
+        <section class="section tile_1_mob" id="home-section-id-mob">
+            <div class="container_mob">
+                <img class="curve_bg_mob" src="img/website-new/mobile-curve-background-small.png" alt="bg_curve">
+                <div class="h1_mob">Your Delivery Partner </div>
+                <img class="scooter_mob" src="img/website-new/DB-on-scooter-small.png" alt="scooter">
+                <div class="h2_mob" style="text-align: center;"></div>
+                <div class="btns_mob">
+                    <!-- Popular tags are added here -->
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- End About Us Area -->
-
-    <!-- Start Choose Us Area -->
-    <section class="choose-us-area pt-100 pb-70" id="choose-page-id">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="choose-us-img">
-                        <img class="value-about-image" src="img/storefront/choose-us-img.png" alt="Images">
-
-                        <!-- <div class="choose-us-shape-1">
-                            <img src="img/storefront/choose-us-shape-1.png" alt="Images">
-                        </div>
-                        <div class="choose-us-shape-2">
-                            <img src="img/storefront/choose-us-shape-2.png" alt="Images">
-                        </div> -->
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="choose-us-tab">
-                        <h2 class="value-about-title">Why should you choose Matro transport and logistics services?
-                        </h2>
-
-                        <div class="tab products-details-tab">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <ul class="tabs">
-                                        <li>
-                                            <span class="value-about-label">Our history</span>
-                                            <i class="flaticon-biography"></i>
-                                        </li>
-                                        <li>
-                                            <span class="value-about-label">Our vision</span>
-                                            <i class="flaticon-target"></i>
-                                        </li>
-                                        <li>
-                                            <span class="value-about-label">Our mission</span>
-                                            <i class="flaticon-mission"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="tab_content">
-                                        <div class="tabs_item">
-                                            <!-- <div class="choose-tab-item item-1">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo
-                                                    molestias temporibus commodi exercitationem reprehenderit ullam
-                                                    reiciendis odit magni, autem rerum id blanditiis in ducimus error
-                                                    quasi nisi iusto sunt reprehenderit ullam reiciendis odit</p>
-                                            </div> -->
-
-                                            <div class="choose-tab-item item-2">
-                                                <h3 class="value-about-heading">Strong customer focus</h3>
-                                                <p class="value-about-subheading">Lorem ipsum dolor sit amet consectetur
-                                                    adipisicing elit. Dicta illo
-                                                    molestias temporibus commodi exercitationem reprehenderit ullam
-                                                    reiciendis odit magni, autem rerum id blanditiis in ducimus error
-                                                    quasi nisi iusto sunt reprehenderit ullam reiciendis odit</p>
-                                            </div>
-
-                                            <!-- <div class="choose-tab-item item-3">
-                                                <h3>On-time delivery</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo
-                                                    molestias temporibus commodi exercitationem reprehenderit ullam
-                                                    reiciendis odit magni, autem rerum id blanditiis in ducimus error
-                                                    quasi nisi iusto sunt reprehenderit ullam reiciendis odit</p>
-                                            </div> -->
-                                        </div>
-
-                                        <div class="tabs_item">
-                                            <!-- <div class="choose-tab-item item-1">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo
-                                                    molestias temporibus commodi exercitationem reprehenderit ullam
-                                                    reiciendis odit magni, autem rerum id blanditiis in ducimus error
-                                                    quasi nisi iusto sunt reprehenderit ullam reiciendis odit</p>
-                                            </div> -->
-
-                                            <div class="choose-tab-item item-2">
-                                                <h3 class="value-about-heading">Strong customer focus</h3>
-                                                <p class="value-about-subheading">Lorem ipsum dolor sit amet consectetur
-                                                    adipisicing elit. Dicta illo
-                                                    molestias temporibus commodi exercitationem reprehenderit ullam
-                                                    reiciendis odit magni, autem rerum id blanditiis in ducimus error
-                                                    quasi nisi iusto sunt reprehenderit ullam reiciendis odit</p>
-                                            </div>
-
-                                            <!-- <div class="choose-tab-item item-3">
-                                                <h3>On time delivery</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo
-                                                    molestias temporibus commodi exercitationem reprehenderit ullam
-                                                    reiciendis odit magni, autem rerum id blanditiis in ducimus error
-                                                    quasi nisi iusto sunt reprehenderit ullam reiciendis odit</p>
-                                            </div> -->
-                                        </div>
-
-                                        <div class="tabs_item">
-                                            <!-- <div class="choose-tab-item item-1">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo
-                                                    molestias temporibus commodi exercitationem reprehenderit ullam
-                                                    reiciendis odit magni, autem rerum id blanditiis in ducimus error
-                                                    quasi nisi iusto sunt reprehenderit ullam reiciendis odit</p>
-                                            </div> -->
-
-                                            <div class="choose-tab-item item-2">
-                                                <h3 class="value-about-heading">Strong customer focus</h3>
-                                                <p class="value-about-subheading">Lorem ipsum dolor sit amet consectetur
-                                                    adipisicing elit. Dicta illo
-                                                    molestias temporibus commodi exercitationem reprehenderit ullam
-                                                    reiciendis odit magni, autem rerum id blanditiis in ducimus error
-                                                    quasi nisi iusto sunt reprehenderit ullam reiciendis odit</p>
-                                            </div>
-
-                                            <!-- <div class="choose-tab-item item-3">
-                                                <h3>On time delivery</h3>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta illo
-                                                    molestias temporibus commodi exercitationem reprehenderit ullam
-                                                    reiciendis odit magni, autem rerum id blanditiis in ducimus error
-                                                    quasi nisi iusto sunt reprehenderit ullam reiciendis odit</p>
-                                            </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Choose Us Area -->
-
-    <!-- Start Services Area -->
-    <section class="services-area bg-color pt-100 pb-70" id="services-page-id">
-        <div class="container">
-            <div class="section-title">
-                <span class="value-services-small-heading">Shipping services</span>
-                <h2 class="value-services-heading">What we can do for you</h2>
-            </div>
-
-            <div class="row value-services-list">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-services-box">
-                        <a href="">
-                            <img src="img/storefront/services-1.jpg" alt="Images">
-                            <h3>
-                                Road freight services
-                            </h3>
-                            <p>It is a long established fact that a reader will be distracted...</p>
-                            <!-- <a href="services-details.html" class="read-more"> -->
-                            <span class="read-more">Read more<i class="ri-add-circle-fill"></i></span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- <div class="col-lg-3 col-sm-6">
-                    <div class="single-services-box">
-                        <a href="services-details.html">
-                            <img src="img/storefront/services-2.jpg" alt="Images" id="service1-image">
-                        </a>
-                        <h3>
-                            <a href="services-details.html" id="service1-title">
-                                Rail freight services
-                            </a>
-                        </h3>
-                        <p id="service1-description">It is a long established fact that a reader will be distracted...</p>
-                        <a href="services-details.html" class="read-more">
-                            Read more
-                            <i class="ri-add-circle-fill"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-services-box">
-                        <a href="services-details.html">
-                            <img src="img/storefront/services-3.jpg" alt="Images" id="service2-image">
-                        </a>
-                        <h3>
-                            <a href="services-details.html" id="service2-title">
-                                Ocean freight services
-                            </a>
-                        </h3>
-                        <p id="service2-description">It is a long established fact that a reader will be distracted...</p>
-                        <a href="services-details.html" class="read-more">
-                            Read more
-                            <i class="ri-add-circle-fill"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-services-box">
-                        <a href="services-details.html">
-                            <img src="img/storefront/services-3.jpg" alt="Images" id="service2-image">
-                        </a>
-                        <h3>
-                            <a href="services-details.html" id="service2-title">
-                                Ocean freight services
-                            </a>
-                        </h3>
-                        <p id="service2-description">It is a long established fact that a reader will be distracted...</p>
-                        <a href="services-details.html" class="read-more">
-                            Read more
-                            <i class="ri-add-circle-fill"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-services-box">
-                        <a href="services-details.html">
-                            <img src="img/storefront/services-3.jpg" alt="Images" id="service2-image">
-                        </a>
-                        <h3>
-                            <a href="services-details.html" id="service2-title">
-                                Ocean freight services
-                            </a>
-                        </h3>
-                        <p id="service2-description">It is a long established fact that a reader will be distracted...</p>
-                        <a href="services-details.html" class="read-more">
-                            Read more
-                            <i class="ri-add-circle-fill"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-services-box">
-                        <a href="services-details.html">
-                            <img src="img/storefront/services-3.jpg" alt="Images" id="service2-image">
-                        </a>
-                        <h3>
-                            <a href="services-details.html" id="service2-title">
-                                Ocean freight services
-                            </a>
-                        </h3>
-                        <p id="service2-description">It is a long established fact that a reader will be distracted...</p>
-                        <a href="services-details.html" class="read-more">
-                            Read more
-                            <i class="ri-add-circle-fill"></i>
-                        </a>
-                    </div>
-                </div> -->
-
-                <!-- <div class="col-lg-3 col-sm-6">
-                    <div class="single-services-box">
-                        <a href="services-details.html">
-                            <img src="img/storefront/services-4.jpg" alt="Images">
-                        </a>
-                        <h3>
-                            <a href="services-details.html">
-                                Airfreight services
-                            </a>
-                        </h3>
-                        <p>It is a long established fact that a reader will be distracted...</p>
-                        <a href="services-details.html" class="read-more">
-                            Read more
-                            <i class="ri-add-circle-fill"></i>
-                        </a>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </section>
-    <!-- End Services Area -->
-
-    <!-- Start Logistics Solutions Area -->
-    <section class="logistics-solutions-area ptb-100" id="solutions-page-id">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="logistics-solutions">
-                        <span class="value-solutions-small-heading">Logistics solutions</span>
-                        <h2 class="value-solutions-heading">We provide the best solution for you</h2>
-
-                        <ul class="value-solutions-list">
-                            <li>
-                                <i class="flaticon-warehouse-1"></i>
-                                <h3>Warehouse solutions</h3>
-                                <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a lorem ipsum dolor sit
-                                    amet tincidunt nibh pulvinar eget tincidunt.</p>
-                            </li>
-
-                            <!-- <li>
-                                <i class="flaticon-warehouse"></i>
-                                <h3 id="set7-pointer1-title">Transport and distribution</h3>
-                                <p id="set7-pointer1-description">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a lorem ipsum dolor sit
-                                    amet tincidunt nibh pulvinar eget tincidunt.</p>
-                            </li>
-
-                            <li>
-                                <i class="flaticon-contract"></i>
-                                <h3 id="set7-pointer2-title">Order management</h3>
-                                <p id="set7-pointer2-description">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a lorem ipsum dolor sit
-                                    amet tincidunt nibh pulvinar eget tincidunt.</p>
-                            </li>
-                            <li>
-                                <i class="flaticon-contract"></i>
-                                <h3 id="set7-pointer2-title">Order management</h3>
-                                <p id="set7-pointer2-description">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a lorem ipsum dolor sit
-                                    amet tincidunt nibh pulvinar eget tincidunt.</p>
-                            </li>
-                            <li>
-                                <i class="flaticon-contract"></i>
-                                <h3 id="set7-pointer2-title">Order management</h3>
-                                <p id="set7-pointer2-description">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a lorem ipsum dolor sit
-                                    amet tincidunt nibh pulvinar eget tincidunt.</p>
-                            </li> -->
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-7">
-                    <div class="logistics-solutions-img">
-                        <div class="video-button">
-                            <a href="https://www.youtube.com/watch?v=cTxCqUwnLg4" class="popup-youtube">
-                                <i class="ri-play-fill"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Logistics Solutions Area -->
-
-    <!-- Start Counter Area -->
-    <section class="counter-area bg-color pt-100 pb-70" id="numbers-page-id">
-        <div class="container">
-            <div class="counter-bg">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-counter">
-                            <i class="flaticon-new-year"></i>
-
-                            <div class="count-title">
-                                <h2>
-                                    <span class="value-numbers-years">10</span> +
-                                </h2>
-                                <h4>Number of years</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-counter">
-                            <i class="flaticon-bus"></i>
-
-                            <div class="count-title">
-                                <h2>
-                                    <span class="value-numbers-vehicles">10</span> +
-                                </h2>
-                                <h4>Specialist vehicles</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-counter">
-                            <i class="flaticon-package"></i>
-
-                            <div class="count-title">
-                                <h2>
-                                    <span class="value-numbers-deliveries">10</span>
-                                </h2>
-                                <h4>Deliveries per year</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-counter">
-                            <i class="flaticon-rating"></i>
-
-                            <div class="count-title">
-                                <h2>
-                                    <span class="value-numbers-clients">10</span> +
-                                </h2>
-                                <h4>Satisfied clients</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Counter Area -->
-
-    <!-- Start Request A Quote Area -->
-    <!-- <section class="request-quote-area ptb-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="request-quote-img"></div>
-                </div>
-
-                <div class="col-lg-5">
-                    <div class="request-quote-content">
-                        <span class="top-title">Request a quote</span>
-                        <h2>Tell us your needs, and our industry experts will respond</h2>
-
-                        <form class="request-quote-from">
-                            <div class="row">
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Your name</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Email address</label>
-                                        <input type="email" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Phone</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Subject</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Freight type</label>
-                                        <select>
-                                            <option value="1">Road freight</option>
-                                            <option value="2">Rail freight</option>
-                                            <option value="3">Ocean freight</option>
-                                            <option value="4">Air freight</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label">City of departure</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Delivery city</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Incoterms</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Weight</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Width</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Height</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Size</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-6">
-                                    <label class="single-check">
-                                        Fragile
-                                        <input type="radio" checked="checked" name="radio-2">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-
-                                <div class="col-lg-3 col-sm-6">
-                                    <label class="single-check">
-                                        Express delivery
-                                        <input type="radio" name="radio-2">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-
-                                <div class="col-lg-3 col-sm-6">
-                                    <label class="single-check">
-                                        Insurance
-                                        <input type="radio" name="radio-2">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-
-                                <div class="col-lg-3 col-sm-6">
-                                    <label class="single-check">
-                                        Urgent
-                                        <input type="radio" name="radio-2">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="default-btn">
-                                <span>
-                                    Request a quote
-                                    <i class="ri-send-plane-2-fill"></i>
-                                </span>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- End Request A Quote Area -->
-
-    <!-- Start Team Area -->
-    <section class="team-area bg-color ptb-100" id="fleet-page-id">
-        <div class="container">
-            <div class="section-title">
-                <span class="value-fleet-small-heading">Our Fleet</span>
-                <h2 class="value-fleet-heading">Choose from a wide range of vehicles</h2>
-            </div>
-
-            <div class="team-sidler owl-carousel owl-theme value-fleet-list">
-                <div class="single-team-member">
-                    <img src="img/storefront/team-img-1.jpg" alt="Image">
-
-                    <div class="team-content">
-                        <h3>Jasper Hooghwerff</h3>
-                        <span>Management</span>
-                    </div>
-                </div>
-
-                <!-- <div class="single-team-member">
-                    <img src="img/storefront/team-img-2.jpg" alt="Image">
-
-                    <div class="team-content">
-                        <h3>Debbie Zange</h3>
-                        <span>Operational Staff</span>
-
-                        <div class="team-social">
-                            <a href="#" class="control">
-                                <i class="ri-share-line"></i>
-                            </a>
-
-                            <ul>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank">
-                                        <i class="ri-facebook-fill"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank">
-                                        <i class="ri-instagram-line"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/" target="_blank">
-                                        <i class="ri-twitter-fill"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://linkedin.com/" target="_blank">
-                                        <i class="ri-linkedin-fill"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="single-team-member">
-                    <img src="img/storefront/team-img-3.jpg" alt="Image">
-
-                    <div class="team-content">
-                        <h3>Arnold Plank</h3>
-                        <span>Business Advisor</span>
-
-                        <div class="team-social">
-                            <a href="#" class="control">
-                                <i class="ri-share-line"></i>
-                            </a>
-
-                            <ul>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank">
-                                        <i class="ri-facebook-fill"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank">
-                                        <i class="ri-instagram-line"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/" target="_blank">
-                                        <i class="ri-twitter-fill"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://linkedin.com/" target="_blank">
-                                        <i class="ri-linkedin-fill"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="single-team-member">
-                    <img src="img/storefront/team-img-5.jpg" alt="Image">
-
-                    <div class="team-content">
-                        <h3>Scott Murphy</h3>
-                        <span>Director</span>
-
-                        <div class="team-social">
-                            <a href="#" class="control">
-                                <i class="ri-share-line"></i>
-                            </a>
-
-                            <ul>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank">
-                                        <i class="ri-facebook-fill"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank">
-                                        <i class="ri-instagram-line"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/" target="_blank">
-                                        <i class="ri-twitter-fill"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://linkedin.com/" target="_blank">
-                                        <i class="ri-linkedin-fill"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="single-team-member">
-                    <img src="img/storefront/team-img-6.jpg" alt="Image">
-
-                    <div class="team-content">
-                        <h3>Sara Horton</h3>
-                        <span>Senior Manager</span>
-
-                        <div class="team-social">
-                            <a href="#" class="control">
-                                <i class="ri-share-line"></i>
-                            </a>
-
-                            <ul>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank">
-                                        <i class="ri-facebook-fill"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank">
-                                        <i class="ri-instagram-line"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/" target="_blank">
-                                        <i class="ri-twitter-fill"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://linkedin.com/" target="_blank">
-                                        <i class="ri-linkedin-fill"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            -->
+                <div class="h4_mob">Delivery Starting From <span class="price_mob"></span><span
+                        class="price_mob cost_mob"></span><span class="price_mob">*</span></div>
+                <!-- <div class="btn_order_mob">
+            <button type="button" class="order_btn_mob"><i class="fas fa-paper-plane"></i> &nbsp; Order Now</button>
+        </div> -->
+                <button type="button" class="order_btn_mob" onclick="OrderNowButton()"><i
+                        class="fas fa-paper-plane"></i> &nbsp; Order Now</button>
+                <button type="button" class="cont_btn_mob" onclick="ContactMeButton()">
+                    <i class="fas fa-phone-alt"></i>&ensp;Contact me
+                </button>
 
             </div>
-        </div>
-    </section>
-    <!-- End Team Area -->
+        </section>
 
-    <!-- Start Testimonials Area -->
-    <!-- <section class="testimonials-area ptb-100">
-        <div class="container">
-            <div class="section-title">
-                <span>Testimonials</span>
-                <h2>What people's say about us</h2>
-            </div>
-
-            <div class="testimonials-slider owl-carousel owl-theme">
-                <div class="single-testimonials">
-                    <i class="ri-double-quotes-l"></i>
-
-                    <p>“ Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla
-                        quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.
-                        Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Vestibulum
-                        ac diam sit amet quam vehicula elementum.”</p>
-
-                    <img src="img/storefront/testimonials-1.jpg" alt="Images">
-                    <div class="testimonials-title">
-                        <h3>Carol Mcdonald</h3>
-                        <span>Management</span>
-                    </div>
+        <section class="section tile_2_desk" id="detail-section-id">
+            <div class="container_2">
+                <div class="db_withbox">
+                    <img src="img/website-new/DB-with-box-small.png" class="db_withbox_img" alt="">
+                </div>
+                <div class="details">
+                    <h3>Details</h3>
+                    <div class="underline_1"></div>
                 </div>
 
-                <div class="single-testimonials">
-                    <i class="ri-double-quotes-l"></i>
-
-                    <p>“ Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla
-                        quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.
-                        Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Vestibulum
-                        ac diam sit amet quam vehicula elementum.”</p>
-
-                    <img src="img/storefront/testimonials-2.jpg" alt="Images">
-
-                    <div class="testimonials-title">
-                        <h3>Alex Mcdonald</h3>
-                        <span>Director</span>
+                <div class="card_1">
+                    <div class="square">
+                        <i class="fas fa-star fa-2x star_desk icons"></i>
                     </div>
+                    <p class="detail">RATED <span class="rating"></span> STARS
+                        <!-- <span class="detail_more">We are trusted by many</span> -->
+                    </p>
                 </div>
 
-                <div class="single-testimonials">
-                    <i class="ri-double-quotes-l"></i>
-
-                    <p>“ Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla
-                        quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.
-                        Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Vestibulum
-                        ac diam sit amet quam vehicula elementum.”</p>
-
-                    <img src="img/storefront/testimonials-2.jpg" alt="Images">
-
-                    <div class="testimonials-title">
-                        <h3>Alex Mcdonald</h3>
-                        <span>Director</span>
+                <div class="card_2">
+                    <div class="square">
+                        <i class="fas fa-building fa-2x building_desk icons"></i>
                     </div>
+                    <p class="detail">FOUNDED IN <span class="found_yr"></span>
+                        <!-- <span class="detail_more">Lorem ipsum has been the industry's standard
+                            dummy text ever since the 1500s</span> -->
+                    </p>
+                </div>
+                <div class="card_3">
+                    <div class="square">
+                        <i class="fas fa-users fa-2x users_desk icons"></i>
+                    </div>
+                    <p class="detail">TEAM SIZE <span class="fl_size"></span>
+                        <!-- <span class="detail_more">Lorem ipsum has been the industry's standard
+                            dummy text ever since the 1500s</span> -->
+                    </p>
+                </div>
+                <div class="card_4">
+                    <div class="square">
+                        <i class="fas fa-map-marker-alt fa-2x map_desk icons"></i>
+                    </div>
+                    <p class="detail">AVAILABLE IN <span class="location"></span>
+                        <!-- <span class="detail_more">Lorem ipsum has been the industry's standard
+                            dummy text ever since the 1500s</span> -->
+                    </p>
                 </div>
             </div>
-        </div>
-    </section> -->
-    <!-- End Testimonials Area -->
+        </section>
 
-    <!-- Start Blog Area -->
-    <!-- <section class="blog-area bg-color pt-100 pb-70">
-        <div class="container">
-            <div class="section-title">
-                <span>Blog post</span>
-                <h2>Latest blog posts</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-box">
-                        <a href="blog-details.html">
-                            <img src="img/storefront/blog-1.jpg" alt="Images">
-                        </a>
-                        <ul>
-                            <li>
-                                <i class="ri-calendar-line"></i>
-                                February 12, 2021
-                            </li>
-                            <li>Transport</li>
-                        </ul>
-                        <h3>
-                            <a href="blog-details.html">
-                                Transport management for business
-                            </a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua consectetur adipiscing.</p>
-                        <a href="blog-details.html" class="read-more">
-                            Read more
-                            <i class="ri-add-circle-fill"></i>
-                        </a>
-                    </div>
+        <section class="section tile_2_mob" id="detail-section-id-mob">
+            <div class="container_2_mob">
+                <div class="db_withbox_mob"><img class="db_withbox_img_mob" src="img/website-new/DB-with-box-small.png" alt="">
                 </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-box">
-                        <a href="blog-details.html">
-                            <img src="img/storefront/blog-2.jpg" alt="Images">
-                        </a>
-                        <ul>
-                            <li>
-                                <i class="ri-calendar-line"></i>
-                                February 11, 2021
-                            </li>
-                            <li>Transport</li>
-                        </ul>
-                        <h3>
-                            <a href="blog-details.html">
-                                Contract logistics restructuring
-                            </a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua consectetur adipiscing.</p>
-                        <a href="blog-details.html" class="read-more">
-                            Read more
-                            <i class="ri-add-circle-fill"></i>
-                        </a>
-                    </div>
+                <div class="details_mob">
+                    <h3>Details</h3>
+                    <div class="underline_1"></div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
-                    <div class="single-blog-box">
-                        <a href="blog-details.html">
-                            <img src="img/storefront/blog-3.jpg" alt="Images">
-                        </a>
-                        <ul>
-                            <li>
-                                <i class="ri-calendar-line"></i>
-                                February 10, 2021
-                            </li>
-                            <li>Transport</li>
-                        </ul>
-                        <h3>
-                            <a href="blog-details.html">
-                                An important role of the supply chain
-                            </a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua consectetur adipiscing.</p>
-                        <a href="blog-details.html" class="read-more">
-                            Read more
-                            <i class="ri-add-circle-fill"></i>
-                        </a>
+                <div class="card_1_mob">
+                    <div class="square_mob">
+                        <i class="fas fa-star fa-2x star_mob icons"></i>
                     </div>
+                    <p class="detail2_mob">RATED <span class="rating_mob"></span> STARS
+                        <!-- <span class="detail_more_mob">Lorem ipsum has been the industry's standard
+                            dummy text ever since the 1500s</span> -->
+                    </p>
+                </div>
+                <div class="card_2_mob">
+                    <div class="square_mob">
+                        <i class="fas fa-building fa-2x building_mob icons"></i>
+                    </div>
+                    <p class="detail2_mob">FOUNDED IN <span class="found_yr_mob"></span>
+                        <!-- <span class="detail_more_mob">Lorem ipsum has been the industry's standard
+                            dummy text ever since the 1500s</span> -->
+                    </p>
+                </div>
+                <div class="card_3_mob">
+                    <div class="square_mob">
+                        <i class="fas fa-users fa-2x users_mob icons"></i>
+                    </div>
+                    <p class="detail2_mob">TEAM SIZE <span class="fl_size_mob"></span>
+                        <!-- <span class="detail_more_mob">Lorem ipsum has been the industry's standard
+                            dummy text ever since the 1500s</span> -->
+                    </p>
+                </div>
+                <div class="card_4_mob">
+                    <div class="square_mob">
+                        <i class="fas fa-map-marker-alt fa-2x map_mob icons"></i>
+                    </div>
+                    <p class="detail2_mob">AVAILABLE IN <span class="location_mob"></span>
+                        <!-- <span class="detail_more_mob">Lorem ipsum has been the industry's standard
+                            dummy text ever since the 1500s</span> -->
+                    </p>
                 </div>
             </div>
-        </div>
-    </section> -->
-    <!-- End Blog Area -->
+        </section>
 
-    <!-- Start Partner Area -->
-    <!-- <div class="partner-area ptb-100">
-        <div class="container">
-            <div class="partner-bg">
-                <div class="row">
-                    <div class="partner-slider owl-carousel owl-theme">
-                        <div class="partner-item">
-                            <a href="partner-details.html">
-                                <img src="img/storefront/partner-1.png" alt="Image">
-                            </a>
+        <section class="section tile_3_desk" id="services-section-id">
+            <div class="container2">
+                <div class="title_services">
+                    <h3>Services</h3>
+                    <div class="underline"></div>
+                </div>
+                <br>
+
+                <div class="container2_service">
+                    <!-- Service To be added Here -->
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section tile_3_mob" id="services-section-id-mob">
+            <div class="title_services_mob">Services</div>
+            <div class="underline_mob"></div>
+            <div class="container2_mob">
+                <!-- Service To be added Here -->
+            </div>
+        </section>
+
+        <section class="section tile_4_desk" id="integration-section-id">
+            <div class="container3">
+                <div class="title_4">
+                    <h2>3 Step Integration</h2>
+                    <div class="underline__4"></div>
+                </div>
+                <div class="cards">
+                    <div class="card__child">
+                        <div class="square_box">
+                            <i class="fas fa-search fa-4x icon__1"></i>
+                            <button type="button" class="copy_btn"><a class="copy" href="https://gofloww.co/search"
+                                    target="_blank">floww Search</a></button>
                         </div>
-
-                        <div class="partner-item">
-                            <a href="partner-details.html">
-                                <img src="img/storefront/partner-2.png" alt="Image">
-                            </a>
+                        <div class="main_text">Vendor Code</div>
+                        <div class="secondary_text">
+                            Go to floww Search and find me, then click on copy vendor code to get the vendor code that
+                            is needed to make API request to me
                         </div>
-
-                        <div class="partner-item">
-                            <a href="partner-details.html">
-                                <img src="img/storefront/partner-2.png" alt="Image">
-                            </a>
+                    </div>
+                    <div class="card__child">
+                        <div class="square_box">
+                            <i class="fas fa-clipboard-list fa-4x icon__1"></i>
+                            <button type="button" class="copy_btn"><a class="copy" href="https://gofloww.co/api-doc"
+                                    target="_blank">Read The Doc</a></button>
                         </div>
-
-                        <div class="partner-item">
-                            <a href="partner-details.html">
-                                <img src="img/storefront/partner-2.png" alt="Image">
-                            </a>
+                        <div class="main_text">API Doc</div>
+                        <div class="secondary_text">
+                            Go through the API doc and integrate required APIs into your project. Then pass the values
+                            along with vendor code as stated in API docs
                         </div>
-
-                        <div class="partner-item">
-                            <a href="partner-details.html">
-                                <img src="img/storefront/partner-2.png" alt="Image">
-                            </a>
+                    </div>
+                    <div class="card__child">
+                        <div class="square_box">
+                            <i class="fas fa-check-circle fa-4x icon__1"></i>
                         </div>
-
-                        <div class="partner-item">
-                            <a href="partner-details.html">
-                                <img src="img/storefront/partner-2.png" alt="Image">
-                            </a>
+                        <div class="main_text">All Done</div>
+                        <div class="secondary_text">
+                            You are all done. Now your system can communicate with the Delivery Vendor automatically
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>
-    </div> -->
-    <!-- End Partner Area -->
 
-    <!-- Start Footer Area -->
-    <footer class="footer-area bg-color pt-100 pb-70" id="contact-page-id">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-footer-widget single-bg">
-                        <a href="index.html" class="logo">
-                            <img class="value-img-logo" src="img/logo/logo.png" alt="Floww Logo" style="width: 170px;">
-                        </a>
+        </section>
 
-                        <p class="value-hero-subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
-
-                        <ul class="social-icon">
-                            <li>
-                                <a class="value-facebook" href="https://www.facebook.com/" target="_blank">
-                                    <i class="ri-facebook-fill"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="value-instagram" href="https://www.instagram.com/" target="_blank">
-                                    <i class="ri-instagram-line"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="value-twitter" href="https://twitter.com/" target="_blank">
-                                    <i class="ri-twitter-fill"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+        <section class="section tile_4_mob" id="integration-section-id-mob">
+            <div class="container3_mob">
+                <div class="title_4_mob">3 Step Integration </div>
+                <div class="underline__4_mob"></div>
+                <div class="square_box_mob">
+                    <i class="fas fa-search fa-2x icon__1_mob"></i>
+                    <button type="button" class="copy_btn_mob"
+                        onclick="window.open('https://gofloww.co/search', '_blank')">floww Search</button>
+                </div>
+                <div class="main_text_mob">Vendor Code</div>
+                <div class="secondary_text_mob">Go to floww Search and find me, then click on copy vendor code to get
+                    the vendor code that
+                    is needed to make API request to me</div>
+                <div class="square_box_mob">
+                    <i class="fas fa-clipboard-list fa-2x icon__1_mob"></i>
+                    <button type="button" class="copy_btn_mob"
+                        onclick="window.open('https://gofloww.co/api-doc', '_blank')">Read The Doc</button>
+                </div>
+                <div class="main_text_mob">API Doc</div>
+                <div class="secondary_text_mob">Go through the API doc and integrate required APIs into your project.
+                    Then pass the values
+                    along with vendor code as stated in API docs</div>
+                <div class="square_box_mob">
+                    <i class="fas fa-check-circle fa-2x icon__1_mob"></i>
+                </div>
+                <div class="main_text_mob">All Done</div>
+                <div class="secondary_text_mob">
+                    You are all done. Now your system can communicate with the Delivery Vendor automatically
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-footer-widget newsletter">
-                        <!-- <h3>Newsletter</h3>
-                        <p>Subscribe to our newsletter and receive the latest tips via email.</p>
 
-                        <form class="newsletter-form" data-toggle="validator">
-                            <input type="email" class="form-control" placeholder="hello@matro.com" name="EMAIL" required
-                                autocomplete="off">
+        </section>
 
-                            <button class="subscribe" type="submit">
-                                Subscribe
-                                <i class="ri-arrow-right-line"></i>
-                            </button>
+        <section class="section tile_5_desk" id="pricing-section-id">
+            <h2 class="delivery">Delivery Rate Chart</h2>
+            <div class="underline5"></div>
+            <div class="container4">
+                <div class="row_1">
+                    <div class="ver_line"></div>
+                    <h3 class="table_elements row_name" style="margin-top: 2%;">Per Order Delivery <span
+                            class="right_elements">Minimum Price</span> </h3>
+                    <div class="hor_line"></div>
 
-                            <div id="validator-newsletter" class="form-result"></div>
-                        </form> -->
-                    </div>
+                    <h4 class="table_elements row_elements" style="margin-top: 3%;">Base Charge 
+                        <span class="brackets">(within 1km and upto 1 kg 1kg)</span>
+                        <span class="right_elements base_charge_per" style="position: absolute; right: 7%;"></span>
+                    </h4>
+                    <h4 class="table_elements row_elements" style="margin-top: 4px;">Per km charge
+                        <span class="brackets">(After exceeding km limit)</span>
+                        <span class="right_elements per_km_charge_order" style="position: absolute; right: 7%;"></span>
+                    </h4>
+                    <h4 class="table_elements row_elements" style="margin-top: 4px;">Per kg charge
+                        <span class="brackets">(After exceeding weight limit)</span>
+                        <span class="right_elements per_kg_charge_order" style="position: absolute; right: 7%;"></span>
+                    </h4>
+                    <div class="hor_line" style="margin-top: 2%;"></div>
+                    <h3 class="table_elements row_name" style="margin-top: 1%;">Rental Charge <span
+                            class="right_elements">Minimum Price</span> </h3>
+                    <div class="hor_line" style="margin-top: 2%;"></div>
+
+                    <h4 class="table_elements row_elements" style="margin-top: 3%;">Base Charge
+                        <span class="brackets">(40km and 4hr)</span>
+                        <span class="right_elements base_charge_rental" style="position: absolute; right: 7%;"></span>
+                    </h4>
+                    <h4 class="table_elements row_elements" style="margin-top: 4px;">Per Hr Charge
+                        <span class="brackets">(After exceeding weight and time limit)</span>
+                        <span class="right_elements per_hr_charge_rental" style="position: absolute; right: 7%;"></span>
+                    </h4>
+                    <h4 class="table_elements row_elements" style="margin-top: 4px;">Per Km Charge
+                        <span class="brackets">(After exceeding distance limit)</span>
+                        <span class="right_elements per_km_charge_rental" style="position: absolute; right: 7%;"></span>
+                    </h4>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-footer-widget">
-                        <h3>Get in touch</h3>
+            </div>
 
-                        <ul class="address">
-                            <li>
-                                <span><i class="ri-map-pin-fill"></i> Address: </span>
-                                <a class="value-address">2976 Sunrise road las vegas, NV 89108</a>
-                            </li>
-                            <li class="location">
-                                <span><i class="ri-phone-fill"></i> Phone:</span>
-                                <a class="value-contact-no" href="tel:+1-(514)-312-5678">+1 (514) 312-5678</a>
-                            </li>
-                            <li>
-                                <span><i class="ri-mail-fill"></i> Email:</span>
-                                <a class="value-email" href="mailto:prakhar@gmail.com">prakhar@gmail.com</a>
-                            </li>
-                        </ul>
-                    </div>
+        </section>
+
+
+        <section class="section tile_5_mob" id="pricing-section-id-mob">
+            <h2 class="delivery_mob">Delivery Rate Chart</h2>
+            <div class="underline5_mob"></div>
+            <div class="container4_mob">
+                <div class="row_1 mob">
+                    <h3 class="table_elements_mob row_name_mob" style="margin-top: 2%;">Per Order Delivery <span
+                            class="right_elements_mob">Minimum Price</span> </h3>
+                    <div class="hor_line_mob"></div>
+
+                    <h4 class="table_elements_mob row_elements_mob" style="margin-top: 3%;">Base Charge
+                        <span class="right_elements_mob base_charge_per_mob" style="position: absolute; right: 7%;"></span>
+                        <br>
+                        <span class="brackets_mob">(within 1km and upto 1 kg 1kg)</span>
+                    </h4>
+
+
+                    <h4 class="table_elements_mob row_elements_mob" style="margin-top: 4px;">Per km charge
+                        <span class="right_elements_mob per_km_charge_order_mob" style="position: absolute; right: 7%;"></span>
+                        <br>
+                        <span class="brackets_mob">(After exceeding km limit)</span>
+                    </h4>
+
+
+                    <h4 class="table_elements_mob row_elements_mob" style="margin-top: 4px;">Per kg charge
+                        <span class="right_elements_mob per_kg_charge_order_mob" style="position: absolute; right: 7%;"></span>
+                        <br>
+                        <span class="brackets_mob"> (After exceeding weight limit)</span>
+                    </h4>
+                    <div class="hor_line_mob" style="margin-top: 2%;"></div>
+
+
+                    <h3 class="table_elements_mob row_name_mob" style="margin-top: 1%;">Rental Charge <span
+                            class="right_elements_mob">Minimum Price</span> </h3>
+                    <div class="hor_line_mob" style="margin-top: 2%;"></div>
+
+                    <h4 class="table_elements_mob row_elements_mob" style="margin-top: 4px;">Base Charge
+                        <span class="right_elements_mob base_charge_rental_mob" style="position: absolute; right: 7%;"></span>
+                        <br>
+                        <span class="brackets_mob">(40km and 4hr)</span>
+                    </h4>
+
+                    <h4 class="table_elements_mob row_elements_mob" style="margin-top: 4px;">Per hr Charge
+                        <span class="right_elements_mob per_hr_charge_rental_mob" style="position: absolute; right: 7%;"></span>
+                        <br>
+                        <span class="brackets_mob">(After exceeding weight and time limit)</span>
+                    </h4>
+
+                    <h4 class="table_elements_mob row_elements_mob" style="margin-top: 4px;">Per km charge
+                        <span class="right_elements_mob per_km_charge_rental_mob" style="position: absolute; right: 7%;"></span>
+                        <br>
+                        <span class="brackets_mob">(After exceeding distance limit)</span>
+                    </h4>
+
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-footer-widget">
-                        <h3>Information</h3>
+            </div>
+        </section>
 
-                        <ul class="import-link">
-                            <li>
-                                <a class="value-policy" target="_blank">Terms & Conditions</a>
-                            </li>
-                            <!-- <li>
-                                <a href="privacy-policy.html">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="request-quote.html">Request A Quote</a>
-                            </li>
-                            <li>
-                                <a href="faq.html">FAQ</a>
-                            </li> -->
-                        </ul>
-                    </div>
+        <section class="section footer">
+            <div class="container_f">
+                <img src="img/website-new/TMoS-Logo-Round.png" class="foot_img" alt="Tmos_logo">
+                <h2 class="name_foot">TMoS</h2><br>
+                <h5 class="detail_foot">Your Delivery Partner</h5>
+                <h5 class="get_foot">Get Your Own Personalised Website <a href="https://gofloww.co/delivery-vendor-onboard"
+                        target="_blank" class="join_foot">Join Floww Now!</a>
+                </h5>
+                <strong class="links_foot">LINKS</strong>
+                <a href="#home-section-id" class="all_links_foot">Home</a> <br>
+                <a href="#detail-section-id" class="all_links_foot link-2">Details</a> <br>
+                <a href="#services-section-id" class="all_links_foot link-3">Services</a><br>
+                <a href="#integration-section-id" class="all_links_foot link-4">Integrations</a><br>
+                <a href="#pricing-section-id" class="all_links_foot link-5">Pricing</a>
+
+                <div class="address_foot_container">
+                    <p><strong class="addr_foot">ADDRESS</strong></p>
+                    <p class="address_foot"></p>
+                    <br>
+                    <p><a class="refer_foot" onclick="window.alert('Coming Soon!')">Refer Your Friends And Earn</a></p>
+                </div>
+
+                <strong class="cont_foot">CONTACT NO.</strong>
+                <h4 class="number_foot"></h4>
+            </div>
+            <div class="container_f2">
+                <div class="power_foot">Powered By
+                    <a href="https://gofloww.co" target="_blank">
+                        <img src="img/logo/logo.png" class="floww_foot" alt="floww_logo">
+                    </a>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- End Footer Area -->
+        </section>
 
-    <!-- Start Copy Right Area -->
-    <div class="copy-right-area bg-color">
-        <div class="container">
-            <p>
-                <i class="ri-copyright-line"></i> 2022
-                <a href="https://gofloww.co" target="_blank">
-                    <img style="width: 60px; transform: translateY(-2px);" src="img/logo/logo.png">
-                </a>
-            </p>
-        </div>
+        <section class="section footer_mob">
+            <div class="container_f_mob">
+                <img src="img/website-new/TMoS-Logo-Round.png" class="foot_img_mob" alt="Tmos_logo">
+                <h2 class="name_foot_mob">TMoS</h2>
+                <br>
+                <h3 class="detail_foot_mob">Your Delivery Partner</h3>
+                <div class="get_foot_mob">Get Your Own Personalised <br> Website <a
+                        href="https://gofloww.co/delivery-vendor-onboard" target="_blank" class="join_foot_mob">Join Floww
+                        Now!</a></div>
+                <strong class="links_foot_mob">LINKS</strong>
+                <a href="#home-section-id-mob" class="all_links_foot_mob">Home</a> <br>
+                <a href="#detail-section-id-mob" class="all_links_foot_mob link-2_mob">Details</a> <br>
+                <a href="#services-section-id-mob" class="all_links_foot_mob link-3_mob">Services</a><br>
+                <a href="#integration-section-id-mob" class="all_links_foot_mob link-4_mob">Integrations</a><br>
+                <a href="#pricing-section-id-mob" class="all_links_foot_mob link-5_mob">Pricing</a>
+                <strong class="addr_foot_mob">ADDRESS</strong>
+                <div class="address_foot_mob"></div>
+                <a class="refer_foot_mob" onclick="window.alert('Coming Soon!')">Refer Your Friends And Earn</a>
+                <strong class="cont_foot_mob">CONTACT NO.</strong>
+                <h4 class="number_foot_mob"></h4>
+            </div>
+            <div class="container_f2_mob">
+                <div class="power_foot_mob">Powered By
+                    <a href="https://gofloww.co" target="_blank">
+                        <img src="img/logo/logo.png" class="floww_foot_mob" alt="floww_logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
     </div>
-    <!-- End Copy Right Area -->
 
-    <!-- Start Go Top Area -->
-    <div class="go-top">
-        <i class="ri-arrow-up-s-fill"></i>
-        <i class="ri-arrow-up-s-fill"></i>
-    </div>
-    <!-- End Go Top Area -->
-
-    <!-- No vendor Area -->
     <div class="no-vendor-found-container hide" id="no-vendor-found-id">
         <div class="no-vendor-found-internal-container">
-            <img class="not-found-image" src="img/storefront/error404.jpeg">
+            <img class="not-found-image" src="img/website-new/error404.jpeg">
             <div class="not-found-homepage-container">
                 <button class="not-found-homepage-button" onclick="window.location.href='/search'">Find More Companies
                     Here</button>
             </div>
         </div>
     </div>
-    <!-- End No vendor Area -->
-
 
 
     <!-- JS Content Here -->
@@ -1395,28 +523,28 @@
     <!-- All JS files start here -->
 
     <script>
-        // function getCookie(name) {
-        //     let cookieValue = null;
+        function getCookie(name) {
+            let cookieValue = null;
 
-        //     if (document.cookie && document.cookie !== '')
-        //     {
-        //         const cookies = document.cookie.split(';');
-        //         for (let i = 0; i < cookies.length; i++)
-        //         {
-        //             const cookie = cookies[i].trim();
+            if (document.cookie && document.cookie !== '')
+            {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++)
+                {
+                    const cookie = cookies[i].trim();
 
-        //             // Does this cookie string begin with the name we want?
-        //             if (cookie.substring(0, name.length + 1) === (name + '='))
-        //             {
-        //                 cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '='))
+                    {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
 
-        //                 break;
-        //             }
-        //         }
-        //     }
+                        break;
+                    }
+                }
+            }
 
-        //     return cookieValue;
-        // }
+            return cookieValue;
+        }
 
         function GetQueryParams(paramName) {
             const urlSearchParams = new URLSearchParams(window.location.search);
@@ -1434,26 +562,20 @@
         const queryVendorId = GetQueryParams('vendor-id');
         console.log(queryVendorId);
 
-        //let tokenVal = getCookie('floww-token');
+        let tokenVal = getCookie('floww-token');
 
-        // if (tokenVal)
-        // {
-        //     let authTokenStr = "Token " + tokenVal;
-        //     axios.defaults.headers.common['Authorization'] = authTokenStr;
-        // }
+        if (tokenVal)
+        {
+            let authTokenStr = "Token " + tokenVal;
+            axios.defaults.headers.common['Authorization'] = authTokenStr;
+        }
 
     </script>
 
-    <!-- Floww JS -->
-    <script src="js/storefront.js"></script>
-    <!-- Meanmenu Min JS -->
-    <script src="js/template/meanmenu2.min.js"></script>
-    <!-- Owl Carousel Min JS -->
-    <script src="js/template/owl.carousel.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/template/custom.js"></script>
+    <script src="js/flowwVariables.js"></script>
+    <!-- Floww custom Dictionaries JS file -->
 
-
+    <script src="js/website.js"></script>
 </body>
 
 </html>
