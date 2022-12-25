@@ -2354,19 +2354,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .circle-shape-bg::before {
-  background-image: url(../img/shape/bg-circle.png);
+  background-image: url(../../img/shape/bg-circle.png);
 }
 
 .circle-shape-bg2::before {
-  background-image: url(../img/shape/bg-circle2.png);
+  background-image: url(../../img/shape/bg-circle2.png);
 }
 
 .circle-shape-bg3::before {
-  background-image: url(../img/shape/bg-circle3.png);
+  background-image: url(../../img/shape/bg-circle3.png);
 }
 
 .circle-shape-bg4::before {
-  background-image: url(../img/shape/bg-circle4.png);
+  background-image: url(../../img/shape/bg-circle4.png);
 }
 
 /* Feedback Area CSS */
