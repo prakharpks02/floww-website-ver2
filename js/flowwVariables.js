@@ -222,15 +222,15 @@ const fleetTypesVar = [{
 }]
 
 const fleetImageVar = {
-    'bike':'https://gofloww.co/img/website/DB-on-scooter-small.png',
-    'tempo':'https://gofloww.co/img/website/tempo-delivery-boy.png',
-    'truck':'https://gofloww.co/img/website/tempo-delivery-boy.png',
+    'bike':'https://gofloww.co/img/website-new/DB-on-scooter-small.png',
+    'tempo':'https://gofloww.co/img/website-new/tempo-delivery-boy.png',
+    'truck':'https://gofloww.co/img/website-new/tempo-delivery-boy.png',
 }
 
 const detailImageVar = {
-    'bike':'https://gofloww.co/img/website/DB-with-box-small.png',
-    'tempo':'https://gofloww.co/img/website/Tempo-with-box-small.png',
-    'truck':'https://gofloww.co/img/website/Tempo-with-box-small.png',
+    'bike':'https://gofloww.co/img/website-new/DB-with-box-small.png',
+    'tempo':'https://gofloww.co/img/website-new/Tempo-with-box-small.png',
+    'truck':'https://gofloww.co/img/website-new/Tempo-with-box-small.png',
 }
 
 const fleetSizeVar = [{
