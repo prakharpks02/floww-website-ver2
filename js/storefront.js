@@ -346,56 +346,56 @@ function CallApi() {
         LoaderDeactivate();
     } else {
 
-        $.ajax({
-            url: "https://backend.gofloww.co/api/v1/website/get-delivery-vendor-details/",
-            type: "get",
-            data: {
-                vendorId: queryVendorId
-            },
-            success: function (response) {
-                console.log(response);
-            },
-            error: function (xhr) {
-                console.log(xhr);
-                VendorNotFound();
-                LoaderDeactivate();
-                window.alert('Server Error, Please Try Again!');
-            }
-        });
+        // $.ajax({
+        //     url: "https://backend.gofloww.co/api/v1/website/get-delivery-vendor-details/",
+        //     type: "get",
+        //     data: {
+        //         vendorId: queryVendorId
+        //     },
+        //     success: function (response) {
+        //         console.log(response);
+        //     },
+        //     error: function (xhr) {
+        //         console.log(xhr);
+        //         VendorNotFound();
+        //         LoaderDeactivate();
+        //         window.alert('Server Error, Please Try Again!');
+        //     }
+        // });
 
-        axios.get(globalApiUrl + '/api/v1/website/get-delivery-vendor-details/', {
-                params: {
-                    vendorId: queryVendorId,
-                }
-            })
-            .then(function (response) {
-                let responseData = JSON.parse(response.data);
-                console.log(responseData);
+        // axios.get(globalApiUrl + '/api/v1/website/get-delivery-vendor-details/', {
+        //         params: {
+        //             vendorId: queryVendorId,
+        //         }
+        //     })
+        //     .then(function (response) {
+        //         let responseData = JSON.parse(response.data);
+        //         console.log(responseData);
 
-                if (responseData.status == 'failure') {
-                    VendorNotFound();
-                    LoaderDeactivate();
-                } else {
-                    vendor_contact_no_global = responseData.variable.contact_no;
+        //         if (responseData.status == 'failure') {
+        //             VendorNotFound();
+        //             LoaderDeactivate();
+        //         } else {
+        //             vendor_contact_no_global = responseData.variable.contact_no;
 
-                    if (vendor_contact_no_global == 'None') {
-                        ctt_no.innerHTML = `<a href="https://backend.gofloww.co/login/" class="refer_foot" target="_blank">Login to Contact</a>`;
-                        ctt_no_mob.innerHTML = `<a href="https://backend.gofloww.co/login/" class="refer_foot_mob_2" target="_blank">Login to Contact</a>`;
-                    } else {
-                        ctt_no.innerHTML = vendor_contact_no_global;
-                        ctt_no_mob.innerHTML = vendor_contact_no_global;
-                    }
+        //             if (vendor_contact_no_global == 'None') {
+        //                 ctt_no.innerHTML = `<a href="https://backend.gofloww.co/login/" class="refer_foot" target="_blank">Login to Contact</a>`;
+        //                 ctt_no_mob.innerHTML = `<a href="https://backend.gofloww.co/login/" class="refer_foot_mob_2" target="_blank">Login to Contact</a>`;
+        //             } else {
+        //                 ctt_no.innerHTML = vendor_contact_no_global;
+        //                 ctt_no_mob.innerHTML = vendor_contact_no_global;
+        //             }
 
-                    AssignVariables(responseData.variable);
-                    LoaderDeactivate();
-                }
-            })
-            .catch(function (error) {
-                console.log(error);
-                VendorNotFound();
-                LoaderDeactivate();
-                window.alert('Server Error, Please Try Again!');
-            });
+        //             AssignVariables(responseData.variable);
+        //             LoaderDeactivate();
+        //         }
+        //     })
+        //     .catch(function (error) {
+        //         console.log(error);
+        //         VendorNotFound();
+        //         LoaderDeactivate();
+        //         window.alert('Server Error, Please Try Again!');
+        //     });
     }
     FillPage(PageDict);
 }
