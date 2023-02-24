@@ -2916,6 +2916,10 @@ Responsive CSS
   .overview-image img {
     filter: unset;
   }
+
+  .custom-mobile-view {
+    display: none;
+  }
 }
 
 /* Min width 576px to Max width 767px */
@@ -3111,6 +3115,10 @@ Responsive CSS
 
   .overview-image img {
     filter: unset;
+  }
+
+  .custom-mobile-view {
+    display: none;
   }
 }
 
