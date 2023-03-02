@@ -20,7 +20,7 @@ const PageDict = {
         'image': 'img/storefront/banner-bg-1.jpg'
     },
     'special': {
-        'heading': 'Our Transportation is unparelled',
+        'heading': 'Our Transportation is unparalleled',
         'subheading': 'Blaze Logistics is a leading provider of specialized service in integrated multi-mode solutions for the transportations of bulk of container cargo. Blaze Logistics provides a single window for businesses that seek seamless transportation, warehousing, supply chain management and trucking.',
         'image': 'img/storefront/about-year.png',
         'imageText': 'Year’s of experience in transport and logistics services'
