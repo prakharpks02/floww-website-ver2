@@ -1,0 +1,46 @@
+#floww-team-member {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+/* For screens larger than 1024px (laptop) */
+@media screen and (min-width: 1024px) {
+  /* Styles for laptop */
+  #floww-team-member {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* For screens between 768px and 1023px (tablet) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for tablet */
+  #floww-team-member {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* For screens smaller than 767px (mobile) */
+@media screen and (max-width: 767px) {
+  /* Styles for mobile */
+  #floww-team-member {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+  }
+  #floww-backed-by {
+    display: grid;
+    justify-content: center;
+  }
+  #floww-backed-by > li {
+    display: grid;
+    justify-content: center;
+  }
+}
