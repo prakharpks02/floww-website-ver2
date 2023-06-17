@@ -1,46 +1,117 @@
-#floww-team-member {
-  width: 60%;
-  margin: auto;
+.floww-backed-by-mobile {
   display: flex;
   justify-content: center;
-}
-/* For screens larger than 1024px (laptop) */
-@media screen and (min-width: 1024px) {
-  /* Styles for laptop */
-  #floww-team-member {
-    width: 60%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-  }
+  flex-wrap: wrap;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* For screens between 768px and 1023px (tablet) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* Styles for tablet */
-  #floww-team-member {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-  }
+.floww-custom-div-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
-/* For screens smaller than 767px (mobile) */
-@media screen and (max-width: 767px) {
-  /* Styles for mobile */
-  #floww-team-member {
-    width: 80%;
-    margin: auto;
-    display: grid;
-    justify-content: center;
-  }
-  #floww-backed-by {
-    display: grid;
-    justify-content: center;
-  }
-  #floww-backed-by > li {
-    display: grid;
-    justify-content: center;
-  }
+.floww-custom-div-item {
+  background-size: cover;
+  width: 250px;
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.floww-custom-div-item:hover {
+  transform: scale(1.1);
+}
+
+.floww-custom-btn-container {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.floww-custom-btn-container button {
+  padding: 6px 20px;
+  font-size: 16px;
+  background-color: #00ceb1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.floww-custom-btn-container button:hover {
+  background-color: #555;
+}
+
+.floww-aboutus-profilediv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -40%;
+}
+
+.floww-aboutus-profilediv>img {
+  width: 150px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 3px;
+  border: solid white 3px;
+}
+
+.floww-aboutus-profilediv>img:hover {
+  border: solid #00ceb1 3px;
+}
+
+.floww-aboutus-aboutdiv {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0px;
+}
+
+.floww-aboutus-aboutdiv>h2 {
+  font-size: larger;
+}
+
+.floww-aboutus-aboutdiv>h3 {
+  font-size: small;
+  color: #00ceb1;
+}
+
+.floww-aboutus-sociallinkdiv {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  gap: 10px;
+}
+
+.floww-aboutus-socialdiv-image {
+  width: 40px;
+  aspect-ratio: 1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.floww-aboutus-fb {
+  background: #5165aa;
+}
+
+.floww-aboutus-ig {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+.floww-aboutus-ld {
+  background: #5b9deb;
+}
+
+.floww-aboutus-email {
+  background: #8f8c8c;
 }
