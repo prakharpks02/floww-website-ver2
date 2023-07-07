@@ -89,6 +89,15 @@ const Teammembers = [
         igLink: "#",
         fbinLink: "#",
     },
+    // {
+    //     profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Sumon Profile.jpg",
+    //     name: "Sumeet",
+    //     role: "Biz Dev, Pune",
+    //     emailLink: "mailto:sumeet.d@gofloww.co",
+    //     linkedinLink: "#",
+    //     igLink: "#",
+    //     fbinLink: "#",
+    // },
 ];
 let currentIndex = 0;
 let boxes = 4;
