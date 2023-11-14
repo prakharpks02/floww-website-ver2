@@ -2,7 +2,7 @@ const Teammembers = [
     {
         profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Anish Profile.jpg",
         name: "Anish",
-        role: "Co-Founder",
+        role: "Co-Founder<br>",
         emailLink: "mailto:anish@gofloww.co",
         linkedinLink: "https://www.linkedin.com/in/anish509/",
         igLink: "#",
@@ -11,7 +11,7 @@ const Teammembers = [
     {
         profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Prakhar Profile.jpg",
         name: "Prakhar",
-        role: "Co-Founder",
+        role: "Co-Founder<br>",
         emailLink: "mailto:prakhar@gofloww.co",
         linkedinLink: "https://www.linkedin.com/in/prakharpks02/",
         igLink: "#",
@@ -47,7 +47,7 @@ const Teammembers = [
     // {
     //     profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Snehal Profile.jpg",
     //     name: "Snehal",
-    //     role: "Marketing, Bengaluru",
+    //     role: "Marketing, Bengaluru<br>",
     //     emailLink: "mailto:snehal.p@gofloww.co",
     //     linkedinLink: "#",
     //     igLink: "#",
@@ -56,7 +56,7 @@ const Teammembers = [
     {
         profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Sumon Profile.jpg",
         name: "Sumon",
-        role: "Operations, Guwahati",
+        role: "Operations, Guwahati<br>",
         emailLink: "mailto:sumon.b@gofloww.co",
         linkedinLink: "#",
         igLink: "#",
@@ -65,7 +65,7 @@ const Teammembers = [
     {
         profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Abhishek Profile.jpg",
         name: "Abhishek",
-        role: "Frontend, Pune",
+        role: "Frontend, Pune<br>",
         emailLink: "mailto:abhishek.u@gofloww.co",
         linkedinLink: "#",
         igLink: "#",
@@ -74,7 +74,7 @@ const Teammembers = [
     {
         profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Adesh Profile.jpg",
         name: "Adesh",
-        role: "Flutter, Pune",
+        role: "Flutter, Pune<br>",
         emailLink: "mailto:adesh.m@gofloww.co",
         linkedinLink: "#",
         igLink: "#",
@@ -83,7 +83,7 @@ const Teammembers = [
     {
         profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Prakhar G Profile.jpeg",
         name: "Prakhar G.",
-        role: "Flutter, Pune",
+        role: "Flutter, Pune<br>",
         emailLink: "mailto:prakhar.g@gofloww.co",
         linkedinLink: "#",
         igLink: "#",
