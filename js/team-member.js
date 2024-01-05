@@ -57,7 +57,7 @@ const Teammembers = [
         profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Sumon Profile.jpg",
         name: "Sumon",
         role: "Operations<br><span style='color:grey'>Guwahati<span>",
-        emailLink: "mailto:sumon.b@gofloww.co",
+        emailLink: "mailto:sumon.d@gofloww.co",
         linkedinLink: "#",
         igLink: "#",
         fbinLink: "#",
