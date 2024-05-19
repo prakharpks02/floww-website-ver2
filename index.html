@@ -22,6 +22,7 @@
 
     <!-- All CSS Links -->
     <link rel="stylesheet" href="css/template/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/team-member.css" />
     <!-- <link rel="stylesheet" href="css/odometer.min.css"> -->
     <link rel="stylesheet" href="css/template/meanmenu.min.css">
     <link rel="stylesheet" href="css/template/animate.min.css">
@@ -98,32 +99,31 @@
                                 </ul> -->
                             </li>
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <span
-                                    style="position: absolute; top: 25%; right: 20%; transform: translateX(100%); font-size: 10px; font-weight: 700; width: 100px;"
-                                    class="text-primary-color">New</span>
-                                <a href="console"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Products</a>
-                                    <ul
+                                <a href="/console"
+                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 before:absolute before:right-6 before:top-38 before:w-1 before:h-9 before:bg-white before:-rotate-45 before:ease-in before:duration-300 after:absolute after:right-0 after:top-38 after:w-1 after:h-9 after:bg-white after:rotate-45 after:ease-in after:duration-300 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Products</a>
+                                <ul
                                     class="absolute bg-white left-0 w-[250px] rounded-sm top-84 z-99 shadow-dropdown pt-10 pb-10 opacity-0 invisible ease-in duration-300 group-hover:opacity-100 group-hover:visible">
                                     <li>
-                                        <a href="index.html"
-                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Project
-                                            AI Mail</a>
+                                        <a href="/mail"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">AI
+                                            Mail</a>
                                     </li>
                                     <li>
-                                        <a href="index-2.html"
-                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Product
-                                            Floww HRMS</a>
-                                            <span
-                                            style="position: absolute; top: 25%; right: 20%; transform: translateX(100%); font-size: 10px; font-weight: 700; width: 100px;"
-                                            class="text-primary-color">New</span>
+                                        <a href="/hr"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Floww
+                                            HR</a>
                                     </li>
                                     <li>
-                                        <a href="index-3.html"
-                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Customer
-                                            Floww Accounting</a>
+                                        <a href="/accounting"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Floww
+                                            Accounting</a>
                                     </li>
-                                </ul> 
+                                    <li>
+                                        <a href="/logistics"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Floww
+                                            Logistics</a>
+                                    </li>
+                                </ul>
                             </li>
                             <!-- <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
                                 <span
@@ -133,16 +133,16 @@
                                     class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Mail</a>
                             </li> -->
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="integration"
+                                <a href="/integration"
                                     class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Integrations</a>
                             </li>
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="about-us"
+                                <a href="/about-us"
                                     class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">About
                                     Us</a>
                             </li>
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="faq"
+                                <a href="/faq"
                                     class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">FAQs</a>
                             </li>
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
@@ -152,8 +152,7 @@
                         </ul>
                         <div class="self-center">
                             <a href="https://console.gofloww.co" target="_blank" style="cursor: pointer;"
-                                class="inline-block font-semibold text-13px md:text-14px lg:text-15px rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Login
-                                / Signup</a>
+                                class="inline-block relative font-bold text-17px mt-15 md:mt-25 rounded-sm text-white pt-11 md:pt-17 pb-11 md:pb-13 pl-25 pr-25 bg-gradient-color shadow-custom-box-shadow hover:shadow-primary-btn ease-in duration-300">Login</a>
                         </div>
                     </div>
                 </nav>
@@ -181,20 +180,21 @@
                     </ul> -->
                 </li>
                 <li>
-                    <a href="console" style="position: relative;">Products</a>
+                    <a href="/console" style="position: relative;">Products</a>
                     <ul>
                         <li>
-                            <a href="index.html">AI Mail</a>
+                            <a href="/mail">AI Mail</a>
                         </li>
                         <li>
-                            <a href="index-2.html">Floww HRMS<span
-                                style="font-size: 10px; font-weight: 700; width: 100px; position: absolute; top: 5px;"
-                                class="text-primary-color">New</span></a>
+                            <a href="/hr">Floww HR</a>
                         </li>
                         <li>
-                            <a href="index-3.html">Floww Accounting</a>
+                            <a href="/accounting">Floww Accounting</a>
                         </li>
-                    </ul> 
+                        <li>
+                            <a href="/logistics">Floww logistics</a>
+                        </li>
+                    </ul>
                 </li>
                 <!-- <li>
                     <a href="mail" style="position: relative">Mail <span
@@ -202,13 +202,13 @@
                         class="text-primary-color">New</span></a>
                   </li> -->
                 <li>
-                    <a href="integration">Integrations</a>
+                    <a href="/integration">Integrations</a>
                 </li>
                 <li>
-                    <a href="about-us">About Us</a>
+                    <a href="/about-us">About Us</a>
                 </li>
                 <li>
-                    <a href="faq">FAQs</a>
+                    <a href="/faq">FAQs</a>
                 </li>
                 <li>
                     <a href="https://blog.gofloww.co" target="_blank">Blog</a>
@@ -230,27 +230,31 @@
                 <div class="self-center md:text-center lg:text-left">
                     <h1
                         class="font-black text-25px md:text-40px lg:text-40px xl:text-50px 2xl:text-60px 3xl:text-66px text-white mb-10 md:mb-12 lg:mb-15">
-                        AI assisted <span class="text-primary-color">Business Software Suite</span> for growing MSMEs</h1>
+                        <span class="text-primary-color">AI Powered </span> Fullstack Business Suite Software
+                    </h1>
                     <p
                         class="text-13px md:text-18px lg:text-18px xl:text-18px 2xl:text-16px leading-8 text-[#e1e1e1] xl:max-w-[600px]">
-                        Cross vertical API based business management automations for all needs of a growing company</p>
+                        Supercharge your Core business functions with our 100% API based Micro SaaS Platform
+                        <br><br>
+                        <span class="text-white text-18px font-bold">HR | Mail | Accounting | Logistics</span>
+                    </p>
                     <div class="btn-box lg:mt-5 xl:mt-10">
                         <a href="https://play.google.com/store/apps/details?id=com.mycompany.flowwv01" target="_blank"
-                            class="inline-block relative font-bold text-13px md:text-15px lg:text-16px mt-15 md:mt-25 rounded-sm text-white pt-15 md:pt-17 pb-11 md:pb-13 pl-16 sm:pl-75 pr-16 sm:pr-30 bg-gradient-color shadow-custom-box-shadow hover:shadow-primary-btn ease-in duration-300">
-                            <img src="img/website/play-store.svg"
+                            class="ml-10 md:ml-15 xl:ml-9 2xl:ml-15 inline-block relative font-bold text-13px md:text-15px lg:text-16px mt-15 md:mt-25 rounded-sm text-white pt-15 md:pt-17 pb-11 md:pb-13 pl-16 pr-16 bg-secondary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">
+                            <!-- <img src="img/website/play-store.svg"
                                 class="sm:absolute sm:left-30 sm:top-1/2 sm:-translate-y-2/4 mb-10 sm:mb-0"
                                 alt="play-store floww, logistics/transporter app">
-                            <span class="block text-12px font-normal mb-4 md:mb-2">GET IT ON</span>
-                            Google Play
+                            <span class="block text-12px font-normal mb-4 md:mb-2">GET IT ON</span> -->
+                            Get Started
                         </a>
-                        <a onclick="window.alert('Coming Soon')" href=""
+                        <!-- <a onclick="window.alert('Coming Soon')" href=""
                             class="ml-10 md:ml-15 xl:ml-9 2xl:ml-15 inline-block relative font-bold text-13px md:text-15px lg:text-16px mt-15 md:mt-25 rounded-sm text-white pt-15 md:pt-17 pb-11 md:pb-13 pl-16 sm:pl-75 pr-16 sm:pr-30 bg-secondary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">
                             <img src="img/website/apple-store.svg"
                                 class="sm:absolute sm:left-30 sm:top-1/2 sm:-translate-y-2/4 mb-10 sm:mb-0"
                                 alt="apple app-store floww, logistics/transporter app">
                             <span class="block text-12px font-normal mb-4 md:mb-2">GET IT ON</span>
                             Apple Store
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 <div class="text-center self-center wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
@@ -280,7 +284,7 @@
                 </h2>
                 <p
                     class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8 text-white">
-                    Save Up to 40% of your with efficient AI assisted cloud softwares</p>
+                    Save Up to 40% of your Resources with The Core Products of Floww</p>
             </div>
             <div
                 class="customer-service-tabs rounded-sm md:rounded-lg p-20 sm:p-30 md:p-35 lg:p-30 xl:p-50 bg-yello-light-300">
@@ -295,7 +299,7 @@
                         <span
                             class="block bg-white text-black-color font-semibold text-14px md:text-15px lg:text-16px xl:text-18px rounded-sm pt-17 pb-15 pl-20
                         pr-20 text-center relative before:bg-primary-gradient-color before:absolute before:left-0 before:w-0 before:bottom-0 before:h-3 before:rounded-sm hover:before:w-full before:ease-in before:duration-300 cursor-pointer">
-                            Floww HRMS</span>
+                            Floww HR</span>
                     </li>
                     <li class="tab-link md:flex-1 mb-12 last:mb-0 md:mb-0" data-tab="tab-3">
                         <span
@@ -307,7 +311,7 @@
                         <span
                             class="block bg-white text-black-color font-semibold text-14px md:text-15px lg:text-16px xl:text-18px rounded-sm pt-17 pb-15 pl-20
                             pr-20 text-center relative before:bg-primary-gradient-color before:absolute before:left-0 before:w-0 before:bottom-0 before:h-3 before:rounded-sm hover:before:w-full before:ease-in before:duration-300 cursor-pointer">
-                            Floww TMS</span>
+                            Floww Logistics</span>
                     </li>
                     <!-- <li class="tab-link md:flex-1 mb-12 last:mb-0 md:mb-0" data-tab="tab-3">
                         <span
@@ -339,37 +343,48 @@
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto" alt="get real time tracking">
-                                    Accurate Order & Fleet Monitoring
+                                    100 mb+ Attachment Sizes
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto" alt="get real time tracking">
-                                    Order Status Tracking
+                                    Automatic Monthly Backups
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto" alt="get real time tracking">
-                                    Driver App Tracking
+                                    Unlimited File Types
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto" alt="VLTD integrations">
-                                    Vehicle Tracking (VLTD Compatible)
+                                    Organization Rules
+                                </li>
+                                <li
+                                    class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle-alternate.svg"
+                                        class="absolute left-0 -top-2 w-[18px] md:w-auto" alt="VLTD integrations">
+                                    Two Factor Authentication
+                                </li>
+                                <li
+                                    class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle-alternate.svg"
+                                        class="absolute left-0 -top-2 w-[18px] md:w-auto" alt="VLTD integrations">
+                                    AI Enabled Features (Beta)
                                 </li>
                             </ul>
 
                             <br>
                             <p
                                 class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-black-color font-semibold">
-                                Starting at just ₹ 2 / order</p>
+                                Starting at just ₹ 49 / user / month</p>
 
-                            <a href="https://wa.me/918879138857?text=I%20am%20interested%20in%20Real%20Time%20Tracking"
-                                target="_blank"
-                                class="inline-block font-semibold text-13px md:text-14px lg:text-15px mt-15 md:mt-20 rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Claim
-                                your Free Credits Today</a>
+                            <a href="/mail" target="_blank"
+                                class="inline-block font-semibold text-13px md:text-14px lg:text-15px mt-15 md:mt-20 rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Start
+                                Free Trial</a>
                         </div>
                     </div>
                 </div>
@@ -382,7 +397,7 @@
                         <div class="overview-content self-center xl:pl-70 lg:pl-15">
                             <h2
                                 class="font-black text-22px md:text-28px lg:text-30px xl:text-35px mb-12 lg:mb-15 text-black-color">
-                                Floww HRMS</h2>
+                                Floww HR</h2>
                             <!-- <p class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color">
                                 Togy Planning, tracking and delivering your team’s best work has never been easier. We
                                 make it easiest for you through the Togy.</p> -->
@@ -393,44 +408,49 @@
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto"
                                         alt="otp pod, proof of delivery">
-                                    OTP based proof of delivery
+                                    Geotagged Attendances
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto"
                                         alt="image based proof of delivery, delivery confirmation">
-                                    Image based proof of delivery
+                                    Project Management
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto"
                                         alt="Proof of Delivery location">
-                                    Location based proof of delivery
+                                    Performance & KPI Trackers
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto" alt="Proof of Pickup">
-                                    Proof of Pickup
+                                    Seamless Payroll
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto" alt="Proof of Trip">
-                                    Proof of Trip
+                                    Leave & Holiday Rules
+                                </li>
+                                <li
+                                    class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle-alternate.svg"
+                                        class="absolute left-0 -top-2 w-[18px] md:w-auto" alt="Proof of Trip">
+                                    Employee Engagement Mobile App
                                 </li>
                             </ul>
 
                             <br>
                             <p
                                 class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-black-color font-semibold">
-                                Starting at just ₹ 1.5 / order</p>
-                            <a href="https://play.google.com/store/apps/details?id=com.mycompany.flowwv01"
-                                target="_blank"
-                                class="inline-block font-semibold text-13px md:text-14px lg:text-15px mt-15 md:mt-20 rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Get
-                                Started</a>
+                                Starting at just ₹ 199 / user / month</p>
+                            <a href="/hr" target="_blank"
+                                class="inline-block font-semibold text-13px md:text-14px lg:text-15px mt-15 md:mt-20 rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Start
+                                Free Trial</a>
                         </div>
                     </div>
                 </div>
@@ -453,39 +473,52 @@
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto" alt="Order Collection Portal">
-                                    Standard Courier Booking
+                                    Invoice, Quotation, LR and DC Instant Creation
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto"
                                         alt="Truck Booking, part load, full load collect orders">
-                                    Truck Booking
+                                    GSTR Preperation
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto"
                                         alt="packers and movers collect orders">
-                                    Packers & Movers Booking
+                                    Multi User Support
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto"
                                         alt="Goods & Cargo Booking portal, bulk booking">
-                                    Goods & Cargo Booking
+                                    Daily Expense Collection
+                                </li>
+                                <li
+                                    class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle-alternate.svg"
+                                        class="absolute left-0 -top-2 w-[18px] md:w-auto"
+                                        alt="Goods & Cargo Booking portal, bulk booking">
+                                    Cloud Based Unlimited Storage & Search
+                                </li>
+                                <li
+                                    class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle-alternate.svg"
+                                        class="absolute left-0 -top-2 w-[18px] md:w-auto"
+                                        alt="Goods & Cargo Booking portal, bulk booking">
+                                    AI powered Analytics
                                 </li>
                             </ul>
 
                             <br>
                             <p
                                 class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-black-color font-semibold">
-                                Free</p>
-                            <a href="https://play.google.com/store/apps/details?id=com.mycompany.flowwv01"
-                                target="_blank"
-                                class="inline-block font-semibold text-13px md:text-14px lg:text-15px mt-15 md:mt-20 rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Get
-                                Started</a>
+                                Starting at just ₹ 2,999 / month</p>
+                            <a href="/acounting" target="_blank"
+                                class="inline-block font-semibold text-13px md:text-14px lg:text-15px mt-15 md:mt-20 rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Start
+                                Free Trial</a>
                         </div>
                     </div>
                 </div>
@@ -499,7 +532,7 @@
                         <div class="overview-content self-center xl:pl-70 lg:pl-15">
                             <h2
                                 class="font-black text-22px md:text-28px lg:text-30px xl:text-35px mb-12 lg:mb-15 text-black-color">
-                                Floww TMS</h2>
+                                Floww Logistics</h2>
                             <!-- <p class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color">
                                 Togy Planning, tracking and delivering your team’s best work has never been easier. We
                                 make it easiest for you through the Togy.</p> -->
@@ -510,39 +543,52 @@
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto"
                                         alt="Branded tracking link, share on WhatsApp">
-                                    Share order updates via SMS and Emails
+                                    Customizable Tracking Pages
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto"
                                         alt="Real time order alerts and notification via WhatsApp and Mail">
-                                    Enhance Customer Experience
+                                    Instant Quote Creator
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto"
                                         alt="Branded Feedback Page, get feedback page">
-                                    Automatic Updates
+                                    Shipping Alerts on SMS, WhatsApp & Email
                                 </li>
                                 <li
                                     class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
                                     <img src="img/website/tick-circle-alternate.svg"
                                         class="absolute left-0 -top-2 w-[18px] md:w-auto"
                                         alt="Customer Insights, intelligence, better shipping options and feedback">
-                                    Better Communication with Customers
+                                    Multi Factor Proof of Delivery
+                                </li>
+                                <li
+                                    class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle-alternate.svg"
+                                        class="absolute left-0 -top-2 w-[18px] md:w-auto"
+                                        alt="Customer Insights, intelligence, better shipping options and feedback">
+                                    Real Time Tracking
+                                </li>
+                                <li
+                                    class="relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle-alternate.svg"
+                                        class="absolute left-0 -top-2 w-[18px] md:w-auto"
+                                        alt="Customer Insights, intelligence, better shipping options and feedback">
+                                    Driver Engagement App
                                 </li>
                             </ul>
 
                             <br>
                             <p
                                 class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-black-color font-semibold">
-                                Starting at just ₹ 5 / order</p>
-                            <a href="https://wa.me/918879138857?text=I%20am%20interested%20in%20Notification%20Intelligence"
-                                target="_blank"
-                                class="inline-block font-semibold text-13px md:text-14px lg:text-15px mt-15 md:mt-20 rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Get
-                                Started</a>
+                                Starting at just ₹ 99 / driver / month</p>
+                            <a href="/logistics" target="_blank"
+                                class="inline-block font-semibold text-13px md:text-14px lg:text-15px mt-15 md:mt-20 rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Start
+                                Free Trial</a>
                         </div>
                     </div>
                 </div>
@@ -550,6 +596,79 @@
         </div>
     </div>
     <!-- End Customer Service Area -->
+
+
+    <!-- Our Partners Section Start -->
+    <div class="partners-wrap bg-yello-light-300" style="margin: 0;padding: 50px;">
+        <div class="container">
+            <div class="title text-center">
+                <!-- <h2 data-aos="fade-up">Backed By</h2> -->
+                <h2
+                    class="font-black text-25px md:text-35px lg:text-40px xl:text-48px 2xl:text-54px text-black-color mb-8">
+                    Backed By</h2>
+            </div>
+            <br />
+            <ul class="lg:text-center floww-backed-by-mobile" id="floww-backed-by">
+                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                    <a
+                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
+                        <img src="img/website/partner-logo1.png" alt="Track delivery" />
+                    </a>
+                </li>
+                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                    <a
+                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
+                        <img src="img/website/partner-logo2.png" alt="Track delivery" />
+                    </a>
+                </li>
+                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                    <a
+                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
+                        <img src="img/website/partner-logo3.png" alt="last-mile carrier" />
+                    </a>
+                </li>
+                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                    <a
+                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
+                        <img src="img/website/partner-logo4.png" alt="routing planning" />
+                    </a>
+                </li>
+                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                    <a
+                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
+                        <img src="img/website/partner-logo5.png" alt="routing planning" />
+                    </a>
+                </li>
+                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                    <a
+                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color">
+                        <img src="img/website/partner-logo6.png" style="width: 230px" alt="routing planning" />
+                    </a>
+                </li>
+                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                    <a
+                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color">
+                        <img src="img/website/partner-logo7.png" style="width: 230px" alt="routing planning" />
+                    </a>
+                </li>
+                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                    <a
+                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color">
+                        <img src="img/website/partner-logo8.png" style="width: 230px" alt="routing planning" />
+                    </a>
+                </li>
+            </ul>
+            <!-- <div class="partners-list">
+                <ul>
+                    <li data-aos="fade-up" data-aos-delay="200"><img src="img/website/partner-logo1.png" alt=""></li>
+                    <li data-aos="fade-up" data-aos-delay="300"><img src="img/website/partner-logo2.png" alt=""></li>
+                    <li data-aos="fade-up" data-aos-delay="400"><img src="img/website/partner-logo3.png" alt=""></li>
+                    <li data-aos="fade-up" data-aos-delay="500"><img src="img/website/partner-logo4.png" alt=""></li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+    <!-- Our Partners Section End -->
 
 
     <!-- Features Area -->
@@ -813,7 +932,7 @@
 
 
     <!-- Subscription Area -->
-    <div class="relative z-1 pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 bg-subscription-bg bg-cover bg-no-repeat bg-center before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:bg-[#0f1216] before:-z-1 before:opacity-80"
+    <!-- <div class="relative z-1 pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 bg-subscription-bg bg-cover bg-no-repeat bg-center before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:bg-[#0f1216] before:-z-1 before:opacity-80"
         style="background-image: url(img/website/subscription-bg.png);">
         <div class="container">
             <div class="lg:max-w-2xl">
@@ -827,442 +946,9 @@
                     Us Now</a>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Subscription Area -->
 
-    <!-- Pricing Area -->
-    <div class="pt-60 md:pt-80 lg:pt-100 bg-[#0f1216]" id="pricing-id">
-        <div class="container">
-            <div class="section-title mb-35 md:mb-40 lg:mb-50 text-center">
-                <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-6 text-white">Our Pricing Plan
-                </h2>
-                <p
-                    class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8 text-[#e1e1e1]">
-                    With Annual Pro plan, get up to <span
-                        class="text-primary-color text-18px md:text-20px lg:text-22px font-semibold"> 50 lacs </span> of
-                    delivery order commitments</p>
-            </div>
-            <div class="pricing-service-tabs style-two">
-                <ul class="tabs mb-25 md:mb-35 lg:mb-30 xl:mb-40 text-center mr-7">
-                    <li class="tab-link current inline-block mb-12 last:mb-0 md:mb-0" data-tab="price-tab-1">
-                        <span
-                            class="text-white text-15px md:text-15px lg:text-16px rounded-sm font-semibold relative pl-25 lg:pl-35 pr-25 lg:pr-35 pt-12 pb-11 cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-secondary-gradient-color hover:before:opacity-100 hover:before:visible">
-                            Monthly
-                        </span>
-                    </li>
-                    <li class="tab-link inline-block mb-12 last:mb-0 md:mb-0 ml-7" data-tab="price-tab-2">
-                        <span
-                            class="text-white text-15px md:text-15px lg:text-16px rounded-sm font-semibold relative pl-25 lg:pl-35 pr-25 lg:pr-35 pt-12 pb-11 cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-primary-gradient-color hover:before:opacity-100 hover:before:visible">
-                            Yearly
-                        </span>
-                    </li>
-                </ul>
-                <div id="price-tab-1" class="pricing-tab-content current">
-                    <div class="grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-                        <div
-                            class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
-                            <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Free</h3>
-                            <div
-                                class="relative font-black text-35px md:text-45px text-[#19ab8b] inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
-                                0
-                                <span class="text-16px absolute left-0 top-4">₹</span>
-                            </div>
-                            <p
-                                class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
-                                For very small teams with basic delivery operations</p>
-                            <a href="https://play.google.com/store/apps/details?id=com.mycompany.flowwv01"
-                                target="_blank"
-                                class="block font-semibold text-13px md:text-14px lg:text-15px mt-12 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-green-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Get
-                                Started</a>
-                            <ul class="mt-25 md:mt-35">
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Fleet Management App for MSMEs, works with WhatsApp">
-                                    Fleet Management App
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Order Collection Portal for Full load, part load truck booking">
-                                    Order Collection Portal
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Invoice Generation branded with company details">
-                                    Invoice Generation
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Sharable Tracking Links on WhatsApp">
-                                    Sharable Tracking Links
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="WhatsApp Alerts for new order status">
-                                    WhatsApp Alerts
-                                </li>
-                            </ul>
-                            <img src="img/website/shape32.png"
-                                class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme"
-                                alt="Floww D2C brands custom plan">
-                        </div>
-                        <div
-                            class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
-                            <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Mini</h3>
-                            <div
-                                class="relative font-black text-35px md:text-45px text-primary-color inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
-                                999
-                                <span class="text-16px absolute left-0 top-4">₹</span>
-                            </div>
-                            <p
-                                class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
-                                For transportation SMEs getting started</p>
-                            <a href="https://wa.me/918879138857?text=I%20am%20interested%20in%20Monthly%20Mini"
-                                target="_blank"
-                                class="block font-semibold text-13px md:text-14px lg:text-1 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-primary-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Activate
-                                Package</a>
-                            <ul class="mt-25 md:mt-35">
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Free supply chain management">
-                                    All Free features
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Business Website Storefront in 2 mins">
-                                    Business Website
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Advance Order Collection Portal with Excel Upload">
-                                    Advance Order Collection Portal
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Track fleet, vehicles, drivers through Floww App">
-                                    Fleet Limit : 3
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Shiprocket, Delhivery like support by Floww">
-                                    24/7 Support
-                                </li>
-                            </ul>
-                            <img src="img/website/shape32.png"
-                                class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme"
-                                alt="Shiprocket, Delhivery like support by Floww">
-                        </div>
-                        <div
-                            class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
-                            <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Pro</h3>
-                            <div
-                                class="relative font-black text-35px md:text-45px text-[#19ab8b] inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
-                                7,999
-                                <span class="text-16px absolute left-0 top-4">₹</span>
-                            </div>
-                            <p
-                                class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
-                                For transportation businesses that want to scale</p>
-                            <a href="https://wa.me/918879138857?text=I%20am%20interested%20in%20Monthly%20Pro"
-                                target="_blank"
-                                class="block font-semibold text-13px md:text-14px lg:text-15px mt-12 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-green-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Activate
-                                Package</a>
-                            <ul class="mt-25 md:mt-35">
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="tick-circle">
-                                    All Mini features
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Shiprocket, Delhivery like support by Floww">
-                                    Fleet Limit : 20
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Delivery Paper Generation like LR, E-way Bill, Challan, etc.">
-                                    Delivery Paper Generation like LR, E-way Bill, Challan, etc.
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Delivery Paper Generation like LR, E-way Bill, Challan, etc.">
-                                    Branded Tracking Page
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Delivery Paper Generation like LR, E-way Bill, Challan, etc.">
-                                    3 Step Proof Of Delivery
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Delivery Paper Generation like LR, E-way Bill, Challan, etc.">
-                                    Get Listed on floww Search
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Delivery Paper Generation like LR, E-way Bill, Challan, etc.">
-                                    Payment Gateway at 0% fee
-                                </li>
-                            </ul>
-                            <img src="img/website/shape32.png"
-                                class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme"
-                                alt="Delivery Paper Generation like LR, E-way Bill, Challan, etc.">
-                        </div>
-                    </div>
-                </div>
-                <div id="price-tab-2" class="pricing-tab-content">
-                    <div class="grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-                        <div
-                            class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
-                            <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Free</h3>
-                            <div
-                                class="relative font-black text-35px md:text-45px text-[#19ab8b] inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
-                                0
-                                <span class="text-16px absolute left-0 top-4">₹</span>
-                            </div>
-                            <p
-                                class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
-                                For very small teams with basic delivery operations</p>
-                            <a href="https://play.google.com/store/apps/details?id=com.mycompany.flowwv01"
-                                target="_blank"
-                                class="block font-semibold text-13px md:text-14px lg:text-15px mt-12 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-green-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Get
-                                Started</a>
-                            <ul class="mt-25 md:mt-35">
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="LR, E-way Bill, Delivery Challan with Floww app">
-                                    Fleet Management App
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Order Collection Portal with Floww">
-                                    Order Collection Portal
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="LR, Lorry Receipt, Bilti, E-way Bill, Delivery Challan, Invoice with Floww app">
-                                    Invoice Generation
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Delivery Tracking Links on WhatsApp">
-                                    Sharable Tracking Links
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="WhatsApp Alerts on order status update">
-                                    WhatsApp Alerts
-                                </li>
-                            </ul>
-                            <img src="img/website/shape32.png"
-                                class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme"
-                                alt="Shiprocket like Delivery APIs">
-                        </div>
-                        <div
-                            class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
-                            <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Mini</h3>
-                            <div
-                                class="relative font-black text-35px md:text-45px text-primary-color inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
-                                7,999
-                                <span class="text-16px absolute left-0 top-4">₹</span>
-                            </div>
-                            <p
-                                class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
-                                For transportation SMEs getting started</p>
-                            <a href="https://wa.me/918879138857?text=I%20am%20interested%20in%20Yearly%20Mini"
-                                target="_blank"
-                                class="block font-semibold text-13px md:text-14px lg:text-1 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-primary-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Activate
-                                Package</a>
-                            <ul class="mt-25 md:mt-35">
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Free transport management app India">
-                                    All Free features
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Business Website in 2 mins faster than Wix, Wordpress">
-                                    Business Website
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Advance Order Collection Portal with Floww">
-                                    Advance Order Collection Portal
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="LR, Lorry Receipt, Bilti, E-way Bill, Delivery Challan, Invoice with Floww app">
-                                    Fleet Limit : 3
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="LR, Lorry Receipt, Bilti, E-way Bill, Delivery Challan, Invoice with Floww app">
-                                    24/7 Support
-                                </li>
-                                <hr style="margin-bottom: 15px;">
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-primary-color relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle-alternate.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="LR, Lorry Receipt, Bilti, E-way Bill, Delivery Challan, Invoice with Floww app">
-                                    1 Domain Free
-                                </li>
-                            </ul>
-                            <img src="img/website/shape32.png"
-                                class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme"
-                                alt="LR, Lorry Receipt, Bilti, E-way Bill, Delivery Challan, Invoice with Floww app">
-                        </div>
-                        <div
-                            class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
-                            <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Pro</h3>
-                            <div
-                                class="relative font-black text-35px md:text-45px text-[#19ab8b] inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
-                                49,999
-                                <span class="text-16px absolute left-0 top-4">₹</span>
-                            </div>
-                            <p
-                                class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
-                                For transportation businesses that want to scale</p>
-                            <a href="https://wa.me/918879138857?text=I%20am%20interested%20in%20Yearly%20Pro"
-                                target="_blank"
-                                class="block font-semibold text-13px md:text-14px lg:text-15px mt-12 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-green-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Activate
-                                Package</a>
-                            <ul class="mt-25 md:mt-35">
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Online Order Management | Real-Time Tracking | Fleet Management | Custom Invoicing | Integration With D2C Brands | Payment Collection | Smart Reports | AI Route Optimization">
-                                    All Mini features
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Online Order Management | Real-Time Tracking | Fleet Management | Custom Invoicing | Integration With D2C Brands | Payment Collection | Smart Reports | AI Route Optimization">
-                                    Fleet Limit : 20
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Online Order Management | Real-Time Tracking | Fleet Management | Custom Invoicing | Integration With D2C Brands | Payment Collection | Smart Reports | AI Route Optimization">
-                                    Delivery Paper Generation like LR, E-way Bill, Challan, etc.
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Online Order Management | Real-Time Tracking | Fleet Management | Custom Invoicing | Integration With D2C Brands | Payment Collection | Smart Reports | AI Route Optimization">
-                                    Branded Tracking Page
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Online Order Management | Real-Time Tracking | Fleet Management | Custom Invoicing | Integration With D2C Brands | Payment Collection | Smart Reports | AI Route Optimization">
-                                    3 Step Proof Of Delivery
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Online Order Management | Real-Time Tracking | Fleet Management | Custom Invoicing | Integration With D2C Brands | Payment Collection | Smart Reports | AI Route Optimization">
-                                    Get Listed on floww Search
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Online Order Management | Real-Time Tracking | Fleet Management | Custom Invoicing | Integration With D2C Brands | Payment Collection | Smart Reports | AI Route Optimization">
-                                    Payment Gateway at 0% fee
-                                </li>
-                                <hr style="margin-bottom: 15px;">
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-primary-color relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle-alternate.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Online Order Management | Real-Time Tracking | Fleet Management | Custom Invoicing | Integration With D2C Brands | Payment Collection | Smart Reports | AI Route Optimization">
-                                    1 Domain Free
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-primary-color relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle-alternate.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Online Order Management | Real-Time Tracking | Fleet Management | Custom Invoicing | Integration With D2C Brands | Payment Collection | Smart Reports | AI Route Optimization">
-                                    Free SEO and Listing at 10+ Platforms
-                                </li>
-                                <li
-                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-primary-color relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                    <img src="img/website/tick-circle-alternate.svg"
-                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                        alt="Online Order Management | Real-Time Tracking | Fleet Management | Custom Invoicing | Integration With D2C Brands | Payment Collection | Smart Reports | AI Route Optimization">
-                                    Connect to 10,000 plus businesses across India
-                                </li>
-                            </ul>
-                            <img src="img/website/shape32.png"
-                                class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme"
-                                alt="Online Order Management | Real-Time Tracking | Fleet Management | Custom Invoicing | Integration With D2C Brands | Payment Collection | Smart Reports | AI Route Optimization">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Pricing Area -->
 
 
 
@@ -1276,9 +962,8 @@
                         style="width: 100%;">
                 </div>
                 <div class="content xl:pl-95 self-center">
-                    <h2 class="font-black text-22px md:text-28px lg:text-35px xl:text-40px mb-12 text-white">ULIP :
-                        Face Of
-                        <span class="text-primary-color">New-Age</span> Indian Logistics
+                    <h2 class="font-black text-22px md:text-28px lg:text-35px xl:text-40px mb-12 text-white">Building NETMOS :
+                        <span class="text-primary-color">Digital - Age</span> Logistics Framework
                     </h2>
                     <p class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-[#e1e1e1]">
                         Floww aims to contribute to this vision
@@ -1423,7 +1108,7 @@
 
 
     <!-- Mobile App Area -->
-    <div class="mobile-app-area relative z-1 pt-60 md:pt-40 lg:pt-80 pb-60 md:pb-80 lg:pb-100 bg-[#0f1216]">
+    <!-- <div class="mobile-app-area relative z-1 pt-60 md:pt-40 lg:pt-80 pb-60 md:pb-80 lg:pb-100 bg-[#0f1216]">
         <div class="container">
             <div class="grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3">
                 <div
@@ -1444,14 +1129,6 @@
                             <span class="block text-12px font-normal mb-4 md:mb-2">GET IT ON</span>
                             Google Play
                         </a>
-                        <!-- <a href="#"
-                            class="ml-10 md:ml-15 xl:ml-9 2xl:ml-15 inline-block relative font-bold text-13px md:text-15px lg:text-16px mt-15 md:mt-25 rounded-sm text-white pt-15 md:pt-17 pb-11 md:pb-13 pl-16 sm:pl-75 pr-16 sm:pr-30 bg-secondary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">
-                            <img src="img/website/apple-store.svg"
-                                class="sm:absolute sm:left-30 sm:top-1/2 sm:-translate-y-2/4 mb-10 sm:mb-0"
-                                alt="play-store">
-                            <span class="block text-12px font-normal mb-4 md:mb-2">GET IT ON</span>
-                            Apple Store
-                        </a> -->
                         <ul class="mt-20 md:mt-25">
                             <li
                                 class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-semibold pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
@@ -1470,7 +1147,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Mobile App Area -->
 
     <!-- Feedback Area -->
@@ -1974,9 +1651,9 @@
     <!-- <script src="js/wow.min.js"></script> -->
     <script src="js/template/main.js"></script>
 
-    <script data-name="floww-contact-us" data-secret="8OA63Wm5oHFzlzuJ" data-template="temp01"
+    <!-- <script data-name="floww-contact-us" data-secret="8OA63Wm5oHFzlzuJ" data-template="temp01"
         data-contactid="con-03We4mXnwc5h"
-        src="https://floww0.blob.core.windows.net/websitegraphics/codes/popup/js/contact-us.js"></script>
+        src="https://floww0.blob.core.windows.net/websitegraphics/codes/popup/js/contact-us.js"></script> -->
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
@@ -1991,6 +1668,9 @@
         })();
     </script>
     <!--End of Tawk.to Script-->
+
+    <!-- Poptin Added here -->
+    <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=e1726762da347' async='true'></script>
 </body>
 
 </html>
