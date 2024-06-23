@@ -37,6 +37,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+
+    <style>
+        blockquote {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            font-style: italic;
+            padding: 0.35em 40px;
+            line-height: 1.45;
+            position: relative;
+            color: #383838;
+        }
+
+        blockquote:before {
+            display: block;
+            padding-left: 10px;
+            content: "\201C";
+            font-size: 80px;
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            color: #7a7a7a;
+        }
+
+        blockquote::after {
+            display: block;
+            padding-left: 10px;
+            content: "\201C";
+            font-size: 80px;
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            color: #7a7a7a;
+        }
+
+        blockquote cite {
+            color: #999999;
+            font-size: 20px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        blockquote cite:before {
+            content: "\2014 \2009";
+        }
+
+        .partner-logo-custom {
+            width: 150px;
+        }
+
+        @media (min-width: 992px) {
+            .partner-logo-custom {
+                width: 200px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -230,16 +285,16 @@
                 <div class="self-center md:text-center lg:text-left">
                     <h1
                         class="font-black text-25px md:text-40px lg:text-40px xl:text-50px 2xl:text-60px 3xl:text-66px text-white mb-10 md:mb-12 lg:mb-15">
-                        <span class="text-primary-color">AI Powered </span> Fullstack Business Suite Software
+                        <span class="text-primary-color">AI Powered </span> Software Suite for Startups & MSMEs
                     </h1>
                     <p
                         class="text-13px md:text-18px lg:text-18px xl:text-18px 2xl:text-16px leading-8 text-[#e1e1e1] xl:max-w-[600px]">
-                        Supercharge your Core business functions with our 100% API based Micro SaaS Platform
+                        Supercharge your Core business functions with our AI powered simple to use SaaS
                         <br><br>
                         <span class="text-white text-18px font-bold">HR | Mail | Accounting | Logistics</span>
                     </p>
                     <div class="btn-box lg:mt-5 xl:mt-10">
-                        <a href="https://play.google.com/store/apps/details?id=com.mycompany.flowwv01" target="_blank"
+                        <a href="https://console.gofloww.co/onboarding/?package_name=hr_management" target="_blank"
                             class="ml-10 md:ml-15 xl:ml-9 2xl:ml-15 inline-block relative font-bold text-13px md:text-15px lg:text-16px mt-15 md:mt-25 rounded-sm text-white pt-15 md:pt-17 pb-11 md:pb-13 pl-16 pr-16 bg-secondary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">
                             <!-- <img src="img/website/play-store.svg"
                                 class="sm:absolute sm:left-30 sm:top-1/2 sm:-translate-y-2/4 mb-10 sm:mb-0"
@@ -276,11 +331,11 @@
 
 
     <!-- Customer Service Area -->
-    <div class="customer-service-area pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 relative z-1 bg-[#070707]">
+    <!-- <div class="customer-service-area pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 relative z-1 bg-[#070707]">
         <div class="container">
             <div class="section-title mb-35 md:mb-40 lg:mb-50 text-center">
-                <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-6 text-white">Is Inefficiency
-                    <span class="text-primary-color">Choking</span> your business?
+                <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-6 text-white">Floww offers
+                    <span class="text-primary-color"></span>
                 </h2>
                 <p
                     class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8 text-white">
@@ -313,16 +368,6 @@
                             pr-20 text-center relative before:bg-primary-gradient-color before:absolute before:left-0 before:w-0 before:bottom-0 before:h-3 before:rounded-sm hover:before:w-full before:ease-in before:duration-300 cursor-pointer">
                             Floww Logistics</span>
                     </li>
-                    <!-- <li class="tab-link md:flex-1 mb-12 last:mb-0 md:mb-0" data-tab="tab-3">
-                        <span
-                            class="block bg-white text-black-color font-semibold text-14px md:text-15px lg:text-16px xl:text-18px rounded-sm pt-17 pb-15 pl-20 pr-20 text-center relative before:bg-primary-gradient-color before:absolute before:left-0 before:w-0 before:bottom-0 before:h-3 before:rounded-sm hover:before:w-full before:ease-in before:duration-300 cursor-pointer">24/7
-                            Product Delivery</span>
-                    </li>
-                    <li class="tab-link md:flex-1 mb-12 last:mb-0 md:mb-0" data-tab="tab-3">
-                        <span
-                            class="block bg-white text-black-color font-semibold text-14px md:text-15px lg:text-16px xl:text-18px rounded-sm pt-17 pb-15 pl-20 pr-20 text-center relative before:bg-primary-gradient-color before:absolute before:left-0 before:w-0 before:bottom-0 before:h-3 before:rounded-sm hover:before:w-full before:ease-in before:duration-300 cursor-pointer">24/7
-                            Product Delivery</span>
-                    </li> -->
                 </ul>
                 <div id="tab-1" class="tab-content current xl:pl-30 xl:pr-30">
                     <div class="grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
@@ -334,9 +379,6 @@
                             <h2
                                 class="font-black text-22px md:text-28px lg:text-30px xl:text-35px mb-12 lg:mb-15 text-black-color">
                                 AI Mail</h2>
-                            <!-- <p class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color">
-                                Togy Planning, tracking and delivering your team’s best work has never been easier. We
-                                make it easiest for you through the Togy.</p> -->
 
                             <ul class="mt-20 md:mt-25">
                                 <li
@@ -398,9 +440,6 @@
                             <h2
                                 class="font-black text-22px md:text-28px lg:text-30px xl:text-35px mb-12 lg:mb-15 text-black-color">
                                 Floww HR</h2>
-                            <!-- <p class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color">
-                                Togy Planning, tracking and delivering your team’s best work has never been easier. We
-                                make it easiest for you through the Togy.</p> -->
 
                             <ul class="mt-20 md:mt-25">
                                 <li
@@ -464,9 +503,6 @@
                             <h2
                                 class="font-black text-22px md:text-28px lg:text-30px xl:text-35px mb-12 lg:mb-15 text-black-color">
                                 Floww Accounting</h2>
-                            <!-- <p class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color">
-                                Togy Planning, tracking and delivering your team’s best work has never been easier. We
-                                make it easiest for you through the Togy.</p> -->
 
                             <ul class="mt-20 md:mt-25">
                                 <li
@@ -533,9 +569,6 @@
                             <h2
                                 class="font-black text-22px md:text-28px lg:text-30px xl:text-35px mb-12 lg:mb-15 text-black-color">
                                 Floww Logistics</h2>
-                            <!-- <p class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color">
-                                Togy Planning, tracking and delivering your team’s best work has never been easier. We
-                                make it easiest for you through the Togy.</p> -->
 
                             <ul class="mt-20 md:mt-25">
                                 <li
@@ -594,106 +627,113 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Customer Service Area -->
 
 
-    <!-- Our Partners Section Start -->
-    <div class="partners-wrap bg-yello-light-300" style="margin: 0;padding: 50px;">
+    <!-- Partners Area -->
+    <div class="customer-service-area pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 relative z-1 bg-[#070707]">
         <div class="container">
-            <div class="title text-center">
-                <!-- <h2 data-aos="fade-up">Backed By</h2> -->
-                <h2
-                    class="font-black text-25px md:text-35px lg:text-40px xl:text-48px 2xl:text-54px text-black-color mb-8">
-                    Backed By</h2>
+            <div class="section-title mb-35 md:mb-40 lg:mb-50 text-center">
+                <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-6 text-white"><span class="text-primary-color">SaaS</span> for companies of all Ages
+                </h2>
+                <p
+                    class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8 text-white">
+                    Manage <strong class="text-primary-color">20+</strong> Company Functions with just few clicks</p>
             </div>
-            <br />
-            <ul class="lg:text-center floww-backed-by-mobile" id="floww-backed-by">
-                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                    <a
-                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
-                        <img src="img/website/partner-logo1.png" alt="Track delivery" />
-                    </a>
-                </li>
-                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                    <a
-                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
-                        <img src="img/website/partner-logo2.png" alt="Track delivery" />
-                    </a>
-                </li>
-                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                    <a
-                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
-                        <img src="img/website/partner-logo3.png" alt="last-mile carrier" />
-                    </a>
-                </li>
-                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                    <a
-                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
-                        <img src="img/website/partner-logo4.png" alt="routing planning" />
-                    </a>
-                </li>
-                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                    <a
-                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
-                        <img src="img/website/partner-logo5.png" alt="routing planning" />
-                    </a>
-                </li>
-                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                    <a
-                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color">
-                        <img src="img/website/partner-logo6.png" style="width: 230px" alt="routing planning" />
-                    </a>
-                </li>
-                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                    <a
-                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color">
-                        <img src="img/website/partner-logo7.png" style="width: 230px" alt="routing planning" />
-                    </a>
-                </li>
-                <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                    <a
-                        class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color">
-                        <img src="img/website/partner-logo8.png" style="width: 230px" alt="routing planning" />
-                    </a>
-                </li>
-            </ul>
-            <!-- <div class="partners-list">
-                <ul>
-                    <li data-aos="fade-up" data-aos-delay="200"><img src="img/website/partner-logo1.png" alt=""></li>
-                    <li data-aos="fade-up" data-aos-delay="300"><img src="img/website/partner-logo2.png" alt=""></li>
-                    <li data-aos="fade-up" data-aos-delay="400"><img src="img/website/partner-logo3.png" alt=""></li>
-                    <li data-aos="fade-up" data-aos-delay="500"><img src="img/website/partner-logo4.png" alt=""></li>
-                </ul>
-            </div> -->
+            <div
+                class="customer-service-tabs rounded-sm md:rounded-lg p-20 sm:p-30 md:p-35 lg:p-30 xl:p-50 bg-yello-light-300">
+
+                <div class="container">
+                    <div class="title text-center">
+                        <!-- <h2 data-aos="fade-up">Backed By</h2> -->
+                        <h2
+                            class="font-black text-25px md:text-35px lg:text-40px xl:text-48px 2xl:text-54px text-black-color mb-8">
+                            Backed By</h2>
+                    </div>
+                    <br />
+                    <ul class="lg:text-center floww-backed-by-mobile" id="floww-backed-by">
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a
+                                class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
+                                <img src="img/website/partner-logo1.png" alt="Track delivery" />
+                            </a>
+                        </li>
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a
+                                class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
+                                <img src="img/website/partner-logo2.png" alt="Track delivery" />
+                            </a>
+                        </li>
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a
+                                class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
+                                <img src="img/website/partner-logo3.png" alt="last-mile carrier" />
+                            </a>
+                        </li>
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a
+                                class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
+                                <img src="img/website/partner-logo4.png" alt="routing planning" />
+                            </a>
+                        </li>
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a
+                                class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color partner-logo-custom">
+                                <img src="img/website/partner-logo5.png" alt="routing planning" />
+                            </a>
+                        </li>
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a
+                                class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color">
+                                <img src="img/website/partner-logo6.png" style="width: 230px" alt="routing planning" />
+                            </a>
+                        </li>
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a
+                                class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color">
+                                <img src="img/website/partner-logo7.png" style="width: 230px" alt="routing planning" />
+                            </a>
+                        </li>
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a
+                                class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color">
+                                <img src="img/website/partner-logo8.png" style="width: 230px" alt="routing planning" />
+                            </a>
+                        </li>
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a
+                                class="inline-block text-optional-color text-13px md:text-15px lg:text-16px transition hover:text-secondary-color">
+                                <img src="img/website/partner-logo9.png" style="width: 180px" alt="routing planning" />
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- <div class="partners-list">
+                            <ul>
+                                <li data-aos="fade-up" data-aos-delay="200"><img src="img/website/partner-logo1.png" alt=""></li>
+                                <li data-aos="fade-up" data-aos-delay="300"><img src="img/website/partner-logo2.png" alt=""></li>
+                                <li data-aos="fade-up" data-aos-delay="400"><img src="img/website/partner-logo3.png" alt=""></li>
+                                <li data-aos="fade-up" data-aos-delay="500"><img src="img/website/partner-logo4.png" alt=""></li>
+                            </ul>
+                        </div> -->
+                </div>
+
+            </div>
         </div>
     </div>
-    <!-- Our Partners Section End -->
+    <!-- End Partners Area -->
 
 
     <!-- Features Area -->
-    <div class="pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 bg-[#0f1216] relative z-1">
+    <div class="pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 bg-[#070707] relative z-1">
         <div class="container">
-            <!-- <div class="section-title mb-35 md:mb-40 lg:mb-50 text-center">
-                <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-6 text-white">Why Choose Togy
-                    App</h2>
-                <p
-                    class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8 text-[#e1e1e1]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet nulla duis ac. Id massa
-                    scelerisque venenatis, massa gravida donec orci.</p>
-            </div> -->
 
             <div class="text-center section-title mb-35 md:mb-40 lg:mb-50 relative">
-                <!-- <span
-                    class="block text-purple-color font-semibold text-13px md:text-15px mb-12 md:mb-15">Feedback</span>
-                <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px text-white md:max-w-[400px]">
-                    Loved By Industry Leaders</h2> -->
                 <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-6 text-white">Why Choose <span
                         class="text-primary-color">Floww</span> ?</h2>
                 <p
                     class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8 text-[#e1e1e1]">
-                    The Floww App brings down your logistics costs by 10% by digitally upscaling your business and
-                    providing instant government compliance for ease of documentation.</p>
+                    TBD</p>
                 <div class="mt-20 md:mt-0 md:absolute md:right-0 md:top-1/2 md:m-auto md:-translate-y-2/4">
                     <div
                         class="customOne swiper-button-prev relative left-0 right-0 mt-0 w-42 md:w-50 bg-white shadow-custom-box-shadow3 rounded-sm opacity-100 h-42 md:h-50 top-0 inline-block after:hidden hover:bg-secondary-gradient-color">
@@ -715,81 +755,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="grid gap-25 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
-                <div class="single-features-box border border-blue-900 p-[20px] sm:border-0 sm:p-0 text-center sm:text-left wow animate__animated animate__fadeInUp"
-                    data-wow-delay=".1s">
-                    <img src="img/website/features1.png" class="mb-30 ml-auto mr-auto sm:ml-0 sm:mr-0"
-                        alt="features-image">
-                    <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
-                        <a href="services-details.html"
-                            class="inline-block text-white hover:text-primary-color ease-in duration-300">
-                            Top Flexibility
-                        </a>
-                    </h3>
-                    <p class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet nulla duis.</p>
-                    <a href="services-details.html"
-                        class="link-btn inline-block relative pr-20 font-semibold text-13px md:text-14px lg:text-15px text-primary-color ease-in duration-100 hover:text-white">
-                        Learn More <img src="img/website/arrow-right.svg" class="absolute right-0 top-1 md:top-3"
-                            alt="arrow-right">
-                    </a>
-                </div>
-                <div class="single-features-box border border-blue-900 p-[20px] sm:border-0 sm:p-0 text-center sm:text-left wow animate__animated animate__fadeInUp"
-                    data-wow-delay=".3s">
-                    <img src="img/website/features2.png" class="mb-30 ml-auto mr-auto sm:ml-0 sm:mr-0"
-                        alt="features-image">
-                    <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
-                        <a href="services-details.html"
-                            class="inline-block text-white hover:text-primary-color ease-in duration-300">
-                            Time Saving
-                        </a>
-                    </h3>
-                    <p class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet nulla duis.</p>
-                    <a href="services-details.html"
-                        class="link-btn inline-block relative pr-20 font-semibold text-13px md:text-14px lg:text-15px text-primary-color ease-in duration-100 hover:text-white">
-                        Learn More <img src="img/website/arrow-right.svg" class="absolute right-0 top-1 md:top-3"
-                            alt="arrow-right">
-                    </a>
-                </div>
-                <div class="single-features-box border border-blue-900 p-[20px] sm:border-0 sm:p-0 text-center sm:text-left wow animate__animated animate__fadeInUp"
-                    data-wow-delay=".5s">
-                    <img src="img/website/features3.png" class="mb-30 ml-auto mr-auto sm:ml-0 sm:mr-0"
-                        alt="features-image">
-                    <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
-                        <a href="services-details.html"
-                            class="inline-block text-white hover:text-primary-color ease-in duration-300">
-                            Best Management
-                        </a>
-                    </h3>
-                    <p class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet nulla duis.</p>
-                    <a href="services-details.html"
-                        class="link-btn inline-block relative pr-20 font-semibold text-13px md:text-14px lg:text-15px text-primary-color ease-in duration-100 hover:text-white">
-                        Learn More <img src="img/website/arrow-right.svg" class="absolute right-0 top-1 md:top-3"
-                            alt="arrow-right">
-                    </a>
-                </div>
-                <div class="single-features-box border border-blue-900 p-[20px] sm:border-0 sm:p-0 text-center sm:text-left wow animate__animated animate__fadeInUp"
-                    data-wow-delay=".7s">
-                    <img src="img/website/features4.png" class="mb-30 ml-auto mr-auto sm:ml-0 sm:mr-0"
-                        alt="features-image">
-                    <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
-                        <a href="services-details.html"
-                            class="inline-block text-white hover:text-primary-color ease-in duration-300">
-                            Collaborative
-                        </a>
-                    </h3>
-                    <p class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet nulla duis.</p>
-                    <a href="services-details.html"
-                        class="link-btn inline-block relative pr-20 font-semibold text-13px md:text-14px lg:text-15px text-primary-color ease-in duration-100 hover:text-white">
-                        Learn More <img src="img/website/arrow-right.svg" class="absolute right-0 top-1 md:top-3"
-                            alt="arrow-right">
-                    </a>
-                </div>
-            </div> -->
         </div>
 
         <div class="swiper feedbackSwiperSlides -mb-20 pl-15 pr-15 md:pl-0 md:pr-0">
@@ -802,17 +767,17 @@
                         <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
                             <a href="services-details.html"
                                 class="inline-block text-white hover:text-primary-color ease-in duration-300">
-                                Business Website
+                                Efficiency
                             </a>
                         </h3>
                         <p
                             class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px">
-                            Create your business website in just 2 minutes</p>
-                        <a href="https://blog.gofloww.co/" target="_blank"
+                            Streamline process with ease</p>
+                        <!-- <a href="https://blog.gofloww.co/" target="_blank"
                             class="link-btn inline-block relative pr-20 font-semibold text-13px md:text-14px lg:text-15px text-primary-color ease-in duration-100 hover:text-white">
                             Learn More <img src="img/website/arrow-right.svg" class="absolute right-0 top-1 md:top-3"
-                                alt="Create your business website in just 2 minutes">
-                        </a>
+                                alt="Create your business website in just 2 minutes"> 
+                        </a> -->
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -823,18 +788,12 @@
                         <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
                             <a href="services-details.html"
                                 class="inline-block text-white hover:text-primary-color ease-in duration-300">
-                                AI Routing & Scheduling
+                                Customization
                             </a>
                         </h3>
                         <p
                             class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px">
-                            Save cost and deliver enhanced customer experience through our intelligent fleet management
-                            solutions</p>
-                        <a href="https://blog.gofloww.co/" target="_blank"
-                            class="link-btn inline-block relative pr-20 font-semibold text-13px md:text-14px lg:text-15px text-primary-color ease-in duration-100 hover:text-white">
-                            Learn More <img src="img/website/arrow-right.svg" class="absolute right-0 top-1 md:top-3"
-                                alt="AI Routing & Scheduling, fleet optimization, sequencing">
-                        </a>
+                            Tailor our system to fit your unique needs</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -845,17 +804,12 @@
                         <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
                             <a href="services-details.html"
                                 class="inline-block text-white hover:text-primary-color ease-in duration-300">
-                                Tracking Links
+                                Support
                             </a>
                         </h3>
                         <p
                             class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px">
-                            Share tracking links with your customers with just one click</p>
-                        <a href="https://blog.gofloww.co/" target="_blank"
-                            class="link-btn inline-block relative pr-20 font-semibold text-13px md:text-14px lg:text-15px text-primary-color ease-in duration-100 hover:text-white">
-                            Learn More <img src="img/website/arrow-right.svg" class="absolute right-0 top-1 md:top-3"
-                                alt="Share tracking links with your customers with just one click on WhatsApp and Mail">
-                        </a>
+                            Customer first Ideology - 24/7 customer support to assist you anytime</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -866,17 +820,12 @@
                         <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
                             <a href="services-details.html"
                                 class="inline-block text-white hover:text-primary-color ease-in duration-300">
-                                Excel Upload
+                                Integrated
                             </a>
                         </h3>
                         <p
                             class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px">
-                            Collect Orders in bulk through excel upload feature</p>
-                        <a href="https://blog.gofloww.co/" target="_blank"
-                            class="link-btn inline-block relative pr-20 font-semibold text-13px md:text-14px lg:text-15px text-primary-color ease-in duration-100 hover:text-white">
-                            Learn More <img src="img/website/arrow-right.svg" class="absolute right-0 top-1 md:top-3"
-                                alt="Excel Upload orders 500 in mins">
-                        </a>
+                            Seamlessly integrates with your existing tools</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -887,175 +836,50 @@
                         <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
                             <a href="services-details.html"
                                 class="inline-block text-white hover:text-primary-color ease-in duration-300">
-                                Collect Orders from Link
+                                Scalability
                             </a>
                         </h3>
                         <p
                             class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px">
-                            Get orders and payments through a simple link that can be shared on WhatsApp</p>
-                        <a href="https://blog.gofloww.co/" target="_blank"
-                            class="link-btn inline-block relative pr-20 font-semibold text-13px md:text-14px lg:text-15px text-primary-color ease-in duration-100 hover:text-white">
-                            Learn More <img src="img/website/arrow-right.svg" class="absolute right-0 top-1 md:top-3"
-                                alt="Collect payments, Order collection link, portal">
-                        </a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="single-features-box border border-blue-900 p-[20px] sm:border-0 sm:p-0 text-center sm:text-left wow animate__animated animate__fadeInUp"
-                        data-wow-delay=".7s">
-                        <img src="img/website/feature1.png" class="mb-30 ml-auto mr-auto sm:ml-0 sm:mr-0"
-                            alt="Shiprocket, Delivery like support">
-                        <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
-                            <a href="services-details.html"
-                                class="inline-block text-white hover:text-primary-color ease-in duration-300">
-                                24 / 7 Premium Support
-                            </a>
-                        </h3>
-                        <p
-                            class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px">
-                            We take huge pride in our best in class customer support</p>
-                        <a href="https://blog.gofloww.co/" target="_blank"
-                            class="link-btn inline-block relative pr-20 font-semibold text-13px md:text-14px lg:text-15px text-primary-color ease-in duration-100 hover:text-white">
-                            Learn More <img src="img/website/arrow-right.svg" class="absolute right-0 top-1 md:top-3"
-                                alt="Shiprocket, Delivery like support">
-                        </a>
+                            Grows with your business</p>
                     </div>
                 </div>
             </div>
         </div>
 
-
-        <div class="absolute -z-1 hidden lg:inline left-[33%] top-[6%]"><img src="img/website/shape33.png"
-                class="animate-custom-rotateme" alt="Floww in Pune, Mumbai, Patna, Guwahati, India"></div>
     </div>
     <!-- End Features Area -->
 
 
     <!-- Subscription Area -->
-    <!-- <div class="relative z-1 pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 bg-subscription-bg bg-cover bg-no-repeat bg-center before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:bg-[#0f1216] before:-z-1 before:opacity-80"
+    <div class="relative z-1 pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 bg-subscription-bg bg-cover bg-no-repeat bg-center before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:bg-[#070707] before:-z-1 before:opacity-80"
         style="background-image: url(img/website/subscription-bg.png);">
         <div class="container">
             <div class="lg:max-w-2xl">
-                <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-15 text-white">Try 30 Days
-                    <span class="text-primary-color">Free Subscription</span>
+                <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-15 text-white">Take advantage of our 
+                    irresistible <span class="text-primary-color">early-bird offers!</span>
                 </h2>
-                <p class="lg:text-16px md:text-15px text-13px leading-7 md:leading-8 text-[#e1e1e1]">Save Up To 10%
-                    Logistics Cost With An All-In-One Transport Management App</p>
-                <a
-                    class="floww-openContactUs inline-block font-semibold text-13px md:text-15px rounded-sm text-white pt-17 pb-13 pl-25 md:pl-35 pr-25 md:pr-35 bg-gradient-color hover:bg-white hover:bg-none hover:text-black-color ease-in duration-300 mt-20 lg:mt-30">Contact
-                    Us Now</a>
+                <p class="lg:text-16px md:text-15px text-13px leading-7 md:leading-8 text-[#e1e1e1]">Enjoy flexible, pay-as-you-go pricing with no surprises or commitments.
+                    <br>Cancel anytime with no hassle.</p>
+                <a href="https://console.gofloww.co/onboarding/" target="_blank"
+                    class="floww-openContactUs inline-block font-semibold text-13px md:text-15px rounded-sm text-white pt-17 pb-13 pl-25 md:pl-35 pr-25 md:pr-35 bg-gradient-color hover:bg-white hover:bg-none hover:text-black-color ease-in duration-300 mt-20 lg:mt-30">
+                    Grab the Offer</a>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- End Subscription Area -->
 
 
 
-
-    <!-- Features Area -->
-    <div class="pt-60 md:pt-80 lg:pt-100 bg-[#070707]">
-        <div class="container lg:pb-20 xl:pb-50">
-            <div class="grid gap-25 grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
-                <div class="image text-center xl:-mr-50 self-center wow animate__animated animate__fadeInUp"
-                    data-wow-delay=".1s">
-                    <img src="img/website/ulipInfographic.png" class="inline" alt="ULIP Floww application"
-                        style="width: 100%;">
-                </div>
-                <div class="content xl:pl-95 self-center">
-                    <h2 class="font-black text-22px md:text-28px lg:text-35px xl:text-40px mb-12 text-white">Building NETMOS :
-                        <span class="text-primary-color">Digital - Age</span> Logistics Framework
-                    </h2>
-                    <p class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-[#e1e1e1]">
-                        Floww aims to contribute to this vision
-                        of creating a sophisticated logistics ecosystem by making ULIP-compliant transport management
-                        system solutions.</p>
-                    <ul class="mt-20 md:mt-25">
-                        <li
-                            class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                            <img src="img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                                alt="ULIP 30+ compliances with Floww">
-                            30+ Compliances in one go
-                        </li>
-                        <li
-                            class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                            <img src="img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                                alt="ULIP, NLP, PM Gati Shakti, NLP, 2022, Unified Logistics Interface Platform with Floww">
-                            Improved supply chain visibility
-                        </li>
-                        <li
-                            class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                            <img src="img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                                alt="ULIP KYC, NLP, PM Gati Shakti, NLP 2022, Unified Logistics Interface Platform with Floww">
-                            Driver verification and tracking
-                        </li>
-                    </ul>
-
-                    <a href="https://blog.gofloww.co/what-is-the-unified-logistics-interface-platform-ulip/"
-                        target="_blank"
-                        class="ml-10 md:ml-15 xl:ml-9 2xl:ml-15 inline-block relative font-bold text-13px md:text-15px lg:text-16px mt-15 md:mt-25 rounded-sm text-white pt-15 md:pt-17 pb-11 md:pb-13 pl-16 sm:pl-75 pr-16 sm:pr-30 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">
-                        <img src="img/website/white-blog.svg"
-                            class="sm:absolute sm:left-30 sm:top-1/2 sm:-translate-y-2/4 mb-10 sm:mb-0"
-                            alt="Get ULIP Id with Floww">
-                        <span class="block text-12px font-normal mb-4 md:mb-2">floww Blog</span>
-                        Know More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Features Area -->
-
-    <!-- Features Area -->
-    <!-- <div class="pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 bg-[#070707]">
-        <div class="container lg:pb-20 xl:pb-50">
-            <div class="grid gap-25 grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
-                <div class="content xl:pr-95 self-center order-2 lg:order-1">
-                    <h2 class="font-black text-22px md:text-28px lg:text-35px xl:text-40px mb-12 text-white">Why We Are
-                        <span class="text-primary-color">Different</span> From Others
-                    </h2>
-                    <p class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-[#e1e1e1]">Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Nulla imperdiet nulla duis ac. Id massa scelerisque
-                        venenatis, massa gravida donec orci.</p>
-                    <ul class="mt-20 md:mt-25">
-                        <li
-                            class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                            <img src="img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                                alt="check">
-                            Create Task For Any Team Member
-                        </li>
-                        <li
-                            class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                            <img src="img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                                alt="check">
-                            Create Appropriate Timeframe For The Task
-                        </li>
-                        <li
-                            class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                            <img src="img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                                alt="check">
-                            Get Notified When Task Completed
-                        </li>
-                    </ul>
-                </div>
-                <div class="image text-center self-center order-1 lg:order-2 wow animate__animated animate__fadeInUp"
-                    data-wow-delay=".1s">
-                    <img src="img/website/two-screens.png" alt="about-image">
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- End Features Area -->
-
     <!-- App Screenshots Area -->
-    <!-- <div class="pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 bg-[#0f1216] relative z-1">
+    <div class="pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 bg-[#070707] relative z-1">
         <div class="container">
             <div class="section-title mb-35 md:mb-40 lg:mb-50 text-center">
-                <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-6 text-white">Apps Screenshots
+                <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-6 text-white">Floww offers complete suite of products
                 </h2>
                 <p
                     class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8 text-[#e1e1e1]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet nulla duis ac. Id massa
-                    scelerisque venenatis, massa gravida donec orci.</p>
+                    We are there so you can focus on your business</p>
             </div>
         </div>
         <div class="pl-15 pr-15 lg:pl-50 lg:pr-50 xl:pl-70 xl:pr-70 3xl:pl-[150px] 3xl:pr-[150px]">
@@ -1063,92 +887,46 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="text-center rounded-lg">
-                            <img src="img/website/screen1.jpg" class="inline rounded-lg" alt="screenshots">
+                            <img src="img/website/FlowwHomeDashboard1.jpg" class="inline rounded-lg" alt="screenshots">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="text-center rounded-lg">
-                            <img src="img/website/screen1.jpg" class="inline rounded-lg" alt="screenshots">
+                            <img src="img/website/FlowwHomeDashboard2.jpg" class="inline rounded-lg" alt="screenshots">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="text-center rounded-lg">
-                            <img src="img/website/screen1.jpg" class="inline rounded-lg" alt="screenshots">
+                            <img src="img/website/FlowwHomeDashboard1.jpg" class="inline rounded-lg" alt="screenshots">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="text-center rounded-lg">
-                            <img src="img/website/screen1.jpg" class="inline rounded-lg" alt="screenshots">
+                            <img src="img/website/FlowwHomeDashboard2.jpg" class="inline rounded-lg" alt="screenshots">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="text-center rounded-lg">
-                            <img src="img/website/screen1.jpg" class="inline rounded-lg" alt="screenshots">
+                            <img src="img/website/FlowwHomeDashboard1.jpg" class="inline rounded-lg" alt="screenshots">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="text-center rounded-lg">
-                            <img src="img/website/screen1.jpg" class="inline rounded-lg" alt="screenshots">
+                            <img src="img/website/FlowwHomeDashboard2.jpg" class="inline rounded-lg" alt="screenshots">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="text-center rounded-lg">
-                            <img src="img/website/screen1.jpg" class="inline rounded-lg" alt="screenshots">
+                            <img src="img/website/FlowwHomeDashboard1.jpg" class="inline rounded-lg" alt="screenshots">
                         </div>
                     </div>
                 </div>
                 <div class="swiper-pagination relative mt-25 md:mt-30"></div>
             </div>
         </div>
-        <div class="absolute -z-1 hidden lg:inline left-[34%] top-[7%]"><img src="img/website/shape33.png"
-                class="animate-custom-rotateme" alt="shape"></div>
-    </div> -->
+    </div>
     <!-- End Screenshots Area -->
 
-
-
-    <!-- Mobile App Area -->
-    <!-- <div class="mobile-app-area relative z-1 pt-60 md:pt-40 lg:pt-80 pb-60 md:pb-80 lg:pb-100 bg-[#0f1216]">
-        <div class="container">
-            <div class="grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3">
-                <div
-                    class="integrate-apps-content relative xl:top-30 xl:-mr-80 self-center lg:text-center xl:text-left">
-                    <h2
-                        class="font-black text-22px md:text-30px lg:text-35px xl:text-34px 2xl:text-38px mb-12 lg:mb-15 text-white">
-                        Create Your Business Website in <span class="text-primary-color">2 mins</span></h2>
-                    <p
-                        class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-[#e1e1e1] lg:max-w-[685px] lg:m-auto xl:max-w-[100%]">
-                        Transform your business from a paper based system to a fully automated and efficient completely
-                        digitally system with just your smartphone</p>
-                    <div class="btn-box">
-                        <a href="#"
-                            class="inline-block relative font-bold text-13px md:text-15px lg:text-16px mt-15 md:mt-25 rounded-sm text-white pt-15 md:pt-17 pb-11 md:pb-13 pl-16 sm:pl-75 pr-16 sm:pr-30 bg-gradient-color shadow-custom-box-shadow hover:shadow-primary-btn ease-in duration-300">
-                            <img src="img/website/play-store.svg"
-                                class="sm:absolute sm:left-30 sm:top-1/2 sm:-translate-y-2/4 mb-10 sm:mb-0"
-                                alt="Download Floww Transportation Management Application">
-                            <span class="block text-12px font-normal mb-4 md:mb-2">GET IT ON</span>
-                            Google Play
-                        </a>
-                        <ul class="mt-20 md:mt-25">
-                            <li
-                                class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-semibold pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                                <img src="img/website/tick-circle-alternate.svg"
-                                    class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                                    alt="Cheapest Real Time Tracking APIs">
-                                Starting at just ₹ 999 / month
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mobile-app-image xl:col-span-2 xl:pl-100 wow animate__animated animate__fadeInUp text-center"
-                    data-wow-delay=".1s">
-                    <img src="img/website/storefrontImage.png" class="inline-block"
-                        alt="Create Transportation business Website in 2 mins">
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- End Mobile App Area -->
 
     <!-- Feedback Area -->
     <div class="feedback-area relative z-1 pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 bg-[#070707]">
@@ -1268,38 +1046,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="swiper-slide">
-                    <div class="single-feedback-box mb-20 shadow-custom-box-shadow4 rounded-md md:rounded-xl bg-white mt-50 md:mt-70 pl-[20px] pr-[20px] pb-[20px] md:pl-[35px] md:pr-[35px] md:pb-[35px] lg:pl-[25px] lg:pr-[25px] lg:pb-[25px] xl:pl-[35px] xl:pr-[35px] xl:pb-[35px]">
-                        <img src="assets/img/icon/facebook.svg" class="-mb-30 md:-mb-45 ml-auto mr-auto relative -top-50 md:-top-70 w-100 md:w-auto" alt="facebook">
-                        <p class="text-[#111111] text-14px md:text-15px lg:text-16px leading-7 md:leading-8">“Planning, tracking and delivering your team’s best work has never been easier. We make it easiest for you through the software.”</p>
-                        <div class="client-info flex mt-20">
-                            <img src="assets/img/user/user4.jpg" alt="user" class="rounded-md w-65 md:w-75 h-65 md:h-75">
-                            <div class="title ml-15 md:ml-20 self-center">
-                                <h3 class="text-secondary-color text-16px md:text-17px lg:text-18px font-bold mb-5 md:mb-8">Sarah Taylor</h3>
-                                <span class="text-13px md:text-14px text-black-color font-medium opacity-95">CEO, Facebook</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="single-feedback-box mb-20 shadow-custom-box-shadow4 rounded-md md:rounded-xl bg-white mt-50 md:mt-70 pl-[20px] pr-[20px] pb-[20px] md:pl-[35px] md:pr-[35px] md:pb-[35px] lg:pl-[25px] lg:pr-[25px] lg:pb-[25px] xl:pl-[35px] xl:pr-[35px] xl:pb-[35px]">
-                        <img src="assets/img/icon/linkedin.svg" class="-mb-30 md:-mb-45 ml-auto mr-auto relative -top-50 md:-top-70 w-100 md:w-auto" alt="linkedin">
-                        <p class="text-[#111111] text-14px md:text-15px lg:text-16px leading-7 md:leading-8">“Planning, tracking and delivering your team’s best work has never been easier. We make it easiest for you through the software.”</p>
-                        <div class="client-info flex mt-20">
-                            <img src="assets/img/user/user5.jpg" alt="user" class="rounded-md w-65 md:w-75 h-65 md:h-75">
-                            <div class="title ml-15 md:ml-20 self-center">
-                                <h3 class="text-secondary-color text-16px md:text-17px lg:text-18px font-bold mb-5 md:mb-8">Amy Jones</h3>
-                                <span class="text-13px md:text-14px text-black-color font-medium opacity-95">CEO, Linkedin</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+
             </div>
         </div>
     </div>
     <!-- End Feedback Area -->
 
-    <!-- Page Title Area -->
+    <!-- Floww Blog Page Title Area -->
     <div class="relative z-1 text-center pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100 ">
         <div class="container">
             <h1 class="font-black text-25px md:text-35px lg:text-40px xl:text-48px 2xl:text-54px text-black-color mb-8">
@@ -1314,9 +1067,9 @@
         <div class="right-0 bottom-20 absolute -z-1 hidden xl:inline"><img src="img/website/shape35.png"
                 class="animate-custom-movebounce" alt="Best Supply Chain Management Platform in India"></div>
     </div>
-    <!-- End Page Title Area -->
+    <!-- Floww Blog Title Area -->
 
-    <!-- Blog Area -->
+    <!-- Floww Blog Content Area -->
     <div class="pb-60 md:pb-80 lg:pb-100 ">
         <div class="container">
             <div class="grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
@@ -1407,35 +1160,28 @@
             </div>
         </div>
     </div>
-    <!-- End Blog Area -->
+    <!-- Floww Blog Content Area -->
 
 
     <!-- Support Area -->
     <div
-        class="support-area relative bg-secondary-gradient-color z-2 pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100">
+        class="support-area relative bg-secondary-gradient-color z-2 pt-60 pb-60">
         <div class="container">
-            <div class="grid gap-18 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-                <div class="support-content xl:col-span-2">
-                    <h2 class="font-black text-22px md:text-30px lg:text-34px xl:text-40px mb-12 text-white">24/7
-                        Customer Support</h2>
-                    <p class="text-13px md:text-15px lg:text-16px md:max-w-[700px] leading-7 md:leading-8 text-white">
-                        Our team is here to provide you with personalized and outstanding service. We also offer a range
-                        of self-learning tools in our support center:</p>
-                </div>
-                <div class="support-btn self-center lg:text-right">
-                    <a
-                        class="floww-openContactUs inline-block font-semibold text-13px md:text-15px rounded-sm pt-17 pb-13 pl-25 md:pl-35 pr-25 md:pr-35 bg-white text-black-color ease-in duration-300 contact-us-button-hover">Contact
-                        Us Now</a>
+
+            <div class="text-center section-title mb-35 md:mb-40 lg:mb-50 relative">
+                <h1
+                    class="font-black text-25px md:text-35px lg:text-40px xl:text-48px 2xl:text-54px text-black-color mb-8">
+                    Ready to <span class="text-primary-color">Elevate</span> your Work ?</h1>
+                <p class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8">
+                    Let's get you started!</p>
+                    
+                    <br><br>
+                <div class="support-btn self-center">
+                    <a href="https://console.gofloww.co/signup/" target="_blank"
+                        class="floww-openContactUs inline-block font-semibold text-13px md:text-15px rounded-sm pt-17 pb-13 pl-25 md:pl-35 pr-25 md:pr-35 bg-white text-black-color ease-in duration-300 contact-us-button-hover">Sign Up</a>
                 </div>
             </div>
         </div>
-        <div class="top-[-35%] left-[2%] 2xl:top-[-12%] absolute -z-1 hidden xl:inline"><img
-                src="img/website/shape12.png" class="animate-custom-movebounce" alt="Floww Blog, supply chain insights">
-        </div>
-        <div class="right-[10%] bottom-[-30.4%] absolute -z-1 hidden xl:inline"><img src="img/website/shape13.png"
-                class="animate-custom-moveleftbounce" alt="Floww Blog, supply chain insights"></div>
-        <div class="top-[20%] left-[52%] absolute -z-1 hidden lg:inline"><img src="img/website/shape14.png"
-                class="animate-custom-rotateme" alt="Floww for D2C brands, manage transporters"></div>
     </div>
     <!-- End Support Area -->
 
@@ -1451,39 +1197,27 @@
                 </div>
                 <div class="single-footer-widget md:pl-25">
                     <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
-                        Compliances
+                        Compare
                     </h3>
                     <ul>
                         <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
                             <a onclick="window.alert('Coming Soon')" style="cursor: pointer;"
                                 class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                E-Way Bill
+                                Zoho
                             </a>
                         </li>
                         <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
                             <a onclick="window.alert('Coming Soon')" style="cursor: pointer;"
                                 class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                VLTD
+                                Keka
                             </a>
                         </li>
                         <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
                             <a onclick="window.alert('Coming Soon')" style="cursor: pointer;"
                                 class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                eVahaan
+                                Darwinbox
                             </a>
                         </li>
-                        <!-- <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a href="services-details.html"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                Wordpress
-                            </a>
-                        </li>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a href="services-details.html"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                Content Writing
-                            </a>
-                        </li> -->
                     </ul>
                 </div>
                 <div class="single-footer-widget">
@@ -1495,6 +1229,18 @@
                             <a href="about-us" target="_blank"
                                 class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
                                 About Us
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="https://blog.gofloww.co" target="_blank"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Blogs
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="mailto:career@gofloww.co" target="_blank"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Careers
                             </a>
                         </li>
                         <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
@@ -1541,8 +1287,7 @@
                             <img src="img/website/location-pin.svg" class="absolute top-0 md:top-2 left-0"
                                 alt="Floww contact India, Pune">
                             <span class="font-medium text-white">Address:</span>
-                            <a target="_blank" class="text-[#e1e1e1] transition hover:text-white">F4,
-                                Awfis Abil Imperial, Pancard Club Road, Baner, Pune, Maharashtra 411045</a>
+                            <a target="_blank" class="text-[#e1e1e1] transition hover:text-white">1202, Gera Imperium Rise, Hinjewadi Phase 2, Pune - 411057</a>
                         </li>
                         <li
                             class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
@@ -1630,16 +1375,6 @@
         </div>
     </div>
     <!-- End Copyright Area -->
-
-    <!-- Go Top -->
-    <div
-        class="progress-wrap bg-white rounded-full block z-50 cursor-pointer fixed w-[3rem] h-[3rem] right-24 bottom-24 opacity-0 invisible">
-        <svg xmlns="http://www.w3.org/2000/svg"
-            class="h-24 w-24 text-center m-auto absolute left-0 right-0 top-1/2 -translate-y-2/4" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
-        </svg>
-    </div>
 
     <!-- All JS Links -->
     <script src="js/template/jquery.min.js"></script>
