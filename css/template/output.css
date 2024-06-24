@@ -40,7 +40,7 @@
   --floww-pink-color: #03fffe;
   --floww-orange-color: #FF8C00;
   /* --floww-purple-color: #8E2DE2; */
-  --floww-purple-color: #FF8C00;
+  --floww-purple-color: rgb(37, 67, 177, 0.9);
   /* --floww-blue-color: #4A00E0; */
   --floww-blue-color: #FF0080;
 }
@@ -2074,7 +2074,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-primary-color {
   --tw-text-opacity: 1;
-  color: var(--floww-pink-color);
+  color: var(--floww-primary-color);
 }
 
 .text-secondary-color {
@@ -2313,17 +2313,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .togy-nav .navbar ul li a.active {
   --tw-text-opacity: 1;
-  color: var(--floww-pink-color);
+  color: var(--floww-purple-color);
 }
 
 .togy-nav .navbar ul li a.active::after {
   --tw-bg-opacity: 1;
-  background-color: var(--floww-pink-color);
+  background-color: var(--floww-purple-color);
 }
 
 .togy-nav .navbar ul li a.active::before {
   --tw-bg-opacity: 1;
-  background-color: var(--floww-pink-color);
+  background-color: var(--floww-purple-color);
 }
 
 .togy-nav .navbar ul li ul li ul {
@@ -3632,7 +3632,7 @@ Container Width Based on Device
 
 .hover\:text-primary-color:hover {
   --tw-text-opacity: 1;
-  color: var(--floww-pink-color);
+  color: var(--floww-primary-color);
 }
 
 .hover\:text-white:hover {
