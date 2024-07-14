@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/template/animate.min.css">
     <link rel="stylesheet" href="css/template/output.css">
 
-    <title>Floww Corporate Mail</title>
+    <title>Floww AI Mail</title>
     <!-- Favicon -->
     <link rel="icon" type="image/ico" href="img/logo/favicon.ico">
 
@@ -55,13 +55,13 @@
     <!-- End Preloader -->
 
     <!-- Navbar Area -->
-    <div class="navbar-area relative z-2 black-navbar bg-[#070707]">
+    <div class="navbar-area relative z-2 white-navbar bg-[#000000]">
         <div class="togy-responsive-nav lg:hidden">
             <div class="container">
                 <div class="togy-responsive-menu">
                     <div class="logo">
-                        <a href="https://gofloww.co">
-                            <img src="img/logo/logo.png" alt="logo" style="width: 132px;">
+                        <a href="https://gofloww.co" target="_blank">
+                            <img src="img/logo/logo.png" alt="floww main logo, logistics app" style="width: 132px;">
                         </a>
                     </div>
                 </div>
@@ -70,51 +70,70 @@
         <div class="togy-nav hidden lg:block">
             <div class="container xl:max-w-full 3xl:max-w-[1700px]">
                 <nav class="navbar flex flex-wrap">
-                    <a class="navbar-brand self-center" href="https://gofloww.co">
-                        <img src="img/logo/logo.png" alt="logo" style="width: 132px;">
+                    <a class="navbar-brand self-center" href="https://gofloww.co" target="_blank">
+                        <img src="img/logo/logo.png" alt="floww main logo, logistics app" style="width: 132px;">
                     </a>
                     <div class="flex self-center grow basis-auto">
                         <ul class="self-center flex flex-row ml-auto mr-auto">
                             <li class="mr-12 xl:mr-15 relative group">
                                 <a href="/"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Home</a>
+                                    class="block  font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Home</a>
                             </li>
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <span
-                                    style="position: absolute; top: 25%; right: 20%; transform: translateX(100%); font-size: 10px; font-weight: 700; width: 100px;"
-                                    class="text-primary-color">New</span>
-                                <a href="console"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Console</a>
+                                <a
+                                    class="active block  font-semibold text-16px ease-in duration-300 relative pr-15 before:absolute before:right-6 before:top-38 before:w-1 before:h-9 before:bg-white before:-rotate-45 before:ease-in before:duration-300 after:absolute after:right-0 after:top-38 after:w-1 after:h-9 after:bg-white after:rotate-45 after:ease-in after:duration-300 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Products</a>
+                                <ul
+                                    class="absolute bg-white left-0 w-[250px] rounded-sm top-84 z-99 shadow-dropdown pt-10 pb-10 opacity-0 invisible ease-in duration-300 group-hover:opacity-100 group-hover:visible">
+                                    <li>
+                                        <a href="/mail"
+                                            class="active block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">AI
+                                            Mail</a>
+                                    </li>
+                                    <li>
+                                        <a href="/hr"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Floww
+                                            HR</a>
+                                    </li>
+                                    <li>
+                                        <a href="/accounting"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Floww
+                                            Accounting</a>
+                                    </li>
+                                    <li>
+                                        <a href="/logistics"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Floww
+                                            Logistics</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                            <span
+                                style="position: absolute; top: 25%; right: 20%; transform: translateX(100%); font-size: 10px; font-weight: 700; width: 100px;"
+                                class="text-primary-color">New</span>
+                            <a href="mail"
+                                class="block  font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Mail</a>
+                        </li> -->
+                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                                <a href="/integration"
+                                    class="block  font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Integrations</a>
                             </li>
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <span
-                                    style="position: absolute; top: 25%; right: 20%; transform: translateX(100%); font-size: 10px; font-weight: 700; width: 100px;"
-                                    class="text-primary-color">New</span>
-                                <a href="mail"
-                                    class="active block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Mail</a>
-                            </li>
-                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="integration"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Integrations</a>
-                            </li>
-                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="about-us"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">About
+                                <a href="/about-us"
+                                    class="block  font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">About
                                     Us</a>
                             </li>
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="faq"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">FAQs</a>
+                                <a href="/faq"
+                                    class="block  font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">FAQs</a>
                             </li>
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
                                 <a href="https://blog.gofloww.co" target="_blank"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Blog</a>
+                                    class="block  font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Blog</a>
                             </li>
                         </ul>
                         <div class="self-center">
                             <a href="https://console.gofloww.co" target="_blank" style="cursor: pointer;"
-                                class="inline-block font-black font-semibold text-13px md:text-14px lg:text-15px rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">
-                                Login / SignUp</a>
+                                class="inline-block relative font-bold text-17px mt-15 md:mt-25 rounded-sm  pt-11 md:pt-17 pb-11 md:pb-13 pl-25 pr-25 bg-gradient-color shadow-custom-box-shadow hover:shadow-primary-btn ease-in duration-300">Login</a>
                         </div>
                     </div>
                 </nav>
@@ -128,26 +147,38 @@
         <div class="mean-menu">
             <ul class="navbar-nav">
                 <li>
-                    <a href="/" class="">Home</a>
+                    <a href="/" class="active">Home</a>
                 </li>
                 <li>
-                    <a href="console" style="position: relative;">Console <span
-                            style="font-size: 10px; font-weight: 700; width: 100px; position: absolute; top: 5px;"
-                            class="text-primary-color">New</span></a>
+                    <a style="position: relative;">Products</a>
+                    <ul>
+                        <li>
+                            <a href="/mail">AI Mail</a>
+                        </li>
+                        <li>
+                            <a href="/hr">Floww HR</a>
+                        </li>
+                        <li>
+                            <a href="/accounting">Floww Accounting</a>
+                        </li>
+                        <li>
+                            <a href="/logistics">Floww logistics</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- <li>
+                <a href="mail" style="position: relative">Mail <span
+                    style="font-size: 10px; font-weight: 700; width: 100px; position: absolute; top: 5px"
+                    class="text-primary-color">New</span></a>
+              </li> -->
+                <li>
+                    <a href="/integration">Integrations</a>
                 </li>
                 <li>
-                    <a href="mail" style="position: relative">Mail <span
-                        style="font-size: 10px; font-weight: 700; width: 100px; position: absolute; top: 5px"
-                        class="text-primary-color">New</span></a>
-                  </li>
-                <li>
-                    <a href="integration">Integrations</a>
+                    <a href="/about-us">About Us</a>
                 </li>
                 <li>
-                    <a href="about-us" class="active">About Us</a>
-                </li>
-                <li>
-                    <a href="faq">FAQs</a>
+                    <a href="/faq">FAQs</a>
                 </li>
                 <li>
                     <a href="https://blog.gofloww.co" target="_blank">Blog</a>
@@ -155,12 +186,114 @@
             </ul>
             <div class="absolute right-45 top-3 md:top-1 md:right-50">
                 <a href="https://console.gofloww.co" target="_blank" style="cursor: pointer;"
-                    class="inline-block font-semibold text-11px md:text-14px lg:text-15px rounded-sm text-white pt-13 pb-10 pl-15 pr-15 md:pl-25 md:pr-25 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Login
-                    / SignUp</a>
+                    class="inline-block font-semibold text-11px md:text-14px lg:text-15px rounded-sm  pt-13 pb-10 pl-15 pr-15 md:pl-25 md:pr-25 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Login
+                    / Signup</a>
             </div>
         </div>
     </div>
     <!-- End Navbar for Responsive -->
+
+    <!-- Page Title Area -->
+    <div
+        class="banner-area pt-60 md:pt-80 lg:pt-100 relative z-1 before:absolute before:left-0 before:right-0 before:bottom-0 before:bg-[#fbfbfb] before:h-[180px] md:before:h-[300px] before:-z-1">
+        <div class="container">
+            <div class="banner-content text-center ml-auto mr-auto max-w-[1010px]">
+                <h1
+                    class="font-black text-black-color text-25px md:text-40px lg:text-51px xl:text-65px mb-12 md:mb-15 lg:mb-20">
+                    Revolutionize your Inbox <br><span class="text-primary-color">AI Mail</span>
+                </h1>
+                <p
+                    class="text-optional-color text-14px md:text-15px lg:text-16px mb-15 lg:ml-auto lg:mr-auto lg:max-w-[790px] md:leading-8 leading-7">
+                    Unlock productivity with intutive tools for paytoll, recruitment and employee management, designed
+                    to adapt and excel alongside your business growth</p>
+                <a href="https://console.gofloww.co/signup"
+                    class="inline-block mt-0 md:mt-5 lg:mt-10 font-semibold text-13px md:text-14px lg:text-15px rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-primary-btn ease-in duration-300">Get
+                    Started for Free</a>
+                <!-- <span class="block text-[#A4A4A4] mt-25 md:mt-25 lg:mt-30 text-13px md:text-15px lg:text-16px">Avail 30 Days Free Trial</span> -->
+            </div>
+            <div
+                class="banner-image text-center mt-30 md:mt-40 lg:mt-60 rounded-xl relative xl:ml-auto xl:mr-auto xl:max-w-[1094px]">
+                <img src="img/website/HR-Attendance.jpg"
+                    class="inline-block rounded-md md:rounded-xl wow animate__animated animate__fadeInUp"
+                    data-wow-delay=".1s" alt="banner-image">
+                <br>
+                <img src="img/website/shape14.png"
+                    class="absolute left-[-85px] top-[-140px] hidden 2xl:inline animate-custom-movebounce" alt="image">
+                <img src="img/website/shape34.png"
+                    class="absolute right-[-200px] bottom-[180px] hidden 3xl:inline animate-custom-movebounce"
+                    alt="image">
+            </div>
+        </div>
+        <div class="absolute -z-1 hidden xl:inline left-0 top-[14%]"><img src="img/website/shape34.png" alt="shape">
+        </div>
+        <div class="absolute -z-1 hidden lg:inline right-[0] top-[14%]"><img src="img/website/shape12.png" alt="shape">
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- AI Mail Features -->
+    <div class="why-choose-us-area pt-60 md:pt-80 lg:pt-100 relative z-1">
+        <div class="container">
+            <div class="section-title mb-35 md:mb-40 lg:mb-50 text-center">
+                <span class="block text-purple-color font-semibold text-13px md:text-15px mb-12 md:mb-15">AI Mail</span>
+                <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-6 text-black-color">Why You
+                    Should Choose AI Mail</h2>
+                <p
+                    class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8 text-optional-color">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet nulla duis ac. Id massa
+                    scelerisque venenatis, massa gravida donec orci.</p>
+            </div>
+            <div class="customer-service-tabs style-two">
+                <ul class="tabs gap-20 md:flex mb-25 md:mb-35 lg:mb-30 xl:mb-40">
+                    <li class="tab-link current md:flex-1 mb-12 last:mb-0 md:mb-0" data-tab="tab-1">
+                        <span
+                            class="text-black-color text-15px md:text-15px lg:text-17px xl:text-20px rounded-md font-bold bg-white shadow-custom-box-shadow4 relative  pl-20 md:pl-20px lg:pl-25 pr-45 pt-20 md:pt-22 pb-20 md:pb-22 hover:text-white cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-secondary-gradient-color hover:before:opacity-100 hover:before:visible">
+                            Brainstorm Ideas
+                            <div
+                                class="icon absolute right-10 lg:right-20 top-1/2 rounded-full -translate-y-2/4 lg:w-50 w-40 lg:h-50 h-40 bg-secondary-gradient-color">
+                                <img src="img/website/box.svg"
+                                    class="absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="box">
+                            </div>
+                        </span>
+                    </li>
+                    <li class="tab-link md:flex-1 mb-12 last:mb-0 md:mb-0" data-tab="tab-2">
+                        <span
+                            class="text-black-color text-15px md:text-15px lg:text-17px xl:text-20px rounded-md font-bold bg-white shadow-custom-box-shadow4 relative pl-20 md:pl-20px lg:pl-25 pr-45 pt-20 md:pt-22 pb-20 md:pb-22 hover:text-white cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-primary-gradient-color hover:before:opacity-100 hover:before:visible">
+                            Manage Projects
+                            <div
+                                class="icon absolute right-10 lg:right-20 top-1/2 rounded-full -translate-y-2/4 lg:w-50 w-40 lg:h-50 h-40 bg-primary-gradient-color">
+                                <img src="img/website/cube.svg"
+                                    class="absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="box">
+                            </div>
+                        </span>
+                    </li>
+                    <li class="tab-link md:flex-1 mb-12 last:mb-0 md:mb-0" data-tab="tab-3">
+                        <span
+                            class="text-black-color text-15px md:text-15px lg:text-17px xl:text-20px rounded-md font-bold bg-white shadow-custom-box-shadow4 relative pl-20 md:pl-20px lg:pl-25 pr-45 pt-20 md:pt-22 pb-20 md:pb-22 hover:text-white cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-green-gradient-color hover:before:opacity-100 hover:before:visible">
+                            Organize Tasks
+                            <div
+                                class="icon absolute right-10 lg:right-20 top-1/2 rounded-full -translate-y-2/4 lg:w-50 w-40 lg:h-50 h-40 bg-green-gradient-color">
+                                <img src="img/website/grid.svg"
+                                    class="absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="box">
+                            </div>
+                        </span>
+                    </li>
+                </ul>
+                <div id="tab-1" class="tab-content current">
+                    <img src="img/website/Attendance.png" class="rounded-sm lg:rounded-lg" alt="brainstorm-ideas">
+                </div>
+                <div id="tab-2" class="tab-content">
+                    <img src="img/website/Payroll.png" class="rounded-sm lg:rounded-lg" alt="manage-projects">
+                </div>
+                <div id="tab-3" class="tab-content">
+                    <img src="img/website/Performance.png" class="rounded-sm lg:rounded-lg" alt="organize-task">
+                </div>
+            </div>
+        </div>
+        <div class="absolute hidden lg:inline right-[10%] top-[5%]"><img src="img/website/shape21.png"
+                class="animate-custom-movebounce" alt="shape"></div>
+    </div>
+    <!-- End AI Mail Features -->
 
     <!-- Mobile App Area -->
     <div class="mobile-app-area relative z-1 pt-60 md:pt-40 lg:pt-80 pb-60 md:pb-80 lg:pb-100 bg-[#0f1216]">
@@ -372,7 +505,8 @@
                             class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
                             <img src="img/website/location-pin.svg" class="absolute top-0 md:top-2 left-0" alt="icon">
                             <span class="font-medium text-white">Address:</span>
-                            <a target="_blank" class="text-[#e1e1e1] transition hover:text-white">1202, Gera Imperium Rise, Hinjewadi Phase 2, Pune - 411057</a>
+                            <a target="_blank" class="text-[#e1e1e1] transition hover:text-white">1202, Gera Imperium
+                                Rise, Hinjewadi Phase 2, Pune - 411057</a>
                         </li>
                         <li
                             class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
@@ -456,16 +590,6 @@
     </div>
     <!-- End Copyright Area -->
 
-    <!-- Go Top -->
-    <div
-        class="progress-wrap bg-white rounded-full block z-50 cursor-pointer fixed w-[3rem] h-[3rem] right-24 bottom-24 opacity-0 invisible">
-        <svg xmlns="http://www.w3.org/2000/svg"
-            class="h-24 w-24 text-center m-auto absolute left-0 right-0 top-1/2 -translate-y-2/4" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
-        </svg>
-    </div>
-
     <!-- All JS Links -->
     <script src="js/template/jquery.min.js"></script>
     <script src="js/template/swiper-bundle.min.js"></script>
@@ -475,8 +599,6 @@
     <!-- <script src="js/magnific-popup.min.js"></script> -->
     <!-- <script src="js/wow.min.js"></script> -->
     <script src="js/template/main.js"></script>
-    <script data-name="floww-contact-us" data-secret="SAoejpgNqtpCrF8W" data-template="temp01"
-        src="https://floww0.blob.core.windows.net/websitegraphics/codes/popup/js/contact-us.js"></script>
 </body>
 
 </html>
