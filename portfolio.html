@@ -1,11 +1,901 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="keywords"
+        content="Delivery Partner, Logistics API, Shiprocket, Find Delivery, Real Time Tracking, Notification Intelligence, Transporter Website creator, LRs, eWayBill integration, fleet management, Delivery Challan, Proof of Delivery, WhatsApp based, D2C brands India, Pune, Baner, Order Collection Portal, ULIP, PM Gati Shakti, NLP 2022">
+    <meta name="author" content="Floww Delivery APIs">
+    <meta name="description"
+        content="The ultimate logistics platform for order management, fleet, compliances, APIs and delivery automation. Saves up to 10% logistics cost. 30% Greater Efficiency.">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK6MTWL5ZZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JK6MTWL5ZZ');
+    </script>
+
+    <!-- All CSS Links -->
+    <link rel="stylesheet" href="css/template/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="css/odometer.min.css"> -->
+    <link rel="stylesheet" href="css/template/meanmenu.min.css">
+    <link rel="stylesheet" href="css/template/animate.min.css">
+    <link rel="stylesheet" href="css/template/output.css">
+
+    <title>Floww | Best Logistics Management Application for MSMEs</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="img/logo/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <p>In Progress</p>
+
+    <!-- Preloader -->
+    <div class="preloader-area text-center left-0 right-0 top-0 bottom-0 bg-white fixed z-9999">
+        <div class="preloader absolute -mt-20 left-0 right-0 top-1/2 m-auto -translate-y-2/4">
+            <div class="waviy font-bold text-50px">
+                <span class="text-black-color inline-block relative">F</span>
+                <span class="text-primary-color inline-block relative">L</span>
+                <span class="text-black-color inline-block relative">O</span>
+                <span class="text-primary-color inline-block relative">W</span>
+                <span class="text-black-color inline-block relative">W</span>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Navbar Area -->
+    <div class="navbar-area relative z-2 black-navbar bg-[#070707]">
+        <div class="togy-responsive-nav lg:hidden">
+            <div class="container">
+                <div class="togy-responsive-menu">
+                    <div class="logo">
+                        <a href="https://gofloww.co" target="_blank">
+                            <img src="img/logo/logo.png" alt="floww main logo, logistics app" style="width: 132px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="togy-nav hidden lg:block">
+            <div class="container xl:max-w-full 3xl:max-w-[1700px]">
+                <nav class="navbar flex flex-wrap">
+                    <a class="navbar-brand self-center" href="https://gofloww.co" target="_blank">
+                        <img src="img/logo/logo.png" alt="floww main logo, logistics app" style="width: 132px;">
+                    </a>
+                    <div class="flex self-center grow basis-auto">
+                        <ul class="self-center flex flex-row ml-auto mr-auto">
+                            <li class="mr-12 xl:mr-15 relative group">
+                                <a href="/"
+                                    class="active block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Home</a>
+                                <!-- <ul
+                                    class="absolute bg-white left-0 w-[250px] rounded-sm top-84 z-99 shadow-dropdown pt-10 pb-10 opacity-0 invisible ease-in duration-300 group-hover:opacity-100 group-hover:visible">
+                                    <li>
+                                        <a href="index.html"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Project
+                                            Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="index-2.html"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Product
+                                            Landing</a>
+                                    </li>
+                                    <li>
+                                        <a href="index-3.html"
+                                            class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">Customer
+                                            Support</a>
+                                    </li>
+                                </ul> -->
+                            </li>
+                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                                <span
+                                    style="position: absolute; top: 25%; right: 20%; transform: translateX(100%); font-size: 10px; font-weight: 700; width: 100px;"
+                                    class="text-primary-color">New</span>
+                                <a href="console"
+                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Console</a>
+                            </li>
+                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                                <span
+                                    style="position: absolute; top: 25%; right: 20%; transform: translateX(100%); font-size: 10px; font-weight: 700; width: 100px;"
+                                    class="text-primary-color">New</span>
+                                <a href="mail"
+                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Mail</a>
+                            </li>
+                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                                <a href="integration"
+                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Integrations</a>
+                            </li>
+                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                                <a href="about-us"
+                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">About
+                                    Us</a>
+                            </li>
+                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                                <a href="faq"
+                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">FAQs</a>
+                            </li>
+                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                                <a href="https://blog.gofloww.co" target="_blank"
+                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Blog</a>
+                            </li>
+                        </ul>
+                        <div class="self-center">
+                            <a href="https://console.gofloww.co" target="_blank" style="cursor: pointer;"
+                                class="inline-block font-semibold text-13px md:text-14px lg:text-15px rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Login
+                                / Signup</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar Area -->
+
+    <!-- Navbar for Responsive -->
+    <div class="navbar-for-responsive hidden">
+        <div class="mean-menu">
+            <ul class="navbar-nav">
+                <li>
+                    <a href="/" class="active">Home</a>
+                    <!-- <ul>
+                        <li>
+                            <a href="index.html">Project Management</a>
+                        </li>
+                        <li>
+                            <a href="index-2.html">Product Landing</a>
+                        </li>
+                        <li>
+                            <a href="index-3.html">Customer Support</a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li>
+                    <a href="console" style="position: relative;">Console <span
+                            style="font-size: 10px; font-weight: 700; width: 100px; position: absolute; top: 5px;"
+                            class="text-primary-color">New</span></a>
+                </li>
+                <li>
+                    <a href="mail" style="position: relative">Mail <span
+                        style="font-size: 10px; font-weight: 700; width: 100px; position: absolute; top: 5px"
+                        class="text-primary-color">New</span></a>
+                  </li>
+                <li>
+                    <a href="integration">Integrations</a>
+                </li>
+                <li>
+                    <a href="about-us">About Us</a>
+                </li>
+                <li>
+                    <a href="faq">FAQs</a>
+                </li>
+                <li>
+                    <a href="https://blog.gofloww.co" target="_blank">Blog</a>
+                </li>
+            </ul>
+            <div class="absolute right-45 top-3 md:top-1 md:right-50">
+                <a href="https://console.gofloww.co" target="_blank" style="cursor: pointer;"
+                    class="inline-block font-semibold text-11px md:text-14px lg:text-15px rounded-sm text-white pt-13 pb-10 pl-15 pr-15 md:pl-25 md:pr-25 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Login
+                    / Signup</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar for Responsive -->
+
+    <!-- Page Title Area -->
+    <div class="relative z-1 text-center pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100">
+        <div class="container">
+            <h1 class="font-black text-25px md:text-35px lg:text-40px xl:text-48px 2xl:text-54px text-black-color mb-8">Our <span class="text-primary-color">Portfolio</span></h1>
+            <p class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8 text-optional-color">Passionate and skilled developer with a knack for crafting efficient solutions. Eager to leverage my expertise in software development and design to drive innovation and success.</p>
+        </div>
+        <div class="left-0 top-25 absolute -z-1 hidden xl:inline"><img src="img/website/shape34.png" class="animate-custom-movebounce w-[100px]" alt="shape"></div>
+        <div class="right-0 bottom-20 absolute -z-1 hidden xl:inline"><img src="img/website/shape35.png" class="animate-custom-movebounce" alt="shape"></div>
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- Portfolio Area -->
+    <div class="pb-60 md:pb-80 lg:pb-100">
+        <div class="container">
+            <div class="customer-service-tabs style-two">
+                <ul class="tabs text-center mb-25 md:mb-35 lg:mb-30 xl:mb-50">
+                    <li class="tab-link current mb-12 last:mb-0 lg:mb-0 ml-5 mr-5 inline-block" data-tab="tab-1">
+                        <span class="text-black-color text-15px lg:text-16px rounded-sm font-semibold bg-[#F5F0E8] relative pl-20 md:pl-25 pr-20 md:pr-25 pt-12 pb-12 hover:text-white cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-secondary-gradient-color hover:before:opacity-100 hover:before:visible">
+                            All
+                        </span>
+                    </li>
+                    <li class="tab-link mb-12 last:mb-0 lg:mb-0 inline-block ml-5 mr-5" data-tab="tab-2">
+                        <span class="text-black-color text-15px lg:text-16px rounded-sm font-semibold bg-[#F5F0E8] relative pl-20 md:pl-25 pr-20 md:pr-25 pt-12 pb-12 hover:text-white cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-secondary-gradient-color hover:before:opacity-100 hover:before:visible">
+                            Design
+                        </span>
+                    </li>
+                    <li class="tab-link mb-12 last:mb-0 lg:mb-0 inline-block ml-5 mr-5" data-tab="tab-3">
+                        <span class="text-black-color text-15px lg:text-16px rounded-sm font-semibold bg-[#F5F0E8] relative pl-20 md:pl-25 pr-20 md:pr-25 pt-12 pb-12 hover:text-white cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-secondary-gradient-color hover:before:opacity-100 hover:before:visible">
+                            Development
+                        </span>
+                    </li>
+                    <li class="tab-link mb-12 last:mb-0 lg:mb-0 inline-block ml-5 mr-5" data-tab="tab-4">
+                        <span class="text-black-color text-15px lg:text-16px rounded-sm font-semibold bg-[#F5F0E8] relative pl-20 md:pl-25 pr-20 md:pr-25 pt-12 pb-12 hover:text-white cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-secondary-gradient-color hover:before:opacity-100 hover:before:visible">
+                            Mobile App
+                        </span>
+                    </li>
+                    <li class="tab-link mb-12 last:mb-0 lg:mb-0 inline-block ml-5 mr-5" data-tab="tab-5">
+                        <span class="text-black-color text-15px lg:text-16px rounded-sm font-semibold bg-[#F5F0E8] relative pl-20 md:pl-25 pr-20 md:pr-25 pt-12 pb-12 hover:text-white cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-secondary-gradient-color hover:before:opacity-100 hover:before:visible">
+                            Wordpress Theme
+                        </span>
+                    </li>
+                    <li class="tab-link mb-12 last:mb-0 lg:mb-0 inline-block ml-5 mr-5" data-tab="tab-6">
+                        <span class="text-black-color text-15px lg:text-16px rounded-sm font-semibold bg-[#F5F0E8] relative pl-20 md:pl-25 pr-20 md:pr-25 pt-12 pb-12 hover:text-white cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-secondary-gradient-color hover:before:opacity-100 hover:before:visible">
+                            Plugin
+                        </span>
+                    </li>
+                </ul>
+                <div id="tab-1" class="tab-content current">
+                    <div class="grid gap-30 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio1.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Task Management Software
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Development</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio2.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Dashboard Software Landing
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">App, Development</p>
+                        </div>
+                    </div>
+                    <div class="grid mt-30 gap-30 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio3.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Dashboard Design
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Development</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio4.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Project Management Software
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Software</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio5.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Mobile App Development
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, App</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio6.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Task Management App
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Development</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio7.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Product Design
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Software</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio8.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Work Flow App
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, App</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-2" class="tab-content">
+                    <div class="grid mt-30 gap-30 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio3.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Dashboard Design
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Development</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio4.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Project Management Software
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Software</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio5.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Mobile App Development
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, App</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio6.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Task Management App
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Development</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio7.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Product Design
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Software</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio8.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Work Flow App
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, App</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-3" class="tab-content">
+                    <div class="grid mt-30 gap-30 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio4.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Project Management Software
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Software</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio5.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Mobile App Development
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, App</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio6.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Task Management App
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Development</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio7.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Product Design
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Software</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio8.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Work Flow App
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, App</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-4" class="tab-content">
+                    <div class="grid mt-30 gap-30 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio5.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Mobile App Development
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, App</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio6.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Task Management App
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Development</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio7.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Product Design
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Software</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-5" class="tab-content">
+                    <div class="grid gap-30 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio2.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Dashboard Software Landing
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">App, Development</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio1.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Task Management Software
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Development</p>
+                        </div>
+                    </div>
+                    <div class="grid mt-30 gap-30 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio3.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Dashboard Design
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Development</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio4.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Project Management Software
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Software</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio5.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Mobile App Development
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, App</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-6" class="tab-content">
+                    <div class="grid mt-30 gap-30 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio6.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Task Management App
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Development</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio7.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Product Design
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Software</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio8.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Work Flow App
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, App</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio3.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Dashboard Design
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Development</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio4.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Project Management Software
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, Software</p>
+                        </div>
+                        <div class="relative">
+                            <a href="" class="block">
+                                <img src="img/website/portfolio5.jpg" class="mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="portfolio-image">
+                            </a>
+                            <h3 class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12">
+                                <a href="" class="inline-block text-black-color hover:text-primary-color ease-in duration-300">
+                                    Mobile App Development
+                                </a>
+                            </h3>
+                            <p class="text-13px md:text-15px lg:text-16px text-optional-color">Design, App</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio Area -->
+
+
+    <!-- Support Area -->
+    <div
+        class="support-area relative bg-secondary-gradient-color z-2 pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100">
+        <div class="container">
+            <div class="grid gap-18 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+                <div class="support-content xl:col-span-2">
+                    <h2 class="font-black text-22px md:text-30px lg:text-34px xl:text-40px mb-12 text-white">24/7
+                        Customer Support</h2>
+                    <p class="text-13px md:text-15px lg:text-16px md:max-w-[700px] leading-7 md:leading-8 text-white">
+                        Our team is here to provide you with personalized and outstanding service. We also offer a range
+                        of self-learning tools in our support center:</p>
+                </div>
+                <div class="support-btn self-center lg:text-right">
+                    <a
+                        class="floww-openContactUs inline-block font-semibold text-13px md:text-15px rounded-sm pt-17 pb-13 pl-25 md:pl-35 pr-25 md:pr-35 bg-white text-black-color ease-in duration-300 contact-us-button-hover">Contact
+                        Us Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="top-[-35%] left-[2%] 2xl:top-[-12%] absolute -z-1 hidden xl:inline"><img
+                src="img/website/shape12.png" class="animate-custom-movebounce" alt="Floww Blog, supply chain insights">
+        </div>
+        <div class="right-[10%] bottom-[-30.4%] absolute -z-1 hidden xl:inline"><img src="img/website/shape13.png"
+                class="animate-custom-moveleftbounce" alt="Floww Blog, supply chain insights"></div>
+        <div class="top-[20%] left-[52%] absolute -z-1 hidden lg:inline"><img src="img/website/shape14.png"
+                class="animate-custom-rotateme" alt="Floww for D2C brands, manage transporters"></div>
+    </div>
+    <!-- End Support Area -->
+
+    <!-- Footer Area -->
+    <footer class="footer-area pt-60 lg:pt-100 pb-60 lg:pb-100 relative z-1 bg-[#070707]">
+        <div class="container">
+            <div class="grid gap-25 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+                <div class="single-footer-widget">
+                    <a href="/" class="logo inline-block mb-20 lg:mb-25">
+                        <img src="img/logo/logo.png" alt="FlowW Logo" style="width: 150px;">
+                    </a>
+                    <img src="img/website/footer.png" alt="Floww for D2C brands, manage transporters">
+                </div>
+                <div class="single-footer-widget md:pl-25">
+                    <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
+                        Compliances
+                    </h3>
+                    <ul>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a onclick="window.alert('Coming Soon')" style="cursor: pointer;"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                E-Way Bill
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a onclick="window.alert('Coming Soon')" style="cursor: pointer;"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                VLTD
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a onclick="window.alert('Coming Soon')" style="cursor: pointer;"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                eVahaan
+                            </a>
+                        </li>
+                        <!-- <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="services-details.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Wordpress
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="services-details.html"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Content Writing
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="single-footer-widget">
+                    <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
+                        Company
+                    </h3>
+                    <ul>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="about-us" target="_blank"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="integration" target="_blank"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Integrations
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="#pricing-id" target="_blank"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Pricing
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="faq" target="_blank"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                FAQs
+                            </a>
+                        </li>
+                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                            <a href="https://play.google.com/store/apps/developer?id=Floww" target="_blank"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
+                                Download Apps
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="single-footer-widget md:-ml-35">
+                    <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
+                        Contact Us
+                    </h3>
+                    <ul>
+                        <li
+                            class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
+                            <img src="img/website/phone-call.svg" class="absolute top-0 md:top-2 left-0"
+                                alt="Floww contact India, Pune">
+                            <span class="font-medium text-white">Call Us:</span>
+                            <a href="tel:+918879138857" class="text-[#e1e1e1] transition hover:text-white">+91
+                                8879138857</a>
+                        </li>
+                        <li
+                            class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
+                            <img src="img/website/location-pin.svg" class="absolute top-0 md:top-2 left-0"
+                                alt="Floww contact India, Pune">
+                            <span class="font-medium text-white">Address:</span>
+                            <a target="_blank" class="text-[#e1e1e1] transition hover:text-white">F4,
+                                Awfis Abil Imperial, Pancard Club Road, Baner, Pune, Maharashtra 411045</a>
+                        </li>
+                        <li
+                            class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
+                            <img src="img/website/email.svg" class="absolute top-0 md:top-2 left-0"
+                                alt="Floww contact India, Pune">
+                            <span class="font-medium text-white">Mail Us:</span>
+                            <a href="mailto:info@gofloww.co">info@gofloww.co</a>
+                        </li>
+                    </ul>
+                    <ul class="mt-15 md:mt-25">
+                        <li class="inline-block mr-5 last:mr-0">
+                            <a href="https://www.facebook.com/floww.deliveryAPIs/" target="_blank"
+                                class="block w-35 rounded-full transition relative h-35 bg-[#4267B2] text-center hover:opacity-90">
+                                <img src="img/website/white-facebook.svg"
+                                    class="w-8 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                                    alt="Floww Facebook">
+                            </a>
+                        </li>
+                        <li class="inline-block mr-5 last:mr-0">
+                            <a onclick="window.alert('Coming Soon')" target="_blank"
+                                class="block w-35 rounded-full transition relative h-35 bg-[#1DA1F2] text-center hover:opacity-90">
+                                <img src="img/website/white-twitter.svg"
+                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                                    alt="Floww Twitter">
+                            </a>
+                        </li>
+                        <li class="inline-block mr-5 last:mr-0">
+                            <a href="https://www.linkedin.com/company/floww-deliveryapis" target="_blank"
+                                class="block w-35 rounded-full transition relative h-35 bg-[#2867B2] text-center hover:opacity-90">
+                                <img src="img/website/white-linkedin.svg"
+                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                                    alt="Floww LinkedIn">
+                            </a>
+                        </li>
+                        <li class="inline-block mr-5 last:mr-0">
+                            <a href="https://www.instagram.com/floww.delivery_api/" target="_blank"
+                                class="block w-35 rounded-full transition relative h-35 bg-instagram-gradient-color text-center hover:opacity-90">
+                                <img src="img/website/white-instagram.svg"
+                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                                    alt="Floww Instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right-[7%] bottom-[6%] absolute -z-1 hidden lg:inline"><img src="img/logo/small-primary-logo.png"
+                class="animate-custom-rotateme" alt="Floww | Best Logistics Management Application for MSMEs"
+                style="width: 50px;"></div>
+    </footer>
+    <!-- End Footer Area -->
+
+    <!-- Copyright Area -->
+    <div class="copyright-area pt-25 md:pt-35 pb-25 md:pb-35 text-center lg:text-left bg-[#0f1216]">
+        <div class="container">
+            <div class="grid gap-5 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
+                <div class="copyright">
+                    <p class="text-13px md:text-15px lg:text-16px text-[#e1e1e1]">&copy;2022 <a
+                            href="https://gofloww.co/" class="font-semibold bg-primary-gradient-color"
+                            target="_blank">Floww APIs Pvt. Ltd.</a></p>
+                </div>
+                <div class="copyright-info self-center">
+                    <ul class="lg:text-right">
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a href="privacy-policy-web"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a href="refund-policy"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white">
+                                Refund Policy
+                            </a>
+                        </li>
+                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
+                            <a href="tnc"
+                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white">
+                                Terms & Conditions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Copyright Area -->
+
+    <!-- Go Top -->
+    <div
+        class="progress-wrap bg-white rounded-full block z-50 cursor-pointer fixed w-[3rem] h-[3rem] right-24 bottom-24 opacity-0 invisible">
+        <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-24 w-24 text-center m-auto absolute left-0 right-0 top-1/2 -translate-y-2/4" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+        </svg>
+    </div>
+
+    <!-- All JS Links -->
+    <script src="js/template/jquery.min.js"></script>
+    <script src="js/template/swiper-bundle.min.js"></script>
+    <script src="js/template/meanmenu.min.js"></script>
+    <!-- <script src="js/appear.min.js"></script> -->
+    <!-- <script src="js/odometer.min.js"></script> -->
+    <!-- <script src="js/magnific-popup.min.js"></script> -->
+    <!-- <script src="js/wow.min.js"></script> -->
+    <script src="js/template/main.js"></script>
+
+    <!-- <script data-name="floww-contact-us" data-secret="8OA63Wm5oHFzlzuJ" data-template="temp01"
+        data-contactid="con-03We4mXnwc5h"
+        src="https://floww0.blob.core.windows.net/websitegraphics/codes/popup/js/contact-us.js"></script> -->
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/64a80fbfcc26a871b026f671/1h4o7r17i';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    
+    <!-- Poptin Added here -->
+    <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=e1726762da347' async='true'></script> 
 </body>
+
 </html>
