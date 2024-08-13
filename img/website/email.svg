@@ -1,14 +1,1 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.99996 7.9072L14.5045 4.35927C14.2976 3.67863 13.878 3.08223 13.3073 2.6576C12.7365 2.23298 12.0447 2.0025 11.3333 2H4.66662C3.95524 2.0025 3.2634 2.23298 2.69265 2.6576C2.12189 3.08223 1.70229 3.67863 1.49542 4.35927L7.99996 7.9072Z" fill="#ffffff"/>
-<path d="M8.31937 9.25175C8.22141 9.30515 8.11162 9.33313 8.00004 9.33313C7.88847 9.33313 7.77867 9.30515 7.68071 9.25175L1.33337 5.78955V10.6665C1.33441 11.5502 1.68594 12.3975 2.31083 13.0224C2.93573 13.6473 3.78297 13.9988 4.66671 13.9998H11.3334C12.2171 13.9988 13.0644 13.6473 13.6892 13.0224C14.3141 12.3975 14.6657 11.5502 14.6667 10.6665V5.78955L8.31937 9.25175Z" fill="#ffffff"/>
-<defs>
-<linearGradient id="paint0_linear_65_274" x1="1.49542" y1="4.9536" x2="14.4733" y2="5.66811" gradientUnits="userSpaceOnUse">
-<stop stop-color="#4A00E0"/>
-<stop offset="1" stop-color="#8E2DE2"/>
-</linearGradient>
-<linearGradient id="paint1_linear_65_274" x1="1.33337" y1="9.89468" x2="14.6531" y2="10.4355" gradientUnits="userSpaceOnUse">
-<stop stop-color="#4A00E0"/>
-<stop offset="1" stop-color="#8E2DE2"/>
-</linearGradient>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#6512ff" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
