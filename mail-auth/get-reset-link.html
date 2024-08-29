@@ -121,7 +121,7 @@
                     if (responseData.status === true) {
                         flowwShowAlert("success", "Invite Sent");
                     } else {
-                        flowwShowAlert("error", "Please Contact Support");
+                        flowwShowAlert("error", responseData.message);
                     }
                     ToggleLoadingAnimation();
                 })
