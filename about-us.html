@@ -43,6 +43,112 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/fontawesome.css" />
+
+    <style>
+
+      /* Default styles for mobile screens (less than 640px) */
+.responsive-heading {
+  font-size: 8px; /* Font size for mobile screens */
+  font-weight: bold;
+}
+
+.responsive-subtitle {
+  font-size: 8px; /* Font size for mobile screens */
+  color: #3490dc; /* Example primary color */
+  font-weight: 500; /* Medium font weight */
+}
+
+/* For medium screens (768px and up) */
+@media (min-width: 768px) {
+  .responsive-heading {
+    font-size: 12px; /* Font size for medium screens (unchanged) */
+  }
+
+  .responsive-subtitle {
+    font-size: 12px; /* Font size for medium screens */
+  }
+}
+
+/* For large screens (1024px and up) */
+@media (min-width: 1024px) {
+  .responsive-heading {
+    font-size: 14px; /* Font size for large screens */
+  }
+
+  .responsive-subtitle {
+    font-size: 14px; /* Font size for large screens */
+  }
+}
+
+      /* Default padding for mobile screens (less than 640px) */
+.responsive-padding {
+  padding: 0.5rem; /* 16px padding on all sides */
+}
+
+/* For small screens (640px and up) */
+@media (min-width: 640px) {
+  .responsive-padding {
+    padding: 0.5rem; /* 24px padding on all sides */
+  }
+}
+
+/* For medium screens (768px and up) */
+@media (min-width: 768px) {
+  .responsive-padding {
+    padding: 0.5rem; /* 32px padding on all sides */
+  }
+}
+
+/* For large screens (1024px and up) */
+@media (min-width: 1024px) {
+  .responsive-padding {
+    padding: 20px; /* 48px padding on all sides */
+  }
+}
+
+/* For extra-large screens (1280px and up) */
+@media (min-width: 1280px) {
+  .responsive-padding {
+    padding:20px; /* 80px padding on all sides */
+  }
+}
+
+      .responsive-grid {
+  display: grid;
+  gap: 1.5rem; /* Same as gap-6 in Tailwind */
+}
+
+@media (min-width: 640px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns on small screens */
+  }
+}
+
+@media (min-width: 300px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns on small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columns on medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 columns on large screens */
+  }
+}
+
+@media (min-width: 1280px) {
+  .responsive-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 columns on extra-large screens */
+  }
+}
+
+    </style>
   </head>
 
   <body>
@@ -633,15 +739,404 @@
     <!-- new Team member div -->
     <!-- Endnew Team member div-->
 
-    <div id="floww-custom-container" class="floww-custom-div-container"></div>
-    <div class="floww-custom-btn-container">
-      <button id="floww-custom-prevBtn" onclick="flowwCustom_handlePrevious()">
-        <i class="fa fa-arrow-left"></i>
-      </button>
-      <button id="floww-custom-nextBtn" onclick="flowwCustom_handleNext()">
-        <i class="fa fa-arrow-right"></i>
-      </button>
-    </div>
+            <!-- Team Area -->
+            <div class="pb-60 md:pb-80 lg:pb-100">
+              <div class="container">
+                  <div class="responsive-grid">
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/prakhar.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Prakhar Kumar Singh</h3>
+                            <span class="responsive-subtitle">CEO & Founder</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/anish.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Anish Kumar Singh</h3>
+                            <span class="responsive-subtitle">CEO & Founder</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/binal.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Binal Mehta</h3>
+                            <span class="responsive-subtitle">Product Manager</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/aryan .jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Aryan Kumar</h3>
+                            <span class="responsive-subtitle">HR</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/samarth.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Samrat Saurav Singh</h3>
+                            <span class="responsive-subtitle">Product Manager</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/abhishek.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Abhishek Upadhyaya</h3>
+                            <span class="responsive-subtitle">Sr. Frontend Developer</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/prakhargupta.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Prakahr Gupta</h3>
+                            <span class="responsive-subtitle">Developer</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/shreyansh.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Shreyansh Sandilya</h3>
+                            <span class="responsive-subtitle">CEO & Founder</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/sakshi.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Sakshi Jadav</h3>
+                            <span class="responsive-subtitle">Frontend Developer</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/manish.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Manish Goyal</h3>
+                            <span class="responsive-subtitle">UI/UX</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/aman.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Aman Yadav</h3>
+                            <span class="responsive-subtitle">Full Stack Developer</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/shivansh.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Shivam Snaju</h3>
+                            <span class="responsive-subtitle">Frontend Developer</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                          <img src="img/website/ayushi.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                          <div class="responsive-padding relative">
+                            <h3 class="responsive-heading">Ayushi Raj</h3>
+                            <span class="responsive-subtitle">Social Media/Marketing</span>
+                              <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                  <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                      </svg>
+                                  </div>
+                                  <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                              <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                          </a>
+                                      </li>
+                                      <li class="inline-block mt-5 last:mt-0">
+                                          <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                              <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                        <img src="img/website/sumon.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                        <div class="responsive-padding relative">
+                          <h3 class="responsive-heading">Sumon Bharat</h3>
+                          <span class="responsive-subtitle">Marketing</span>
+                            <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                    </svg>
+                                </div>
+                                <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                    <li class="inline-block mt-5 last:mt-0">
+                                        <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                            <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                        </a>
+                                    </li>
+                                    <li class="inline-block mt-5 last:mt-0">
+                                        <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                            <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="single-team-member rounded-md md:rounded-lg bg-white shadow-custom-box-shadow2">
+                        <img src="img/website/mudit.jpg" class="rounded-tl-lg rounded-tr-lg md:rounded-tl-lg md:rounded-tr-lg" alt="team">
+                        <div class="responsive-padding relative">
+                          <h3 class="responsive-heading">Mudit Daga</h3>
+                          <span class="responsive-subtitle">Marketing</span>
+                            <div class="socials absolute right-10 md:right-10 top-1/2 -translate-y-2/4">
+                                <div class="btn ease-in duration-300 w-35 md:w-40 h-35 md:h-40 bg-white shadow-custom-box-shadow3 text-center relative rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-22 w-22 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                    </svg>
+                                </div>
+                                <ul class="absolute right-0 bottom-45 md:bottom-55 ease-in duration-300">
+                                    <li class="inline-block mt-5 last:mt-0">
+                                        <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-[#2867B2] text-center hover:opacity-90">
+                                            <img src="img/website/white-linkedin.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
+                                        </a>
+                                    </li>
+                                    <li class="inline-block mt-5 last:mt-0">
+                                        <a href="#" target="_blank" class="block w-40 md:w-50 rounded-full transition relative h-40 md:h-50 bg-instagram-gradient-color text-center hover:opacity-90">
+                                            <img src="img/website/white-twitter.svg" class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="instagram">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <!-- End Team Area -->
 
     <!-- Support Area -->
     <div
