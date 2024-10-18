@@ -59,21 +59,18 @@
 
     <!-- Google tag (gtag.js) event - delayed navigation helper -->
     <script>
-    // Helper function to delay opening a URL until a gtag event is sent.
-    // Call it in response to an action that should navigate to a URL.
-    function gtagSendEvent(url) {
-      var callback = function () {
-        if (typeof url === 'string') {
-          window.location = url;
+        function gtag_report_conversion(url) {
+          var callback = function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'conversion', {
+              'send_to': 'AW-16731050468/Fm0OCMn42t4ZEOSj_qk-',
+              'event_callback': callback
+          });
+          return false;
         }
-      };
-      gtag('event', 'conversion_event_signup', {
-        'event_callback': callback,
-        'event_timeout': 2000,
-        // <event_parameters>
-      });
-      return false;
-    }
     </script>
         
         
