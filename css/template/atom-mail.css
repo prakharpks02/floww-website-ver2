@@ -4,6 +4,13 @@
 .floww-atom-mail-h1{
     text-align: left;
 }
+.floww-button-rigister-part{
+    border-radius: 30px;
+    background-color: #fff;
+}
+.floww-openContactUs{
+    border-radius: 30px;
+}
 .floww-main-part-button{
     border-radius: 30px;
 }
