@@ -1,3 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+body{
+    font-family: "Lexend", sans-serif;
+}
+
 .mail-banner-part{
     background-color: black;
 }
@@ -34,21 +41,22 @@
 .features-list {
     display: flex;
     flex-wrap: wrap; 
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 1rem; 
     padding: 20px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .feature-item {
     position: relative;
-    padding-left: 2rem;
+    padding-left: 4rem;
     padding-right: 1rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    background-color: #333;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(94, 114, 167, 0.16);
     color: white;
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 500;
     border-radius: 9999px; /* Full rounded */
     display: flex;
@@ -62,14 +70,18 @@
     left: 5px;
     top: 50%;
     transform: translateY(-50%);
-    width: 26px;
+    width: 45px;
+    padding-left: 0.5rem;
 }
 
 /* Larger screens */
 @media (min-width: 768px) {
     .feature-item {
-        font-size: 15px;
-        padding-left: 2.75rem;
+        font-size: 14px;
+        padding-left: 4rem;
+    }
+    .tick-icon{
+        width: 45px;
     }
 
     .starting-price {
@@ -80,10 +92,16 @@
 /* Even larger screens */
 @media (min-width: 1024px) {
     .feature-item {
-        font-size: 16px;
-        padding-left: 3rem;
+        font-size: 14px;
+        padding-left: 4.5rem;
     }
-
+    .tick-icon{
+        width: 55px;
+    }
+    .features-list{
+        width: 80%;
+        margin: auto
+    }
     .starting-price {
         font-size: 24px;
     }
@@ -94,8 +112,10 @@
     text-align: start;
     font-weight: bold;
     color: #6C63FF; /* Purple color */
+    width: 72%;
+    margin: auto;
     margin-top: 1rem;
-    margin-left: 5rem;
+    font-family: "Lexend", sans-serif;
 }
 
 /* .floww-middle-last-element li{
@@ -213,7 +233,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%; /* Default for large screens */
     right: 0;
     bottom: 0;
     background-image: url('./../../img/website/Frame\ 58.png'); /* Replace with your image path */
@@ -224,6 +244,27 @@
     transform: skewY(0deg); /* Creates the slanted effect */
     transform-origin: top left;
     z-index: 1; /* Ensures the pseudo-element is above the background but below the content */
+}
+
+/* Medium screens */
+@media (max-width: 1024px) {
+    .mobile-app-area::before {
+        left: 30%;
+    }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    .mobile-app-area::before {
+        left: 15%;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .mobile-app-area::before {
+        left: 0; /* Align to the left for mobile screens */
+    }
 }
 
 .container {
