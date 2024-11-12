@@ -28,6 +28,16 @@ body{
     align-items: center;
     margin-bottom: 1rem;
 }
+.floww-main-atom-mail-color{
+    background: linear-gradient(90deg, #9C77EC 0%, #1C5DE0 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.floww-middle-atom-mail-color{
+    background: linear-gradient(90deg, #6936D6 0%, #152A65 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
 .background-black {
     background-color: black;
 }
