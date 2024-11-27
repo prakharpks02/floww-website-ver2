@@ -49,6 +49,69 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+
+        <style>
+            .price-strikethrough {
+    position: relative; /* To position the pseudo-element */
+    color: gray; /* Color of the text */
+    font-size: 0.6em; /* Relative size for responsiveness */
+    display: inline-block;
+}
+
+.price-strikethrough::after {
+    content: ''; /* No additional text, just the line */
+    position: absolute;
+    top: 50%; /* Center the line vertically */
+    left: 0;
+    width: 100%; /* Full width of the text */
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: gray; /* Match line color with text color */
+    transform: translateY(-50%); /* Align perfectly with text */
+    z-index: 1; /* Ensure the line appears above the text */
+}
+
+@media (min-width: 768px) {
+    .price-strikethrough {
+        font-size: 0.6em; /* Adjust size for medium screens */
+    }
+    .price-strikethrough::after {
+        height: 3px; /* Slightly thicker line for larger screens */
+    }
+}
+
+.price-strikethrough-second-part{
+    position: relative; 
+    color:var(--floww-primary-color) ; 
+    font-size: 0.6em;
+    display: inline-block;
+}
+.price-strikethrough-second-part::after {
+    content: ''; /* No additional text, just the line */
+    position: absolute;
+    top: 50%; /* Center the line vertically */
+    left: 0;
+    width: 100%; /* Full width of the text */
+    height: 2px; /* Adjust the thickness of the line */
+    background-color:var(--floww-primary-color); /* Match line color with text color */
+    transform: translateY(-50%); /* Align perfectly with text */
+    z-index: 1; /* Ensure the line appears above the text */
+}
+
+@media (min-width: 768px) {
+    .price-strikethrough-second-part {
+        font-size: 0.6em; /* Adjust size for medium screens */
+    }
+    .price-strikethrough-second-part::after {
+        height: 3px; /* Slightly thicker line for larger screens */
+    }
+}
+.small-span-part{
+    color: magenta;
+    font-size: 10px;
+}
+
+
+        </style>
 </head>
 
 <body>
@@ -266,361 +329,388 @@
                         <li class="tab-link current inline-block mb-12 last:mb-0 md:mb-0" data-tab="tab-1">
                             <span
                                 class="text-white text-15px md:text-15px lg:text-16px rounded-sm font-semibold relative pl-25 lg:pl-35 pr-25 lg:pr-35 pt-12 pb-11 cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-secondary-gradient-color hover:before:opacity-100 hover:before:visible">
-                                Monthly
+                                Yearly
                             </span>
                         </li>
                         <li class="tab-link inline-block mb-12 last:mb-0 md:mb-0 ml-7" data-tab="tab-2">
                             <span
                                 class="text-white text-15px md:text-15px lg:text-16px rounded-sm font-semibold relative pl-25 lg:pl-35 pr-25 lg:pr-35 pt-12 pb-11 cursor-pointer block z-1 ease-in duration-300 before:absolute before:left-0 before:right-0 before:top-0 before:bottom-0 before:opacity-0 before:invisible before:ease-in before:duration-300 before:-z-1 before:rounded-sm before:bg-primary-gradient-color hover:before:opacity-100 hover:before:visible">
-                                Yearly
+                                Monthly
                             </span>
                         </li>
                     </ul>
                     <div id="tab-1" class="tab-content current" style="padding-bottom: 1rem;">
                         <div
-                            class="grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+                        class="grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+                        <div
+                            class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
+                            <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Lite</h3>
+                            <div>
                             <div
-                                class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
-                                <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Lite</h3>
-                                <div
-                                    class="relative font-black text-35px md:text-45px text-[#19ab8b] inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
-                                    49 <span class="text-13px md:text-14px lg:text-15px font-semibold">(per
-                                        mailbox)</span>
-                                    <span class="text-16px absolute left-0 top-4">₹</span>
-                                </div>
-                                <p
-                                    class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
-                                    All the essentials you need to kickstart your journey, streamlined for efficiency.
-                                </p>
-                                <a href="https://console.gofloww.co/signup/atom-mail"
-                                    class="block font-semibold text-13px md:text-14px lg:text-15px mt-12 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-green-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Activate
-                                    Package</a>
-                                <ul class="mt-25 md:mt-35">
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Floww Console Integrate
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Multi Domain Hosting
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Domain Aliases
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Email Routing
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Attachment size 15 MB
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Start & Bookmarks
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        IMAP & POP Access
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Migration available
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        1 GB Storage
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Integration Rules (attachement & mail restriction)
-                                    </li>
-                                </ul>
-                                <img src="img/website/shape32 (1).png"
-                                    class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme" alt="shape">
+                                class="relative font-black text-35px md:text-45px text-[#19ab8b] inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
+                                  <span class="price-strikethrough">₹41</span>
                             </div>
                             <div
-                                class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
-                                <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Premium</h3>
-                                <div
-                                    class="relative font-black text-35px md:text-45px text-primary-color inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
-                                    149 <span class="text-13px md:text-14px lg:text-15px font-semibold">(per
-                                        mailbox)</span>
-                                    <span class="text-16px absolute left-0 top-4">₹</span>
-                                </div>
-                                <p
-                                    class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
-                                    Unlock all Lite features, premium power and scale your operations with advanced
-                                    tools for growth</p>
-                                <a href="https://console.gofloww.co/signup/atom-mail"
-                                    class="block font-semibold text-13px md:text-14px lg:text-1 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-primary-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Activate
-                                    Package</a>
-                                <ul class="mt-25 md:mt-35">
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Attachment Size 100 MB
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        10 GB Storage
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Email Backup & Restoration Monthly
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        White Labelling
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Archival Storage
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        AI Drafting
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Scheduled Send
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Reply Assist
-                                    </li>
-                                </ul>
-                                <img src="img/website/shape32 (1).png"
-                                    class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme" alt="shape">
+                                class="relative font-black text-35px md:text-45px text-[#19ab8b] inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
+                                9 <span class="text-13px md:text-14px lg:text-15px font-semibold">X12
+                                </span>
+                                <span class="text-13px md:text-14px lg:text-15px font-semibold">(per
+                                    mailbox/per Month)</span>
+                                <span class="text-16px absolute left-0 top-4">₹</span>
                             </div>
+                           </div>
+                           <div>
+                            <span class="small-span-part">
+                                For Individual</span>
                         </div>
+                            <p
+                                class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
+                                All the essentials you need to kickstart your journey, streamlined for efficiency.
+                            </p>
+                            <a href="https://console.gofloww.co/signup/atom-mail"
+                                class="block font-semibold text-13px md:text-14px lg:text-15px mt-12 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-green-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Activate
+                                Package</a>
+                            <ul class="mt-25 md:mt-35">
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Floww Console Integrate
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Multi Domain Hosting
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Domain Aliases
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Email Routing
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Attachment size 15 MB
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Start & Bookmarks
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    IMAP & POP Access
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Migration available
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    1 GB Storage
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Integration Rules (attachement & mail restriction)
+                                </li>
+                            </ul>
+                            <img src="img/website/shape32 (1).png"
+                                class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme" alt="shape">
+                        </div>
+                        <div
+                            class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
+                            <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Premium</h3>
+                            <div>
+                            <div
+                            class="relative font-black text-35px md:text-45px text-primary-color inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
+                            <span class="price-strikethrough-second-part">₹99</span>
+                            </div>
+                            <div
+                                class="relative font-black text-35px md:text-45px text-primary-color inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
+                                49 <span class="text-13px md:text-14px lg:text-15px font-semibold">X12
+                                    </span>
+                                <span class="text-13px md:text-14px lg:text-15px font-semibold">(per
+                                    mailbox/per Month)</span>
+                                <span class="text-16px absolute left-0 top-4">₹</span>
+                            </div>
+                            </div>
+                            <div>
+                            <div>
+                                <span class="small-span-part">
+                                    For Individual</span>
+                            </div>
+                            </div>
+                            <p
+                                class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
+                                Unlock all Lite features, premium power and scale your operations with advanced
+                                tools for growth</p>
+                            <a href="https://console.gofloww.co/signup/atom-mail"
+                                class="block font-semibold text-13px md:text-14px lg:text-1 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-primary-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Activate
+                                Package</a>
+                            <ul class="mt-25 md:mt-35">
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Attachment Size 100 MB
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    10 GB Storage
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Email Backup & Restoration Monthly
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    White Labelling
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Archival Storage
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    AI Drafting
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Scheduled Send
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Reply Assist
+                                </li>
+                            </ul>
+                            <img src="img/website/shape32 (1).png"
+                                class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme" alt="shape">
+                        </div>
+                    </div>
                     </div>
                     <div id="tab-2" class="tab-content" style="padding-bottom: 1rem;">
                         <div
-                            class="grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+                        class="grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+                        <div
+                            class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
+                            <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Lite</h3>
                             <div
-                                class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
-                                <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Lite</h3>
-                                <div
-                                    class="relative font-black text-35px md:text-45px text-[#19ab8b] inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
-                                    499 <span class="text-13px md:text-14px lg:text-15px font-semibold">(per
-                                        mailbox)</span>
-                                    <span class="text-16px absolute left-0 top-4">₹</span>
-                                </div>
-                                <p
-                                    class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
-                                    All the essentials you need to kickstart your journey, streamlined for efficiency.
-                                </p>
-                                <a href="https://console.gofloww.co/signup/atom-mail"
-                                    class="block font-semibold text-13px md:text-14px lg:text-15px mt-12 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-green-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Activate
-                                    Package</a>
-                                <ul class="mt-25 md:mt-35">
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Floww Console Integrate
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Multi Domain Hosting
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Domain Aliases
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Email Routing
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Attachment size 15 MB
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Start & Bookmarks
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        IMAP & POP Access
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Migration available
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        1 GB Storage
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Integration Rules (attachement & mail restriction)
-                                    </li>
-                                </ul>
-                                <img src="img/website/shape32 (1).png"
-                                    class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme" alt="shape">
+                                class="relative font-black text-35px md:text-45px text-[#19ab8b] inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
+                                49  
+                                <span class="text-13px md:text-14px lg:text-15px font-semibold">(per
+                                    mailbox)</span>
+                                <span class="text-16px absolute left-0 top-4">₹</span>
                             </div>
-                            <div
-                                class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
-                                <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Premium</h3>
-                                <div
-                                    class="relative font-black text-35px md:text-45px text-primary-color inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
-                                    1,199 <span class="text-13px md:text-14px lg:text-15px font-semibold">(per
-                                        mailbox)</span>
-                                    <span class="text-16px absolute left-0 top-4">₹</span>
-                                </div>
-                                <p
-                                    class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
-                                    Unlock all Lite features, premium power and scale your operations with advanced
-                                    tools for growth</p>
-                                <a href="https://console.gofloww.co/signup/atom-mail"
-                                    class="block font-semibold text-13px md:text-14px lg:text-1 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-primary-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Activate
-                                    Package</a>
-                                <ul class="mt-25 md:mt-35">
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Attachment Size 100 MB
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        10 GB Storage
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Email Backup & Restoration Monthly
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        White Labelling
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Archival Storage
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        AI Drafting
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Scheduled Send
-                                    </li>
-                                    <li
-                                        class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
-                                        <img src="img/website/tick-circle (2).svg"
-                                            class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
-                                            alt="tick-circle">
-                                        Reply Assist
-                                    </li>
-                                </ul>
-                                <img src="img/website/shape32 (1).png"
-                                    class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme" alt="shape">
-                            </div>
+                            <p
+                                class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
+                                All the essentials you need to kickstart your journey, streamlined for efficiency.
+                            </p>
+                            <a href="https://console.gofloww.co/signup/atom-mail"
+                                class="block font-semibold text-13px md:text-14px lg:text-15px mt-12 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-green-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Activate
+                                Package</a>
+                            <ul class="mt-25 md:mt-35">
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Floww Console Integrate
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Multi Domain Hosting
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Domain Aliases
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Email Routing
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Attachment size 15 MB
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Start & Bookmarks
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    IMAP & POP Access
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Migration available
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    1 GB Storage
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Integration Rules (attachement & mail restriction)
+                                </li>
+                            </ul>
+                            <img src="img/website/shape32 (1).png"
+                                class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme" alt="shape">
                         </div>
+                        <div
+                            class="relative z-1 bg-[#1a1a1a] p-20 sm:p-25 md:p-30 xl:p-35 rounded-lg border border-[#323232]">
+                            <h3 class="font-bold text-18px md:text-20px lg:text-24px text-white">Premium</h3>
+                            <div
+                                class="relative font-black text-35px md:text-45px text-primary-color inline-block mt-10 md:mt-20 -mb-6 md:-mb-8 pl-15">
+                                149 <span class="text-13px md:text-14px lg:text-15px font-semibold">(per
+                                    mailbox)</span>
+                                <span class="text-16px absolute left-0 top-4">₹</span>
+                            </div>
+                            <p
+                                class="leading-7 md:leading-8 text-[#e1e1e1] mb-10 md:mb-15 text-13px md:text-15px lg:text-16px mt-12">
+                                Unlock all Lite features, premium power and scale your operations with advanced
+                                tools for growth</p>
+                            <a href="https://console.gofloww.co/signup/atom-mail"
+                                class="block font-semibold text-13px md:text-14px lg:text-1 rounded-sm text-white pt-17 pb-15 pl-35 pr-35 bg-primary-gradient-color hover:shadow-custom-box-shadow ease-in duration-300 text-center">Activate
+                                Package</a>
+                            <ul class="mt-25 md:mt-35">
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Attachment Size 100 MB
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    10 GB Storage
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Email Backup & Restoration Monthly
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    White Labelling
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Archival Storage
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    AI Drafting
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Scheduled Send
+                                </li>
+                                <li
+                                    class="text-13px md:text-15px lg:text-15px xl:text-15px 2xl:text-16px text-white relative pl-26 md:pl-35 mb-15 md:mb-20 last:mb-0">
+                                    <img src="img/website/tick-circle (2).svg"
+                                        class="absolute left-0 -top-2 md:-top-3 lg:-top-2 w-18 md:w-24"
+                                        alt="tick-circle">
+                                    Reply Assist
+                                </li>
+                            </ul>
+                            <img src="img/website/shape32 (1).png"
+                                class="absolute right-35 top-35 -z-1 animate-custom-slow-rotateme" alt="shape">
+                        </div>
+                    </div>
                     </div>
                     <div class="text-center pt-60">
                         <a href="" target="_blank"

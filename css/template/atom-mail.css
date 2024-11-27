@@ -318,3 +318,30 @@ body{
 }
 
 
+.price-strikethrough {
+    position: relative; /* To position the pseudo-element */
+    color: white; /* Color of the text */
+    font-size: 1.5rem; /* Relative size for responsiveness */
+    display: inline-block;
+}
+
+.price-strikethrough::after {
+    content: ''; /* No additional text, just the line */
+    position: absolute;
+    top: 50%; /* Center the line vertically */
+    left: 0;
+    width: 100%; /* Full width of the text */
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: white; /* Match line color with text color */
+    transform: translateY(-50%); /* Align perfectly with text */
+    z-index: 1; /* Ensure the line appears above the text */
+}
+
+@media (min-width: 768px) {
+    .price-strikethrough {
+        font-size: 1.5rem; /* Adjust size for medium screens */
+    }
+    .price-strikethrough::after {
+        height: 3px; /* Slightly thicker line for larger screens */
+    }
+}
