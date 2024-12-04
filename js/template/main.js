@@ -18,18 +18,14 @@
 
 	window.redirectToHref = function(link, event) {
 		const current_url = window.location.href;
-		const parameters = current_url.includes('?') ? current_url.split('?')[1] : ''; // Extract parameters if present
-	  
-		// Ensure a "?" is always appended, even if no parameters exist
-		const newUrl = link + '?' + parameters;
+		const parameters = current_url.includes('?') ? current_url.split('?')[1] : ''; // Extract parameters
 	  
 		if (event.ctrlKey || event.metaKey) {
-		  window.open(newUrl, '_blank'); // Open in a new tab
+		  window.open(link + (parameters ? '?' + parameters : ''), '_blank'); // Open in a new tab
 		} else {
-		  window.open(newUrl, '_self'); // Open in the same tab
+		  window.open(link + (parameters ? '?' + parameters : ''), '_self'); // Open in the same tab
 		}
-	  };
-	  
+	  };		
 	  
 	// Feedback Swiper
     var swiper = new Swiper(".feedbackSwiper", {
