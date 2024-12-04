@@ -56,27 +56,6 @@
     </script>
     <!-- G Tag Header Ended -->
 
-    <script>
-        function redirectToHref(link) {
-            // Get the current URL
-            const current_url = window.location.href;
-            
-            // Extract everything after the '?' symbol (i.e., the URL parameters)
-            const parameters = current_url.split('?')[1] || ''; // If no parameters exist, return an empty string
-            
-            // Prepare the target URL by appending the parameters
-            const targetUrl = link + (parameters ? '?' + parameters : ''); // Only add '?' if parameters exist
-
-            // Determine if Ctrl (or Cmd) key is pressed for opening in a new tab
-            if (event.ctrlKey || event.metaKey) {
-                // Open in a new tab with the appended parameters
-                window.open(targetUrl, '_blank');
-            } else {
-                // Open in the same window with the appended parameters
-                window.open(targetUrl, '_self');
-            }
-        }
-    </script>
 
     <!-- All CSS Links -->
     <link rel="canonical" href="https://gofloww.co/" />
@@ -1462,7 +1441,7 @@
 
                 <br><br>
                 <div class="support-btn self-center">
-                    <a href="javascript:void(0);" onclick="redirectToHref('console.gofloww.co/signup')" target="_blank"
+                    <a href="https://console.gofloww.co/signup/" target="_blank"
                         class="floww-openContactUs inline-block font-semibold text-13px md:text-15px rounded-sm pt-17 pb-13 pl-25 md:pl-35 pr-25 md:pr-35 bg-white text-black-color ease-in duration-300 contact-us-button-hover">Sign
                         Up</a>
                 </div>
