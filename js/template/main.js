@@ -15,16 +15,13 @@
 	$('.mean-menu').meanmenu({
 		meanScreenWidth: "991"
 	});
-
+	
 	window.redirectToHref = function(link, event) {
 		const current_url = window.location.href;
-		const parameters = current_url.includes('?') ? current_url.split('?')[1] : ''; // Extract parameters if present
-		
-		// Ensure the link has no domain prefix like "https://gofloww.co/"
-		const finalLink = link.includes("https://console.gofloww.co") ? link : "https://console.gofloww.co" + link;
+		const parameters = current_url.includes('?') ? current_url.split('?')[1] : ''; // Extract parameters after '?'
 	  
-		// Append parameters, ensuring a "?" is always included
-		const newUrl = finalLink + (parameters ? '?' + parameters : '?');
+		// Append parameters if they exist
+		const newUrl = link + (parameters ? '?' + parameters : '');
 	  
 		if (event.ctrlKey || event.metaKey) {
 		  window.open(newUrl, '_blank'); // Open in a new tab
@@ -32,6 +29,7 @@
 		  window.open(newUrl, '_self'); // Open in the same tab
 		}
 	  };
+	  
 	  
 	  
 	// Feedback Swiper
