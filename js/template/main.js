@@ -16,36 +16,7 @@
 		meanScreenWidth: "991"
 	});
 
-	// function redirectToHref(link) {
-    //       current_url = window.location.href;
-    //       parameters = "";// get everything in current_url after ? symbol
-    //       if (event.ctrlKey || event.metaKey) {
-    //         window.open(link+"?"+parameters, '_blank');
-    //       } else {
-    //         window.open(link+"?"+parameters, '_self');
-    //       }
-    //     };
-
-	window.redirectToHref = function(link, event) {
-		const current_url = window.location.href;
-		const parameters = current_url.includes('?') ? current_url.split('?')[1] : ''; // Extract parameters if present
-		
-		// Ensure the link has no domain prefix like "https://gofloww.co/"
-		const finalLink = link.includes("https://console.gofloww.co") ? link : "https://console.gofloww.co" + link;
-	  
-		// Append parameters, ensuring a "?" is always included
-		const newUrl = finalLink + (parameters ? '?' + parameters : '?');
-	  
-		if (event.ctrlKey || event.metaKey) {
-		  window.open(newUrl, '_blank'); // Open in a new tab
-		} else {
-		  window.open(newUrl, '_self'); // Open in the same tab
-		}
-	  };
-	  
-	  
-	  
-	  
+	  	  
 	// Feedback Swiper
     var swiper = new Swiper(".feedbackSwiper", {
         autoplay: false,
