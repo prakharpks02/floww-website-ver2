@@ -41,6 +41,22 @@
     </script>
     <!-- G Tag Header Ended -->
 
+    <script>
+        function redirectToHref(link) {
+   
+        const currentUrl = window.location.href;
+        const parameters = currentUrl.split('?')[1] || ""; 
+   
+   
+        if (event.ctrlKey || event.metaKey) {
+        window.open(link + (parameters ? "?" + parameters : ""), '_blank'); 
+        } else {
+        window.open(link + (parameters ? "?" + parameters : ""), '_self');
+        }
+        }
+   
+     </script>
+
     <!-- All CSS Links -->
     <link rel="stylesheet" href="css/template/swiper-bundle.min.css">
     <!-- <link rel="stylesheet" href="css/odometer.min.css"> -->
@@ -89,7 +105,7 @@
             <div class="container">
                 <div class="togy-responsive-menu">
                     <div class="logo">
-                        <a href="https://gofloww.co" target="_blank">
+                        <a onclick="redirectToHref('https://gofloww.co/')">
                             <img src="img/logo/logo.png" alt="floww main logo, logistics app" style="width: 132px;">
                         </a>
                     </div>
@@ -99,7 +115,7 @@
         <div class="togy-nav hidden lg:block">
             <div class="container xl:max-w-full 3xl:max-w-[1700px]">
                 <nav class="navbar flex flex-wrap">
-                    <a class="navbar-brand self-center" href="https://gofloww.co" target="_blank">
+                    <a class="navbar-brand self-center" onclick="redirectToHref('https://gofloww.co/')">
                         <img src="img/logo/logo.png" alt="floww main logo, logistics app" style="width: 132px;">
                     </a>
                     <div class="flex self-center grow basis-auto">
@@ -144,7 +160,7 @@
                                     class="block  font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Pricing</a>
                             </li>
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="https://blog.gofloww.co" target="_blank"
+                                <a onclick="redirectToHref('https://blog.gofloww.co')"
                                     class="block  font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Blog</a>
                             </li>
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
@@ -177,7 +193,8 @@
                             </li>
                         </ul>
                         <div class="self-center">
-                            <a href="https://console.gofloww.co" target="_blank" style="cursor: pointer;"
+                            <a onclick="redirectToHref('https://console.gofloww.co')"
+                             style="cursor: pointer;"
                                 class="inline-block font-semibold text-13px md:text-14px lg:text-15px rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">
                                 Access Console
                             </a>
@@ -220,7 +237,7 @@
                     <a href="/pricing">Pricing</a>
                 </li>
                 <li>
-                    <a href="https://blog.gofloww.co" target="_blank">Blog</a>
+                    <a onclick="redirectToHref('https://blog.gofloww.co')">Blog</a>
                 </li>
                 <li>
                     <a style="position: relative;" class="active">Know More</a>
@@ -241,7 +258,7 @@
                 </li>
             </ul>
             <div class="absolute right-45 top-3 md:top-1 md:right-50">
-                <a href="https://console.gofloww.co" target="_blank" style="cursor: pointer;"
+                <a onclick="redirectToHref('https://mail.gofloww.co')" style="cursor: pointer;"
                     class="inline-block font-semibold text-11px md:text-14px lg:text-15px rounded-sm  pt-13 pb-10 pl-15 pr-15 md:pl-25 md:pr-25 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Access
                     Console</a>
             </div>
@@ -367,7 +384,7 @@
                         of self-learning tools in our support center:</p>
                 </div>
                 <div class="support-btn self-center lg:text-right">
-                    <a href="https://blog.gofloww.co" target="_blank"
+                    <a onclick="redirectToHref('https://blog.gofloww.co')"
                         class="floww-openContactUs inline-block font-semibold text-13px md:text-15px rounded-sm pt-17 pb-13 pl-25 md:pl-35 pr-25 md:pr-35 bg-white text-black-color ease-in duration-300 contact-us-button-hover">
                         Know More
                     </a>
@@ -437,7 +454,7 @@
                             </a>
                         </li>
                         <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a href="https://blog.gofloww.co" target="_blank"
+                            <a onclick="redirectToHref('https://blog.gofloww.co')"
                                 class="inline-block  text-13px md:text-15px lg:text-16px transition hover: relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
                                 Blogs
                             </a>
@@ -506,7 +523,7 @@
                     </ul>
                     <ul class="mt-15 md:mt-25">
                         <li class="inline-block mr-5 last:mr-0">
-                            <a href="https://www.facebook.com/gofloww/" target="_blank"
+                            <a onclick="redirectToHref('https://www.facebook.com/floww.deliveryAPIs/')"
                                 class="block w-35 rounded-full transition relative h-35 bg-[#4267B2] text-center hover:opacity-90">
                                 <img src="img/website/white-facebook.svg"
                                     class="w-8 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
@@ -514,7 +531,7 @@
                             </a>
                         </li>
                         <li class="inline-block mr-5 last:mr-0">
-                            <a href="https://x.com/FlowwAPIs" style="cursor: pointer;"
+                            <a onclick="redirectToHref('https://x.com/FlowwAPIs')"
                                 class="block w-35 rounded-full transition relative h-35 bg-[#1DA1F2] text-center hover:opacity-90"
                                 target="_blank">
                                 <img src="img/website/white-twitter.svg"
@@ -523,7 +540,7 @@
                             </a>
                         </li>
                         <li class="inline-block mr-5 last:mr-0">
-                            <a href="https://www.linkedin.com/company/gofloww" target="_blank"
+                            <a onclick="redirectToHref('https://www.linkedin.com/company/floww-deliveryapis')"
                                 class="block w-35 rounded-full transition relative h-35 bg-[#2867B2] text-center hover:opacity-90">
                                 <img src="img/website/white-linkedin.svg"
                                     class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
@@ -531,7 +548,7 @@
                             </a>
                         </li>
                         <li class="inline-block mr-5 last:mr-0">
-                            <a href="https://www.instagram.com/gofloww.co/" target="_blank"
+                            <a onclick="redirectToHref('https://www.instagram.com/gofloww.co/')"
                                 class="block w-35 rounded-full transition relative h-35 bg-instagram-gradient-color text-center hover:opacity-90">
                                 <img src="img/website/white-instagram.svg"
                                     class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
@@ -539,7 +556,7 @@
                             </a>
                         </li>
                         <li class="inline-block mr-5 last:mr-0">
-                            <a href="https://www.youtube.com/@gofloww" target="_blank"
+                            <a onclick="redirectToHref('https://www.youtube.com/@gofloww')"
                                 class="block w-35 rounded-full transition relative h-35  bg-[#FF0000] text-center hover:opacity-100">
                                 <img src="img/website/youtube-brands-solid (1).svg"
                                     class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
@@ -562,7 +579,7 @@
             <div class="grid gap-5 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
                 <div class="copyright">
                     <p class="bg-bluish-gradient-color text-13px md:text-15px lg:text-16px font-semibold">&copy;2024 <a
-                            href="https://gofloww.co/" class="font-semibold" target="_blank">Floww APIs Pvt. Ltd.</a>
+                        onclick="redirectToHref('https://gofloww.co/')"  class="font-semibold" >Floww APIs Pvt. Ltd.</a>
                     </p>
                 </div>
                 <div class="copyright-info self-center">
