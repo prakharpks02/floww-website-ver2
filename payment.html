@@ -4,11 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Payment</title>
 </head>
 
 <body>
     <h1>Testing out the payment gateway</h1>
+    <button id="payButton">
+        Pay Now
+    </button>
+
+    <script>
+
+        function generateRandom12DigitNumber() {
+        return Math.floor(100000000000 + Math.random() * 900000000000).toString();
+        }
+
+        async function initiatePayment() {
+        const MERCHANT_ID = "M22O1SKN3KUPK"; // Replace with your merchant ID
+        const SALT_KEY = "f27a833a-a397-44e8-ab59-a28d7cef562b"; // Replace with your salt key
+        const SALT_INDEX = "1"; // Replace with your salt index
+        // const MERCHANT_ID = "PGTESTPAYUAT86"; // Replace with your merchant ID
+        // const SALT_KEY = "96434309-7796-489d-8924-ab56988a6076"; // Replace with your salt key
+        // const SALT_INDEX = "1"; // Replace with your salt index
+        const email = "info@netmos.in";
+
+        const payload = {
+            amount: 100,
+            merchantId: MERCHANT_ID,
+            merchantTransactionId: generateRandom12DigitNumber(),
+            merchantUserId: "USER108",
+            redirectUrl: "https://dev.netmos.in/paymentProcessing",
+            redirectMode: "GET",
+            callbackUrl: "https://dev.netmos.in/api/rush/handle-courier-payment-callback/",
+            merchantOrderId: generateRandom12DigitNumber(),
+            mobileNumber: "8448825062",
+            email: "shreyanshandilya@gmail.com",
+            message: "description",
+            paymentInstrument: {
+            type: "PAY_PAGE",
+            }
+        };
+
+        // Convert payload to JSON and encode in Base64
+        const jsonPayload = JSON.stringify(payload);
+        const base64Request = btoa(jsonPayload);
+
+        // Function to create SHA-256 hash
+        async function createSha256Hash(input) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(input);
+            const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+        }
+
+        // Generate X-VERIFY header value
+        const verificationString = base64Request + "/pg/v1/pay" + SALT_KEY;
+        const sha256Hash = await createSha256Hash(verificationString);
+        const finalXHeader = `${sha256Hash}###${SALT_INDEX}`;
+
+        const req = {
+            request: base64Request,
+        };
+
+        const finalHeader = {
+            "Content-Type": "application/json",
+            "X-VERIFY": finalXHeader,
+        };
+
+        // const url = "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay"; // DEV URL
+        const url = "https://api.phonepe.com/apis/hermes/pg/v1/pay"; // PROD URL
+
+        const response = await fetch(url, {
+            method: "POST",
+            headers: finalHeader,
+            body: JSON.stringify(req),
+        });
+            
+        console.log(response)
+
+        if (response.ok) {
+            const responseData = await response.json();
+            const paymentUrl =
+                responseData.data.instrumentResponse.redirectInfo.url;
+                window.location.href = paymentUrl;
+        } else {
+            const errorText = await response.text();
+            console.log(errorText)
+        }
+        }
+
+        function onClickPayButton() {
+            alert("Button clicked")
+        }
+        document.getElementById("payButton").onclick = initiatePayment;
+    </script>
 </body>
 
 </html>
