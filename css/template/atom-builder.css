@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+body {
+  font-family: "Lexend", sans-serif;
+}
+.support-area-second-last-part {
+  background: linear-gradient(90.75deg, #212246 3.29%, #312c49 101.5%);
+}
+.mail-banner-part {
+  background-color: black;
+}
+.floww-atom-mail-h1 {
+  text-align: left;
+}
+.floww-button-rigister-part {
+  border-radius: 30px;
+  color: rgba(21, 42, 101, 1);
+  background-color: #fff;
+}
+.floww-openContactUs {
+  border-radius: 30px;
+}
+.floww-main-part-button {
+  border-radius: 30px;
+}
+.floww-main-atom-mail-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.floww-main-atom-mail-color {
+  background: linear-gradient(90deg, #9c77ec 0%, #1c5de0 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.floww-middle-atom-mail-color {
+  background: linear-gradient(90deg, #6936d6 0%, #152a65 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.background-black {
+  background-color: black;
+}
+.background-light-black {
+  background: #5e72a729;
+}
+.floww-middle-last-element {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.inner-secure-part-div {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+/* General Styles */
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  background: linear-gradient(90deg, #1f2146 0%, #312b48 100%);
+  border-radius: 10px;
+}
+
+.feature-item {
+  position: relative;
+  padding-left: 4rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: white;
+  color: black;
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 9999px; /* Full rounded */
+  display: flex;
+  align-items: center;
+  min-width: 100% !important ; /* Ensures a minimum width on smaller screens */
+}
+
+/* Icon Positioning */
+.tick-icon {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  padding-left: 0.5rem;
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .feature-item {
+    font-size: 14px;
+    padding-left: 4rem;
+    width: 30% !important;
+  }
+  .tick-icon {
+    width: 45px;
+  }
+
+  .starting-price {
+    font-size: 20px;
+  }
+}
+
+/* Even larger screens */
+@media (min-width: 1024px) {
+  .feature-item {
+    font-size: 14px;
+    padding-left: 4.5rem;
+    min-width: 30% !important ;
+  }
+  .tick-icon {
+    width: 55px;
+  }
+  .features-list {
+    width: 90%;
+    margin: auto;
+  }
+  .starting-price {
+    font-size: 24px;
+  }
+}
+
+/* Center the price text with spacing adjustments */
+.starting-price {
+  text-align: start;
+  font-weight: bold;
+  color: white;
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+  font-family: "Lexend", sans-serif;
+}
+.all-pricing-plans-part {
+  width: 90%;
+  margin: auto;
+}
+.floww-main-part-button {
+  background: white;
+}
+.floww-main-part-button-text {
+  background: linear-gradient(90deg, #6936d6, #07409c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* .floww-middle-last-element li{
+   border: 1px solid white;
+   padding: 1rem;
+   padding-left: 2rem;
+}
+.floww-middle-last-element li{
+   border: 1px solid white;
+   padding: 1rem;
+   padding-left: 2rem;
+} */
+/* .floww-vector-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+/* .atom-mail-container{
+    background: linear-gradient(90deg, rgba(29, 53, 238, 0.22) 0%, rgba(162, 130, 255, 0.22) 100%);
+} */
+/* .floww-atom-mail-upper-part{
+    padding: 1rem;
+ } */
+
+@media (min-width: 300px) {
+  /* Small devices (tablets) and up */
+  .floww-atom-mail-upper-part {
+    font-size: 8px;
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 640px) {
+  /* Small devices (tablets) and up */
+  .floww-atom-mail-upper-part {
+    font-size: 8px;
+    padding: 0.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Medium devices (desktops) and up */
+  .floww-atom-mail-upper-part {
+    font-size: 10px;
+    padding: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Large devices (large desktops) and up */
+  .floww-atom-mail-upper-part {
+    font-size: 12px;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* Extra large devices (larger desktops) and up */
+  .floww-atom-mail-upper-part {
+    font-size: 16px;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .floww-atom-mail-footer-part {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.floww-image-part {
+  margin-left: 1rem;
+}
+
+.mail-banner-part {
+  position: relative;
+  overflow: hidden;
+}
+
+.mail-banner-part::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 19px;
+  background: linear-gradient(
+    90deg,
+    rgba(29, 53, 238, 0.22) 0%,
+    rgba(162, 130, 255, 0.22) 100%
+  );
+  transform: skewY(-40deg); /* Controls the slant angle */
+  transform-origin: top left;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .mail-banner-part::before {
+    transform: skewY(-40deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mail-banner-part::before {
+    transform: skewY(-24deg);
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.mobile-app-area {
+  position: relative;
+  overflow: hidden;
+  color: #fff; /* Ensures text contrast */
+}
+
+.mobile-app-area::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%; /* Default for large screens */
+  right: 0;
+  bottom: 0;
+  background-image: url("./../../img/website/Frame\ 58.png"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7; /* Adjusts the transparency of the background image */
+  transform: skewY(0deg); /* Creates the slanted effect */
+  transform-origin: top left;
+  z-index: 1; /* Ensures the pseudo-element is above the background but below the content */
+}
+
+/* Medium screens */
+@media (max-width: 1024px) {
+  .mobile-app-area::before {
+    left: 30%;
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .mobile-app-area::before {
+    left: 15%;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .mobile-app-area::before {
+    left: 0; /* Align to the left for mobile screens */
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
+}
+
+@media (min-width: 768px) {
+  .mobile-app-area::before {
+    transform: skewY(0deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-app-area::before {
+    transform: skewY(0deg);
+  }
+}
+
+.price-strikethrough {
+  position: relative; /* To position the pseudo-element */
+  color: white; /* Color of the text */
+  font-size: 1.5rem; /* Relative size for responsiveness */
+  display: inline-block;
+}
+
+.price-strikethrough::after {
+  content: ""; /* No additional text, just the line */
+  position: absolute;
+  top: 50%; /* Center the line vertically */
+  left: 0;
+  width: 100%; /* Full width of the text */
+  height: 2px; /* Adjust the thickness of the line */
+  background-color: white; /* Match line color with text color */
+  transform: translateY(-50%); /* Align perfectly with text */
+  z-index: 1; /* Ensure the line appears above the text */
+}
+
+@media (min-width: 768px) {
+  .price-strikethrough {
+    font-size: 1.5rem; /* Adjust size for medium screens */
+  }
+  .price-strikethrough::after {
+    height: 3px; /* Slightly thicker line for larger screens */
+  }
+}
