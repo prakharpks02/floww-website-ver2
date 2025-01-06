@@ -10,7 +10,7 @@ body {
   background-color: black;
 }
 .floww-atom-mail-h1 {
-  text-align: left;
+  text-align: center;
 }
 .floww-button-rigister-part {
   border-radius: 30px;
@@ -21,7 +21,7 @@ body {
   border-radius: 30px;
 }
 .floww-main-part-button {
-  border-radius: 30px;
+  border-radius: 20px;
 }
 .floww-main-atom-mail-part {
   display: flex;
@@ -146,6 +146,12 @@ body {
 .floww-main-part-button {
   background: white;
 }
+.floww-main-part-button-1 {
+  margin-left: 20px;
+  background: #28165c;
+  border-radius: 20px;
+  color: #fff;
+}
 .floww-main-part-button-text {
   background: linear-gradient(90deg, #6936d6, #07409c);
   -webkit-background-clip: text;
@@ -228,7 +234,7 @@ body {
   overflow: hidden;
 }
 
-.mail-banner-part::before {
+/* .mail-banner-part::before {
   content: "";
   position: absolute;
   top: 0;
@@ -240,7 +246,7 @@ body {
     rgba(29, 53, 238, 0.22) 0%,
     rgba(162, 130, 255, 0.22) 100%
   );
-  transform: skewY(-40deg); /* Controls the slant angle */
+  transform: skewY(-40deg); 
   transform-origin: top left;
   z-index: -1;
 }
@@ -255,7 +261,7 @@ body {
   .mail-banner-part::before {
     transform: skewY(-24deg);
   }
-}
+} */
 
 .container {
   position: relative;
