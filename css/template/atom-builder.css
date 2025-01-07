@@ -4,10 +4,10 @@ body {
   font-family: "Lexend", sans-serif;
 }
 .support-area-second-last-part {
-  background: linear-gradient(90.75deg, #212246 3.29%, #312c49 101.5%);
+  background: #4f3288;
 }
 .mail-banner-part {
-  background-color: black;
+  background: linear-gradient(to bottom, #9f7aea, #805ad5, #6b46c1);
 }
 .floww-atom-mail-h1 {
   text-align: center;
@@ -18,7 +18,7 @@ body {
   background-color: #fff;
 }
 .floww-openContactUs {
-  border-radius: 30px;
+  border-radius: 18px;
 }
 .floww-main-part-button {
   border-radius: 20px;
@@ -39,11 +39,16 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-.background-black {
-  background-color: black;
+
+.themebackground {
+  background: linear-gradient(to bottom, #9f7aea, #805ad5, #6b46c1);
 }
-.background-light-black {
-  background: #5e72a729;
+
+.background-dark-purple {
+  background-color: #331e57;
+}
+.background-light-purple {
+  background: #4f3288;
 }
 .floww-middle-last-element {
   display: flex;
@@ -227,6 +232,7 @@ body {
 
 .floww-image-part {
   margin-left: 1rem;
+  padding-top: 4.5rem;
 }
 
 .mail-banner-part {
@@ -355,4 +361,13 @@ body {
   .price-strikethrough::after {
     height: 3px; /* Slightly thicker line for larger screens */
   }
+}
+
+.styled-div {
+  backdrop-filter: blur(13px);
+  box-shadow: -243.14px 243.14px 243.14px 0px rgba(255, 255, 255, 0.047),
+    243.14px -243.14px 243.14px 0px rgba(165, 165, 165, 0.047) inset;
+  background: #d9d9d90c; /* Ensure this matches the theme */
+  position: relative;
+  z-index: 1;
 }
