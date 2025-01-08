@@ -345,3 +345,29 @@ body{
         height: 3px; /* Slightly thicker line for larger screens */
     }
 }
+
+.logo img{
+    width: 132px;
+}
+.navbar-brand img{
+    width: 132px;
+}
+.animate-custom-rotateme{
+    width: 50px;
+}
+.support-area{
+  background: rgba(34, 37, 45, 1);
+  
+}
+.support-area-backgound-part{
+  background: rgba(16, 49, 104, 0.56);
+}
+.compatible-part-mail{
+background-color: white; padding-top: 75px; padding-bottom: 75px;
+}
+.navbar-anchor-tag{
+    position: relative;
+}
+.mobile-area-div-main-part{
+    background-color: black;
+}
