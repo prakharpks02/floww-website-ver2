@@ -7,7 +7,10 @@ body {
   background: #4f3288;
 }
 .mail-banner-part {
-  background: linear-gradient(to bottom, #c084fc, #a855f7, #7e22ce);
+  /* background: linear-gradient(to bottom, #c084fc, #a855f7, #7e22ce); */
+  background: linear-gradient(90deg, #9c77ec 0%, #bfa5f9 100%);
+  /* -webkit-text-fill-color: transparent; */
+  /* -webkit-background-clip: text; */
 }
 .floww-atom-mail-h1 {
   text-align: center;
