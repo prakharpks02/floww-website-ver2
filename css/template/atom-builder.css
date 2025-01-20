@@ -8,9 +8,17 @@ body {
 }
 .mail-banner-part {
   /* background: linear-gradient(to bottom, #c084fc, #a855f7, #7e22ce); */
-  background: linear-gradient(90deg, #9c77ec 0%, #bfa5f9 100%);
+  /* background: linear-gradient(90deg, #9c77ec 0%, #4f3288 100%); */
   /* -webkit-text-fill-color: transparent; */
   /* -webkit-background-clip: text; */
+
+  position: relative;
+  background: linear-gradient(135deg, #6e49b5 0%, #a77ad1 50%, #eeb0c8 100%);
+  /* background: linear-gradient(135deg, #9333ea 0%, #a855f7 50%, #c084fc 100%); */
+  backdrop-filter: blur(1337px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: inset -240px 240px 240px rgba(255, 255, 255, 0.05),
+    inset 240px -240px 240px rgba(165, 165, 165, 0.05);
 }
 .floww-atom-mail-h1 {
   text-align: center;
@@ -30,7 +38,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 .floww-main-atom-mail-color {
   background: linear-gradient(90deg, #9c77ec 0%, #1c5de0 100%);
@@ -156,7 +164,7 @@ body {
 }
 .floww-main-part-button-1 {
   margin-left: 20px;
-  background: #28165c;
+  background: #6936d6;
   border-radius: 20px;
   color: #fff;
 }
@@ -186,6 +194,20 @@ body {
 /* .floww-atom-mail-upper-part{
     padding: 1rem;
  } */
+
+.atom-mail-container {
+  position: relative;
+}
+
+/* .atom-mail-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset -240px 240px 240px rgba(255, 255, 255, 0.05),
+    inset 240px -240px 240px rgba(165, 165, 165, 0.05);
+  pointer-events: none;
+  z-index: -1;
+} */
 
 @media (min-width: 300px) {
   /* Small devices (tablets) and up */
