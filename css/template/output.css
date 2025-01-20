@@ -2064,7 +2064,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .font-semibold {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .font-medium {
@@ -2072,6 +2072,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .font-black {
+  font-weight: 900;
+}
+
+.font-black-atom-builder {
   font-weight: 600;
 }
 
