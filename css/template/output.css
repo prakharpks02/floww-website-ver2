@@ -22,7 +22,7 @@
 
 ::before,
 ::after {
-  --tw-content: '';
+  --tw-content: "";
 }
 
 /*
@@ -33,16 +33,16 @@
 */
 
 :root {
-  --floww-primary-color: #1E92FB;
+  --floww-primary-color: #1e92fb;
   --floww-secondary-color: #03fffe;
   --floww-tertiary-color: #00ceb1;
   /* --floww-pink-color: #FF0080; */
   --floww-pink-color: #03fffe;
-  --floww-orange-color: #FF8C00;
+  --floww-orange-color: #ff8c00;
   /* --floww-purple-color: #8E2DE2; */
   --floww-purple-color: rgb(37, 67, 177, 0.9);
   /* --floww-blue-color: #4A00E0; */
-  --floww-blue-color: #FF0080;
+  --floww-blue-color: #ff0080;
 }
 
 html {
@@ -136,7 +136,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -225,9 +226,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -274,7 +275,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type='search'] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -1437,11 +1438,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .-translate-y-2\/4 {
   --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .animate-custom-moveleftbounce {
@@ -1705,27 +1710,39 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .bg-secondary-gradient-color {
-  background-image: linear-gradient(91.43deg, var(--floww-blue-color) 1.22%, var(--floww-purple-color) 98.84%);
+  background-image: linear-gradient(
+    91.43deg,
+    var(--floww-blue-color) 1.22%,
+    var(--floww-purple-color) 98.84%
+  );
 }
 
 .bg-primary-gradient-color {
-  background-image: linear-gradient(90deg, var(--floww-tertiary-color) 67.19%, var(--floww-secondary-color) 100%);
+  background-image: linear-gradient(
+    90deg,
+    var(--floww-tertiary-color) 67.19%,
+    var(--floww-secondary-color) 100%
+  );
 }
 
-.bg-bluish-gradient-color{
-  background-image: linear-gradient(90deg, #6936D6 0%, #371D70 100%);
+.bg-bluish-gradient-color {
+  background-image: linear-gradient(90deg, #6936d6 0%, #371d70 100%);
 }
 
 .bg-green-gradient-color {
-  background-image: linear-gradient(91.43deg, #11998E 1.22%, #38EF7D 98.84%);
+  background-image: linear-gradient(91.43deg, #11998e 1.22%, #38ef7d 98.84%);
 }
 
 .bg-yello-gradient-color {
-  background-image: linear-gradient(90deg, #E65C00 0%, #F9D423 100%);
+  background-image: linear-gradient(90deg, #e65c00 0%, #f9d423 100%);
 }
 
 .bg-blue-gradient-color {
-  background-image: linear-gradient(90deg, var(--floww-primary-color) 67.19%, var(--floww-secondary-color) 100%);
+  background-image: linear-gradient(
+    90deg,
+    var(--floww-primary-color) 67.19%,
+    var(--floww-secondary-color) 100%
+  );
 }
 
 .contact-us-button-hover:hover {
@@ -1733,18 +1750,29 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .bg-gradient-color {
-  background-image: linear-gradient(90deg, var(--floww-tertiary-color) 0%, var(--floww-primary-color) 100%);
+  background-image: linear-gradient(
+    90deg,
+    var(--floww-tertiary-color) 0%,
+    var(--floww-primary-color) 100%
+  );
 }
 
-.bg-button-gradient-color{
-  background: linear-gradient(90deg, #6936D6 0%, #0F2A57 100%);
+.bg-button-gradient-color {
+  background: linear-gradient(90deg, #6936d6 0%, #0f2a57 100%);
 }
 .bg-gray-gradient-color {
-  background-image: linear-gradient(180deg, #FBFBFB 0%, #FBFBFB 100%);
+  background-image: linear-gradient(180deg, #fbfbfb 0%, #fbfbfb 100%);
 }
 
 .bg-instagram-gradient-color {
-  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
 }
 
 .bg-cover {
@@ -2036,7 +2064,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .font-semibold {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .font-medium {
@@ -2044,7 +2072,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .font-black {
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .font-normal {
@@ -2159,43 +2187,51 @@ Ensure the default browser behavior of the `hidden` attribute.
 .shadow-navbar {
   --tw-shadow: 0px 2px 20px rgba(0, 0, 0, 0.05);
   --tw-shadow-colored: 0px 2px 20px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-dropdown {
-  --tw-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .10);
+  --tw-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
   --tw-shadow-colored: 0px 0px 15px 0px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-custom-box-shadow {
   --tw-shadow: 0px 10px 15px rgba(142, 45, 226, 0.15);
   --tw-shadow-colored: 0px 10px 15px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-custom-box-shadow4 {
   --tw-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
   --tw-shadow-colored: 0px 2px 15px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-custom-box-shadow3 {
   --tw-shadow: 0px 2px 15px rgba(58, 58, 58, 0.1);
   --tw-shadow-colored: 0px 2px 15px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-custom-box-shadow2 {
   --tw-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
   --tw-shadow-colored: 0px 14px 30px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
+    0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .outline-0 {
@@ -2204,17 +2240,27 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .blur {
   --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke,
+    opacity, box-shadow, transform, filter, -webkit-text-decoration-color,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -2246,39 +2292,38 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .preloader-area .preloader .waviy span {
-  -webkit-animation-delay: .1s;
-  animation-delay: .1s;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
   -webkit-animation: waviy 1s infinite;
   animation: waviy 1s infinite;
 }
 
 .preloader-area .preloader .waviy span:nth-child(2) {
-  -webkit-animation-delay: .2s;
-  animation-delay: .2s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .preloader-area .preloader .waviy span:nth-child(3) {
-  -webkit-animation-delay: .3s;
-  animation-delay: .3s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .preloader-area .preloader .waviy span:nth-child(4) {
-  -webkit-animation-delay: .4s;
-  animation-delay: .4s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .preloader-area .preloader .waviy span:nth-child(5) {
-  -webkit-animation-delay: .5s;
-  animation-delay: .5s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .preloader-area .preloader .waviy span:nth-child(6) {
-  -webkit-animation-delay: .6s;
-  animation-delay: .6s;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 @-webkit-keyframes waviy {
-
   0%,
   40%,
   100% {
@@ -2291,7 +2336,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @keyframes waviy {
-
   0%,
   40%,
   100% {
@@ -2357,12 +2401,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .overview-image img {
-  filter: drop-shadow(15px 15px 40px rgba(0, 0, 0, 0.1)) drop-shadow(-15px -15px 40px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(15px 15px 40px rgba(0, 0, 0, 0.1))
+    drop-shadow(-15px -15px 40px rgba(0, 0, 0, 0.15));
 }
 
 .features-area .image img.active {
   opacity: 1;
   visibility: visible;
+  /* background-color: #331e57; */
 }
 
 .circle-shape-bg::before {
@@ -2414,11 +2460,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 12px;
 }
 
-.screenshotsSwiperSlides .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-image: linear-gradient(90deg, var(--floww-tertiary-color) 67.19%, var(--floww-secondary-color) 100%);
+.screenshotsSwiperSlides
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-image: linear-gradient(
+    90deg,
+    var(--floww-tertiary-color) 67.19%,
+    var(--floww-secondary-color) 100%
+  );
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
@@ -2434,7 +2485,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .accordion .accordion-item .accordion-title.active svg {
   --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   stroke: #464646;
 }
 
@@ -2454,7 +2507,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .single-team-member:hover .socials .btn {
   --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .single-team-member .socials ul {
@@ -2470,7 +2525,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 /* Footer Area CSS */
 
 .single-footer-widget ul li a:before {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 /* Copyright Area CSS */
@@ -2484,7 +2539,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .progress-wrap {
   transform: translateY(0.75rem);
-  transition: all .2s linear, margin-right 0s;
+  transition: all 0.2s linear, margin-right 0s;
   box-shadow: inset 0 0 0 0.1rem rgba(128, 130, 134, 0.25);
 }
 
@@ -2492,7 +2547,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 1;
   visibility: visible;
   --tw-translate-y: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 /* keyframes */
@@ -2873,36 +2930,76 @@ Responsive CSS
     box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.active {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.active {
     --tw-text-opacity: 1;
     color: var(--floww-pink-color);
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     height: 23px;
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     padding: 13px;
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     width: 50%;
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     border-left-width: 0px;
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     border-bottom-width: 0px;
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     text-align: right;
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     background-color: transparent;
   }
 
@@ -2936,7 +3033,8 @@ Responsive CSS
 
 /* Min width 576px to Max width 767px */
 
-@media only screen and (min-width: 576px) and (max-width: 767px) {}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+}
 
 /* Min width 768px to Max width 991px */
 
@@ -3082,36 +3180,76 @@ Responsive CSS
     box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.active {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.active {
     --tw-text-opacity: 1;
     color: var(--floww-pink-color);
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     height: 23px;
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     padding: 13px;
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     width: 50%;
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     border-left-width: 0px;
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     border-bottom-width: 0px;
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     text-align: right;
   }
 
-  .togy-responsive-nav .togy-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+  .togy-responsive-nav
+    .togy-responsive-menu.mean-container
+    .mean-nav
+    ul
+    li
+    a.mean-expand {
     background-color: transparent;
   }
 
@@ -3136,15 +3274,18 @@ Responsive CSS
 
 /* Min width 992px to Max width 1199px */
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
 
 /* Min width 1200px to Max width 1399px */
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+}
 
 /* Min width 1600px */
 
-@media only screen and (min-width: 1600px) {}
+@media only screen and (min-width: 1600px) {
+}
 
 /*================================================
 Container Width Based on Device
@@ -3221,23 +3362,37 @@ Container Width Based on Device
 }
 
 .placeholder\:transition::-moz-placeholder {
-  -moz-transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  -moz-transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
 .placeholder\:transition:-ms-input-placeholder {
-  -ms-transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  -ms-transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
 .placeholder\:transition::placeholder {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke,
+    opacity, box-shadow, transform, filter, -webkit-text-decoration-color,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -3411,13 +3566,17 @@ Container Width Based on Device
 .before\:-translate-y-2\/4::before {
   content: var(--tw-content);
   --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .before\:-rotate-45::before {
   content: var(--tw-content);
   --tw-rotate: -45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .before\:rounded-full::before {
@@ -3489,22 +3648,30 @@ Container Width Based on Device
 
 .before\:bg-primary-gradient-color::before {
   content: var(--tw-content);
-  background-image: linear-gradient(90deg, var(--floww-tertiary-color) 67.19%, var(--floww-secondary-color) 100%);
+  background-image: linear-gradient(
+    90deg,
+    var(--floww-tertiary-color) 67.19%,
+    var(--floww-secondary-color) 100%
+  );
 }
 
 .before\:bg-secondary-gradient-color::before {
   content: var(--tw-content);
-  background-image: linear-gradient(91.43deg, var(--floww-blue-color) 1.22%, var(--floww-purple-color) 98.84%);
+  background-image: linear-gradient(
+    91.43deg,
+    var(--floww-blue-color) 1.22%,
+    var(--floww-purple-color) 98.84%
+  );
 }
 
 .before\:bg-green-gradient-color::before {
   content: var(--tw-content);
-  background-image: linear-gradient(91.43deg, #11998E 1.22%, #38EF7D 98.84%);
+  background-image: linear-gradient(91.43deg, #11998e 1.22%, #38ef7d 98.84%);
 }
 
 .before\:bg-yello-gradient-color::before {
   content: var(--tw-content);
-  background-image: linear-gradient(90deg, #E65C00 0%, #F9D423 100%);
+  background-image: linear-gradient(90deg, #e65c00 0%, #f9d423 100%);
 }
 
 .before\:opacity-80::before {
@@ -3570,7 +3737,9 @@ Container Width Based on Device
 .after\:rotate-45::after {
   content: var(--tw-content);
   --tw-rotate: 45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .after\:bg-black-color::after {
@@ -3623,15 +3792,23 @@ Container Width Based on Device
 }
 
 .hover\:bg-secondary-gradient-color:hover {
-  background-image: linear-gradient(91.43deg, var(--floww-blue-color) 1.22%, var(--floww-purple-color) 98.84%);
+  background-image: linear-gradient(
+    91.43deg,
+    var(--floww-blue-color) 1.22%,
+    var(--floww-purple-color) 98.84%
+  );
 }
 
 .hover\:bg-primary-gradient-color:hover {
-  background-image: linear-gradient(90deg, var(--floww-tertiary-color) 67.19%, var(--floww-secondary-color) 100%);
+  background-image: linear-gradient(
+    90deg,
+    var(--floww-tertiary-color) 67.19%,
+    var(--floww-secondary-color) 100%
+  );
 }
 
 .hover\:bg-green-gradient-color:hover {
-  background-image: linear-gradient(91.43deg, #11998E 1.22%, #38EF7D 98.84%);
+  background-image: linear-gradient(91.43deg, #11998e 1.22%, #38ef7d 98.84%);
 }
 
 .hover\:bg-none:hover {
@@ -3669,25 +3846,29 @@ Container Width Based on Device
 .hover\:shadow-secondary-btn:hover {
   --tw-shadow: 0px 15px 40px rgba(142, 45, 226, 0.3);
   --tw-shadow-colored: 0px 15px 40px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .hover\:shadow-primary-btn:hover {
   --tw-shadow: 0px 15px 40px rgba(244, 27, 84, 0.3);
   --tw-shadow-colored: 0px 15px 40px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .hover\:shadow-white-btn:hover {
   --tw-shadow: 0px 15px 40px rgba(255, 255, 255, 0.3); /* White shadow */
   --tw-shadow-colored: 0px 15px 40px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .hover\:shadow-custom-box-shadow:hover {
   --tw-shadow: 0px 10px 15px rgba(142, 45, 226, 0.15);
   --tw-shadow-colored: 0px 10px 15px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .hover\:before\:visible:hover::before {
@@ -3777,7 +3958,9 @@ Container Width Based on Device
 
   .sm\:-translate-y-2\/4 {
     --tw-translate-y: -50%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .sm\:grid-cols-3 {
@@ -4180,7 +4363,9 @@ Container Width Based on Device
 
   .md\:-translate-y-2\/4 {
     --tw-translate-y: -50%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:grid-cols-3 {
@@ -4522,7 +4707,8 @@ Container Width Based on Device
   .md\:hover\:shadow-custom-box-shadow3:hover {
     --tw-shadow: 0px 2px 15px rgba(58, 58, 58, 0.1);
     --tw-shadow-colored: 0px 2px 15px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
 
@@ -5262,7 +5448,9 @@ Container Width Based on Device
 
   .xl\:-translate-y-2\/4 {
     --tw-translate-y: -50%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .xl\:grid-cols-2 {
@@ -5588,9 +5776,6 @@ Container Width Based on Device
     font-size: 53px;
   }
 }
-
-
-
 
 /* Partners Area */
 
