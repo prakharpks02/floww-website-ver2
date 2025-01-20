@@ -43,23 +43,23 @@
 
     <script>
         function redirectToHref(link) {
-   
-        const currentUrl = window.location.href;
-        const parameters = currentUrl.split('?')[1] || ""; 
-   
-   
-        if (event.ctrlKey || event.metaKey) {
-        window.open(link + (parameters ? "?" + parameters : ""), '_blank'); 
-        } else {
-        window.open(link + (parameters ? "?" + parameters : ""), '_self');
-        }
-        }
-   
-     </script>
 
-<script defer src="https://analytics.gofloww.co/script.js" data-website-id="06df739f-0001-4fab-9393-1271fc6591c6">
-    
-</script>
+            const currentUrl = window.location.href;
+            const parameters = currentUrl.split('?')[1] || "";
+
+
+            if (event.ctrlKey || event.metaKey) {
+                window.open(link + (parameters ? "?" + parameters : ""), '_blank');
+            } else {
+                window.open(link + (parameters ? "?" + parameters : ""), '_self');
+            }
+        }
+
+    </script>
+
+    <script defer src="https://analytics.gofloww.co/script.js" data-website-id="06df739f-0001-4fab-9393-1271fc6591c6">
+
+    </script>
 
     <!-- All CSS Links -->
     <link rel="stylesheet" href="css/template/swiper-bundle.min.css">
@@ -139,7 +139,7 @@
                                             Mail</a>
                                     </li>
                                     <li>
-                                        <a href="http://brandbuilder.store/"
+                                        <a href="/atom-builder"
                                             class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">
                                             Atom Builder</a>
                                     </li>
@@ -202,8 +202,7 @@
                             </li>
                         </ul>
                         <div class="self-center">
-                            <a onclick="redirectToHref('https://console.gofloww.co')"
-                             style="cursor: pointer;"
+                            <a onclick="redirectToHref('https://console.gofloww.co')" style="cursor: pointer;"
                                 class="inline-block font-semibold text-13px md:text-14px lg:text-15px rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">
                                 Access Console
                             </a>
@@ -229,7 +228,7 @@
                             <a href="/atom-mail">Atom Mail</a>
                         </li>
                         <li>
-                           <a href="http://brandbuilder.store/" >Atom Builder</a>
+                            <a href="/atom-builder">Atom Builder</a>
                         </li>
                         <li>
                             <a href="/hr">Floww HR</a>
@@ -591,7 +590,8 @@
             <div class="grid gap-5 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
                 <div class="copyright">
                     <p class="bg-bluish-gradient-color text-13px md:text-15px lg:text-16px font-semibold">&copy;2024 <a
-                        onclick="redirectToHref('https://gofloww.co/')"  class="font-semibold" >Floww APIs Pvt. Ltd.</a>
+                            onclick="redirectToHref('https://gofloww.co/')" class="font-semibold">Floww APIs Pvt.
+                            Ltd.</a>
                     </p>
                 </div>
                 <div class="copyright-info self-center">
