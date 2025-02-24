@@ -291,7 +291,12 @@ input[type="checkbox"] {
     margin-bottom: 30px;
   }
 }
-
+a{
+  cursor: pointer;
+}
+button{
+  cursor: pointer;
+}
 @media (max-width: 1024px) {
   #floww-logo {
     width: 120px; /* Reduce size for tablets */
