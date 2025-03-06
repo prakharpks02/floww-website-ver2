@@ -670,8 +670,9 @@
                 });
 
                 if (response.ok) {
-                    // alert('Message sent successfully!');
+                    event.target.reset();
                     window.location.href = '/thank-you';
+                    
                 } else {
                     alert('Failed to send message. Please try again.');
                 }
