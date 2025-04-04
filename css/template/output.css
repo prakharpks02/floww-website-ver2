@@ -2415,13 +2415,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   /* background-color: #331e57; */
 }
 
-.circle-shape-bg::before {
+/* .circle-shape-bg::before {
   background-image: url(../../img/shape/bg-circle.png);
 }
 
 .circle-shape-bg2::before {
   background-image: url(../../img/shape/bg-circle2.png);
-}
+} */
 
 .circle-shape-bg3::before {
   background-image: url(../../img/shape/bg-circle3.png);
