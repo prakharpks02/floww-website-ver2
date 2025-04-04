@@ -78,6 +78,7 @@ body{
     color: black;
     font-size: 10px;
     font-weight: 500;
+    font-display: swap;
     border-radius: 9999px; /* Full rounded */
     display: flex;
     align-items: center;
