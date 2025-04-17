@@ -15,7 +15,7 @@
     <img src = "./images/floww-logo.png" id="floww-logo">
    </div>
     <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
-      <h1 class="login-heading" > Forgot Password </h1>
+      <h1 class="login-heading" > Forgot Password ? </h1>
       <div class="container">
         <header>
           <img src="./images/logo-atom.png" alt="Floww Logo" class="logo">
@@ -95,7 +95,7 @@
             .then(response => response.json())  // Convert response to JSON
             .then(responseData => {
                 if (responseData && responseData.status) {
-                    flowwShowAlert("success", "Invite Sent");
+                    flowwShowAlert("success", "Email Sent");
                 } else {
                     flowwShowAlert("error", responseData.message || "Something went wrong");
                 }
