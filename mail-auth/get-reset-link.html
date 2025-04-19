@@ -26,7 +26,7 @@
           <form id="login-form" class="login-form" method="post">
             <div class="form-group">
               <label for="email">Enter Your Email ID</label>
-              <input type="email" id="email" name="email" placeholder="enter email (e.g., abc@xyz.com)" required>
+              <input type="email" id="email" name="email" placeholder="Enter Your Email (e.g., abc@xyz.com)" required>
             </div>
            
             <button type="submit" class="login-button" onClick="submitForm()">Submit</button>
@@ -71,6 +71,8 @@
         // Submit the form with the email (same function as checkEmailValidity for demonstration)
         function submitForm() {
             event.preventDefault();
+
+            
             const email = document.getElementById("email").value;
             console.log(email);
             if (!email) {
@@ -96,6 +98,14 @@
             .then(responseData => {
                 if (responseData && responseData.status) {
                     flowwShowAlert("success", "Email Sent");
+                     
+            button.disabled = true;
+            button.classList.add("disabled");
+
+            setTimeout(() => {
+                button.disabled = false;
+                button.classList.remove("disabled");
+            }, 120000);
                 } else {
                     flowwShowAlert("error", responseData.message || "Something went wrong");
                 }
