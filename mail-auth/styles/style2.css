@@ -262,6 +262,13 @@ body {
   .floww-main-part-element{
     width: 100%;
   }
+
+  .disabled {
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
   
   @media (max-width: 1280px) {
     #floww-logo {
