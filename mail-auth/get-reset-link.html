@@ -43,7 +43,7 @@
           <!-- <button type="submit" class="login-button" onClick="submitForm()">Submit</button> -->
           <button type="submit" id="submit-btn" class="login-button">Submit</button>
           <div class="footer-links">
-            <p>No Sales Calls Ever!</p>
+           <small><strong> <p id="cooldown-text" style="display: none;">You can request new mail after 02:00 mins.</p></small></strong>
           </div>
         </form>
       </main>
@@ -193,10 +193,30 @@
           button.disabled = true;
           button.classList.add("disabled");
 
-          setTimeout(() => {
-            button.disabled = false;
-            button.classList.remove("disabled");
-          }, 120000); // 2 minutes
+         const cooldownText = document.getElementById("cooldown-text");
+let timeLeft = 120;
+
+cooldownText.style.display = "block";
+
+const formatTime = (seconds) => {
+  const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+  const sec = String(seconds % 60).padStart(2, '0');
+  return `${min}:${sec} mins.`;
+};
+
+cooldownText.textContent = `You can request new mail after ${formatTime(timeLeft)}`;
+
+const countdownInterval = setInterval(() => {
+  timeLeft--;
+  if (timeLeft > 0) {
+    cooldownText.textContent = `You can request new mail after ${formatTime(timeLeft)}`;
+  } else {
+    clearInterval(countdownInterval);
+    cooldownText.style.display = "none";
+    button.disabled = false;
+    button.classList.remove("disabled");
+  }
+}, 1000);
         } else {
           flowwShowAlert("error", responseData.message || "Something went wrong");
         }
