@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floww Console</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+  font-family: "Poppins", sans-serif !important;
+
+}
+/* Default: Mobile first (below 968px) */ 
+.floww-atom-suite-desktop-version {
+  display: none;
+}
+
+.floww-atom-suite-mobile-version {
+  display: block;
+}
+
+/* Desktop version (968px and above) */
+@media (min-width: 968px) {
+  .floww-atom-suite-desktop-version {
+    display: block;
+  }
+
+  .floww-atom-suite-mobile-version {
+    display: none;
+  }
+}
+
+</style>
+<body class="bg-gradient-to-r from-[#041B2D] to-[#00BFFF] text-white font-sans" >
+  <!-- Desktop version -->
+<div class="floww-atom-suite-desktop-version">
+  <div class="logo px-4 pt-6 sm:px-10 sm:pt-10">
+    <a href="https://gofloww.co" target="_blank">
+      <img 
+        src="img/logo/logo.webp" 
+        alt="floww logo, logistics app" 
+        class="w-24 sm:w-[18%]" 
+      />
+    </a>
+  </div>
+  
+  <!-- 1st screen -->
+  <div class="min-h-screen flex items-center justify-center px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 w-full max-w-6xl  rounded-xl overflow-hidden">
+
+      <!-- Left Side -->
+      <div class="p-8 lg:p-16 text-left space-y-6">
+
+        <!-- Tagline -->
+    <p class="text-xl font-normal tracking-wide">Backed by IIT & Key Ministries</p>
+
+    <!-- Main Heading -->
+    <h1 class="text-3xl sm:text-4xl font-bold leading-snug">
+      <span class="font-bold">AI Powered Atom Suite</span><br>
+      <span class="font-normal">Enables MSMEs for the<br>future of work</span>
+    </h1>
+
+    <!-- Description -->
+    <p class="text-xl font-normal leading-relaxed text-gray-200">
+      Drive efficiency, elevate business<br>
+      operations, and improve<br>
+      employee engagement
+    </p>
+      </div>
+
+      <!-- Right Side: Form -->
+      <div class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"  style="border-radius: px;">
+        <form class="space-y-4">
+          <input type="email" placeholder="Work Email*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+          <div class="flex gap-4">
+            <input type="text" placeholder="First Name*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            <input type="text" placeholder="Last Name*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+          </div>
+
+          <div class="flex gap-4">
+            <input type="text" placeholder="India" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            <input type="text" placeholder="+91" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+          </div>
+
+          <input type="text" placeholder="Company Name*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+          <div class="flex gap-4">
+            <input type="text" placeholder="No. of Employees*" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            <input type="text" placeholder="Seniority*" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+          </div>
+
+          <input type="text" placeholder="Functional Area*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+          <div class="flex items-start space-x-2">
+            <input type="checkbox" class="mt-1" />
+            <label class="text-sm text-gray-600">
+              I have read and understood the <a href="#" class="underline">Terms of Use</a>
+            </label>
+          </div>
+
+          <button type="submit" class="w-full bg-black text-white font-semibold rounded-full py-2 hover:bg-gray-900">
+            Book a Demo
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!--2nd screen  -->
+  <section class="bg-gradient-to-b from-[#fdf2ff] to-[#f3e9ff] text-gray-800">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold text-center text-purple-700">1 Solution</h2>
+      <h3 class="text-2xl md:text-3xl font-semibold text-center mt-2">133+ Automated Workflows</h3>
+      <p class="text-center text-base md:text-lg text-gray-700 mt-4 max-w-2xl mx-auto">
+        Automate HR, streamline <span class="font-semibold text-purple-700">emails</span>, and build your brand — faster, smarter, and
+        <span class="font-bold">all in one place</span> with <strong>Floww Atom Suite</strong>.
+      </p>
+  
+
+      <!-- Grid of cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-12" style="gap:4rem">
+
+
+          <!-- Card 1 -->
+  <div class="relative w-[250px] h-[230px] rounded-2xl  bg-white flex flex-col " style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+    <img src="./atom-suite-images/ai-icon-1.png" alt="AI Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem;background-color: #7B5ABA;
+    border-radius: 50%;padding: 0.5rem; " />
+    <h4 class="text-lg font-semibold text-purple-700 leading-tight" style="font-size: 1.6rem;font-weight: 600;">AI<br>Drafting</h4>
+    <p class="text-gray-700 mt-3"style="font-size: 1rem;font-weight: 400; line-height:1.6rem">Generate professional emails faster with AI-powered writing assistance.</p>
+  </div>
+
+
+
+        <!-- Card 2 -->
+        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+          <img src="./atom-suite-images/Icon 02 1 (1).png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Payroll<br>Automation</h4>
+          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Automate complex payroll calculations with precision and ensure timely salary disbursals.</p>
+        </div>
+      
+        <!-- Card 3 -->
+        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+          <img src="./atom-suite-images/Icon 03 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">300+<br>Design Templates</h4>
+          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Choose from a wide range of pre-built themes tailored for every industry.</p>
+        </div>
+      
+        <!-- Card 4 -->
+        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+          <img src="./atom-suite-images/Icon 04 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">No-Code<br>Customization</h4>
+          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Design your site with drag-and-drop tools and zero coding effort.</p>
+        </div>
+      
+        <!-- Card 5 -->
+        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+          <img src="./atom-suite-images/Icon 05 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Performance<br>Management</h4>
+          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Set goals, track progress, and review performance with intuitive dashboards.</p>
+        </div>
+      
+        <!-- Card 6 -->
+        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+          <img src="./atom-suite-images/Icon 06 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Task  & <br> Workflow<br>Automation</h4>
+          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Streamline internal processes with custom task flows and smart notifications.</p>
+        </div>
+      
+        <!-- Card 7 -->
+        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+          <img src="./atom-suite-images/Icon 07 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">One-Click<br>Templates</h4>
+          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Use customizable email templates to save time and maintain consistency.</p>
+        </div>
+      
+        <!-- Card 8 -->
+        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+          <img src="./atom-suite-images/Icon 08.02 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Custom <br>Domain Integration</h4>
+          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Build brand credibility with professional email addresses under your domain.</p>
+        </div>
+      
+        <!-- Card 9 -->
+        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+          <img src="./atom-suite-images/Icon 09.02 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Mobile-Optimized<br>Designs</h4>
+          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Ensure a flawless experience on all screen sizes and devices.</p>
+        </div>
+      
+        <!-- Card 10 -->
+        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+          <img src="./atom-suite-images/Icon 10 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Analytics &<br>Reporting</h4>
+          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Make data-driven decisions with real-time reports and actionable HR insights.</p>
+        </div>
+      
+        <!-- Card 11 -->
+        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+          <img src="./atom-suite-images/Icon 11.03 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Employee Self-Service<br>(ESS) Portal</h4>
+          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Employees manage their own details, leaves, and payslips—so HR doesn’t have to.</p>
+        </div>
+      
+        <!-- Card 12 -->
+        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+          <img src="./atom-suite-images/Icon 12.01 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Expense<br>Management</h4>
+          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Easily submit, track, approve, and manage employee expenses with transparency and control.</p>
+        </div>
+      
+      </div>
+      
+
+
+      
+
+ 
+    </div>
+  </section>
+  
+
+</div>
+<!-- Mobile Version -->
+<div class="floww-atom-suite-mobile-version">
+  <div class="logo px-4 pt-6 sm:px-10 sm:pt-10">
+    <a href="https://gofloww.co" target="_blank">
+      <img 
+        src="img/logo/logo.webp" 
+        alt="floww logo, logistics app" 
+        class="w-24 sm:w-[18%]" 
+      />
+    </a>
+  </div>
+  
+  <!-- 1st screen -->
+  <div class="min-h-screen flex items-center justify-center px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 w-full max-w-6xl  rounded-xl overflow-hidden">
+
+      <!-- Left Side -->
+      <div class="p-8 lg:p-16 text-left space-y-6">
+
+        <!-- Tagline -->
+    <p class="text-xl font-normal tracking-wide">Backed by IIT & Key Ministries</p>
+
+    <!-- Main Heading -->
+    <h1 class="text-3xl sm:text-4xl font-bold leading-snug">
+      <span class="font-bold">AI Powered Atom Suite</span><br>
+      <span class="font-normal">Enables MSMEs for the<br>future of work</span>
+    </h1>
+
+    <!-- Description -->
+    <p class="text-xl font-normal leading-relaxed text-gray-200">
+      Drive efficiency, elevate business<br>
+      operations, and improve<br>
+      employee engagement
+    </p>
+      </div>
+
+      <!-- Right Side: Form -->
+      <div class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"  style="border-radius: px;">
+        <form class="space-y-4">
+          <input type="email" placeholder="Work Email*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+          <div class="flex gap-4">
+            <input type="text" placeholder="First Name*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            <input type="text" placeholder="Last Name*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+          </div>
+
+          <div class="flex gap-4">
+            <input type="text" placeholder="India" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            <input type="text" placeholder="+91" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+          </div>
+
+          <input type="text" placeholder="Company Name*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+          <div class="flex gap-4">
+            <input type="text" placeholder="No. of Employees*" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            <input type="text" placeholder="Seniority*" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+          </div>
+
+          <input type="text" placeholder="Functional Area*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+          <div class="flex items-start space-x-2">
+            <input type="checkbox" class="mt-1" />
+            <label class="text-sm text-gray-600">
+              I have read and understood the <a href="#" class="underline">Terms of Use</a>
+            </label>
+          </div>
+
+          <button type="submit" class="w-full bg-black text-white font-semibold rounded-full py-2 hover:bg-gray-900">
+            Book a Demo
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!--2nd screen  -->
+  <div>
+       <!-- Mobile Layout -->
+
+       <div class="flex flex-col gap-4 mt-10">
+        <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow" >
+          <div style="background-color: #7B5ABA;
+    border-radius: 50%;">
+          <img src="./atom-suite-images/ai-icon-1.png" alt="AI Drafting" class="h-6 w-6 mt-1"style="width: 30px; height=20px"; />
+        </div>
+          <div>
+            <h4 class="text-purple-700 font-semibold">AI Drafting</h4>
+            <p class="text-sm text-gray-700">Create professional emails faster with AI assistance.</p>
+          </div>
+        </div>
+  
+        <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow">
+          <img src="./atom-suite-images/Icon 02 1 (1).png" alt="Payroll" class="h-6 w-6 mt-1" />
+          <div>
+            <h4 class="text-purple-700 font-semibold">Payroll Automation</h4>
+            <p class="text-sm text-gray-700">Automate payroll with precision and timely payouts.</p>
+          </div>
+        </div>
+  
+        <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow">
+          <img src="./atom-suite-images/Icon 03 1.png" alt="Design Templates" class="h-6 w-6 mt-1" />
+          <div>
+            <h4 class="text-purple-700 font-semibold">300+ Design Templates</h4>
+            <p class="text-sm text-gray-700">Select from pre-built themes for every industry.</p>
+          </div>
+        </div>
+  
+        <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow">
+          <img src="./atom-suite-images/Icon 04 1.png" alt="No-Code" class="h-6 w-6 mt-1" />
+          <div>
+            <h4 class="text-purple-700 font-semibold">No-Code Customization</h4>
+            <p class="text-sm text-gray-700">Design your site with drag-and-drop, no coding needed.</p>
+          </div>
+        </div>
+  
+        <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow">
+          <img src="./atom-suite-images/Icon 05 1.png" alt="Custom Domain" class="h-6 w-6 mt-1" />
+          <div>
+            <h4 class="text-purple-700 font-semibold">Custom Domain Integration</h4>
+            <p class="text-sm text-gray-700">Build credibility with professional email addresses.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- CTA Button -->
+      <div class="text-center mt-8">
+        <button class="bg-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
+          Schedule a Demo
+        </button>
+      </div>
+  </div>
+
+</div>
+</body>
+</html>
