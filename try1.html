@@ -2,624 +2,947 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floww Console</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floww Console</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet">
 
 <style>
-    body {
-        font-family: "Poppins", sans-serif !important;
 
-    }
+  
+  body {
+    font-family: "Poppins", sans-serif !important;
 
-    /* Default: Mobile first (below 968px) */
+  }
+
+  /* Default: Mobile first (below 968px) */
+  .floww-atom-suite-desktop-version {
+    display: none;
+  }
+
+  .floww-atom-suite-mobile-version {
+    display: block;
+  }
+
+  /* Desktop version (968px and above) */
+  @media (min-width: 968px) {
     .floww-atom-suite-desktop-version {
-        display: none;
+      display: block;
     }
 
     .floww-atom-suite-mobile-version {
-        display: block;
+      display: none;
     }
-
-    /* Desktop version (968px and above) */
-    @media (min-width: 968px) {
-        .floww-atom-suite-desktop-version {
-            display: block;
-        }
-
-        .floww-atom-suite-mobile-version {
-            display: none;
-        }
-    }
+  }
 </style>
 
 <body class="bg-gradient-to-r from-[#041B2D] to-[#00BFFF] text-white font-sans">
-    <!-- Desktop version -->
-    <div class="floww-atom-suite-desktop-version">
-        <div class="logo px-4 pt-6 sm:px-10 sm:pt-10">
-            <a href="https://gofloww.co" target="_blank">
-                <img src="img/logo/logo.webp" alt="floww logo, logistics app" class="w-24 sm:w-[18%]" />
-            </a>
+  <!-- Desktop version -->
+  <div class="floww-atom-suite-desktop-version">
+    <div class="logo px-4 pt-6 sm:px-10 sm:pt-10">
+      <a href="https://gofloww.co" target="_blank">
+        <img src="img/logo/logo.webp" alt="floww logo, logistics app" class="w-24 sm:w-[18%]" />
+      </a>
+    </div>
+
+    <!-- 1st screen -->
+    <div class="min-h-screen flex items-center justify-center px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 w-full max-w-6xl  rounded-xl overflow-hidden">
+
+        <!-- Left Side -->
+        <div class="p-8 lg:p-16 text-left space-y-6">
+
+          <!-- Tagline -->
+          <p class="text-xl font-normal tracking-wide">Backed by IIT & Key Ministries</p>
+
+          <!-- Main Heading -->
+          <h1 class="text-3xl sm:text-4xl font-bold leading-snug">
+            <span class="font-bold">AI Powered Atom Suite</span><br>
+            <span class="font-normal">Enables MSMEs for the<br>future of work</span>
+          </h1>
+
+          <!-- Description -->
+          <p class="text-xl font-normal leading-relaxed text-gray-200">
+            Drive efficiency, elevate business<br>
+            operations, and improve<br>
+            employee engagement
+          </p>
         </div>
 
-        <!-- 1st screen -->
-        <div class="min-h-screen flex items-center justify-center px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 w-full max-w-6xl  rounded-xl overflow-hidden">
+        <!-- Right Side: Form -->
+        <div class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"
+          style="border-radius: px;">
+          <form class="space-y-4">
+            <input type="email" placeholder="Work Email*"
+              class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
 
-                <!-- Left Side -->
-                <div class="p-8 lg:p-16 text-left space-y-6">
-
-                    <!-- Tagline -->
-                    <p class="text-xl font-normal tracking-wide">Backed by IIT & Key Ministries</p>
-
-                    <!-- Main Heading -->
-                    <h1 class="text-3xl sm:text-4xl font-bold leading-snug">
-                        <span class="font-bold">AI Powered Atom Suite</span><br>
-                        <span class="font-normal">Enables MSMEs for the<br>future of work</span>
-                    </h1>
-
-                    <!-- Description -->
-                    <p class="text-xl font-normal leading-relaxed text-gray-200">
-                        Drive efficiency, elevate business<br>
-                        operations, and improve<br>
-                        employee engagement
-                    </p>
-                </div>
-
-                <!-- Right Side: Form -->
-                <div class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"
-                    style="border-radius: px;">
-                    <form class="space-y-4">
-                        <input type="email" placeholder="Work Email*"
-                            class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-
-                        <div class="flex gap-4">
-                            <input type="text" placeholder="First Name*"
-                                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-                            <input type="text" placeholder="Last Name*"
-                                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-                        </div>
-
-                        <div class="flex gap-4">
-                            <input type="text" placeholder="India"
-                                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-                            <input type="text" placeholder="+91"
-                                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-                        </div>
-
-                        <input type="text" placeholder="Company Name*"
-                            class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-
-                        <div class="flex gap-4">
-                            <input type="text" placeholder="No. of Employees*"
-                                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-                            <input type="text" placeholder="Seniority*"
-                                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-                        </div>
-
-                        <input type="text" placeholder="Functional Area*"
-                            class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-
-                        <div class="flex items-start space-x-2">
-                            <input type="checkbox" class="mt-1" />
-                            <label class="text-sm text-gray-600">
-                                I have read and understood the <a href="#" class="underline">Terms of Use</a>
-                            </label>
-                        </div>
-
-                        <button type="submit"
-                            class="w-full bg-black text-white font-semibold rounded-full py-2 hover:bg-gray-900">
-                            Book a Demo
-                        </button>
-                    </form>
-                </div>
+            <div class="flex gap-4">
+              <input type="text" placeholder="First Name*"
+                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+              <input type="text" placeholder="Last Name*"
+                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
             </div>
+
+            <div class="flex gap-4">
+              <input type="text" placeholder="India"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+              <input type="text" placeholder="+91"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            </div>
+
+            <input type="text" placeholder="Company Name*"
+              class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+            <div class="flex gap-4">
+              <input type="text" placeholder="No. of Employees*"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+              <input type="text" placeholder="Seniority*"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            </div>
+
+            <input type="text" placeholder="Functional Area*"
+              class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+            <div class="flex items-start space-x-2">
+              <input type="checkbox" class="mt-1" />
+              <label class="text-sm text-gray-600">
+                I have read and understood the <a href="#" class="underline">Terms of Use</a>
+              </label>
+            </div>
+
+            <button type="submit" class="w-full bg-black text-white font-semibold rounded-full py-2 hover:bg-gray-900">
+              Book a Demo
+            </button>
+          </form>
         </div>
-
-        <!-- 3rd screen -->
-        <section class="bg-gradient-to-r from-white to-blue-100 py-12 px-4">
-            <div class="max-w-6xl mx-auto text-center">
-                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                    DISCOVER WHY ATOM SUITE IS THE <span class="text-blue-600">#1</span>
-                </h2>
-                <p class="text-lg sm:text-xl text-blue-700 font-semibold mb-8">Software Solution for Startups & MSMEs
-                </p>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <!-- Card Template Start -->
-                    <div class="bg-pink-100 rounded-xl p-4 shadow-sm">
-                        <div class="flex items-center justify-between">
-                            <h3 class="font-semibold text-gray-800">Cloud & Mobile Ready</h3>
-                            <button
-                                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
-                                data-target="desc1">⌄</button>
-                        </div>
-                        <p class="text-sm text-gray-700 mt-2 hidden sm:block">
-                            Access Atom Suite anywhere, anytime — 100% cloud-based with a seamless mobile experience
-                            trusted by 1000+ MSMEs.
-                        </p>
-                    </div>
-
-                    <div class="bg-purple-100 rounded-xl p-4 shadow-sm">
-                        <div class="flex items-center justify-between">
-                            <h3 class="font-semibold text-gray-800">Secure & Compliant</h3>
-                            <button
-                                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
-                                data-target="desc2">⌄</button>
-                        </div>
-                        <p class="text-sm text-gray-700 mt-2 hidden sm:block">
-                            Hosted on highly secure servers, Atom Suite is GDPR-compliant and built with
-                            enterprise-grade privacy encryption and data protection.
-                        </p>
-                    </div>
-
-                    <div class="bg-green-100 rounded-xl p-4 shadow-sm">
-                        <div class="flex items-center justify-between">
-                            <h3 class="font-semibold text-gray-800">Intuitive & Easy-to-Use</h3>
-                            <button
-                                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
-                                data-target="desc3">⌄</button>
-                        </div>
-                        <p class="text-sm text-gray-700 mt-2 hidden sm:block">
-                            Designed with simplicity in mind — a no-learning-curve, modern interface that makes HR
-                            management a breeze.
-                        </p>
-                    </div>
-
-                    <div class="bg-blue-100 rounded-xl p-4 shadow-sm">
-                        <div class="flex items-center justify-between">
-                            <h3 class="font-semibold text-gray-800">AI-Powered Automation</h3>
-                            <button
-                                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
-                                data-target="desc4">⌄</button>
-                        </div>
-                        <p class="text-sm text-gray-700 mt-2 hidden sm:block">
-                            From payroll to performance tracking — automate repetitive tasks, reduce errors, and make
-                            smarter HR decisions in real-time.
-                        </p>
-                    </div>
-
-                    <div class="bg-purple-100 rounded-xl p-4 shadow-sm">
-                        <div class="flex items-center justify-between">
-                            <h3 class="font-semibold text-gray-800">Customizable & Scalable</h3>
-                            <button
-                                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
-                                data-target="desc5">⌄</button>
-                        </div>
-                        <p class="text-sm text-gray-700 mt-2 hidden sm:block">
-                            Whether you’re a 10-person startup or a 500+ employee workforce, personalize workflows,
-                            permissions, and modules as you grow.
-                        </p>
-                    </div>
-
-                    <div class="bg-green-100 rounded-xl p-4 shadow-sm">
-                        <div class="flex items-center justify-between">
-                            <h3 class="font-semibold text-gray-800">Employee Self-Service Portal</h3>
-                            <button
-                                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
-                                data-target="desc6">⌄</button>
-                        </div>
-                        <p class="text-sm text-gray-700 mt-2 hidden sm:block">
-                            Empower your team to access payslips, request leaves and more — all from one intuitive
-                            dashboard.
-                        </p>
-                    </div>
-                    <!-- Card Template End -->
-                </div>
-
-                <div class="mt-10">
-                    <button
-                        class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full shadow-md transition">
-                        Book a Demo
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- screen  -->
-        <section class="bg-gradient-to-br from-purple-500 to-pink-400 flex items-center justify-center  p-4" style="height: 350px;">
-            <div class="bg-white/80 backdrop-blur-md text-gray-800 max-w-2xl rounded-2xl p-6 shadow-lg">
-              <h2 class="text-xl sm:text-2xl font-bold text-pink-700 mb-2 text-center sm:text-left">
-                DEDICATED CUSTOMER SUCCESS SUPPORT
-              </h2>
-              <p class="text-sm sm:text-base text-gray-800 leading-relaxed">
-                Every <span class="font-semibold">customer</span> is assigned a dedicated 
-                <span class="font-semibold">Customer Success Representative</span> post-sale—
-                ensuring smooth <span class="font-semibold">onboarding</span>, prompt 
-                <span class="font-semibold">assistance</span>, and continued 
-                <span class="font-semibold">success</span> with 
-                <span class="font-bold text-pink-700">Atom Suite</span>.
-              </p>
-            </div>
-          </section>
-
-
-          <section class="bg-gradient-to-b from-purple-600 to-pink-400">
-
-            <!-- Top Section -->
-            <div class="max-w-5xl mx-auto text-white text-center px-4 py-10">
-              <h1 class="text-2xl sm:text-3xl font-bold">
-                Start from just ₹9 — Atom Suite for MSMEs
-              </h1>
-              <p class="text-base sm:text-lg mt-2">
-                All-in-one solution for email, HR, branding, and billing.
-              </p>
-            </div>
-          
-            <!-- White Card Section -->
-            <div class="bg-white rounded-t-3xl shadow-lg max-w-5xl mx-auto px-6 py-8 sm:py-10 relative z-10">
-              <div class="space-y-6">
-                
-                <!-- Step 1 -->
-                <div class="flex items-start gap-4">
-                  <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
-                    01
-                  </div>
-                  <div>
-                    <p class="font-semibold text-lg text-black">Book a Demo</p>
-                    <p class="text-gray-600 text-sm">Discover how Atom Suite can transform your business.</p>
-                  </div>
-                </div>
-          
-                <!-- Step 2 -->
-                <div class="flex items-start gap-4">
-                  <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
-                    02
-                  </div>
-                  <div>
-                    <p class="font-semibold text-lg text-black">Product Walkthrough</p>
-                    <p class="text-gray-600 text-sm">Explore powerful features like Atom Mail, Atom HR, And Atom Builder.</p>
-                  </div>
-                </div>
-          
-                <!-- Step 3 -->
-                <div class="flex items-start gap-4">
-                  <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
-                    03
-                  </div>
-                  <div>
-                    <p class="font-semibold text-lg text-black" >Customized Plan Setup</p>
-                    <p class="text-gray-600 text-sm">Tailored solutions to match your unique business needs.</p>
-                  </div>
-                </div>
-          
-                <!-- Step 4 -->
-                <div class="flex items-start gap-4">
-                  <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
-                    04
-                  </div>
-                  <div>
-                    <p class="font-semibold text-lg text-black">Onboarding & Training</p>
-                    <p class="text-gray-600 text-sm">Seamless setup with full support from our expert team.</p>
-                  </div>
-                </div>
-          
-              </div>
-            </div>
-          
-            <!-- Colored Bottom for Desktop -->
-          
-          </section>
-
-
-<section class="bg-gradient-to-r from-black via-[#0d0f23] to-cyan-500 text-white font-sans min-h-screen flex items-center justify-center p-4">
-  <div class="text-center max-w-2xl mx-auto">
-    <!-- Header Text -->
-    <h1 class="text-2xl sm:text-3xl font-bold mb-2">
-      We’ve Simplified Business for <br />
-      <span class="text-cyan-300">1000+ Startups & MSMEs</span>
-    </h1>
-    <p class="text-sm sm:text-base text-gray-300 mb-8">
-      From chaotic spreadsheets to seamless automation — we’ve solved it all.
-    </p>
-
-    <!-- Icons Row -->
-    <div class="flex justify-center gap-6 mb-10">
-      <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center border border-gray-600">
-        <img src="https://img.icons8.com/ios-filled/24/ffffff/rocket.png" alt="Rocket Icon" />
-      </div>
-      <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center border border-gray-600">
-        <img src="https://img.icons8.com/ios-filled/24/ffffff/loading.png" alt="Loading Icon" />
-      </div>
-      <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center border border-gray-600">
-        <img src="https://img.icons8.com/ios-filled/24/ffffff/atom.png" alt="Atom Icon" />
       </div>
     </div>
 
-    <!-- Laptop Image -->
-    <div class="relative w-full flex justify-center mb-10">
-      <img
-        src="https://via.placeholder.com/400x250.png?text=Laptop+UI+Screenshot"
-        alt="Laptop Screenshot"
-        class="rounded-lg shadow-lg max-w-full"
-      />
-    </div>
+    <!-- 3rd screen -->
+    <section class="bg-gradient-to-r from-white to-blue-100 py-12 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+          DISCOVER WHY ATOM SUITE IS THE <span class="text-blue-600">#1</span>
+        </h2>
+        <p class="text-lg sm:text-xl text-blue-700 font-semibold mb-8">Software Solution for Startups & MSMEs
+        </p>
 
-    <!-- CTA Text -->
-    <h2 class="text-xl sm:text-2xl font-semibold mb-4">
-      What’s holding your growth?<br />
-      <span class="text-cyan-300">Let’s solve it, together.</span>
-    </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Card Template Start -->
+          <div class="bg-pink-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Cloud & Mobile Ready</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc1">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Access Atom Suite anywhere, anytime — 100% cloud-based with a seamless mobile experience
+              trusted by 1000+ MSMEs.
+            </p>
+          </div>
 
-    <!-- Button -->
-    <a href="#" class="inline-block mt-4 px-6 py-3 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-400 transition">
-      Book a Demo
-    </a>
-  </div>
-</section>
+          <div class="bg-purple-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Secure & Compliant</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc2">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Hosted on highly secure servers, Atom Suite is GDPR-compliant and built with
+              enterprise-grade privacy encryption and data protection.
+            </p>
+          </div>
 
+          <div class="bg-green-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Intuitive & Easy-to-Use</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc3">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Designed with simplicity in mind — a no-learning-curve, modern interface that makes HR
+              management a breeze.
+            </p>
+          </div>
 
-          
+          <div class="bg-blue-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">AI-Powered Automation</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc4">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              From payroll to performance tracking — automate repetitive tasks, reduce errors, and make
+              smarter HR decisions in real-time.
+            </p>
+          </div>
 
+          <div class="bg-purple-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Customizable & Scalable</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc5">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Whether you’re a 10-person startup or a 500+ employee workforce, personalize workflows,
+              permissions, and modules as you grow.
+            </p>
+          </div>
 
-
-
-
-    </div>
-    <!-- Mobile Version -->
-    <div class="floww-atom-suite-mobile-version">
-        <div class="logo px-4 pt-6 sm:px-10 sm:pt-10">
-            <a href="https://gofloww.co" target="_blank">
-                <img src="img/logo/logo.webp" alt="floww logo, logistics app" class="w-24 sm:w-[18%]" />
-            </a>
+          <div class="bg-green-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Employee Self-Service Portal</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc6">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Empower your team to access payslips, request leaves and more — all from one intuitive
+              dashboard.
+            </p>
+          </div>
+          <!-- Card Template End -->
         </div>
 
-        <!-- 1st screen -->
-        <div class="min-h-screen flex items-center justify-center px-4">
-            <div class="grid grid-cols-1 lg:grid-cols-2 w-full max-w-6xl  rounded-xl overflow-hidden">
-
-                <!-- Left Side -->
-                <div class="p-8 lg:p-16 text-left space-y-6">
-
-                    <!-- Tagline -->
-                    <p class="text-xl font-normal tracking-wide">Backed by IIT & Key Ministries</p>
-
-                    <!-- Main Heading -->
-                    <h1 class="text-3xl sm:text-4xl font-bold leading-snug">
-                        <span class="font-bold">AI Powered Atom Suite</span><br>
-                        <span class="font-normal">Enables MSMEs for the<br>future of work</span>
-                    </h1>
-
-                    <!-- Description -->
-                    <p class="text-xl font-normal leading-relaxed text-gray-200">
-                        Drive efficiency, elevate business<br>
-                        operations, and improve<br>
-                        employee engagement
-                    </p>
-                </div>
-
-                <!-- Right Side: Form -->
-                <div class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"
-                    style="border-radius: px;">
-                    <form class="space-y-4">
-                        <input type="email" placeholder="Work Email*"
-                            class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-
-                        <div class="flex gap-4">
-                            <input type="text" placeholder="First Name*"
-                                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-                            <input type="text" placeholder="Last Name*"
-                                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-                        </div>
-
-                        <div class="flex gap-4">
-                            <input type="text" placeholder="India"
-                                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-                            <input type="text" placeholder="+91"
-                                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-                        </div>
-
-                        <input type="text" placeholder="Company Name*"
-                            class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-
-                        <div class="flex gap-4">
-                            <input type="text" placeholder="No. of Employees*"
-                                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-                            <input type="text" placeholder="Seniority*"
-                                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-                        </div>
-
-                        <input type="text" placeholder="Functional Area*"
-                            class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-
-                        <div class="flex items-start space-x-2">
-                            <input type="checkbox" class="mt-1" />
-                            <label class="text-sm text-gray-600">
-                                I have read and understood the <a href="#" class="underline">Terms of Use</a>
-                            </label>
-                        </div>
-
-                        <button type="submit"
-                            class="w-full bg-black text-white font-semibold rounded-full py-2 hover:bg-gray-900">
-                            Book a Demo
-                        </button>
-                    </form>
-                </div>
-
-            </div>
+        <div class="mt-10">
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full shadow-md transition">
+            Book a Demo
+          </button>
         </div>
+      </div>
+    </section>
 
-        <!-- 3rd  -->
-        <div class="grid grid-cols-1 gap-4 max-w-md mx-auto p-4" id="cards-container">
-            <!-- Card 1 -->
-            <div class="bg-gradient-to-br from-blue-500 to-indigo-400 text-white rounded-xl p-4 relative">
-              <div class="flex justify-between items-center">
-                <h3 class="font-semibold">Cloud & Mobile Ready</h3>
-                <button class="toggle-btn" data-target="desc1">
-                  <span id="icon-desc1">⌄</span>
-                </button>
-              </div>
-              <p id="desc1" class="description mt-2 text-sm hidden">
-                Access anytime, anywhere — 100% cloud-based and mobile-optimized.
-              </p>
+    <!-- screen  -->
+    <section class="bg-gradient-to-br from-purple-500 to-pink-400 flex items-center justify-center  p-4"
+      style="height: 350px;">
+      <div class="bg-white/80 backdrop-blur-md text-gray-800 max-w-2xl rounded-2xl p-6 shadow-lg">
+        <h2 class="text-xl sm:text-2xl font-bold text-pink-700 mb-2 text-center sm:text-left">
+          DEDICATED CUSTOMER SUCCESS SUPPORT
+        </h2>
+        <p class="text-sm sm:text-base text-gray-800 leading-relaxed">
+          Every <span class="font-semibold">customer</span> is assigned a dedicated
+          <span class="font-semibold">Customer Success Representative</span> post-sale—
+          ensuring smooth <span class="font-semibold">onboarding</span>, prompt
+          <span class="font-semibold">assistance</span>, and continued
+          <span class="font-semibold">success</span> with
+          <span class="font-bold text-pink-700">Atom Suite</span>.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="bg-gradient-to-b from-purple-600 to-pink-400">
+
+      <!-- Top Section -->
+      <div class="max-w-5xl mx-auto text-white text-center px-4 py-10">
+        <h1 class="text-2xl sm:text-3xl font-bold">
+          Start from just ₹9 — Atom Suite for MSMEs
+        </h1>
+        <p class="text-base sm:text-lg mt-2">
+          All-in-one solution for email, HR, branding, and billing.
+        </p>
+      </div>
+
+      <!-- White Card Section -->
+      <div class="bg-white rounded-t-3xl shadow-lg max-w-5xl mx-auto px-6 py-8 sm:py-10 relative z-10">
+        <div class="space-y-6">
+
+          <!-- Step 1 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              01
             </div>
-          
-            <!-- Card 2 -->
-            <div class="bg-gradient-to-br from-blue-500 to-indigo-400 text-white rounded-xl p-4 relative">
-              <div class="flex justify-between items-center">
-                <h3 class="font-semibold">Intuitive & Easy</h3>
-                <button class="toggle-btn" data-target="desc2">
-                  <span id="icon-desc2">⌄</span>
-                </button>
-              </div>
-              <p id="desc2" class="description mt-2 text-sm hidden">
-                Designed with simplicity for HR management to improve workflows.
-              </p>
-            </div>
-          
-            <!-- Card 3 -->
-            <div class="bg-gradient-to-br from-blue-500 to-indigo-400 text-white rounded-xl p-4 relative">
-              <div class="flex justify-between items-center">
-                <h3 class="font-semibold">Secure & Compliant</h3>
-                <button class="toggle-btn" data-target="desc3">
-                  <span id="icon-desc3">⌄</span>
-                </button>
-              </div>
-              <p id="desc3" class="description mt-2 text-sm hidden">
-                Enterprise-grade data encryption, privacy and compliance.
-              </p>
-            </div>
-          
-            <!-- Card 4 -->
-            <div class="bg-gradient-to-br from-blue-500 to-indigo-400 text-white rounded-xl p-4 relative">
-              <div class="flex justify-between items-center">
-                <h3 class="font-semibold">AI Automation</h3>
-                <button class="toggle-btn" data-target="desc4">
-                  <span id="icon-desc4">⌄</span>
-                </button>
-              </div>
-              <p id="desc4" class="description mt-2 text-sm hidden">
-                Automate tasks, track performance, and optimize workflows.
-              </p>
+            <div>
+              <p class="font-semibold text-lg text-black">Book a Demo</p>
+              <p class="text-gray-600 text-sm">Discover how Atom Suite can transform your business.</p>
             </div>
           </div>
 
-          <section class="bg-gradient-to-br from-purple-500 to-pink-400 flex items-center justify-center p-4" style="height: 400px;">
-            <div class="bg-white/80 backdrop-blur-md text-gray-800 max-w-2xl rounded-2xl p-6 shadow-lg">
-              <h2 class="text-xl sm:text-2xl font-bold text-pink-700 mb-2 text-center sm:text-left">
-                DEDICATED CUSTOMER SUCCESS
-              </h2>
-              
-              <p class="text-sm sm:text-base text-gray-800 leading-relaxed">
-                Get a personal success manager for smooth onboarding, fast support, and lasting growth with <span class="font-bold text-pink-700">Atom Suite</span>.
-              </p>
+          <!-- Step 2 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              02
             </div>
-          </section>
+            <div>
+              <p class="font-semibold text-lg text-black">Product Walkthrough</p>
+              <p class="text-gray-600 text-sm">Explore powerful features like Atom Mail, Atom HR, And Atom Builder.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              03
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Customized Plan Setup</p>
+              <p class="text-gray-600 text-sm">Tailored solutions to match your unique business needs.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              04
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Onboarding & Training</p>
+              <p class="text-gray-600 text-sm">Seamless setup with full support from our expert team.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Colored Bottom for Desktop -->
+
+    </section>
 
 
+    <section
+      class="bg-gradient-to-r from-black via-[#0d0f23] to-cyan-500 text-white font-sans min-h-screen flex items-center justify-center p-4">
+      <div class="text-center max-w-2xl mx-auto">
+        <!-- Header Text -->
+        <h1 class="text-2xl text-white sm:text-3xl font-bold mb-5 mt-10">
+          We’ve Simplified Business for <br />
+          <span class="text-cyan-300">1000+ </span>Startups & MSMEs
+        </h1>
+        <p class="text-sm sm:text-base text-gray-300 mb-12">
+          From chaotic spreadsheets to seamless automation — we’ve solved it all.
+        </p>
 
+        <!-- Icons Row -->
+        <div class="flex justify-center gap-6 mb-30">
+          <div class="bg-black rounded-full flex items-center justify-center border border-gray-600"  style="position: relative;top:6rem";>
+            <img src="./atom-suite-images/main/builder.png" alt="builder Icon" width="90px"  style="position: relative;top:2px";/>
+          </div>
+          <div class="bg-black rounded-full flex items-center justify-center border border-gray-600"  style="position: relative;top:3rem";>
+            <img src="./atom-suite-images/main/hr.png" alt="hr Icon" width="90px"  style="position: relative;top:2px" left:2rem; />
+          </div>
+          <div class="bg-black rounded-full flex items-center justify-center border border-gray-600" style="position: relative;top:5rem";>
+            <img src="./atom-suite-images/main/mail.png" width="90px" alt="mail Icon" style="position: relative;top:0.3rem;left:0.5rem" />
+          </div>
+        </div>
 
-<section class="bg-gradient-to-b from-purple-600 to-pink-400">
+        <!-- Laptop Image -->
+        <div class="relative w-full flex justify-center  "style="position: absolute; left: 0rem; margin-bottom: 6rem;">
+          <img src="./atom-suite-images/main/arc.png" alt="Laptop Screenshot"
+            />
+        </div>
+        <!-- Laptop Image -->
+        <div class=" w-full flex justify-center mt-40">
+          <img src="./atom-suite-images/main/laptop 05 1 (1).png" alt="Laptop Screenshot"
+            class="max-w-full"  />
+        </div>
 
-  <!-- Top Section -->
-  <div class="max-w-5xl mx-auto text-white text-center px-4 py-10">
-    <h1 class="text-2xl sm:text-3xl font-bold">
-      Start from just ₹9
-    </h1>
-    <p class="text-base sm:text-lg mt-2">
-     Email, HR, branding, and billing - <br>  All-in-one Suite.
+        <!-- CTA Text -->
+        <h2 class="text-xl sm:text-2xl font-semibold mb-4">
+          What’s holding your growth?<br />
+          <span class="text-cyan-300">Let’s solve it, together.</span>
+        </h2>
+
+        <!-- Button -->
+        <a href="#"
+          class="inline-block mt-4 px-6 py-3 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-400 transition">
+          Book a Demo
+        </a>
+      </div>
+    </section>
+
+    <!-- new screen 11 may -->
+  <section class="bg-gradient-to-b from-blue-100 via-white to-white min-h-screen">
+
+    <section class="max-w-7xl mx-auto px-4 py-16 text-center">
+    <!-- Heading -->
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+      Trusted by Industry Leaders to<br class="hidden sm:block" /> Transform Workforce
+    </h2>
+    <!-- Subheading -->
+    <p class="text-base sm:text-lg md:text-xl text-gray-700 mb-10">
+      <span class="font-semibold text-blue-600">Join 1000+ Startups &amp; <span class="text-indigo-600">MSMEs</span></span>
+      Powering Their Growth with <span class="font-bold text-blue-700">Atom Suite</span>
     </p>
-  </div>
 
-  <!-- White Card Section -->
-  <div class="bg-white rounded-t-3xl shadow-lg max-w-5xl mx-auto px-6 py-8 sm:py-10 relative z-10">
-    <div class="space-y-6">
-      
-      <!-- Step 1 -->
-      <div class="flex items-start gap-4">
-        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
-          01
+    <!-- Logo Grid -->
+    <div class="bg-white rounded-xl border border-blue-200 shadow-md p-6 sm:p-8">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-center">
+        <!-- Sample logos - replace src with actual image paths -->
+        <img src="./atom-suite-images/partners/radiance.png" alt="Radiance Lights" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/orgo.png" alt="Orgo East" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/hul.png" alt="Unilever" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/airth.png" alt="AiRTH" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/goi.png" alt="Govt of India" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/cimp.png" alt="CIMP" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/raru.png" alt="ANRU" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/phoenix.png" alt="Phoenix Mills" class="max-h-18 mx-auto">
+      </div>
+    </div>
+    </section>
+
+  </section>
+
+  <!-- testimonial screen -->
+   <div class="bg-gradient-to-b from-purple-100 via-white to-white min-h-screen flex items-center justify-center">
+
+  <section class="w-full max-w-3xl px-4" 
+           x-data="{ current: 0, testimonials: [
+      {
+        quote: `Atom Mail helped us transform our communication. Faster replies, multilingual support, and AI drafts have made our team more efficient and professional.`,
+        name: 'Mrs. Swadha Singh',
+        position: 'Founder & CEO, Orgoeast',
+        image: './atom-suite-images/testim/swadha-mam.png'
+      },
+      {
+        quote: `Floww application has helped us managing and tracking consignments, and their application helps us in building our delivery proofs instantly.`,
+        name: 'Mr. Nitesh Kumar',
+        position: 'Director – R1 Radiance Lights',
+        image: './atom-suite-images/testim/nitesh-sir.png'
+      },
+      {
+        quote: `Floww Search is really great for us. It has helped us in finding local delivery companies in Mumbai. We see great potential in the product for mid size companies like ours.`,
+        name: 'Mr. Ravi Kaushik',
+        position: 'CEO, Airth.in - IIT Bombay | IIT Kanpur',
+        image: './atom-suite-images/testim/ravi-sir.png'
+      }
+    ] }">
+
+    <!-- Heading -->
+    <div class="text-center mb-10">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-2">
+        CUSTOMER HAPPINESS
+      </h2>
+      <h3 class="text-2xl font-semibold text-purple-600">Assured!</h3>
+    </div>
+
+    <!-- Testimonial Card -->
+    <div class="relative flex justify-center items-center">
+      <template x-for="(testimonial, index) in testimonials" :key="index">
+        <div
+          x-show="current === index"
+          x-transition
+          class="relative bg-white rounded-2xl shadow-lg p-8 w-full max-w-md aspect-square border border-purple-200 flex flex-col justify-between"
+        style="width: 360px;">
+          <!-- Quote image (replace src with your image path) -->
+          <img src="./atom-suite-images/testim/quote-icon.png" alt="Quote Icon"
+               class="absolute w-20 h-20 opacity-80" style="top:-3rem; left:-1.5rem; width: 100px; height: 100px;" />
+
+          <!-- Testimonial Text -->
+          <p class="text-gray-800 text-sm sm:text-base leading-relaxed mt-8">
+            <span x-text="testimonial.quote"></span>
+          </p>
+
+          <!-- User Info -->
+          <div class="mt-6 text-left">
+            <p class="text-sm sm:text-base font-medium text-purple-600" x-text="testimonial.name"></p>
+            <p class="text-xs italic text-purple-500" x-text="testimonial.position"></p>
+          </div>
+
+          <!-- Profile image with hover effect -->
+          <div class="absolute -bottom-6 right-6" style="bottom: -1.5rem; right: -1.5rem;">
+            <img :src="testimonial.image" alt="Profile"
+                 class="w-32 h-32 rounded-full object-cover border-2 border-white shadow-md 
+                        filter grayscale hover:grayscale-0 transition duration-300"   />
+          </div>
         </div>
-        <div>
-          <p class="font-semibold text-lg text-black">Book a Demo</p>
-          <p class="text-gray-600 text-sm">See Atom Suite in action.</p>
-        </div>
+      </template>
+
+      <!-- Left Arrow -->
+      <div class="absolute left-0 top-1/2 transform -translate-y-1/2">
+        <button @click="current = (current - 1 + testimonials.length) % testimonials.length"
+                class="text-purple-500 hover:text-purple-700 text-2xl px-2">
+          &#8592;
+        </button>
       </div>
 
-      <!-- Step 2 -->
-      <div class="flex items-start gap-4">
-        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
-          02
-        </div>
-        <div>
-          <p class="font-semibold text-lg text-black">Product Walkthrough</p>
-          <p class="text-gray-600 text-sm">Explore Mail, HR & Builder</p>
-        </div>
+      <!-- Right Arrow -->
+      <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
+        <button @click="current = (current + 1) % testimonials.length"
+                class="text-purple-500 hover:text-purple-700 text-2xl px-2">
+          &#8594;
+        </button>
       </div>
+    </div>
 
-      <!-- Step 3 -->
-      <div class="flex items-start gap-4">
-        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
-          03
-        </div>
-        <div>
-          <p class="font-semibold text-lg text-black">Customized Plan Setup</p>
-          <p class="text-gray-600 text-sm">Tailored to your needs</p>
-        </div>
-      </div>
+  </section>
 
-      <!-- Step 4 -->
-      <div class="flex items-start gap-4">
-        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
-          04
-        </div>
-        <div>
-          <p class="font-semibold text-lg text-black">Onboarding & Training</p>
-          <p class="text-gray-600 text-sm">Expert setup & training</p>
-        </div>
-      </div>
+</div>
 
+
+<!-- hELLo -->
+
+<!-- UI 1: Timeline Curve Milestone Section -->
+<section class="py-10 text-center font-sans bg-gradient-to-b from-white to-blue-100">
+  <h2 class="text-2xl font-bold text-blue-600 mb-6">FLOWW MILESTONES</h2>
+  <div class="relative h-[300px] w-full max-w-[1000px] mx-auto bg-no-repeat bg-contain bg-center" style="background-image: url('/mnt/data/file-UJu64PrVSanxgGyB2bDqrC.png');">
+    <!-- Timeline Milestones -->
+    <div class="absolute bottom-0 left-0 w-[150px] transform -translate-x-1/2 text-xs">
+      <div class="w-4 h-4 bg-blue-500 rounded-full mx-auto"></div>
+      <p><strong>July 2022</strong><br>Incorporation</p>
+    </div>
+    <div class="absolute bottom-0 left-[15%] w-[150px] transform -translate-x-1/2 text-xs">
+      <div class="w-4 h-4 bg-sky-400 rounded-full mx-auto"></div>
+      <p><strong>Nov 2022</strong><br>Global Backing from Microsoft</p>
+    </div>
+    <div class="absolute bottom-0 left-[30%] w-[150px] transform -translate-x-1/2 text-xs">
+      <div class="w-4 h-4 bg-purple-500 rounded-full mx-auto"></div>
+      <p><strong>March 2023</strong><br>Trusted by the Government</p>
+    </div>
+    <div class="absolute bottom-0 left-[45%] w-[150px] transform -translate-x-1/2 text-xs">
+      <div class="w-4 h-4 bg-purple-500 rounded-full mx-auto"></div>
+      <p><strong>Nov 2023</strong><br>Seed Funded Under Startup Bihar Policy</p>
+    </div>
+    <div class="absolute bottom-0 left-[60%] w-[150px] transform -translate-x-1/2 text-xs">
+      <div class="w-4 h-4 bg-violet-500 rounded-full mx-auto"></div>
+      <p><strong>2024</strong><br>Startup of the Year Award</p>
+    </div>
+    <div class="absolute bottom-0 left-[75%] w-[150px] transform -translate-x-1/2 text-xs">
+      <div class="w-4 h-4 bg-violet-500 rounded-full mx-auto"></div>
+      <p><strong>2025</strong><br>1000+ MSMEs Enabled</p>
+    </div>
+
+    <div class="bg-red">
+    <img src="./atom-suite-images/main/Vector 1.png" alt="flag"  width="780px" style=" position: relative;left: 210px;"/>
     </div>
   </div>
 
-  <!-- Colored Bottom for Desktop -->
-  <div class="hidden md:block bg-gradient-to-b from-white to-purple-500 h-20 w-full -mt-4"></div>
-
+  <div class="mt-8">
+    <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">Schedule a Demo</button>
+  </div>
 </section>
 
 
-          
-       
-          
-      
-          
 
 
 
+
+  </div>
+  <!-- Mobile Version -->
+  <div class="floww-atom-suite-mobile-version">
+    <div class="logo px-4 pt-6 sm:px-10 sm:pt-10">
+      <a href="https://gofloww.co" target="_blank">
+        <img src="img/logo/logo.webp" alt="floww logo, logistics app" class="w-24 sm:w-[18%]" />
+      </a>
     </div>
+
+    <!-- 1st screen -->
+    <div class="min-h-screen flex items-center justify-center px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 w-full max-w-6xl  rounded-xl overflow-hidden">
+
+        <!-- Left Side -->
+        <div class="p-8 lg:p-16 text-left space-y-6">
+
+          <!-- Tagline -->
+          <p class="text-xl font-normal tracking-wide">Backed by IIT & Key Ministries</p>
+
+          <!-- Main Heading -->
+          <h1 class="text-3xl sm:text-4xl font-bold leading-snug">
+            <span class="font-bold">AI Powered Atom Suite</span><br>
+            <span class="font-normal">Enables MSMEs for the<br>future of work</span>
+          </h1>
+
+          <!-- Description -->
+          <p class="text-xl font-normal leading-relaxed text-gray-200">
+            Drive efficiency, elevate business<br>
+            operations, and improve<br>
+            employee engagement
+          </p>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"
+          style="border-radius: px;">
+          <form class="space-y-4">
+            <input type="email" placeholder="Work Email*"
+              class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+            <div class="flex gap-4">
+              <input type="text" placeholder="First Name*"
+                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+              <input type="text" placeholder="Last Name*"
+                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            </div>
+
+            <div class="flex gap-4">
+              <input type="text" placeholder="India"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+              <input type="text" placeholder="+91"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            </div>
+
+            <input type="text" placeholder="Company Name*"
+              class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+            <div class="flex gap-4">
+              <input type="text" placeholder="No. of Employees*"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+              <input type="text" placeholder="Seniority*"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            </div>
+
+            <input type="text" placeholder="Functional Area*"
+              class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+            <div class="flex items-start space-x-2">
+              <input type="checkbox" class="mt-1" />
+              <label class="text-sm text-gray-600">
+                I have read and understood the <a href="#" class="underline">Terms of Use</a>
+              </label>
+            </div>
+
+            <button type="submit" class="w-full bg-black text-white font-semibold rounded-full py-2 hover:bg-gray-900">
+              Book a Demo
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3rd  -->
+    <div class="grid grid-cols-1 gap-4 max-w-md mx-auto p-4" id="cards-container">
+      <!-- Card 1 -->
+      <div class="bg-gradient-to-br from-blue-500 to-indigo-400 text-white rounded-xl p-4 relative">
+        <div class="flex justify-between items-center">
+          <h3 class="font-semibold">Cloud & Mobile Ready</h3>
+          <button class="toggle-btn" data-target="desc1">
+            <span id="icon-desc1">⌄</span>
+          </button>
+        </div>
+        <p id="desc1" class="description mt-2 text-sm hidden">
+          Access anytime, anywhere — 100% cloud-based and mobile-optimized.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gradient-to-br from-blue-500 to-indigo-400 text-white rounded-xl p-4 relative">
+        <div class="flex justify-between items-center">
+          <h3 class="font-semibold">Intuitive & Easy</h3>
+          <button class="toggle-btn" data-target="desc2">
+            <span id="icon-desc2">⌄</span>
+          </button>
+        </div>
+        <p id="desc2" class="description mt-2 text-sm hidden">
+          Designed with simplicity for HR management to improve workflows.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gradient-to-br from-blue-500 to-indigo-400 text-white rounded-xl p-4 relative">
+        <div class="flex justify-between items-center">
+          <h3 class="font-semibold">Secure & Compliant</h3>
+          <button class="toggle-btn" data-target="desc3">
+            <span id="icon-desc3">⌄</span>
+          </button>
+        </div>
+        <p id="desc3" class="description mt-2 text-sm hidden">
+          Enterprise-grade data encryption, privacy and compliance.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-gradient-to-br from-blue-500 to-indigo-400 text-white rounded-xl p-4 relative">
+        <div class="flex justify-between items-center">
+          <h3 class="font-semibold">AI Automation</h3>
+          <button class="toggle-btn" data-target="desc4">
+            <span id="icon-desc4">⌄</span>
+          </button>
+        </div>
+        <p id="desc4" class="description mt-2 text-sm hidden">
+          Automate tasks, track performance, and optimize workflows.
+        </p>
+      </div>
+    </div>
+
+    <section class="bg-gradient-to-br from-purple-500 to-pink-400 flex items-center justify-center p-4"
+      style="height: 400px;">
+      <div class="bg-white/80 backdrop-blur-md text-gray-800 max-w-2xl rounded-2xl p-6 shadow-lg">
+        <h2 class="text-xl sm:text-2xl font-bold text-pink-700 mb-2 text-center sm:text-left">
+          DEDICATED CUSTOMER SUCCESS
+        </h2>
+
+        <p class="text-sm sm:text-base text-gray-800 leading-relaxed">
+          Get a personal success manager for smooth onboarding, fast support, and lasting growth with <span
+            class="font-bold text-pink-700">Atom Suite</span>.
+        </p>
+      </div>
+    </section>
+
+
+     <!-- Milestones  -->
+     <section class=" bg-white py-10 text-center font-sans">
+  <h2 class="text-2xl font-bold text-blue-600 mb-6">FLOWW MILESTONES</h2>
+
+  <div class="flex flex-wrap justify-center gap-2 mb-4">
+    <button class="tab px-4 py-2 text-gray-500 font-bold hover:text-blue-600 active:text-blue-600" onclick="showMilestone('july2022')">JUL 2022</button>
+    <button class="tab px-4 py-2 text-gray-500 font-bold hover:text-blue-600" onclick="showMilestone('nov2022')">NOV 2022</button>
+    <button class="tab px-4 py-2 text-gray-500 font-bold hover:text-blue-600" onclick="showMilestone('mar2023')">MAR 2023</button>
+    <button class="tab px-4 py-2 text-gray-500 font-bold hover:text-blue-600" onclick="showMilestone('nov2023')">NOV 2023</button>
+    <button class="tab px-4 py-2 text-gray-500 font-bold hover:text-blue-600" onclick="showMilestone('2024')">2024</button>
+    <button class="tab px-4 py-2 text-gray-500 font-bold hover:text-blue-600" onclick="showMilestone('2025')">2025</button>
+  </div>
+
+  <div id="milestone-card" class="bg-blue-100 p-6 rounded-xl max-w-md mx-auto flex flex-col items-center">
+    <img id="milestone-img" src="/atom-suite-images/milestones/01.02 1.png" alt="july2022" class="w-24 mb-4">
+    <div id="milestone-text" class="text-sm text-gray-800">
+      <strong>JULY 2022</strong><br>
+      Incorporation
+    </div>
+  </div>
+  
+
+  <div class="mt-8">
+    <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">Schedule a Demo</button>
+  </div>
+</section>
+
+
+
+
+    <section class="bg-gradient-to-b from-purple-600 to-pink-400">
+
+      <!-- Top Section -->
+      <div class="max-w-5xl mx-auto text-white text-center px-4 py-10">
+        <h1 class="text-2xl sm:text-3xl font-bold">
+          Start from just ₹9
+        </h1>
+        <p class="text-base sm:text-lg mt-2">
+          Email, HR, branding, and billing - <br> All-in-one Suite.
+        </p>
+      </div>
+
+      <!-- White Card Section -->
+      <div class="bg-white rounded-t-3xl shadow-lg max-w-5xl mx-auto px-6 py-8 sm:py-10 relative z-10">
+        <div class="space-y-6">
+
+          <!-- Step 1 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              01
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Book a Demo</p>
+              <p class="text-gray-600 text-sm">See Atom Suite in action.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              02
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Product Walkthrough</p>
+              <p class="text-gray-600 text-sm">Explore Mail, HR & Builder</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              03
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Customized Plan Setup</p>
+              <p class="text-gray-600 text-sm">Tailored to your needs</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              04
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Onboarding & Training</p>
+              <p class="text-gray-600 text-sm">Expert setup & training</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Colored Bottom for Desktop -->
+      <div class="hidden md:block bg-gradient-to-b from-white to-purple-500 h-20 w-full -mt-4"></div>
+
+    </section>
+
+    <!-- new screen 11 may -->
+       
+  <section class="bg-gradient-to-b from-blue-100 via-white to-white min-h-screen">
+
+    <section class="max-w-7xl mx-auto px-4 py-16 text-center">
+    <!-- Heading -->
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+      Trusted by Industry Leaders to<br class="hidden sm:block" /> Transform Workforce
+    </h2>
+    <!-- Subheading -->
+    <p class="text-base sm:text-lg md:text-xl text-gray-700 mb-10">
+      <span class="font-semibold text-blue-600">Join 1000+ Startups &amp; <span class="text-indigo-600">MSMEs</span></span>
+      Powering Their Growth with <span class="font-bold text-blue-700">Atom Suite</span>
+    </p>
+
+    <!-- Logo Grid -->
+    <div class="bg-white rounded-xl border border-blue-200 shadow-md p-6 sm:p-8">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-center">
+        <!-- Sample logos - replace src with actual image paths -->
+        <img src="./atom-suite-images/partners/radiance.png" alt="Radiance Lights" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/orgo.png" alt="Orgo East" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/hul.png" alt="Unilever" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/airth.png" alt="AiRTH" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/goi.png" alt="Govt of India" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/cimp.png" alt="CIMP" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/raru.png" alt="ANRU" class="max-h-18 mx-auto">
+        <img src="./atom-suite-images/partners/phoenix.png" alt="Phoenix Mills" class="max-h-18 mx-auto">
+      </div>
+    </div>
+    </section>
+
+  </section>
+
+
+<!-- Last Screen -->
+  <section
+      class="bg-gradient-to-r from-black via-[#0d0f23] to-cyan-500 text-white font-sans min-h-screen flex items-center justify-center p-4">
+      <div class="text-center max-w-2xl mx-auto">
+        <!-- Header Text -->
+        <h1 class="text-2xl text-white sm:text-3xl font-bold mb-5 mt-10">
+          We’ve Simplified Business for <br />
+          <span class="text-cyan-300">1000+ </span>Startups & MSMEs
+        </h1>
+        <p class="text-sm sm:text-base text-gray-300 mb-12">
+          From chaotic spreadsheets to seamless automation — we’ve solved it all.
+        </p>
+
+        <!-- Icons Row -->
+        <div class="flex justify-center gap-6 mb-30">
+          <div class="bg-black rounded-full flex items-center justify-center border border-gray-600"  style="position: relative;top:6rem";>
+            <img src="./atom-suite-images/main/builder.png" alt="builder Icon" width="90px"  style="position: relative;top:2px";/>
+          </div>
+          <div class="bg-black rounded-full flex items-center justify-center border border-gray-600"  style="position: relative;top:3rem";>
+            <img src="./atom-suite-images/main/hr.png" alt="hr Icon" width="90px"  style="position: relative;top:2px" left:2rem; />
+          </div>
+          <div class="bg-black rounded-full flex items-center justify-center border border-gray-600" style="position: relative;top:5rem";>
+            <img src="./atom-suite-images/main/mail.png" width="90px" alt="mail Icon" style="position: relative;top:0.3rem;left:0.5rem" />
+          </div>
+        </div>
+
+        <!-- Laptop Image -->
+        <div class="relative w-full flex justify-center  "style="position: absolute; left: 0rem; margin-bottom: 6rem;">
+          <img src="./atom-suite-images/main/arc.png" alt="Laptop Screenshot"
+            />
+        </div>
+        <!-- Laptop Image -->
+        <div class=" w-full flex justify-center mt-40">
+          <img src="./atom-suite-images/main/laptop 05 1 (1).png" alt="Laptop Screenshot"
+            class="max-w-full"  />
+        </div>
+
+        <!-- CTA Text -->
+        <h2 class="text-xl sm:text-2xl font-semibold mb-4">
+          What’s holding your growth?<br />
+          <span class="text-cyan-300">Let’s solve it, together.</span>
+        </h2>
+
+        <!-- Button -->
+        <a href="#"
+          class="inline-block mt-4 px-6 py-3 bg-cyan-500 text-black font-semibold rounded-full hover:bg-cyan-400 transition">
+          Book a Demo
+        </a>
+      </div>
+    </section>
+
+
+   
+
+
+
+
+
+
+
+
+
+  </div>
 </body>
 
-  
+
 <script>
-    const buttons = document.querySelectorAll('.toggle-btn');
-    const descriptions = document.querySelectorAll('.description');
-  
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.dataset.target;
-        descriptions.forEach(desc => {
-          const icon = document.getElementById('icon-' + desc.id);
-          if (desc.id === targetId) {
-            const isHidden = desc.classList.contains('hidden');
-            descriptions.forEach(d => {
-              d.classList.add('hidden');
-              document.getElementById('icon-' + d.id).textContent = '⌄';
-            });
-            if (isHidden) {
-              desc.classList.remove('hidden');
-              icon.textContent = '⌃';
-            }
+function showMilestone(month) {
+  const images = {
+    july2022: './atom-suite-images/milestones/01.02 1.png',
+    nov2022: './atom-suite-images/milestones/02 3.png',
+    mar2023: './atom-suite-images/milestones/03 3.png',
+    nov2023: './atom-suite-images/milestones/04 2.png',
+    2024: './atom-suite-images/milestones/05 1.png',
+    2025: './atom-suite-images/milestones/06 1.png',
+  };
+  const texts = {
+    july2022: '<strong>JULY 2022</strong><br>Incorporation',
+    nov2022: '<strong>NOVEMBER 2022</strong><br>Global Backing from Microsoft',
+    mar2023: '<strong>MARCH 2023</strong><br>Trusted by the Government',
+    nov2023: '<strong>NOVEMBER 2023</strong><br>Seed Funded Under Startup Bihar Policy',
+    2024: '<strong>2024</strong><br>Startup of the Year Award',
+    2025: '<strong>2025</strong><br>1000+ MSMEs Onboarded',
+  };
+
+  document.getElementById('milestone-img').src = images[month];
+  document.getElementById('milestone-text').innerHTML = texts[month];
+
+  document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('text-blue-600'));
+  const tab = Array.from(document.querySelectorAll('.tab')).find(t => t.innerText.includes(month.toUpperCase().slice(0, 3)));
+  if (tab) tab.classList.add('text-blue-600');
+}
+
+
+
+
+
+
+  const buttons = document.querySelectorAll('.toggle-btn');
+  const descriptions = document.querySelectorAll('.description');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.target;
+      descriptions.forEach(desc => {
+        const icon = document.getElementById('icon-' + desc.id);
+        if (desc.id === targetId) {
+          const isHidden = desc.classList.contains('hidden');
+          descriptions.forEach(d => {
+            d.classList.add('hidden');
+            document.getElementById('icon-' + d.id).textContent = '⌄';
+          });
+          if (isHidden) {
+            desc.classList.remove('hidden');
+            icon.textContent = '⌃';
           }
-        });
+        }
       });
     });
-  </script>
+  });
+</script>
+
 </html>

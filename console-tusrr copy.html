@@ -1,333 +1,783 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Floww Console</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="/js/tailwind.min.js"></script>
+  <!--   Calling Tailwind from local file   -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet">
 
 <style>
+  body {
+    font-family: "Poppins", sans-serif !important;
 
-body{
-  font-family: "Poppins", sans-serif !important;
+  }
 
-}
-/* Default: Mobile first (below 968px) */ 
-.floww-atom-suite-desktop-version {
-  display: none;
-}
-
-.floww-atom-suite-mobile-version {
-  display: block;
-}
-
-/* Desktop version (968px and above) */
-@media (min-width: 968px) {
+  /* Default: Mobile first (below 968px) */
   .floww-atom-suite-desktop-version {
-    display: block;
+    display: none;
   }
 
   .floww-atom-suite-mobile-version {
-    display: none;
+    display: block;
   }
-}
 
+  /* Desktop version (968px and above) */
+  @media (min-width: 968px) {
+    .floww-atom-suite-desktop-version {
+      display: block;
+    }
+
+    .floww-atom-suite-mobile-version {
+      display: none;
+    }
+  }
 </style>
-<body class="bg-gradient-to-r from-[#041B2D] to-[#00BFFF] text-white font-sans" >
+
+<body class="bg-gradient-to-r from-[#041B2D] to-[#00BFFF] text-white font-sans">
   <!-- Desktop version -->
-<div class="floww-atom-suite-desktop-version">
-  <div class="logo px-4 pt-6 sm:px-10 sm:pt-10">
-    <a href="https://gofloww.co" target="_blank">
-      <img 
-        src="img/logo/logo.webp" 
-        alt="floww logo, logistics app" 
-        class="w-24 sm:w-[18%]" 
-      />
-    </a>
-  </div>
-  
-  <!-- 1st screen -->
-  <div class="min-h-screen flex items-center justify-center px-4">
-    <div class="grid grid-cols-1 lg:grid-cols-2 w-full max-w-6xl  rounded-xl overflow-hidden">
+  <div class="floww-atom-suite-desktop-version">
+    <div class="logo px-4 pt-6 sm:px-10 sm:pt-10">
+      <a href="https://gofloww.co" target="_blank">
+        <img src="img/logo/logo.webp" alt="floww logo, logistics app" class="w-24 sm:w-[18%]" />
+      </a>
+    </div>
 
-      <!-- Left Side -->
-      <div class="p-8 lg:p-16 text-left space-y-6">
+    <!-- 1st screen -->
+    <div class="min-h-screen flex items-center justify-center px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 w-full max-w-6xl  rounded-xl overflow-hidden">
 
-        <!-- Tagline -->
-    <p class="text-xl font-normal tracking-wide">Backed by IIT & Key Ministries</p>
+        <!-- Left Side -->
+        <div class="p-8 lg:p-16 text-left space-y-6">
 
-    <!-- Main Heading -->
-    <h1 class="text-3xl sm:text-4xl font-bold leading-snug">
-      <span class="font-bold">AI Powered Atom Suite</span><br>
-      <span class="font-normal">Enables MSMEs for the<br>future of work</span>
-    </h1>
+          <!-- Tagline -->
+          <p class="text-xl font-normal tracking-wide">Backed by IIT & Key Ministries</p>
 
-    <!-- Description -->
-    <p class="text-xl font-normal leading-relaxed text-gray-200">
-      Drive efficiency, elevate business<br>
-      operations, and improve<br>
-      employee engagement
-    </p>
-      </div>
+          <!-- Main Heading -->
+          <h1 class="text-3xl sm:text-4xl font-bold leading-snug">
+            <span class="font-bold">AI Powered Atom Suite</span><br>
+            <span class="font-normal">Enables MSMEs for the<br>future of work</span>
+          </h1>
 
-      <!-- Right Side: Form -->
-      <div class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"  style="border-radius: px;">
-        <form class="space-y-4">
-          <input type="email" placeholder="Work Email*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+          <!-- Description -->
+          <p class="text-xl font-normal leading-relaxed text-gray-200">
+            Drive efficiency, elevate business<br>
+            operations, and improve<br>
+            employee engagement
+          </p>
+        </div>
 
-          <div class="flex gap-4">
-            <input type="text" placeholder="First Name*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-            <input type="text" placeholder="Last Name*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-          </div>
+        <!-- Right Side: Form -->
+        <div class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"
+          style="border-radius: px;">
+          <form class="space-y-4">
+            <input type="email" placeholder="Work Email*"
+              class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
 
-          <div class="flex gap-4">
-            <input type="text" placeholder="India" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-            <input type="text" placeholder="+91" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-          </div>
+            <div class="flex gap-4">
+              <input type="text" placeholder="First Name*"
+                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+              <input type="text" placeholder="Last Name*"
+                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            </div>
 
-          <input type="text" placeholder="Company Name*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            <div class="flex gap-4">
+              <input type="text" placeholder="India"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+              <input type="text" placeholder="+91"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            </div>
 
-          <div class="flex gap-4">
-            <input type="text" placeholder="No. of Employees*" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-            <input type="text" placeholder="Seniority*" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-          </div>
+            <input type="text" placeholder="Company Name*"
+              class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
 
-          <input type="text" placeholder="Functional Area*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            <div class="flex gap-4">
+              <input type="text" placeholder="No. of Employees*"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+              <input type="text" placeholder="Seniority*"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            </div>
 
-          <div class="flex items-start space-x-2">
-            <input type="checkbox" class="mt-1" />
-            <label class="text-sm text-gray-600">
-              I have read and understood the <a href="#" class="underline">Terms of Use</a>
-            </label>
-          </div>
+            <input type="text" placeholder="Functional Area*"
+              class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
 
-          <button type="submit" class="w-full bg-black text-white font-semibold rounded-full py-2 hover:bg-gray-900">
-            Book a Demo
-          </button>
-        </form>
+            <div class="flex items-start space-x-2">
+              <input type="checkbox" class="mt-1" />
+              <label class="text-sm text-gray-600">
+                I have read and understood the <a href="#" class="underline">Terms of Use</a>
+              </label>
+            </div>
+
+            <button type="submit" class="w-full bg-black text-white font-semibold rounded-full py-2 hover:bg-gray-900">
+              Book a Demo
+            </button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
 
 
-  <!--2nd screen  -->
-  <section class="bg-gradient-to-b from-[#fdf2ff] to-[#f3e9ff] text-gray-800">
-    <div class="max-w-7xl mx-auto px-4 py-16">
-      <h2 class="text-3xl font-bold text-center text-purple-700">1 Solution</h2>
-      <h3 class="text-2xl md:text-3xl font-semibold text-center mt-2">133+ Automated Workflows</h3>
-      <p class="text-center text-base md:text-lg text-gray-700 mt-4 max-w-2xl mx-auto">
-        Automate HR, streamline <span class="font-semibold text-purple-700">emails</span>, and build your brand — faster, smarter, and
-        <span class="font-bold">all in one place</span> with <strong>Floww Atom Suite</strong>.
-      </p>
-  
+    <!--2nd screen  -->
+    <section class="bg-gradient-to-b from-[#fdf2ff] to-[#f3e9ff] text-gray-800">
+      <div class="max-w-7xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center text-purple-700">1 Solution</h2>
+        <h3 class="text-2xl md:text-3xl font-semibold text-center mt-2">133+ Automated Workflows</h3>
+        <p class="text-center text-base md:text-lg text-gray-700 mt-4 max-w-2xl mx-auto">
+          Automate HR, streamline <span class="font-semibold text-purple-700">emails</span>, and build your brand —
+          faster, smarter, and
+          <span class="font-bold">all in one place</span> with <strong>Floww Atom Suite</strong>.
+        </p>
 
-      <!-- Grid of cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-12" style="gap:4rem">
+
+        <!-- Grid of cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-12" style="gap:4rem">
 
 
           <!-- Card 1 -->
-  <div class="relative w-[250px] h-[230px] rounded-2xl  bg-white flex flex-col " style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
-    <img src="./atom-suite-images/ai-icon-1.png" alt="AI Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem;background-color: #7B5ABA;
+          <div class="relative w-[250px] h-[230px] rounded-2xl  bg-white flex flex-col "
+            style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+            <img src="./atom-suite-images/ai-icon-1.png" alt="AI Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem;background-color: #7B5ABA;
     border-radius: 50%;padding: 0.5rem; " />
-    <h4 class="text-lg font-semibold text-purple-700 leading-tight" style="font-size: 1.6rem;font-weight: 600;">AI<br>Drafting</h4>
-    <p class="text-gray-700 mt-3"style="font-size: 1rem;font-weight: 400; line-height:1.6rem">Generate professional emails faster with AI-powered writing assistance.</p>
-  </div>
+            <h4 class="text-lg font-semibold text-purple-700 leading-tight" style="font-size: 1.6rem;font-weight: 600;">
+              AI<br>Drafting</h4>
+            <p class="text-gray-700 mt-3" style="font-size: 1rem;font-weight: 400; line-height:1.6rem">Generate
+              professional emails faster with AI-powered writing assistance.</p>
+          </div>
 
 
 
-        <!-- Card 2 -->
-        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
-          <img src="./atom-suite-images/Icon 02 1 (1).png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
-          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Payroll<br>Automation</h4>
-          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Automate complex payroll calculations with precision and ensure timely salary disbursals.</p>
+          <!-- Card 2 -->
+          <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col"
+            style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+            <img src="./atom-suite-images/Icon 02 1 (1).png" alt="Icon" class="absolute z-10"
+              style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+            <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Payroll<br>Automation
+            </h4>
+            <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Automate
+              complex payroll calculations with precision and ensure timely salary disbursals.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col"
+            style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+            <img src="./atom-suite-images/Icon 03 1.png" alt="Icon" class="absolute z-10"
+              style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+            <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">300+<br>Design
+              Templates</h4>
+            <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Choose from a
+              wide range of pre-built themes tailored for every industry.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col"
+            style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+            <img src="./atom-suite-images/Icon 04 1.png" alt="Icon" class="absolute z-10"
+              style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+            <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">
+              No-Code<br>Customization</h4>
+            <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Design your
+              site with drag-and-drop tools and zero coding effort.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col"
+            style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+            <img src="./atom-suite-images/Icon 05 1.png" alt="Icon" class="absolute z-10"
+              style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+            <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">
+              Performance<br>Management</h4>
+            <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Set goals,
+              track progress, and review performance with intuitive dashboards.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col"
+            style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+            <img src="./atom-suite-images/Icon 06 1.png" alt="Icon" class="absolute z-10"
+              style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+            <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Task & <br>
+              Workflow<br>Automation</h4>
+            <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Streamline
+              internal processes with custom task flows and smart notifications.</p>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col"
+            style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+            <img src="./atom-suite-images/Icon 07 1.png" alt="Icon" class="absolute z-10"
+              style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+            <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">
+              One-Click<br>Templates</h4>
+            <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Use
+              customizable email templates to save time and maintain consistency.</p>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col"
+            style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+            <img src="./atom-suite-images/Icon 08.02 1.png" alt="Icon" class="absolute z-10"
+              style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+            <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Custom <br>Domain
+              Integration</h4>
+            <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Build brand
+              credibility with professional email addresses under your domain.</p>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col"
+            style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+            <img src="./atom-suite-images/Icon 09.02 1.png" alt="Icon" class="absolute z-10"
+              style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+            <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">
+              Mobile-Optimized<br>Designs</h4>
+            <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Ensure a
+              flawless experience on all screen sizes and devices.</p>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col"
+            style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+            <img src="./atom-suite-images/Icon 10 1.png" alt="Icon" class="absolute z-10"
+              style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+            <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Analytics
+              &<br>Reporting</h4>
+            <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Make
+              data-driven decisions with real-time reports and actionable HR insights.</p>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col"
+            style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+            <img src="./atom-suite-images/Icon 11.03 1.png" alt="Icon" class="absolute z-10"
+              style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+            <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Employee
+              Self-Service<br>(ESS) Portal</h4>
+            <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Employees
+              manage their own details, leaves, and payslips—so HR doesn’t have to.</p>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col"
+            style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
+            <img src="./atom-suite-images/Icon 12.01 1.png" alt="Icon" class="absolute z-10"
+              style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
+            <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Expense<br>Management
+            </h4>
+            <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Easily submit,
+              track, approve, and manage employee expenses with transparency and control.</p>
+          </div>
+
         </div>
-      
-        <!-- Card 3 -->
-        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
-          <img src="./atom-suite-images/Icon 03 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
-          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">300+<br>Design Templates</h4>
-          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Choose from a wide range of pre-built themes tailored for every industry.</p>
+
+        <!-- CTA Button -->
+        <div class="text-center mt-8">
+          <button
+            class="bg-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
+            Schedule a Demo
+          </button>
         </div>
-      
-        <!-- Card 4 -->
-        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
-          <img src="./atom-suite-images/Icon 04 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
-          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">No-Code<br>Customization</h4>
-          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Design your site with drag-and-drop tools and zero coding effort.</p>
-        </div>
-      
-        <!-- Card 5 -->
-        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
-          <img src="./atom-suite-images/Icon 05 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
-          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Performance<br>Management</h4>
-          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Set goals, track progress, and review performance with intuitive dashboards.</p>
-        </div>
-      
-        <!-- Card 6 -->
-        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
-          <img src="./atom-suite-images/Icon 06 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
-          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Task  & <br> Workflow<br>Automation</h4>
-          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Streamline internal processes with custom task flows and smart notifications.</p>
-        </div>
-      
-        <!-- Card 7 -->
-        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
-          <img src="./atom-suite-images/Icon 07 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
-          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">One-Click<br>Templates</h4>
-          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Use customizable email templates to save time and maintain consistency.</p>
-        </div>
-      
-        <!-- Card 8 -->
-        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
-          <img src="./atom-suite-images/Icon 08.02 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
-          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Custom <br>Domain Integration</h4>
-          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Build brand credibility with professional email addresses under your domain.</p>
-        </div>
-      
-        <!-- Card 9 -->
-        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
-          <img src="./atom-suite-images/Icon 09.02 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
-          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Mobile-Optimized<br>Designs</h4>
-          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Ensure a flawless experience on all screen sizes and devices.</p>
-        </div>
-      
-        <!-- Card 10 -->
-        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
-          <img src="./atom-suite-images/Icon 10 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
-          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Analytics &<br>Reporting</h4>
-          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Make data-driven decisions with real-time reports and actionable HR insights.</p>
-        </div>
-      
-        <!-- Card 11 -->
-        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
-          <img src="./atom-suite-images/Icon 11.03 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
-          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Employee Self-Service<br>(ESS) Portal</h4>
-          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Employees manage their own details, leaves, and payslips—so HR doesn’t have to.</p>
-        </div>
-      
-        <!-- Card 12 -->
-        <div class="relative w-[250px] h-[230px] rounded-2xl bg-white flex flex-col" style="box-shadow: 0px 2.06px 2.06px 0px #9747FF; padding: 0.7rem;">
-          <img src="./atom-suite-images/Icon 12.01 1.png" alt="Icon" class="absolute z-10" style="top: -2rem; right: -2.2rem; width: 5rem; height: 5rem; background-color: #7B5ABA; border-radius: 50%; padding: 0.5rem;" />
-          <h4 class="text-purple-700 leading-tight" style="font-size: 1.6rem; font-weight: 600;">Expense<br>Management</h4>
-          <p class="text-gray-700 mt-3" style="font-size: 1rem; font-weight: 400; line-height: 1.6rem;">Easily submit, track, approve, and manage employee expenses with transparency and control.</p>
-        </div>
-      
+
+
+
+
+
+
+
       </div>
-      
- <!-- CTA Button -->
- <div class="text-center mt-8">
-  <button class="bg-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
-    Schedule a Demo
-  </button>
-</div>
-      
+    </section>
 
 
-      
+    <!-- 3rd Screen -->
 
- 
-    </div>
-  </section>
-  
 
-</div>
-<!-- Mobile Version -->
-<div class="floww-atom-suite-mobile-version">
-  <div class="logo px-4 pt-6 sm:px-10 sm:pt-10">
-    <a href="https://gofloww.co" target="_blank">
-      <img 
-        src="img/logo/logo.webp" 
-        alt="floww logo, logistics app" 
-        class="w-24 sm:w-[18%]" 
-      />
-    </a>
-  </div>
-  
-  <!-- 1st screen -->
-  <div class="min-h-screen flex items-center justify-center px-4">
-    <div class="grid grid-cols-1 lg:grid-cols-2 w-full max-w-6xl  rounded-xl overflow-hidden">
+    <section class="bg-gradient-to-b from-blue-100 via-white to-white min-h-screen">
 
-      <!-- Left Side -->
-      <div class="p-8 lg:p-16 text-left space-y-6">
+      <section class="max-w-7xl mx-auto px-4 py-16 text-center">
+        <!-- Heading -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+          Trusted by Industry Leaders to<br class="hidden sm:block" /> Transform Workforce
+        </h2>
+        <!-- Subheading -->
+        <p class="text-base sm:text-lg md:text-xl text-gray-700 mb-10">
+          <span class="font-semibold text-blue-600">Join 1000+ Startups &amp; <span
+              class="text-indigo-600">MSMEs</span></span>
+          Powering Their Growth with <span class="font-bold text-blue-700">Atom Suite</span>
+        </p>
 
-        <!-- Tagline -->
-    <p class="text-xl font-normal tracking-wide">Backed by IIT & Key Ministries</p>
+        <!-- Logo Grid -->
+        <div class="bg-white rounded-xl border border-blue-200 shadow-md p-6 sm:p-8">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-center">
+            <!-- Sample logos - replace src with actual image paths -->
+            <img src="./atom-suite-images/partners/radiance.png" alt="Radiance Lights" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/orgo.png" alt="Orgo East" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/hul.png" alt="Unilever" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/airth.png" alt="AiRTH" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/goi.png" alt="Govt of India" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/cimp.png" alt="CIMP" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/raru.png" alt="ANRU" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/phoenix.png" alt="Phoenix Mills" class="max-h-18 mx-auto">
+          </div>
+        </div>
+      </section>
 
-    <!-- Main Heading -->
-    <h1 class="text-3xl sm:text-4xl font-bold leading-snug">
-      <span class="font-bold">AI Powered Atom Suite</span><br>
-      <span class="font-normal">Enables MSMEs for the<br>future of work</span>
-    </h1>
+    </section>
 
-    <!-- Description -->
-    <p class="text-xl font-normal leading-relaxed text-gray-200">
-      Drive efficiency, elevate business<br>
-      operations, and improve<br>
-      employee engagement
-    </p>
-      </div>
+    <!-- 4th screen -->
+    <section class="bg-gradient-to-r from-white to-blue-100 py-12 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+          DISCOVER WHY ATOM SUITE IS THE <span class="text-blue-600">#1</span>
+        </h2>
+        <p class="text-lg sm:text-xl text-blue-700 font-semibold mb-8">Software Solution for Startups & MSMEs
+        </p>
 
-      <!-- Right Side: Form -->
-      <div class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"  style="border-radius: px;">
-        <form class="space-y-4">
-          <input type="email" placeholder="Work Email*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-
-          <div class="flex gap-4">
-            <input type="text" placeholder="First Name*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-            <input type="text" placeholder="Last Name*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Card Template Start -->
+          <div class="bg-pink-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Cloud & Mobile Ready</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc1">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Access Atom Suite anywhere, anytime — 100% cloud-based with a seamless mobile experience
+              trusted by 1000+ MSMEs.
+            </p>
           </div>
 
-          <div class="flex gap-4">
-            <input type="text" placeholder="India" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-            <input type="text" placeholder="+91" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+          <div class="bg-purple-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Secure & Compliant</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc2">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Hosted on highly secure servers, Atom Suite is GDPR-compliant and built with
+              enterprise-grade privacy encryption and data protection.
+            </p>
           </div>
 
-          <input type="text" placeholder="Company Name*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-
-          <div class="flex gap-4">
-            <input type="text" placeholder="No. of Employees*" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-            <input type="text" placeholder="Seniority*" class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+          <div class="bg-green-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Intuitive & Easy-to-Use</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc3">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Designed with simplicity in mind — a no-learning-curve, modern interface that makes HR
+              management a breeze.
+            </p>
           </div>
 
-          <input type="text" placeholder="Functional Area*" class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
-
-          <div class="flex items-start space-x-2">
-            <input type="checkbox" class="mt-1" />
-            <label class="text-sm text-gray-600">
-              I have read and understood the <a href="#" class="underline">Terms of Use</a>
-            </label>
+          <div class="bg-blue-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">AI-Powered Automation</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc4">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              From payroll to performance tracking — automate repetitive tasks, reduce errors, and make
+              smarter HR decisions in real-time.
+            </p>
           </div>
 
-          <button type="submit" class="w-full bg-black text-white font-semibold rounded-full py-2 hover:bg-gray-900">
+          <div class="bg-purple-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Customizable & Scalable</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc5">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Whether you’re a 10-person startup or a 500+ employee workforce, personalize workflows,
+              permissions, and modules as you grow.
+            </p>
+          </div>
+
+          <div class="bg-green-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Employee Self-Service Portal</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc6">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Empower your team to access payslips, request leaves and more — all from one intuitive
+              dashboard.
+            </p>
+          </div>
+          <!-- Card Template End -->
+        </div>
+
+        <div class="mt-10">
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full shadow-md transition">
             Book a Demo
           </button>
-        </form>
+        </div>
       </div>
+    </section>
+
+    <!-- 5th Screen (TESTIMONIAL) -->
+    <div class="bg-gradient-to-b from-purple-100 via-white to-white min-h-screen flex items-center justify-center">
+
+      <section class="w-full max-w-3xl px-4" x-data="{ current: 0, testimonials: [
+      {
+        quote: `Atom Mail helped us transform our communication. Faster replies, multilingual support, and AI drafts have made our team more efficient and professional.`,
+        name: 'Mrs. Swadha Singh',
+        position: 'Founder & CEO, Orgoeast',
+        image: './atom-suite-images/testim/swadha-mam.png'
+      },
+      {
+        quote: `Floww application has helped us managing and tracking consignments, and their application helps us in building our delivery proofs instantly.`,
+        name: 'Mr. Nitesh Kumar',
+        position: 'Director – R1 Radiance Lights',
+        image: './atom-suite-images/testim/nitesh-sir.png'
+      },
+      {
+        quote: `Floww Search is really great for us. It has helped us in finding local delivery companies in Mumbai. We see great potential in the product for mid size companies like ours.`,
+        name: 'Mr. Ravi Kaushik',
+        position: 'CEO, Airth.in - IIT Bombay | IIT Kanpur',
+        image: './atom-suite-images/testim/ravi-sir.png'
+      }
+    ] }">
+
+        <!-- Heading -->
+        <div class="text-center mb-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-2">
+            CUSTOMER HAPPINESS
+          </h2>
+          <h3 class="text-2xl font-semibold text-purple-600">Assured!</h3>
+        </div>
+
+        <!-- Testimonial Card -->
+        <div class="relative flex justify-center items-center">
+          <template x-for="(testimonial, index) in testimonials" :key="index">
+            <div x-show="current === index" x-transition
+              class="relative bg-white rounded-2xl shadow-lg p-8 w-full max-w-md aspect-square border border-purple-200 flex flex-col justify-between"
+              style="width: 360px;">
+              <!-- Quote image (replace src with your image path) -->
+              <img src="./atom-suite-images/testim/quote-icon.png" alt="Quote Icon"
+                class="absolute w-20 h-20 opacity-80" style="top:-3rem; left:-1.5rem; width: 100px; height: 100px;" />
+
+              <!-- Testimonial Text -->
+              <p class="text-gray-800 text-sm sm:text-base leading-relaxed mt-8">
+                <span x-text="testimonial.quote"></span>
+              </p>
+
+              <!-- User Info -->
+              <div class="mt-6 text-left">
+                <p class="text-sm sm:text-base font-medium text-purple-600" x-text="testimonial.name"></p>
+                <p class="text-xs italic text-purple-500" x-text="testimonial.position"></p>
+              </div>
+
+              <!-- Profile image with hover effect -->
+              <div class="absolute -bottom-6 right-6" style="bottom: -1.5rem; right: -1.5rem;">
+                <img :src="testimonial.image" alt="Profile" class="w-32 h-32 rounded-full object-cover border-2 border-white shadow-md 
+                        filter grayscale hover:grayscale-0 transition duration-300" />
+              </div>
+            </div>
+          </template>
+
+          <!-- Left Arrow -->
+          <div class="absolute left-0 top-1/2 transform -translate-y-1/2">
+            <button @click="current = (current - 1 + testimonials.length) % testimonials.length"
+              class="text-purple-500 hover:text-purple-700 text-2xl px-2">
+              &#8592;
+            </button>
+          </div>
+
+          <!-- Right Arrow -->
+          <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
+            <button @click="current = (current + 1) % testimonials.length"
+              class="text-purple-500 hover:text-purple-700 text-2xl px-2">
+              &#8594;
+            </button>
+          </div>
+        </div>
+
+      </section>
+
     </div>
+
+    <!-- 6th screen -->
+    <section class="bg-gradient-to-br from-purple-500 to-pink-400 flex items-center justify-center p-4"
+      style="height: 400px;">
+      <div class="bg-white/80 backdrop-blur-md text-gray-800 max-w-2xl rounded-2xl p-6 shadow-lg">
+        <h2 class="text-xl sm:text-2xl font-bold text-pink-700 mb-2 text-center sm:text-left">
+          DEDICATED CUSTOMER SUCCESS
+        </h2>
+
+        <p class="text-sm sm:text-base text-gray-800 leading-relaxed">
+          Get a personal success manager for smooth onboarding, fast support, and lasting growth with <span
+            class="font-bold text-pink-700">Atom Suite</span>.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- 7th Screen -->
+     <section class="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-16 px-6">
+  <!-- Section Heading -->
+  <div class="text-center mb-12">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700">
+      The Values that Inspire Our Journey
+    </h2>
   </div>
 
+  <!-- Grid Container -->
+  <div class="grid sm:grid-cols-2 lg:grid-cols-2 max-w-2xl mx-auto" style="gap: 4rem; margin-top: 5rem;">
+    
+    <!-- Card 1 -->
+    <div class="relative bg-white rounded-xl shadow-md border border-blue-100 p-6 pt-12" style="width:250px;">
+      <div class="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-blue-500 p-5 rounded-full">
+        <img src="./atom-suite-images/values/01.01 1.png" alt="Icon 1" class="w-11 h-11" />
+      </div>
+      <h3 class="text-lg font-semibold text-blue-700 mb-2">
+        Empowering MSMEs, Every Step of the Way
+      </h3>
+      <p class="text-sm text-gray-700">
+        We’ve built Floww with one clear purpose — to help MSMEs grow without the weight of complex tools.
+        Our products are designed to simplify operations and bring clarity, so businesses can focus on what matters:
+        scaling with confidence.
+      </p>
+    </div>
 
-  <!--2nd screen  -->
-  <div>
-       <!-- Mobile Layout -->
+    <!-- Card 2 -->
+    <div class="relative bg-white rounded-xl shadow-md border border-blue-100 p-6 pt-12" style="width:250px;">
+      <div class="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-blue-500 p-5 rounded-full">
+        <img src="./atom-suite-images/values/02 2.png" alt="Icon 2" class="w-11 h-11" />
+      </div>
+      <h3 class="text-lg font-semibold text-blue-700 mb-2">
+        Built for the Long Haul
+      </h3>
+      <p class="text-sm text-gray-700">
+        Our approach is never short-sighted. We don’t chase trends — we solve real problems. Whether it’s communication, HR, or billing,
+        we’re here to create systems that work for you, not around you.
+      </p>
+    </div>
 
-       <div class="flex flex-col gap-4 mt-10">
-        <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow" >
+    <!-- Card 3 -->
+    <div class="relative bg-white rounded-xl shadow-md border border-blue-100 p-6 pt-12"style="width:250px;">
+      <div class="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-blue-500 p-5 rounded-full">
+        <img src="./atom-suite-images/values/03 2.png" alt="Icon 3" class="w-11 h-11" />
+      </div>
+      <h3 class="text-lg font-semibold text-blue-700 mb-2">
+        Innovation with Purpose
+      </h3>
+      <p class="text-sm text-gray-700">
+        We don’t build features just for the sake of it. Every aspect of Floww is shaped by actual user needs.
+        From AI-powered emails to seamless HR workflows — innovation is always grounded in utility.
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="relative bg-white rounded-xl shadow-md border border-blue-100 p-6 pt-12" style="width:250px;">
+      <div class="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-blue-500 p-5 rounded-full">
+        <img src="./atom-suite-images/values/04 1.png" alt="Icon 4" class="w-11 h-11" />
+      </div>
+      <h3 class="text-lg font-semibold text-blue-700 mb-2">
+        Partnership over Transactions
+      </h3>
+      <p class="text-sm text-gray-700">
+        At Floww, we don’t just offer products — we build relationships.
+        Your feedback drives our roadmap. Your wins are our milestones. We grow when you grow.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- 8th Screen -->
+     <section class="bg-gradient-to-b from-purple-600 to-pink-400">
+
+      <!-- Top Section -->
+      <div class="max-w-5xl mx-auto text-white text-center px-4 py-10">
+        <h1 class="text-2xl sm:text-3xl font-bold">
+          Start from just ₹9 — Atom Suite for MSMEs
+        </h1>
+        <p class="text-base sm:text-lg mt-2">
+          All-in-one solution for email, HR, branding, and billing.
+        </p>
+      </div>
+
+      <!-- White Card Section -->
+      <div class="bg-white rounded-t-3xl shadow-lg max-w-5xl mx-auto px-6 py-8 sm:py-10 relative z-10">
+        <div class="space-y-6">
+
+          <!-- Step 1 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              01
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Book a Demo</p>
+              <p class="text-gray-600 text-sm">Discover how Atom Suite can transform your business.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              02
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Product Walkthrough</p>
+              <p class="text-gray-600 text-sm">Explore powerful features like Atom Mail, Atom HR, And Atom Builder.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              03
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Customized Plan Setup</p>
+              <p class="text-gray-600 text-sm">Tailored solutions to match your unique business needs.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              04
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Onboarding & Training</p>
+              <p class="text-gray-600 text-sm">Seamless setup with full support from our expert team.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Colored Bottom for Desktop -->
+
+    </section>
+
+    <!-- 9th screen -->
+
+
+
+  </div>
+  <!-- Mobile Version -->
+  <div class="floww-atom-suite-mobile-version">
+    <div class="logo px-4 pt-6 sm:px-10 sm:pt-10">
+      <a href="https://gofloww.co" target="_blank">
+        <img src="img/logo/logo.webp" alt="floww logo, logistics app" class="w-24 sm:w-[18%]" />
+      </a>
+    </div>
+
+    <!-- 1st screen -->
+    <div class="min-h-screen flex items-center justify-center px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 w-full max-w-6xl  rounded-xl overflow-hidden">
+
+        <!-- Left Side -->
+        <div class="p-8 lg:p-16 text-left space-y-6">
+
+          <!-- Tagline -->
+          <p class="text-xl font-normal tracking-wide">Backed by IIT & Key Ministries</p>
+
+          <!-- Main Heading -->
+          <h1 class="text-3xl sm:text-4xl font-bold leading-snug">
+            <span class="font-bold">AI Powered Atom Suite</span><br>
+            <span class="font-normal">Enables MSMEs for the<br>future of work</span>
+          </h1>
+
+          <!-- Description -->
+          <p class="text-xl font-normal leading-relaxed text-gray-200">
+            Drive efficiency, elevate business<br>
+            operations, and improve<br>
+            employee engagement
+          </p>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"
+          style="border-radius: px;">
+          <form class="space-y-4">
+            <input type="email" placeholder="Work Email*"
+              class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+            <div class="flex gap-4">
+              <input type="text" placeholder="First Name*"
+                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+              <input type="text" placeholder="Last Name*"
+                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            </div>
+
+            <div class="flex gap-4">
+              <input type="text" placeholder="India"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+              <input type="text" placeholder="+91"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            </div>
+
+            <input type="text" placeholder="Company Name*"
+              class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+            <div class="flex gap-4">
+              <input type="text" placeholder="No. of Employees*"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+              <input type="text" placeholder="Seniority*"
+                class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+            </div>
+
+            <input type="text" placeholder="Functional Area*"
+              class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none" />
+
+            <div class="flex items-start space-x-2">
+              <input type="checkbox" class="mt-1" />
+              <label class="text-sm text-gray-600">
+                I have read and understood the <a href="#" class="underline">Terms of Use</a>
+              </label>
+            </div>
+
+            <button type="submit" class="w-full bg-black text-white font-semibold rounded-full py-2 hover:bg-gray-900">
+              Book a Demo
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!--2nd screen  -->
+    <div>
+      <!-- Mobile Layout -->
+
+      <div class="flex flex-col gap-4 mt-10">
+        <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow">
           <div style="background-color: #7B5ABA;
     border-radius: 50%;">
-          <img src="./atom-suite-images/ai-icon-1.png" alt="AI Drafting" class="h-6 w-6 mt-1"style="width: 30px; height=20px"; />
-        </div>
+            <img src="./atom-suite-images/ai-icon-1.png" alt="AI Drafting" class="h-6 w-6 mt-1"
+              style="width: 30px; height:20px"; />
+          </div>
           <div>
             <h4 class="text-purple-700 font-semibold">AI Drafting</h4>
             <p class="text-sm text-gray-700">Create professional emails faster with AI assistance.</p>
           </div>
         </div>
-  
+
         <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow">
           <img src="./atom-suite-images/Icon 02 1 (1).png" alt="Payroll" class="h-6 w-6 mt-1" />
           <div>
@@ -335,7 +785,7 @@ body{
             <p class="text-sm text-gray-700">Automate payroll with precision and timely payouts.</p>
           </div>
         </div>
-  
+
         <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow">
           <img src="./atom-suite-images/Icon 03 1.png" alt="Design Templates" class="h-6 w-6 mt-1" />
           <div>
@@ -343,7 +793,7 @@ body{
             <p class="text-sm text-gray-700">Select from pre-built themes for every industry.</p>
           </div>
         </div>
-  
+
         <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow">
           <img src="./atom-suite-images/Icon 04 1.png" alt="No-Code" class="h-6 w-6 mt-1" />
           <div>
@@ -351,7 +801,7 @@ body{
             <p class="text-sm text-gray-700">Design your site with drag-and-drop, no coding needed.</p>
           </div>
         </div>
-  
+
         <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow">
           <img src="./atom-suite-images/Icon 05 1.png" alt="Custom Domain" class="h-6 w-6 mt-1" />
           <div>
@@ -360,15 +810,427 @@ body{
           </div>
         </div>
       </div>
-  
+
       <!-- CTA Button -->
       <div class="text-center mt-8">
-        <button class="bg-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
+        <button
+          class="bg-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition">
           Schedule a Demo
         </button>
       </div>
+    </div>
+
+    <!-- 3rd Screen -->
+
+
+    <div class="bg-gradient-to-b from-blue-100 via-white to-white min-h-screen" style="margin-top: 2rem;">
+
+      <section class="max-w-7xl mx-auto px-4 py-16 text-center">
+        <!-- Heading -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+          Trusted by Industry Leaders to<br class="hidden sm:block" /> Transform Workforce
+        </h2>
+        <!-- Subheading -->
+        <p class="text-base sm:text-lg md:text-xl text-gray-700 mb-10">
+          <span class="font-semibold text-blue-600">Join 1000+ Startups &amp; <span
+              class="text-indigo-600">MSMEs</span></span>
+          Powering Their Growth with <span class="font-bold text-blue-700">Atom Suite</span>
+        </p>
+
+        <!-- Logo Grid -->
+        <div class="bg-white rounded-xl border border-blue-200 shadow-md p-6 sm:p-8">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-center">
+            <!-- Sample logos - replace src with actual image paths -->
+            <img src="./atom-suite-images/partners/radiance.png" alt="Radiance Lights" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/orgo.png" alt="Orgo East" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/hul.png" alt="Unilever" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/airth.png" alt="AiRTH" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/goi.png" alt="Govt of India" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/cimp.png" alt="CIMP" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/raru.png" alt="ANRU" class="max-h-18 mx-auto">
+            <img src="./atom-suite-images/partners/phoenix.png" alt="Phoenix Mills" class="max-h-18 mx-auto">
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+
+    <!-- 4th screen -->
+
+
+
+    <section class="bg-gradient-to-r from-white to-blue-100 py-12 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+          DISCOVER WHY ATOM SUITE IS THE <span class="text-blue-600">#1</span>
+        </h2>
+        <p class="text-lg sm:text-xl text-blue-700 font-semibold mb-8">Software Solution for Startups & MSMEs
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Card Template Start -->
+          <div class="bg-pink-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Cloud & Mobile Ready</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc1">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Access Atom Suite anywhere, anytime — 100% cloud-based with a seamless mobile experience
+              trusted by 1000+ MSMEs.
+            </p>
+          </div>
+
+          <div class="bg-purple-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Secure & Compliant</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc2">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Hosted on highly secure servers, Atom Suite is GDPR-compliant and built with
+              enterprise-grade privacy encryption and data protection.
+            </p>
+          </div>
+
+          <div class="bg-green-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Intuitive & Easy-to-Use</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc3">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Designed with simplicity in mind — a no-learning-curve, modern interface that makes HR
+              management a breeze.
+            </p>
+          </div>
+
+          <div class="bg-blue-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">AI-Powered Automation</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc4">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              From payroll to performance tracking — automate repetitive tasks, reduce errors, and make
+              smarter HR decisions in real-time.
+            </p>
+          </div>
+
+          <div class="bg-purple-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Customizable & Scalable</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc5">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Whether you’re a 10-person startup or a 500+ employee workforce, personalize workflows,
+              permissions, and modules as you grow.
+            </p>
+          </div>
+
+          <div class="bg-green-100 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold text-gray-800">Employee Self-Service Portal</h3>
+              <button
+                class="sm:hidden text-white bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center toggle-btn"
+                data-target="desc6">⌄</button>
+            </div>
+            <p class="text-sm text-gray-700 mt-2 hidden sm:block">
+              Empower your team to access payslips, request leaves and more — all from one intuitive
+              dashboard.
+            </p>
+          </div>
+          <!-- Card Template End -->
+        </div>
+
+        <div class="mt-10">
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full shadow-md transition">
+            Book a Demo
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5th screen -->
+    <div class="bg-gradient-to-b from-purple-100 via-white to-white min-h-screen flex items-center justify-center">
+
+      <section class="w-full max-w-3xl px-4" x-data="{ current: 0, testimonials: [
+      {
+        quote: `Atom Mail helped us transform our communication. Faster replies, multilingual support, and AI drafts have made our team more efficient and professional.`,
+        name: 'Mrs. Swadha Singh',
+        position: 'Founder & CEO, Orgoeast',
+        image: './atom-suite-images/testim/swadha-mam.png'
+      },
+      {
+        quote: `Floww application has helped us managing and tracking consignments, and their application helps us in building our delivery proofs instantly.`,
+        name: 'Mr. Nitesh Kumar',
+        position: 'Director – R1 Radiance Lights',
+        image: './atom-suite-images/testim/nitesh-sir.png'
+      },
+      {
+        quote: `Floww Search is really great for us. It has helped us in finding local delivery companies in Mumbai. We see great potential in the product for mid size companies like ours.`,
+        name: 'Mr. Ravi Kaushik',
+        position: 'CEO, Airth.in - IIT Bombay | IIT Kanpur',
+        image: './atom-suite-images/testim/ravi-sir.png'
+      }
+    ] }">
+
+        <!-- Heading -->
+        <div class="text-center mb-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-2">
+            CUSTOMER HAPPINESS
+          </h2>
+          <h3 class="text-2xl font-semibold text-purple-600">Assured!</h3>
+        </div>
+
+        <!-- Testimonial Card -->
+        <div class="relative flex justify-center items-center">
+          <template x-for="(testimonial, index) in testimonials" :key="index">
+            <div x-show="current === index" x-transition
+              class="relative bg-white rounded-2xl shadow-lg p-8 w-full max-w-md aspect-square border border-purple-200 flex flex-col justify-between"
+              style="width: 360px;">
+              <!-- Quote image (replace src with your image path) -->
+              <img src="./atom-suite-images/testim/quote-icon.png" alt="Quote Icon"
+                class="absolute w-20 h-20 opacity-80" style="top:-3rem; left:-1.5rem; width: 100px; height: 100px;" />
+
+              <!-- Testimonial Text -->
+              <p class="text-gray-800 text-sm sm:text-base leading-relaxed mt-8">
+                <span x-text="testimonial.quote"></span>
+              </p>
+
+              <!-- User Info -->
+              <div class="mt-6 text-left">
+                <p class="text-sm sm:text-base font-medium text-purple-600" x-text="testimonial.name"></p>
+                <p class="text-xs italic text-purple-500" x-text="testimonial.position"></p>
+              </div>
+
+              <!-- Profile image with hover effect -->
+              <div class="absolute -bottom-6 right-6" style="bottom: -1.5rem; right: -1.5rem;">
+                <img :src="testimonial.image" alt="Profile" class="w-32 h-32 rounded-full object-cover border-2 border-white shadow-md" />
+              </div>
+            </div>
+          </template>
+
+          <!-- Left Arrow -->
+          <div class="absolute left-0 top-1/2 transform -translate-y-1/2">
+            <button @click="current = (current - 1 + testimonials.length) % testimonials.length"
+              class="text-purple-500 hover:text-purple-700 text-2xl px-2">
+              &#8592;
+            </button>
+          </div>
+
+          <!-- Right Arrow -->
+          <div class="absolute right-0 top-1/2 transform -translate-y-1/2">
+            <button @click="current = (current + 1) % testimonials.length"
+              class="text-purple-500 hover:text-purple-700 text-2xl px-2">
+              &#8594;
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- 6th screen  -->
+
+    <section class="bg-gradient-to-br from-purple-500 to-pink-400 flex items-center justify-center p-4"
+      style="height: 400px;">
+      <div class="bg-white/80 backdrop-blur-md text-gray-800 max-w-2xl rounded-2xl p-6 shadow-lg">
+        <h2 class="text-xl sm:text-2xl font-bold text-pink-700 mb-2 text-center sm:text-left">
+          DEDICATED CUSTOMER SUCCESS
+        </h2>
+
+        <p class="text-sm sm:text-base text-gray-800 leading-relaxed">
+          Get a personal success manager for smooth onboarding, fast support, and lasting growth with <span
+            class="font-bold text-pink-700">Atom Suite</span>.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- 7th Screen -->
+     <section class="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-16 px-6">
+  <!-- Section Heading -->
+  <div class="text-center mb-12">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700">
+      The Values that Inspire Our Journey
+    </h2>
   </div>
 
-</div>
+  <!-- Grid Container -->
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto">
+    
+    <!-- Card 1 -->
+    <div class="relative bg-white rounded-xl shadow-md border border-blue-100 p-6 pt-12">
+      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-blue-100 p-3 rounded-full">
+        <img src="https://img.icons8.com/ios-filled/50/000000/combo-chart--v1.png" alt="Icon 1" class="w-6 h-6" />
+      </div>
+      <h3 class="text-lg font-semibold text-blue-700 mb-2">
+        Empowering MSMEs
+      </h3>
+      <p class="text-sm text-gray-700">
+        Simplifying operations so you can scale with clarity and confidence.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="relative bg-white rounded-xl shadow-md border border-blue-100 p-6 pt-12">
+      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-blue-100 p-3 rounded-full">
+        <img src="https://img.icons8.com/ios-filled/50/000000/settings--v1.png" alt="Icon 2" class="w-6 h-6" />
+      </div>
+      <h3 class="text-lg font-semibold text-blue-700 mb-2">
+        Built for the Long Haul
+      </h3>
+      <p class="text-sm text-gray-700">
+        We solve real problems — creating systems that grow with you.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="relative bg-white rounded-xl shadow-md border border-blue-100 p-6 pt-12">
+      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-blue-100 p-3 rounded-full">
+        <img src="https://img.icons8.com/ios-filled/50/000000/idea.png" alt="Icon 3" class="w-6 h-6" />
+      </div>
+      <h3 class="text-lg font-semibold text-blue-700 mb-2">
+        Innovation with Purpose
+      </h3>
+      <p class="text-sm text-gray-700">
+       Every feature is built for real needs, not just for show.
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="relative bg-white rounded-xl shadow-md border border-blue-100 p-6 pt-12">
+      <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-blue-100 p-3 rounded-full">
+      </div>
+      <h3 class="text-lg font-semibold text-blue-700 mb-2">
+        Partnership over Transactions
+      </h3>
+      <p class="text-sm text-gray-700">
+        Your success drives our journey. We grow together.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- 8th MOB -->
+     <section class="bg-gradient-to-b from-purple-600 to-pink-400">
+
+      <!-- Top Section -->
+      <div class="max-w-5xl mx-auto text-white text-center px-4 py-10">
+        <h1 class="text-2xl sm:text-3xl font-bold">
+          Start from just ₹9
+        </h1>
+        <p class="text-base sm:text-lg mt-2">
+          Email, HR, branding, and billing - <br> All-in-one Suite.
+        </p>
+      </div>
+
+      <!-- White Card Section -->
+      <div class="bg-white rounded-t-3xl shadow-lg max-w-5xl mx-auto px-6 py-8 sm:py-10 relative z-10">
+        <div class="space-y-6">
+
+          <!-- Step 1 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              01
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Book a Demo</p>
+              <p class="text-gray-600 text-sm">See Atom Suite in action.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              02
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Product Walkthrough</p>
+              <p class="text-gray-600 text-sm">Explore Mail, HR & Builder</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              03
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Customized Plan Setup</p>
+              <p class="text-gray-600 text-sm">Tailored to your needs</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-semibold">
+              04
+            </div>
+            <div>
+              <p class="font-semibold text-lg text-black">Onboarding & Training</p>
+              <p class="text-gray-600 text-sm">Expert setup & training</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Colored Bottom for Desktop -->
+      <div class="hidden md:block bg-gradient-to-b from-white to-purple-500 h-20 w-full -mt-4"></div>
+
+    </section>
+
+
+
+
+
+
+
+  </div>
 </body>
+
+
+
+
+<script>
+  const buttons = document.querySelectorAll('.toggle-btn');
+  const descriptions = document.querySelectorAll('.description');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.target;
+      descriptions.forEach(desc => {
+        const icon = document.getElementById('icon-' + desc.id);
+        if (desc.id === targetId) {
+          const isHidden = desc.classList.contains('hidden');
+          descriptions.forEach(d => {
+            d.classList.add('hidden');
+            document.getElementById('icon-' + d.id).textContent = '⌄';
+          });
+          if (isHidden) {
+            desc.classList.remove('hidden');
+            icon.textContent = '⌃';
+          }
+        }
+      });
+    });
+  });
+</script>
 </html>
