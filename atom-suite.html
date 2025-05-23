@@ -2900,7 +2900,7 @@
     e.preventDefault();
 
     const payload = {
-      companyEmail: "shivanshrajput108@gmail.com", // static or dynamic as needed
+      companyEmail: "info@gofloww.co", // static or dynamic as needed
       email: document.getElementById("email").value.trim(),
       firstName: document.getElementById("firstName").value.trim(),
       lastName: document.getElementById("lastName").value.trim(),
@@ -3179,7 +3179,7 @@
     }
 
     const payload = {
-      companyEmail: "shivanshrajput108@gmail.com", 
+      companyEmail: "info@gofloww.co", 
       email: emailMobile.value.trim(),
       firstName: firstNameMobile.value.trim(),
       lastName: lastNameMobile.value.trim(),
@@ -3218,6 +3218,27 @@
 
   validateMobileForm(); // Initial validation
 </script>
+
+
+<script>
+  const selectElements = ["employees", "seniority", "functionArea"];
+
+  selectElements.forEach((id) => {
+    const select = document.getElementById(id);
+
+    select.addEventListener("change", function () {
+      if (this.value) {
+        this.classList.remove("text-gray-500");
+        this.classList.add("text-black");
+      } else {
+        this.classList.add("text-gray-500");
+        this.classList.remove("text-black");
+      }
+    });
+  });
+</script>
+
+
 
 
 </html>
