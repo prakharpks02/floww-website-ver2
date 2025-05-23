@@ -370,158 +370,136 @@
             class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"
             style="border-radius: px"
           >
-            <form id="demoForm" class="space-y-4">
-              <input
-                type="email"
-                id="email"
-                required
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                placeholder="Work Email*"
-                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-              />
+         <form id="demoForm" class="space-y-4">
+  <input
+    type="email"
+    id="email"
+    required
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+    placeholder="Work Email*"
+    class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
+  />
 
-              <div class="flex gap-4">
-                <input
-                  type="text"
-                  id="firstName"
-                  required
-                  pattern="[A-Za-z\s]+"
-                  placeholder="First Name*"
-                  class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                />
-                <input
-                  type="text"
-                  id="lastName"
-                  required
-                  pattern="[A-Za-z\s]+"
-                  placeholder="Last Name*"
-                  class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                />
-              </div>
+  <div class="flex gap-4">
+    <input
+      type="text"
+      id="firstName"
+      required
+      pattern="[A-Za-z\s]+"
+      placeholder="First Name*"
+      class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
+    />
+    <input
+      type="text"
+      id="lastName"
+      required
+      pattern="[A-Za-z\s]+"
+      placeholder="Last Name*"
+      class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
+    />
+  </div>
 
-              <div class="flex gap-4">
-                <input
-                  type="text"
-                  id="country"
-                  placeholder="India"
-                  class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                />
-                <input
-                  type="tel"
-                  id="phone"
-                  required
-                  pattern="^\d{10}$"
-                  placeholder="+91"
-                  class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                />
-              </div>
+  <div class="flex gap-4">
+    <input
+      type="text"
+      id="country"
+      required
+      placeholder="Country*"
+      class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
+    />
+    <input
+      type="tel"
+      id="phone"
+      required
+      pattern="^\d{10}$"
+      placeholder="Phone (10 digits)*"
+      class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
+    />
+  </div>
 
-              <input
-                type="text"
-                id="company"
-                required
-                placeholder="Company Name*"
-                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-              />
+  <input
+    type="text"
+    id="company"
+    required
+    placeholder="Company Name*"
+    class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
+  />
 
-              <div class="flex gap-4">
-                <select
-                  id="employees"
-                  required
-                  class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                  onchange="this.style.color = this.value ? 'black' : 'gray'"
-                >
-                  <option selected disabled value="">
-                    Select Employee Size
-                  </option>
-                  <option value="0-200">0-200</option>
-                  <option value="201-500">201-500</option>
-                  <option value="501-1000">501-1000</option>
-                  <option value="1001-2500">1001-2500</option>
-                  <option value="2501-5000">2501-5000</option>
-                  <option value="5001-10000">5001-10000</option>
-                  <option value="10001+">10001+</option>
-                </select>
+  <div class="flex gap-4">
+    <select
+      id="employees"
+      required
+      class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none text-gray-500"
+    >
+      <option value="" disabled selected hidden>Select Employee Size</option>
+      <option value="0-200">0-200</option>
+      <option value="201-500">201-500</option>
+      <option value="501-1000">501-1000</option>
+      <option value="1001-2500">1001-2500</option>
+      <option value="2501-5000">2501-5000</option>
+      <option value="5001-10000">5001-10000</option>
+      <option value="10001+">10001+</option>
+    </select>
 
-                <select
-                  id="seniority"
-                  required
-                  class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                  onchange="this.style.color = this.value ? 'black' : 'gray'"
-                >
-                  <option selected disabled value="">Select Seniority</option>
-                  <option value="CXO">CXO</option>
-                  <option value="Director">Director</option>
-                  <option value="VP">VP</option>
-                  <option value="Head">Head</option>
-                  <option value="Owner">Owner</option>
-                  <option value="Manager">Manager</option>
-                  <option value="Senior">Senior</option>
-                  <option value="Partner">Partner</option>
-                  <option value="Entry">Entry</option>
-                </select>
-              </div>
+    <select
+      id="seniority"
+      required
+      class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none text-gray-500"
+    >
+      <option value="" disabled selected hidden>Select Seniority</option>
+      <option value="CXO">CXO</option>
+      <option value="Director">Director</option>
+      <option value="VP">VP</option>
+      <option value="Head">Head</option>
+      <option value="Owner">Owner</option>
+      <option value="Manager">Manager</option>
+      <option value="Senior">Senior</option>
+      <option value="Partner">Partner</option>
+      <option value="Entry">Entry</option>
+    </select>
+  </div>
 
-              <select
-                id="functionArea"
-                required
-                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                onchange="this.style.color = this.value ? 'black' : 'gray'"
-              >
-                <option selected disabled value="">
-                  Select Functional Area
-                </option>
-                <option value="CEO/MD/Promoter">CEO/MD/Promoter</option>
-                <option value="HR">HR</option>
-                <option value="HR:Compensation & Benefits">
-                  HR:Compensation & Benefits
-                </option>
-                <option value="HR:Total Rewards & Wellness">
-                  HR:Total Rewards & Wellness
-                </option>
-                <option value="HR:Talent Management & OD">
-                  HR:Talent Management & OD
-                </option>
-                <option value="HR:Employee Engagement">
-                  HR:Employee Engagement
-                </option>
-                <option value="HR:Talent Acquisition">
-                  HR:Talent Acquisition
-                </option>
-                <option value="HR:HR Ops & Compliance">
-                  HR:HR Ops & Compliance
-                </option>
-                <option value="HR:Learning & Development">
-                  HR:Learning & Development
-                </option>
-                <option value="HR:Technology & Analytics">
-                  HR:Technology & Analytics
-                </option>
-                <option value="HR:Legal & Industry Relations">
-                  HR:Legal & Industry Relations
-                </option>
-                <option value="IT">IT</option>
-                <option value="Finance">Finance</option>
-                <option value="Academia">Academia</option>
-                <option value="Procurement">Procurement</option>
-                <option value="Other">Other</option>
-              </select>
+  <select
+    id="functionArea"
+    required
+    class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none text-gray-500"
+  >
+    <option value="" disabled selected hidden>Select Functional Area</option>
+    <option value="CEO/MD/Promoter">CEO/MD/Promoter</option>
+    <option value="HR">HR</option>
+    <option value="HR:Compensation & Benefits">HR:Compensation & Benefits</option>
+    <option value="HR:Total Rewards & Wellness">HR:Total Rewards & Wellness</option>
+    <option value="HR:Talent Management & OD">HR:Talent Management & OD</option>
+    <option value="HR:Employee Engagement">HR:Employee Engagement</option>
+    <option value="HR:Talent Acquisition">HR:Talent Acquisition</option>
+    <option value="HR:HR Ops & Compliance">HR:HR Ops & Compliance</option>
+    <option value="HR:Learning & Development">HR:Learning & Development</option>
+    <option value="HR:Technology & Analytics">HR:Technology & Analytics</option>
+    <option value="HR:Legal & Industry Relations">HR:Legal & Industry Relations</option>
+    <option value="IT">IT</option>
+    <option value="Finance">Finance</option>
+    <option value="Academia">Academia</option>
+    <option value="Procurement">Procurement</option>
+    <option value="Other">Other</option>
+  </select>
 
-              <div class="flex items-start space-x-2">
-                <input type="checkbox" id="terms" required class="mt-1" />
-                <label class="text-sm text-gray-600">
-                  I have read and understood the Terms of use
-                </label>
-              </div>
+  <div class="flex items-start space-x-2">
+    <input type="checkbox" id="terms" required class="mt-1" />
+    <label class="text-sm text-gray-600">
+      I have read and understood the Terms of use
+    </label>
+  </div>
 
-              <button
-                type="submit"
-                id="submitBtn"
-                class="w-full bg-[#02807F] text-white font-semibold rounded-full py-2"
-              >
-                Book a Demo
-              </button>
-            </form>
+  <button
+    type="submit"
+    id="submitBtn"
+    disabled
+    class="w-full bg-gray-400 text-white font-semibold rounded-full py-2 cursor-not-allowed"
+  >
+    Book a Demo
+  </button>
+</form>
+
           </div>
         </div>
       </div>
@@ -2855,126 +2833,109 @@
       });
   </script> -->
 
-  <script>
-    const fields = [
-      "email",
-      "firstName",
-      "lastName",
-      "country",
-      "phone",
-      "company",
-      "employees",
-      "seniority",
-      "functionArea",
-    ];
-    const form = document.getElementById("demoForm");
-    const button = document.getElementById("submitBtn");
-    const checkbox = document.getElementById("terms");
+ <script>
+  const fields = [
+    "email",
+    "firstName",
+    "lastName",
+    "country",
+    "phone",
+    "company",
+    "employees",
+    "seniority",
+    "functionArea",
+  ];
+  const form = document.getElementById("demoForm");
+  const button = document.getElementById("submitBtn");
+  const checkbox = document.getElementById("terms");
 
-    // Validate form fields and checkbox to enable/disable submit button
-    function validateForm() {
-      const allFilled = fields.every((id) => {
-        const el = document.getElementById(id);
-        // For selects, check if value is not empty or default option
-        if (!el) return false;
-        if (el.tagName === "SELECT") {
-          return el.value.trim() !== "";
-        }
-        return el.value.trim() !== "";
+  function validateForm() {
+    const allValid = fields.every((id) => {
+      const el = document.getElementById(id);
+      return el && el.checkValidity();
+    });
+
+    if (allValid && checkbox.checked) {
+      button.disabled = false;
+      button.classList.remove("bg-gray-400", "cursor-not-allowed");
+      button.classList.add("bg-black", "hover:bg-gray-900", "cursor-pointer");
+    } else {
+      button.disabled = true;
+      button.classList.add("bg-gray-400", "cursor-not-allowed");
+      button.classList.remove("bg-black", "hover:bg-gray-900", "cursor-pointer");
+    }
+  }
+
+  fields.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener("input", validateForm);
+      el.addEventListener("change", validateForm);
+    }
+  });
+
+  checkbox.addEventListener("change", validateForm);
+
+  // Custom validation messages
+  document.getElementById("email").addEventListener("invalid", function () {
+    this.setCustomValidity("Please enter a valid email address.");
+  });
+  document.getElementById("firstName").addEventListener("invalid", function () {
+    this.setCustomValidity("First name should only contain letters.");
+  });
+  document.getElementById("lastName").addEventListener("invalid", function () {
+    this.setCustomValidity("Last name should only contain letters.");
+  });
+  document.getElementById("phone").addEventListener("invalid", function () {
+    this.setCustomValidity("Phone number must be 10 digits.");
+  });
+
+  ["email", "firstName", "lastName", "phone"].forEach((id) => {
+    document.getElementById(id).addEventListener("input", function () {
+      this.setCustomValidity("");
+    });
+  });
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const payload = {
+      companyEmail: "shivanshrajput108@gmail.com", // static or dynamic as needed
+      email: document.getElementById("email").value.trim(),
+      firstName: document.getElementById("firstName").value.trim(),
+      lastName: document.getElementById("lastName").value.trim(),
+      country: document.getElementById("country").value.trim(),
+      phone: document.getElementById("phone").value.trim(),
+      company: document.getElementById("company").value.trim(),
+      employees: document.getElementById("employees").value,
+      seniority: document.getElementById("seniority").value,
+      functionArea: document.getElementById("functionArea").value,
+    };
+
+    try {
+      const res = await fetch("https://service-node.gofloww.co/api/contactus-open/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
 
-      if (allFilled && checkbox.checked) {
-        button.disabled = false;
-        button.classList.remove("bg-gray-400", "cursor-not-allowed");
-        button.classList.add("bg-black", "hover:bg-gray-900", "cursor-pointer");
-      } else {
-        button.disabled = true;
-        button.classList.add("bg-gray-400", "cursor-not-allowed");
-        button.classList.remove(
-          "bg-black",
-          "hover:bg-gray-900",
-          "cursor-pointer"
-        );
-      }
+      if (!res.ok) throw new Error("API request failed");
+
+      const data = await res.json();
+      console.log("Success:", data);
+      alert("Form submitted successfully!");
+      form.reset();
+      validateForm();
+    } catch (err) {
+      console.error("Error:", err);
+      alert("Something went wrong. Please try again.");
     }
+  });
 
-    // Attach input/change listeners for validation
-    fields.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) el.addEventListener("input", validateForm);
-    });
-    checkbox.addEventListener("change", validateForm);
+  // Initial validation check
+  validateForm();
+</script>
 
-    // Custom email validation message
-    const emailInput = document.getElementById("email");
-    emailInput.addEventListener("invalid", function () {
-      this.setCustomValidity("Please enter a valid email address");
-    });
-    emailInput.addEventListener("input", function () {
-      this.setCustomValidity("");
-    });
-
-    // Custom firstName validation message (only letters)
-    const firstName = document.getElementById("firstName");
-    firstName.addEventListener("invalid", function () {
-      this.setCustomValidity("Please enter a valid first name (letters only)");
-    });
-    firstName.addEventListener("input", function () {
-      this.setCustomValidity("");
-    });
-
-    // Custom lastName validation message (only letters)
-    const lastName = document.getElementById("lastName");
-    lastName.addEventListener("invalid", function () {
-      this.setCustomValidity("Please enter a valid last name (letters only)");
-    });
-    lastName.addEventListener("input", function () {
-      this.setCustomValidity("");
-    });
-
-    // On form submit
-    form.addEventListener("submit", async function (e) {
-      e.preventDefault();
-
-      const payload = {
-        companyEmail: "rishabhks206@gmail.com", // static or replace accordingly
-        email: emailInput.value,
-        firstName: firstName.value,
-        lastName: lastName.value,
-        country: document.getElementById("country").value,
-        phone: document.getElementById("phone").value,
-        company: document.getElementById("company").value,
-        employees: document.getElementById("employees").value,
-        seniority: document.getElementById("seniority").value,
-        functionArea: document.getElementById("functionArea").value,
-      };
-
-      try {
-        const res = await fetch(
-          "https://service-node.gofloww.co/api/contactus-open/",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload),
-          }
-        );
-
-        const data = await res.json();
-        console.log("Success:", data);
-        alert("Form submitted successfully!");
-
-        // Reset form and update button state/styles
-        form.reset();
-        validateForm();
-      } catch (err) {
-        console.error("Error:", err);
-        alert("Something went wrong!");
-      }
-    });
-
-    // Initial call to set button state correctly on page load
-    validateForm();
-  </script>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -3149,7 +3110,7 @@
     "companyMobile",
     "employeesMobile",
     "seniorityMobile",
-    "functionAreaMobile",
+    "functionAreaMobile"
   ];
 
   const formMobile = document.getElementById("demoFormMobile");
@@ -3157,16 +3118,23 @@
   const checkboxMobile = document.getElementById("termsMobile");
 
   function validateMobileForm() {
-    const allFilled = mobileFields.every((id) => {
-      const el = document.getElementById(id);
-      if (!el) return false;
-      if (el.tagName === "SELECT") {
-        return el.value.trim() !== "";
-      }
-      return el.value.trim() !== "";
-    });
+    let isValid = true;
 
-    if (allFilled && checkboxMobile.checked) {
+    for (const id of mobileFields) {
+      const el = document.getElementById(id);
+
+      if (!el || !el.checkValidity()) {
+        isValid = false;
+        break;
+      }
+
+      if (el.tagName === "SELECT" && el.selectedIndex === 0) {
+        isValid = false;
+        break;
+      }
+    }
+
+    if (isValid && checkboxMobile.checked) {
       buttonMobile.disabled = false;
       buttonMobile.classList.remove("bg-gray-400", "cursor-not-allowed");
       buttonMobile.classList.add("bg-black", "hover:bg-gray-900", "cursor-pointer");
@@ -3177,76 +3145,79 @@
     }
   }
 
-  // Attach input/change listeners for validation
+  // Event listeners for validation
   mobileFields.forEach((id) => {
     const el = document.getElementById(id);
-    if (el) el.addEventListener("input", validateMobileForm);
+    if (el) {
+      el.addEventListener("input", validateMobileForm);
+      el.addEventListener("change", validateMobileForm);
+    }
   });
   checkboxMobile.addEventListener("change", validateMobileForm);
 
   // Custom validation messages
-  const emailMobile = document.getElementById("emailMobile");
-  emailMobile.addEventListener("invalid", function () {
-    this.setCustomValidity("Please enter a valid email address");
-  });
-  emailMobile.addEventListener("input", function () {
-    this.setCustomValidity("");
-  });
+  const setCustomValidation = (input, message) => {
+    input.addEventListener("invalid", function () {
+      this.setCustomValidity(message);
+    });
+    input.addEventListener("input", function () {
+      this.setCustomValidity("");
+    });
+  };
 
-  const firstNameMobile = document.getElementById("firstNameMobile");
-  firstNameMobile.addEventListener("invalid", function () {
-    this.setCustomValidity("Please enter a valid first name (letters only)");
-  });
-  firstNameMobile.addEventListener("input", function () {
-    this.setCustomValidity("");
-  });
+  setCustomValidation(emailMobile, "Please enter a valid email address");
+  setCustomValidation(firstNameMobile, "Please enter a valid first name (letters only)");
+  setCustomValidation(lastNameMobile, "Please enter a valid last name (letters only)");
+  setCustomValidation(document.getElementById("phoneMobile"), "Please enter a valid 10-digit phone number");
 
-  const lastNameMobile = document.getElementById("lastNameMobile");
-  lastNameMobile.addEventListener("invalid", function () {
-    this.setCustomValidity("Please enter a valid last name (letters only)");
-  });
-  lastNameMobile.addEventListener("input", function () {
-    this.setCustomValidity("");
-  });
-
-  // Submit handler
   formMobile.addEventListener("submit", async function (e) {
     e.preventDefault();
 
+    if (!formMobile.checkValidity()) {
+      formMobile.reportValidity();
+      return;
+    }
+
     const payload = {
-      companyEmail: "rishabhks206@gmail.com", // replace accordingly
-      email: emailMobile.value,
-      firstName: firstNameMobile.value,
-      lastName: lastNameMobile.value,
-      country: document.getElementById("countryMobile").value,
-      phone: document.getElementById("phoneMobile").value,
-      company: document.getElementById("companyMobile").value,
+      companyEmail: "shivanshrajput108@gmail.com", 
+      email: emailMobile.value.trim(),
+      firstName: firstNameMobile.value.trim(),
+      lastName: lastNameMobile.value.trim(),
+      country: document.getElementById("countryMobile").value.trim(),
+      phone: document.getElementById("phoneMobile").value.trim(),
+      company: document.getElementById("companyMobile").value.trim(),
       employees: document.getElementById("employeesMobile").value,
       seniority: document.getElementById("seniorityMobile").value,
-      functionArea: document.getElementById("functionAreaMobile").value,
+      functionArea: document.getElementById("functionAreaMobile").value
     };
 
     try {
       const res = await fetch("https://service-node.gofloww.co/api/contactus-open/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
       });
 
       const data = await res.json();
-      console.log("Success:", data);
-      alert("Form submitted successfully!");
+      console.log("Response:", data);
 
-      formMobile.reset();
-      validateMobileForm();
+      if (res.ok) {
+        alert("Form submitted successfully!");
+        formMobile.reset();
+        validateMobileForm();
+      } else {
+        alert("Something went wrong. Please try again later.");
+      }
     } catch (err) {
       console.error("Error:", err);
-      alert("Something went wrong!");
+      alert("Network or server error occurred.");
     }
   });
 
-  // Initial validation on page load
-  validateMobileForm();
+  validateMobileForm(); // Initial validation
 </script>
+
 
 </html>
