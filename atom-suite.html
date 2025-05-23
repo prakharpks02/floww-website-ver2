@@ -370,70 +370,70 @@
             class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"
             style="border-radius: px"
           >
-            <form class="space-y-4" class="demoForm">
+            <form id="demoForm" class="space-y-4">
               <input
                 type="email"
-                placeholder="Work Email*"
-                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                 id="email"
                 required
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                placeholder="Work Email*"
+                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
               />
 
               <div class="flex gap-4">
                 <input
                   type="text"
-                  placeholder="First Name*"
-                  class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                   id="firstName"
                   required
                   pattern="[A-Za-z\s]+"
+                  placeholder="First Name*"
+                  class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                 />
                 <input
                   type="text"
-                  placeholder="Last Name*"
-                  class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                   id="lastName"
                   required
                   pattern="[A-Za-z\s]+"
+                  placeholder="Last Name*"
+                  class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                 />
               </div>
-
 
               <div class="flex gap-4">
                 <input
                   type="text"
+                  id="country"
                   placeholder="India"
                   class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                  id="country"
                 />
                 <input
                   type="tel"
-                  placeholder="+91"
-                  class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                   id="phone"
                   required
                   pattern="^\d{10}$"
+                  placeholder="+91"
+                  class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                 />
               </div>
 
               <input
                 type="text"
+                id="company"
+                required
                 placeholder="Company Name*"
                 class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                id="company"
               />
 
               <div class="flex gap-4">
                 <select
-                  type="select"
-                  placeholder="No. of Employees*"
-                  style="color: gray"
-                  class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                   id="employees"
+                  required
+                  class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                   onchange="this.style.color = this.value ? 'black' : 'gray'"
                 >
-                  <option selected disabled>Select Employee Size</option>
+                  <option selected disabled value="">
+                    Select Employee Size
+                  </option>
                   <option value="0-200">0-200</option>
                   <option value="201-500">201-500</option>
                   <option value="501-1000">501-1000</option>
@@ -442,15 +442,14 @@
                   <option value="5001-10000">5001-10000</option>
                   <option value="10001+">10001+</option>
                 </select>
+
                 <select
-                  type="select"
-                  placeholder="Seniority*"
-                  style="color: gray"
-                  class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                   id="seniority"
+                  required
+                  class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                   onchange="this.style.color = this.value ? 'black' : 'gray'"
                 >
-                  <option selected disabled>Select Seniority</option>
+                  <option selected disabled value="">Select Seniority</option>
                   <option value="CXO">CXO</option>
                   <option value="Director">Director</option>
                   <option value="VP">VP</option>
@@ -464,14 +463,14 @@
               </div>
 
               <select
-                type="text"
-                placeholder="other"
-                style="color: gray"
-                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                 id="functionArea"
+                required
+                class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                 onchange="this.style.color = this.value ? 'black' : 'gray'"
               >
-                <option selected disabled>Select Functional Area</option>
+                <option selected disabled value="">
+                  Select Functional Area
+                </option>
                 <option value="CEO/MD/Promoter">CEO/MD/Promoter</option>
                 <option value="HR">HR</option>
                 <option value="HR:Compensation & Benefits">
@@ -501,7 +500,7 @@
                 <option value="HR:Legal & Industry Relations">
                   HR:Legal & Industry Relations
                 </option>
-                <option value="HR:Legal & Industry Relations">IT</option>
+                <option value="IT">IT</option>
                 <option value="Finance">Finance</option>
                 <option value="Academia">Academia</option>
                 <option value="Procurement">Procurement</option>
@@ -509,20 +508,16 @@
               </select>
 
               <div class="flex items-start space-x-2">
-                <!-- <input type="checkbox" class="mt-1" /> -->
-                <input type="checkbox" class="mt-1" id="terms" />
+                <input type="checkbox" id="terms" required class="mt-1" />
                 <label class="text-sm text-gray-600">
                   I have read and understood the Terms of use
-                  <!-- <a href="#" class="underline">Terms of Use</a> -->
                 </label>
               </div>
 
               <button
-                target="_blank"
                 type="submit"
                 id="submitBtn"
-                class="w-full bg-gray-400 text-white font-semibold rounded-full py-2 cursor-not-allowed"
-                disabled
+                class="w-full bg-[#02807F] text-white font-semibold rounded-full py-2"
               >
                 Book a Demo
               </button>
@@ -1757,16 +1752,18 @@
           </div>
 
           <!-- Right Side: Form -->
-          <!-- <div
+          <div
             class="bg-white text-black p-6 sm:p-10 rounded-lg lg:rounded-none lg:rounded-r-lg space-y-4"
             style="width: 80%; margin: auto"
           >
-            <form class="space-y-4" class="demoForm">
+            <form class="space-y-4" id="demoFormMobile">
               <input
                 type="email"
                 placeholder="Work Email*"
                 class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                id="email"
+                id="emailMobile"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               />
 
               <div class="flex gap-4">
@@ -1774,13 +1771,17 @@
                   type="text"
                   placeholder="First Name*"
                   class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                  id="firstName"
+                  id="firstNameMobile"
+                  required
+                  pattern="[A-Za-z\s]+"
                 />
                 <input
                   type="text"
                   placeholder="Last Name*"
                   class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                  id="lastName"
+                  id="lastNameMobile"
+                  required
+                  pattern="[A-Za-z\s]+"
                 />
               </div>
 
@@ -1790,14 +1791,16 @@
                   placeholder="India"
                   class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                   style="width: 25%"
-                  id="country"
+                  id="countryMobile"
                 />
                 <input
                   type="tel"
                   placeholder="+91"
                   class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                   style="width: 75%"
-                  id="phone"
+                  id="phoneMobile"
+                  required
+                  pattern="^\d{10}$"
                 />
               </div>
 
@@ -1805,16 +1808,14 @@
                 type="text"
                 placeholder="Company Name*"
                 class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
-                id="company"
+                id="companyMobile"
               />
 
               <div class="flex gap-4">
                 <select
-                  type="select"
-                  placeholder="No. of Employees*"
                   class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                   style="width: 100%; color: gray"
-                  id="employees"
+                  id="employeesMobile"
                   onchange="this.style.color = this.value ? 'black' : 'gray'"
                 >
                   <option selected disabled>Select Employee Size</option>
@@ -1829,16 +1830,12 @@
               </div>
 
               <select
-                type="select"
-                placeholder="Seniority*"
                 class="w-1/2 border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                 style="width: 100%; color: gray"
-                id="seniority"
+                id="seniorityMobile"
                 onchange="this.style.color = this.value ? 'black' : 'gray'"
               >
-                <option selected disabled style="color: gray">
-                  Select Seniority
-                </option>
+                <option selected disabled>Select Seniority</option>
                 <option value="CXO">CXO</option>
                 <option value="Director">Director</option>
                 <option value="VP">VP</option>
@@ -1851,11 +1848,9 @@
               </select>
 
               <select
-                type="text"
-                placeholder="other"
                 class="w-full border border-[#02807F] rounded-lg px-4 py-2 outline-none"
                 style="color: gray"
-                id="functionArea"
+                id="functionAreaMobile"
                 onchange="this.style.color = this.value ? 'black' : 'gray'"
               >
                 <option selected disabled>Select Functional Area</option>
@@ -1888,7 +1883,7 @@
                 <option value="HR:Legal & Industry Relations">
                   HR:Legal & Industry Relations
                 </option>
-                <option value="HR:Legal & Industry Relations">IT</option>
+                <option value="IT">IT</option>
                 <option value="Finance">Finance</option>
                 <option value="Academia">Academia</option>
                 <option value="Procurement">Procurement</option>
@@ -1896,7 +1891,7 @@
               </select>
 
               <div class="flex items-start space-x-2">
-                <input type="checkbox" class="mt-1" id="terms" />
+                <input type="checkbox" class="mt-1" id="termsMobile" />
                 <label class="text-sm text-gray-600">
                   I have read and understood the terms of use
                 </label>
@@ -1904,14 +1899,14 @@
 
               <button
                 type="submit"
-                id="submitBtn"
+                id="submitBtnMobile"
                 class="w-full bg-gray-400 text-white font-semibold rounded-full py-2 cursor-not-allowed"
                 disabled
               >
                 Book a Demo
               </button>
             </form>
-          </div> -->
+          </div>
         </div>
       </div>
 
@@ -2821,14 +2816,14 @@
     }
   </script>
 
-  <script>
+  <!-- <script>
     document
       .getElementById("demoForm")
       .addEventListener("submit", async function (e) {
         e.preventDefault();
 
         const payload = {
-          companyEmail: "rishabhkumar25012003@gmail.com",
+          companyEmail: "shivanshrajput108@gmail.com",
           email: document.getElementById("email").value,
           firstName: document.getElementById("firstName").value,
           lastName: document.getElementById("lastName").value,
@@ -2858,6 +2853,127 @@
           alert("Something went wrong!");
         }
       });
+  </script> -->
+
+  <script>
+    const fields = [
+      "email",
+      "firstName",
+      "lastName",
+      "country",
+      "phone",
+      "company",
+      "employees",
+      "seniority",
+      "functionArea",
+    ];
+    const form = document.getElementById("demoForm");
+    const button = document.getElementById("submitBtn");
+    const checkbox = document.getElementById("terms");
+
+    // Validate form fields and checkbox to enable/disable submit button
+    function validateForm() {
+      const allFilled = fields.every((id) => {
+        const el = document.getElementById(id);
+        // For selects, check if value is not empty or default option
+        if (!el) return false;
+        if (el.tagName === "SELECT") {
+          return el.value.trim() !== "";
+        }
+        return el.value.trim() !== "";
+      });
+
+      if (allFilled && checkbox.checked) {
+        button.disabled = false;
+        button.classList.remove("bg-gray-400", "cursor-not-allowed");
+        button.classList.add("bg-black", "hover:bg-gray-900", "cursor-pointer");
+      } else {
+        button.disabled = true;
+        button.classList.add("bg-gray-400", "cursor-not-allowed");
+        button.classList.remove(
+          "bg-black",
+          "hover:bg-gray-900",
+          "cursor-pointer"
+        );
+      }
+    }
+
+    // Attach input/change listeners for validation
+    fields.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener("input", validateForm);
+    });
+    checkbox.addEventListener("change", validateForm);
+
+    // Custom email validation message
+    const emailInput = document.getElementById("email");
+    emailInput.addEventListener("invalid", function () {
+      this.setCustomValidity("Please enter a valid email address");
+    });
+    emailInput.addEventListener("input", function () {
+      this.setCustomValidity("");
+    });
+
+    // Custom firstName validation message (only letters)
+    const firstName = document.getElementById("firstName");
+    firstName.addEventListener("invalid", function () {
+      this.setCustomValidity("Please enter a valid first name (letters only)");
+    });
+    firstName.addEventListener("input", function () {
+      this.setCustomValidity("");
+    });
+
+    // Custom lastName validation message (only letters)
+    const lastName = document.getElementById("lastName");
+    lastName.addEventListener("invalid", function () {
+      this.setCustomValidity("Please enter a valid last name (letters only)");
+    });
+    lastName.addEventListener("input", function () {
+      this.setCustomValidity("");
+    });
+
+    // On form submit
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const payload = {
+        companyEmail: "rishabhks206@gmail.com", // static or replace accordingly
+        email: emailInput.value,
+        firstName: firstName.value,
+        lastName: lastName.value,
+        country: document.getElementById("country").value,
+        phone: document.getElementById("phone").value,
+        company: document.getElementById("company").value,
+        employees: document.getElementById("employees").value,
+        seniority: document.getElementById("seniority").value,
+        functionArea: document.getElementById("functionArea").value,
+      };
+
+      try {
+        const res = await fetch(
+          "https://service-node.gofloww.co/api/contactus-open/",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          }
+        );
+
+        const data = await res.json();
+        console.log("Success:", data);
+        alert("Form submitted successfully!");
+
+        // Reset form and update button state/styles
+        form.reset();
+        validateForm();
+      } catch (err) {
+        console.error("Error:", err);
+        alert("Something went wrong!");
+      }
+    });
+
+    // Initial call to set button state correctly on page load
+    validateForm();
   </script>
 
   <script>
@@ -2887,39 +3003,45 @@
         });
       });
     });
-  
 
     // book a demo disable till all the fields are not filled
-    const fields = [
-      "email",
-      "firstName",
-      "lastName",
-      "country",
-      "phone",
-      "company",
-      "employees",
-      "seniority",
-      "functionArea",
-    ];
-    const checkbox = document.getElementById("terms");
-    const button = document.getElementById("submitBtn");
+  </script>
 
-    function validateForm() {
-      const allFilled = fields.every((id) => {
+  <!-- <script>
+    const fieldsMobile = [
+      "emailMobile",
+      "firstNameMobile",
+      "lastNameMobile",
+      "countryMobile",
+      "phoneMobile",
+      "companyMobile",
+      "employeesMobile",
+      "seniorityMobile",
+      "functionAreaMobile",
+    ];
+    const checkboxMobile = document.getElementById("termsMobile");
+    const buttonMobile = document.getElementById("submitBtnMobile");
+
+    function validateMobileForm() {
+      const allFilled = fieldsMobile.every((id) => {
         const el = document.getElementById(id);
         return (
           el && el.value.trim() !== "" && el.value !== el.options?.[0]?.text
         );
       });
 
-      if (allFilled && checkbox.checked) {
-        button.disabled = false;
-        button.classList.remove("bg-gray-400", "cursor-not-allowed");
-        button.classList.add("bg-black", "hover:bg-gray-900", "cursor-pointer");
+      if (allFilled && checkboxMobile.checked) {
+        buttonMobile.disabled = false;
+        buttonMobile.classList.remove("bg-gray-400", "cursor-not-allowed");
+        buttonMobile.classList.add(
+          "bg-black",
+          "hover:bg-gray-900",
+          "cursor-pointer"
+        );
       } else {
-        button.disabled = true;
-        button.classList.add("bg-gray-400", "cursor-not-allowed");
-        button.classList.remove(
+        buttonMobile.disabled = true;
+        buttonMobile.classList.add("bg-gray-400", "cursor-not-allowed");
+        buttonMobile.classList.remove(
           "bg-black",
           "hover:bg-gray-900",
           "cursor-pointer"
@@ -2927,52 +3049,204 @@
       }
     }
 
-    // Attach event listeners to all inputs and the checkbox
-    fields.forEach((id) => {
+    // Attach listeners
+    fieldsMobile.forEach((id) => {
       const el = document.getElementById(id);
-      if (el) el.addEventListener("input", validateForm);
+      if (el) el.addEventListener("input", validateMobileForm);
+    });
+    checkboxMobile.addEventListener("change", validateMobileForm);
+
+    // Email validation
+    document
+      .getElementById("emailMobile")
+      .addEventListener("invalid", function () {
+        this.setCustomValidity("Please enter a valid email address");
+      });
+    document
+      .getElementById("emailMobile")
+      .addEventListener("input", function () {
+        this.setCustomValidity("");
+      });
+
+    // First Name
+    const firstNameMobile = document.getElementById("firstNameMobile");
+    firstNameMobile.addEventListener("invalid", function () {
+      this.setCustomValidity("Please enter a valid first name (letters only)");
+    });
+    firstNameMobile.addEventListener("input", function () {
+      this.setCustomValidity("");
     });
 
-    checkbox.addEventListener("change", validateForm);
+    // Last Name
+    const lastNameMobile = document.getElementById("lastNameMobile");
+    lastNameMobile.addEventListener("invalid", function () {
+      this.setCustomValidity("Please enter a valid last name (letters only)");
+    });
+    lastNameMobile.addEventListener("input", function () {
+      this.setCustomValidity("");
+    });
+
+    // API call and form submit
+    document
+      .getElementById("demoFormMobile")
+      .addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const payload = {
+          companyEmail: "shivanshrajput108@gmail.com",
+          email: document.getElementById("emailMobile").value,
+          firstName: document.getElementById("firstNameMobile").value,
+          lastName: document.getElementById("lastNameMobile").value,
+          country: document.getElementById("countryMobile").value,
+          phone: document.getElementById("phoneMobile").value,
+          company: document.getElementById("companyMobile").value,
+          employees: document.getElementById("employeesMobile").value,
+          seniority: document.getElementById("seniorityMobile").value,
+          functionArea: document.getElementById("functionAreaMobile").value,
+        };
+
+        try {
+          const res = await fetch(
+            "https://service-node.gofloww.co/api/contactus-open/",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload),
+            }
+          );
+
+          const data = await res.json();
+          console.log("Success:", data);
+          alert("Form submitted successfully!");
+
+          // Reset the form
+          document.getElementById("demoFormMobile").reset();
+
+          // Reset button state (disable and styles)
+          buttonMobile.disabled = true;
+          buttonMobile.classList.add("bg-gray-400", "cursor-not-allowed");
+          buttonMobile.classList.remove(
+            "bg-black",
+            "hover:bg-gray-900",
+            "cursor-pointer"
+          );
+        } catch (err) {
+          console.error("Error:", err);
+          alert("Something went wrong!");
+        }
+      
+      });
+  </script> -->
 
 
-    //validate email
-    document.getElementById("email").addEventListener("invalid", function () {
-  this.setCustomValidity("Please enter a valid email address");
-});
+<script>
+  const mobileFields = [
+    "emailMobile",
+    "firstNameMobile",
+    "lastNameMobile",
+    "countryMobile",
+    "phoneMobile",
+    "companyMobile",
+    "employeesMobile",
+    "seniorityMobile",
+    "functionAreaMobile",
+  ];
 
-document.getElementById("email").addEventListener("input", function () {
-  this.setCustomValidity("");
-});
+  const formMobile = document.getElementById("demoFormMobile");
+  const buttonMobile = document.getElementById("submitBtnMobile");
+  const checkboxMobile = document.getElementById("termsMobile");
 
+  function validateMobileForm() {
+    const allFilled = mobileFields.every((id) => {
+      const el = document.getElementById(id);
+      if (!el) return false;
+      if (el.tagName === "SELECT") {
+        return el.value.trim() !== "";
+      }
+      return el.value.trim() !== "";
+    });
 
-//validating firstName
-const firstName = document.getElementById("firstName");
+    if (allFilled && checkboxMobile.checked) {
+      buttonMobile.disabled = false;
+      buttonMobile.classList.remove("bg-gray-400", "cursor-not-allowed");
+      buttonMobile.classList.add("bg-black", "hover:bg-gray-900", "cursor-pointer");
+    } else {
+      buttonMobile.disabled = true;
+      buttonMobile.classList.add("bg-gray-400", "cursor-not-allowed");
+      buttonMobile.classList.remove("bg-black", "hover:bg-gray-900", "cursor-pointer");
+    }
+  }
 
-firstName.addEventListener("invalid", function () {
-  this.setCustomValidity("Please enter a valid first name (letters only)");
-});
+  // Attach input/change listeners for validation
+  mobileFields.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("input", validateMobileForm);
+  });
+  checkboxMobile.addEventListener("change", validateMobileForm);
 
-firstName.addEventListener("input", function () {
-  this.setCustomValidity("");
-});
+  // Custom validation messages
+  const emailMobile = document.getElementById("emailMobile");
+  emailMobile.addEventListener("invalid", function () {
+    this.setCustomValidity("Please enter a valid email address");
+  });
+  emailMobile.addEventListener("input", function () {
+    this.setCustomValidity("");
+  });
 
-//validating lastName
-const lastName = document.getElementById("lastName");
+  const firstNameMobile = document.getElementById("firstNameMobile");
+  firstNameMobile.addEventListener("invalid", function () {
+    this.setCustomValidity("Please enter a valid first name (letters only)");
+  });
+  firstNameMobile.addEventListener("input", function () {
+    this.setCustomValidity("");
+  });
 
-lastName.addEventListener("invalid", function () {
-  this.setCustomValidity("Please enter a valid last name (letters only)");
-});
+  const lastNameMobile = document.getElementById("lastNameMobile");
+  lastNameMobile.addEventListener("invalid", function () {
+    this.setCustomValidity("Please enter a valid last name (letters only)");
+  });
+  lastNameMobile.addEventListener("input", function () {
+    this.setCustomValidity("");
+  });
 
-lastName.addEventListener("input", function () {
-  this.setCustomValidity("");
-});
+  // Submit handler
+  formMobile.addEventListener("submit", async function (e) {
+    e.preventDefault();
 
+    const payload = {
+      companyEmail: "rishabhks206@gmail.com", // replace accordingly
+      email: emailMobile.value,
+      firstName: firstNameMobile.value,
+      lastName: lastNameMobile.value,
+      country: document.getElementById("countryMobile").value,
+      phone: document.getElementById("phoneMobile").value,
+      company: document.getElementById("companyMobile").value,
+      employees: document.getElementById("employeesMobile").value,
+      seniority: document.getElementById("seniorityMobile").value,
+      functionArea: document.getElementById("functionAreaMobile").value,
+    };
 
-//validating phone number
+    try {
+      const res = await fetch("https://service-node.gofloww.co/api/contactus-open/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
+      const data = await res.json();
+      console.log("Success:", data);
+      alert("Form submitted successfully!");
 
+      formMobile.reset();
+      validateMobileForm();
+    } catch (err) {
+      console.error("Error:", err);
+      alert("Something went wrong!");
+    }
+  });
 
+  // Initial validation on page load
+  validateMobileForm();
+</script>
 
-  </script>
 </html>
