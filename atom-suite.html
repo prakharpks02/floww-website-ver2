@@ -2923,7 +2923,8 @@
 
       const data = await res.json();
       console.log("Success:", data);
-      alert("Form submitted successfully!");
+      // alert("Form submitted successfully!");
+      redirectToHref('https://calendly.com/anish-floww/atom-suite-demo');
       form.reset();
       validateForm();
     } catch (err) {
@@ -3204,7 +3205,8 @@
       console.log("Response:", data);
 
       if (res.ok) {
-        alert("Form submitted successfully!");
+        // alert("Form submitted successfully!");
+        redirectToHref('https://calendly.com/anish-floww/atom-suite-demo');
         formMobile.reset();
         validateMobileForm();
       } else {
