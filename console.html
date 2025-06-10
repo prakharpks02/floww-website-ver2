@@ -1,183 +1,271 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="Delivery Partner, Logistics API, Shiprocket, Find Delivery, Real Time Tracking, Notification Intelligence, Transporter Website creator, LRs, eWayBill integration, fleet management, Delivery Challan, Proof of Delivery, WhatsApp based, D2C brands India, Pune, Baner, Order Collection Portal, ULIP, PM Gati Shakti, NLP 2022">
-    <meta name="author" content="Floww Delivery APIs">
-    <meta name="description"
-        content="The ultimate logistics platform for order management, fleet, compliances, APIs and delivery automation. Saves up to 10% logistics cost. 30% Greater Efficiency.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Delivery Partner, Logistics API, Shiprocket, Find Delivery, Real Time Tracking, Notification Intelligence, Transporter Website creator, LRs, eWayBill integration, fleet management, Delivery Challan, Proof of Delivery, WhatsApp based, D2C brands India, Pune, Baner, Order Collection Portal, ULIP, PM Gati Shakti, NLP 2022"
+    />
+    <meta name="author" content="Floww Delivery APIs" />
+    <meta
+      name="description"
+      content="The ultimate logistics platform for order management, fleet, compliances, APIs and delivery automation. Saves up to 10% logistics cost. 30% Greater Efficiency."
+    />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK6MTWL5ZZ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JK6MTWL5ZZ"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-JK6MTWL5ZZ');
+      gtag("config", "G-JK6MTWL5ZZ");
     </script>
 
     <!-- All CSS Links -->
-    <link rel="stylesheet" href="css/template/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/template/swiper-bundle.min.css" />
     <!-- <link rel="stylesheet" href="css/odometer.min.css"> -->
-    <link rel="stylesheet" href="css/template/meanmenu.min.css">
-    <link rel="stylesheet" href="css/template/animate.min.css">
-    <link rel="stylesheet" href="css/template/output.css">
+    <link rel="stylesheet" href="css/template/meanmenu.min.css" />
+    <link rel="stylesheet" href="css/template/animate.min.css" />
+    <link rel="stylesheet" href="css/template/output.css" />
 
     <title>Floww Console</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/ico" href="img/logo/favicon.ico">
+    <link rel="icon" type="image/ico" href="img/logo/favicon.ico" />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-        a,
-        button {
-            cursor: pointer;
-        }
+      a,
+      button {
+        cursor: pointer;
+      }
     </style>
 
-    <script defer src="https://analytics.gofloww.co/script.js" data-website-id="06df739f-0001-4fab-9393-1271fc6591c6">
+    <script
+      defer
+      src="https://analytics.gofloww.co/script.js"
+      data-website-id="06df739f-0001-4fab-9393-1271fc6591c6"
+    ></script>
+  </head>
 
-    </script>
-</head>
-
-<body>
-
+  <body>
     <!-- Preloader -->
-    <div class="preloader-area text-center left-0 right-0 top-0 bottom-0 bg-white fixed z-9999">
-        <div class="preloader absolute -mt-20 left-0 right-0 top-1/2 m-auto -translate-y-2/4">
-            <div class="waviy font-bold text-50px">
-                <span class="text-black-color inline-block relative">F</span>
-                <span class="text-primary-color inline-block relative">L</span>
-                <span class="text-black-color inline-block relative">O</span>
-                <span class="text-primary-color inline-block relative">W</span>
-                <span class="text-black-color inline-block relative">W</span>
-            </div>
+    <div
+      class="preloader-area text-center left-0 right-0 top-0 bottom-0 bg-white fixed z-9999"
+    >
+      <div
+        class="preloader absolute -mt-20 left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+      >
+        <div class="waviy font-bold text-50px">
+          <span class="text-black-color inline-block relative">F</span>
+          <span class="text-primary-color inline-block relative">L</span>
+          <span class="text-black-color inline-block relative">O</span>
+          <span class="text-primary-color inline-block relative">W</span>
+          <span class="text-black-color inline-block relative">W</span>
         </div>
+      </div>
     </div>
     <!-- End Preloader -->
 
     <!-- Navbar Area -->
     <div class="navbar-area relative z-2 black-navbar bg-[#070707]">
-        <div class="togy-responsive-nav lg:hidden">
-            <div class="container">
-                <div class="togy-responsive-menu">
-                    <div class="logo">
-                        <a href="https://gofloww.co">
-                            <img src="img/logo/logo.png" alt="logo" style="width: 132px;">
-                        </a>
-                    </div>
-                </div>
+      <div class="togy-responsive-nav lg:hidden">
+        <div class="container">
+          <div class="togy-responsive-menu">
+            <div class="logo">
+              <a href="https://gofloww.co">
+                <img src="img/logo/logo.webp" alt="logo" style="width: 132px" />
+              </a>
             </div>
+          </div>
         </div>
-        <div class="togy-nav hidden lg:block">
-            <div class="container xl:max-w-full 3xl:max-w-[1700px]">
-                <nav class="navbar flex flex-wrap">
-                    <a class="navbar-brand self-center" href="https://gofloww.co">
-                        <img src="img/logo/logo.png" alt="logo" style="width: 132px;">
-                    </a>
-                    <div class="flex self-center grow basis-auto">
-                        <ul class="self-center flex flex-row ml-auto mr-auto">
-                            <li class="mr-12 xl:mr-15 relative group">
-                                <a href="/"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Home</a>
-                            </li>
-                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <span
-                                    style="position: absolute; top: 25%; right: 20%; transform: translateX(100%); font-size: 10px; font-weight: 700; width: 100px;"
-                                    class="text-primary-color">New</span>
-                                <a href="console"
-                                    class="active block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Console</a>
-                            </li>
-                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <span
-                                    style="position: absolute; top: 25%; right: 20%; transform: translateX(100%); font-size: 10px; font-weight: 700; width: 100px;"
-                                    class="text-primary-color">New</span>
-                                <a href="mail"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Mail</a>
-                            </li>
-                            <!-- <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+      </div>
+      <div class="togy-nav hidden lg:block">
+        <div class="container xl:max-w-full 3xl:max-w-[1700px]">
+          <nav class="navbar flex flex-wrap">
+            <a class="navbar-brand self-center" href="https://gofloww.co">
+              <img src="img/logo/logo.webp" alt="logo" style="width: 132px" />
+            </a>
+            <div class="flex self-center grow basis-auto">
+              <ul class="self-center flex flex-row ml-auto mr-auto">
+                <li class="mr-12 xl:mr-15 relative group">
+                  <a
+                    href="/"
+                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30"
+                    >Home</a
+                  >
+                </li>
+                <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                  <span
+                    style="
+                      position: absolute;
+                      top: 25%;
+                      right: 20%;
+                      transform: translateX(100%);
+                      font-size: 10px;
+                      font-weight: 700;
+                      width: 100px;
+                    "
+                    class="text-primary-color"
+                    >New</span
+                  >
+                  <a
+                    href="console"
+                    class="active block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30"
+                    >Console</a
+                  >
+                </li>
+                <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                  <span
+                    style="
+                      position: absolute;
+                      top: 25%;
+                      right: 20%;
+                      transform: translateX(100%);
+                      font-size: 10px;
+                      font-weight: 700;
+                      width: 100px;
+                    "
+                    class="text-primary-color"
+                    >New</span
+                  >
+                  <a
+                    href="mail"
+                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30"
+                    >Mail</a
+                  >
+                </li>
+                <!-- <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
                                 <a href="integration"
                                     class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Integrations</a>
                             </li> -->
-                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="about-us"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">About
-                                    Us</a>
-                            </li>
-                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="faq"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">FAQs</a>
-                            </li>
-                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="https://blog.gofloww.co" target="_blank"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Blog</a>
-                            </li>
-                        </ul>
-                        <div class="self-center">
-                            <a href="https://console.gofloww.co" target="_blank" style="cursor: pointer;"
-                                class="inline-block font-black font-semibold text-13px md:text-14px lg:text-15px rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">
-                                Login / SignUp</a>
-                        </div>
-                    </div>
-                </nav>
+                <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                  <a
+                    href="about-us"
+                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30"
+                    >About Us</a
+                  >
+                </li>
+                <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                  <a
+                    href="faq"
+                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30"
+                    >FAQs</a
+                  >
+                </li>
+                <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                  <a
+                    href="https://blog.gofloww.co"
+                    target="_blank"
+                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30"
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+              <div class="self-center">
+                <a
+                  href="https://console.gofloww.co"
+                  target="_blank"
+                  style="cursor: pointer"
+                  class="inline-block font-black font-semibold text-13px md:text-14px lg:text-15px rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300"
+                >
+                  Login / SignUp</a
+                >
+              </div>
             </div>
+          </nav>
         </div>
+      </div>
     </div>
     <!-- End Navbar Area -->
 
     <!-- Navbar for Responsive -->
     <div class="navbar-for-responsive hidden">
-        <div class="mean-menu">
-            <ul class="navbar-nav">
-                <li>
-                    <a href="/" class="">Home</a>
-                </li>
-                <li>
-                    <a href="console" style="position: relative;">Console <span
-                            style="font-size: 10px; font-weight: 700; width: 100px; position: absolute; top: 5px;"
-                            class="text-primary-color">New</span></a>
-                </li>
-                <li>
-                    <a href="mail" style="position: relative">Mail <span
-                            style="font-size: 10px; font-weight: 700; width: 100px; position: absolute; top: 5px"
-                            class="text-primary-color">New</span></a>
-                </li>
-                <!-- <li>
+      <div class="mean-menu">
+        <ul class="navbar-nav">
+          <li>
+            <a href="/" class="">Home</a>
+          </li>
+          <li>
+            <a href="console" style="position: relative"
+              >Console
+              <span
+                style="
+                  font-size: 10px;
+                  font-weight: 700;
+                  width: 100px;
+                  position: absolute;
+                  top: 5px;
+                "
+                class="text-primary-color"
+                >New</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="mail" style="position: relative"
+              >Mail
+              <span
+                style="
+                  font-size: 10px;
+                  font-weight: 700;
+                  width: 100px;
+                  position: absolute;
+                  top: 5px;
+                "
+                class="text-primary-color"
+                >New</span
+              ></a
+            >
+          </li>
+          <!-- <li>
                     <a href="integration">Integrations</a>
                 </li> -->
-                <li>
-                    <a href="about-us" class="active">About Us</a>
-                </li>
-                <li>
-                    <a href="faq">FAQs</a>
-                </li>
-                <li>
-                    <a href="https://blog.gofloww.co" target="_blank">Blog</a>
-                </li>
-            </ul>
-            <div class="absolute right-45 top-3 md:top-1 md:right-50">
-                <a href="https://console.gofloww.co" target="_blank" style="cursor: pointer;"
-                    class="inline-block font-semibold text-11px md:text-14px lg:text-15px rounded-sm text-white pt-13 pb-10 pl-15 pr-15 md:pl-25 md:pr-25 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Login
-                    / SignUp</a>
-            </div>
+          <li>
+            <a href="about-us" class="active">About Us</a>
+          </li>
+          <li>
+            <a href="faq">FAQs</a>
+          </li>
+          <li>
+            <a href="https://blog.gofloww.co" target="_blank">Blog</a>
+          </li>
+        </ul>
+        <div class="absolute right-45 top-3 md:top-1 md:right-50">
+          <a
+            href="https://console.gofloww.co"
+            target="_blank"
+            style="cursor: pointer"
+            class="inline-block font-semibold text-11px md:text-14px lg:text-15px rounded-sm text-white pt-13 pb-10 pl-15 pr-15 md:pl-25 md:pr-25 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300"
+            >Login / SignUp</a
+          >
         </div>
+      </div>
     </div>
     <!-- End Navbar for Responsive -->
 
     <!-- Mobile App Area -->
-    <div class="mobile-app-area relative z-1 pt-60 md:pt-40 lg:pt-80 pb-60 md:pb-80 lg:pb-100 bg-[#0f1216]">
-        <div class="container">
-            <div class="grid gap-25 xl:gap-35 grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
-                <!-- grid gap-25 xl:gap-35 grid-cols-1 md:grid-cols-1 lg:grid-cols-2
+    <div
+      class="mobile-app-area relative z-1 pt-60 md:pt-40 lg:pt-80 pb-60 md:pb-80 lg:pb-100 bg-[#0f1216]"
+    >
+      <div class="container">
+        <div
+          class="grid gap-25 xl:gap-35 grid-cols-1 md:grid-cols-1 lg:grid-cols-2"
+        >
+          <!-- grid gap-25 xl:gap-35 grid-cols-1 md:grid-cols-1 lg:grid-cols-2
                  grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 
                 
                 image relative self-center wow animate__ animate__fadeInUp animated
@@ -185,143 +273,215 @@
             
                 content self-center
                 integrate-apps-content relative xl:top-30 xl:-mr-80 self-center lg:text-center xl:text-left-->
-                <div class="content self-center">
-                    <h2
-                        class="font-black text-22px md:text-30px lg:text-35px xl:text-34px 2xl:text-38px mb-12 lg:mb-15 text-white">
-                        <span class="text-primary-color">Floww Console</span> - Business Software Suite for MSMEs
-                    </h2>
-                    <p
-                        class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-[#e1e1e1] lg:max-w-[685px] lg:m-auto xl:max-w-[100%]">
-                        Seamless automation management for all needs of a growing company</p>
+          <div class="content self-center">
+            <h2
+              class="font-black text-22px md:text-30px lg:text-35px xl:text-34px 2xl:text-38px mb-12 lg:mb-15 text-white"
+            >
+              <span class="text-primary-color">Floww Console</span> - Business
+              Software Suite for MSMEs
+            </h2>
+            <p
+              class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-[#e1e1e1] lg:max-w-[685px] lg:m-auto xl:max-w-[100%]"
+            >
+              Seamless automation management for all needs of a growing company
+            </p>
 
-                    <ul class="mt-20 md:mt-25">
-                        <li
-                            class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                            <img src="img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                                alt="ULIP 30+ compliances with Floww">
-                            Floww Tally Accounting
-                        </li>
-                        <li
-                            class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                            <img src="img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                                alt="ULIP, NLP, PM Gati Shakti, NLP, 2022, Unified Logistics Interface Platform with Floww">
-                            Floww Employee Management
-                        </li>
-                        <li
-                            class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                            <img src="img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                                alt="ULIP KYC, NLP, PM Gati Shakti, NLP 2022, Unified Logistics Interface Platform with Floww">
-                            Floww Web Tools for Brands
-                        </li>
-                        <li
-                            class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                            <img src="img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                                alt="ULIP KYC, NLP, PM Gati Shakti, NLP 2022, Unified Logistics Interface Platform with Floww">
-                            Floww Logistics ERP
-                        </li>
-                    </ul>
+            <ul class="mt-20 md:mt-25">
+              <li
+                class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0"
+              >
+                <img
+                  src="img/website/tick-circle.svg"
+                  class="absolute left-0 -top-2 w-[18px] md:w-auto"
+                  alt="ULIP 30+ compliances with Floww"
+                />
+                Floww Tally Accounting
+              </li>
+              <li
+                class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0"
+              >
+                <img
+                  src="img/website/tick-circle.svg"
+                  class="absolute left-0 -top-2 w-[18px] md:w-auto"
+                  alt="ULIP, NLP, PM Gati Shakti, NLP, 2022, Unified Logistics Interface Platform with Floww"
+                />
+                Floww Employee Management
+              </li>
+              <li
+                class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0"
+              >
+                <img
+                  src="img/website/tick-circle.svg"
+                  class="absolute left-0 -top-2 w-[18px] md:w-auto"
+                  alt="ULIP KYC, NLP, PM Gati Shakti, NLP 2022, Unified Logistics Interface Platform with Floww"
+                />
+                Floww Web Tools for Brands
+              </li>
+              <li
+                class="text-[#e1e1e1] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0"
+              >
+                <img
+                  src="img/website/tick-circle.svg"
+                  class="absolute left-0 -top-2 w-[18px] md:w-auto"
+                  alt="ULIP KYC, NLP, PM Gati Shakti, NLP 2022, Unified Logistics Interface Platform with Floww"
+                />
+                Floww Logistics ERP
+              </li>
+            </ul>
 
-                    <br>
-                    <p class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-white font-semibold">
-                        Starting at just ₹ 500 per month</p>
-                    <!-- <a href="https://wa.me/918879138857?text=I%20am%20interested%20in%20Notification%20Intelligence"
+            <br />
+            <p
+              class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-white font-semibold"
+            >
+              Starting at just ₹ 500 per month
+            </p>
+            <!-- <a href="https://wa.me/918879138857?text=I%20am%20interested%20in%20Notification%20Intelligence"
                         target="_blank"
                         class="inline-block font-semibold text-13px md:text-14px lg:text-15px mt-15 md:mt-20 rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Get
                         Started</a> -->
-                    <a href="https://forms.gle/gyRMasNxXj8sJ6nT9" target="_blank"
-                        class="inline-block font-semibold text-13px md:text-14px lg:text-15px mt-15 md:mt-20 rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Get
-                        Started</a>
-
-                </div>
-                <div class="image relative self-center wow animate__ animate__fadeInUp animated xl:pl-100"
-                    data-wow-delay=".1s">
-                    <img src="img/console.png" class="inline-block" alt="bg-image">
-                </div>
-            </div>
+            <a
+              href="https://forms.gle/gyRMasNxXj8sJ6nT9"
+              target="_blank"
+              class="inline-block font-semibold text-13px md:text-14px lg:text-15px mt-15 md:mt-20 rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300"
+              >Get Started</a
+            >
+          </div>
+          <div
+            class="image relative self-center wow animate__ animate__fadeInUp animated xl:pl-100"
+            data-wow-delay=".1s"
+          >
+            <img src="img/console.png" class="inline-block" alt="bg-image" />
+          </div>
         </div>
+      </div>
     </div>
     <!-- End Mobile App Area -->
 
     <!-- Why Choose Us Area -->
     <div class="why-choose-us-area pt-60 md:pt-80 lg:pt-100 relative z-1">
-        <div class="container">
-            <div class="section-title mb-35 md:mb-40 lg:mb-50 text-center">
-                <span class="block text-purple-color font-semibold text-13px md:text-15px mb-12 md:mb-15">Did you
-                    know?</span>
-                <h2 class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-6 text-black-color">Companies
-                    can save
-                    more than <span class="text-primary-color">30%</span> of their revenue with efficient cloud based
-                    software
-                </h2>
-            </div>
+      <div class="container">
+        <div class="section-title mb-35 md:mb-40 lg:mb-50 text-center">
+          <span
+            class="block text-purple-color font-semibold text-13px md:text-15px mb-12 md:mb-15"
+            >Did you know?</span
+          >
+          <h2
+            class="font-black text-22px md:text-30px lg:text-35px xl:text-40px mb-6 text-black-color"
+          >
+            Companies can save more than
+            <span class="text-primary-color">30%</span> of their revenue with
+            efficient cloud based software
+          </h2>
         </div>
+      </div>
     </div>
     <!-- End Why Choose Us Area -->
 
-
-
     <!-- Support Area -->
     <div
-        class="support-area relative bg-secondary-gradient-color z-2 pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100">
-        <div class="container">
-            <div class="grid gap-18 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-                <div class="support-content xl:col-span-2">
-                    <h2 class="font-black text-22px md:text-30px lg:text-34px xl:text-40px mb-12 text-white">Grow with
-                        Floww</h2>
-                    <p class="text-13px md:text-15px lg:text-16px md:max-w-[700px] leading-7 md:leading-8 text-white">
-                        Our team is here to provide you with personalized and outstanding service. We also offer a range
-                        of self-learning tools in our support center.</p>
-                </div>
-                <div class="support-btn self-center lg:text-right">
-                    <a
-                        class="floww-openContactUs inline-block font-semibold text-13px md:text-15px rounded-sm pt-17 pb-13 pl-25 md:pl-35 pr-25 md:pr-35 bg-white text-black-color ease-in duration-300 contact-us-button-hover">Get
-                        in Touch</a>
-                </div>
-            </div>
+      class="support-area relative bg-secondary-gradient-color z-2 pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100"
+    >
+      <div class="container">
+        <div
+          class="grid gap-18 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+        >
+          <div class="support-content xl:col-span-2">
+            <h2
+              class="font-black text-22px md:text-30px lg:text-34px xl:text-40px mb-12 text-white"
+            >
+              Grow with Floww
+            </h2>
+            <p
+              class="text-13px md:text-15px lg:text-16px md:max-w-[700px] leading-7 md:leading-8 text-white"
+            >
+              Our team is here to provide you with personalized and outstanding
+              service. We also offer a range of self-learning tools in our
+              support center.
+            </p>
+          </div>
+          <div class="support-btn self-center lg:text-right">
+            <a
+              class="floww-openContactUs inline-block font-semibold text-13px md:text-15px rounded-sm pt-17 pb-13 pl-25 md:pl-35 pr-25 md:pr-35 bg-white text-black-color ease-in duration-300 contact-us-button-hover"
+              >Get in Touch</a
+            >
+          </div>
         </div>
-        <div class="top-[-35%] left-[2%] 2xl:top-[-12%] absolute -z-1 hidden xl:inline"><img
-                src="img/website/shape12.png" class="animate-custom-movebounce" alt="shape"></div>
-        <div class="right-[10%] bottom-[-30.4%] absolute -z-1 hidden xl:inline"><img src="img/website/shape13.png"
-                class="animate-custom-moveleftbounce" alt="shape"></div>
-        <div class="top-[20%] left-[52%] absolute -z-1 hidden lg:inline"><img src="img/website/shape14.png"
-                class="animate-custom-rotateme" alt="shape"></div>
+      </div>
+      <div
+        class="top-[-35%] left-[2%] 2xl:top-[-12%] absolute -z-1 hidden xl:inline"
+      >
+        <img
+          src="img/website/shape12.png"
+          class="animate-custom-movebounce"
+          alt="shape"
+        />
+      </div>
+      <div class="right-[10%] bottom-[-30.4%] absolute -z-1 hidden xl:inline">
+        <img
+          src="img/website/shape13.png"
+          class="animate-custom-moveleftbounce"
+          alt="shape"
+        />
+      </div>
+      <div class="top-[20%] left-[52%] absolute -z-1 hidden lg:inline">
+        <img
+          src="img/website/shape14.png"
+          class="animate-custom-rotateme"
+          alt="shape"
+        />
+      </div>
     </div>
     <!-- End Support Area -->
 
     <!-- Footer Area -->
-    <footer class="footer-area pt-60 lg:pt-100 pb-60 lg:pb-100 relative z-1 bg-[#070707]">
-        <div class="container">
-            <div class="grid gap-25 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
-                <div class="single-footer-widget">
-                    <a href="index-6.html" class="logo inline-block mb-20 lg:mb-25">
-                        <img src="img/logo/logo.png" alt="logo" style="width: 150px;">
-                    </a>
-                    <img src="img/website/footer.png" alt="footer-image">
-                </div>
-                <div class="single-footer-widget md:pl-25">
-                    <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
-                        Compliances
-                    </h3>
-                    <ul>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a onclick="window.alert('Coming Soon')" style="cursor: pointer;"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                E-Way Bill
-                            </a>
-                        </li>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a onclick="window.alert('Coming Soon')" style="cursor: pointer;"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                VLTD
-                            </a>
-                        </li>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a onclick="window.alert('Coming Soon')" style="cursor: pointer;"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                eVahaan
-                            </a>
-                        </li>
-                        <!-- <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+    <footer
+      class="footer-area pt-60 lg:pt-100 pb-60 lg:pb-100 relative z-1 bg-[#070707]"
+    >
+      <div class="container">
+        <div
+          class="grid gap-25 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4"
+        >
+          <div class="single-footer-widget">
+            <a href="index-6.html" class="logo inline-block mb-20 lg:mb-25">
+              <img src="img/logo/logo.webp" alt="logo" style="width: 150px" />
+            </a>
+            <img src="img/website/footer.png" alt="footer-image" />
+          </div>
+          <div class="single-footer-widget md:pl-25">
+            <h3
+              class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white"
+            >
+              Compliances
+            </h3>
+            <ul>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <a
+                  onclick="window.alert('Coming Soon')"
+                  style="cursor: pointer"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25"
+                >
+                  E-Way Bill
+                </a>
+              </li>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <a
+                  onclick="window.alert('Coming Soon')"
+                  style="cursor: pointer"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25"
+                >
+                  VLTD
+                </a>
+              </li>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <a
+                  onclick="window.alert('Coming Soon')"
+                  style="cursor: pointer"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25"
+                >
+                  eVahaan
+                </a>
+              </li>
+              <!-- <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
                             <a href="services-details.html"
                                 class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
                                 Wordpress
@@ -333,170 +493,265 @@
                                 Content Writing
                             </a>
                         </li> -->
-                    </ul>
-                </div>
-                <div class="single-footer-widget">
-                    <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
-                        Company
-                    </h3>
-                    <ul>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a href="about-us" target="_blank"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                About Us
-                            </a>
-                        </li>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <!-- <a href="integration" target="_blank"
+            </ul>
+          </div>
+          <div class="single-footer-widget">
+            <h3
+              class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white"
+            >
+              Company
+            </h3>
+            <ul>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <a
+                  href="about-us"
+                  target="_blank"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25"
+                >
+                  About Us
+                </a>
+              </li>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <!-- <a href="integration" target="_blank"
                                 class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
                                 Integrations
                             </a> -->
-                        </li>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a href="#pricing-id" target="_blank"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                Pricing
-                            </a>
-                        </li>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a href="faq" target="_blank"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                FAQs
-                            </a>
-                        </li>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a href="https://play.google.com/store/apps/developer?id=Floww" target="_blank"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                Download Apps
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="single-footer-widget md:-ml-35 text-white">
-                    <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 ">
-                        Contact Us
-                    </h3>
-                    <ul>
-                        <li
-                            class="mb-15 md:mb-15 lg:mb-20  last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
-                            <img src="img/website/phone-call.svg" class="absolute top-0 md:top-2 left-0"
-                                alt="Floww contact India, Pune">
-                            <span class="font-medium ">Call Us:</span>
-                            <a href="tel:+918879138857" class=" transition hover:">+91
-                                8879138857</a>
-                        </li>
-                        <li
-                            class="mb-15 md:mb-15 lg:mb-20  last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
-                            <img src="img/website/location-pin.svg" class="absolute top-0 md:top-2 left-0"
-                                alt="Floww contact India, Pune">
-                            <span class="font-medium ">Address:</span>
-                            <a target="_blank" href="https://g.co/kgs/5Foz17b" class=" transition hover:">1202, Gera
-                                Imperium Rise, Hinjewadi Phase 2,
-                                Pune - 411057</a>
-                        </li>
-                        <li
-                            class="mb-15 md:mb-15 lg:mb-20  last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
-                            <img src="img/website/email.svg" class="absolute top-0 md:top-2 left-0"
-                                alt="Floww contact India, Pune">
-                            <span class="font-medium ">Mail Us:</span>
-                            <a href="mailto:info@gofloww.co">info@gofloww.co</a>
-                        </li>
-                    </ul>
-                    <ul class="mt-15 md:mt-25">
-                        <li class="inline-block mr-5 last:mr-0">
-                            <a href="https://www.facebook.com/gofloww/" target="_blank"
-                                class="block w-35 rounded-full transition relative h-35 bg-[#4267B2] text-center hover:opacity-90">
-                                <img src="img/website/white-facebook.svg"
-                                    class="w-8 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
-                                    alt="Floww Facebook">
-                            </a>
-                        </li>
-                        <li class="inline-block mr-5 last:mr-0">
-                            <a href="https://x.com/FlowwAPIs" style="cursor: pointer;"
-                                class="block w-35 rounded-full transition relative h-35 bg-[#1DA1F2] text-center hover:opacity-90"
-                                target="_blank">
-                                <img src="img/website/white-twitter.svg"
-                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
-                                    alt="Floww Twitter">
-                            </a>
-                        </li>
-                        <li class="inline-block mr-5 last:mr-0">
-                            <a href="https://www.linkedin.com/company/gofloww" target="_blank"
-                                class="block w-35 rounded-full transition relative h-35 bg-[#2867B2] text-center hover:opacity-90">
-                                <img src="img/website/white-linkedin.svg"
-                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
-                                    alt="Floww LinkedIn">
-                            </a>
-                        </li>
-                        <li class="inline-block mr-5 last:mr-0">
-                            <a href="https://www.instagram.com/gofloww.co/" target="_blank"
-                                class="block w-35 rounded-full transition relative h-35 bg-instagram-gradient-color text-center hover:opacity-90">
-                                <img src="img/website/white-instagram.svg"
-                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
-                                    alt="Floww Instagram">
-                            </a>
-                        </li>
-                        <li class="inline-block mr-5 last:mr-0">
-                            <a href="https://www.youtube.com/@gofloww" target="_blank"
-                                class="block w-35 rounded-full transition relative h-35  bg-[#FF0000] text-center hover:opacity-100">
-                                <img src="img/website/youtube-brands-solid (1).svg"
-                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
-                                    alt="Floww Youtube">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+              </li>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <a
+                  href="#pricing-id"
+                  target="_blank"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25"
+                >
+                  Pricing
+                </a>
+              </li>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <a
+                  href="faq"
+                  target="_blank"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25"
+                >
+                  FAQs
+                </a>
+              </li>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <a
+                  href="https://play.google.com/store/apps/developer?id=Floww"
+                  target="_blank"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25"
+                >
+                  Download Apps
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="single-footer-widget md:-ml-35 text-white">
+            <h3
+              class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25"
+            >
+              Contact Us
+            </h3>
+            <ul>
+              <li
+                class="mb-15 md:mb-15 lg:mb-20 last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25"
+              >
+                <img
+                  src="img/website/phone-call.svg"
+                  class="absolute top-0 md:top-2 left-0"
+                  alt="Floww contact India, Pune"
+                />
+                <span class="font-medium">Call Us:</span>
+                <a href="tel:+918879138857" class="transition hover:"
+                  >+91 8879138857</a
+                >
+              </li>
+              <li
+                class="mb-15 md:mb-15 lg:mb-20 last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25"
+              >
+                <img
+                  src="img/website/location-pin.svg"
+                  class="absolute top-0 md:top-2 left-0"
+                  alt="Floww contact India, Pune"
+                />
+                <span class="font-medium">Address:</span>
+                <a
+                  target="_blank"
+                  href="https://g.co/kgs/5Foz17b"
+                  class="transition hover:"
+                  >1202, Gera Imperium Rise, Hinjewadi Phase 2, Pune - 411057</a
+                >
+              </li>
+              <li
+                class="mb-15 md:mb-15 lg:mb-20 last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25"
+              >
+                <img
+                  src="img/website/email.svg"
+                  class="absolute top-0 md:top-2 left-0"
+                  alt="Floww contact India, Pune"
+                />
+                <span class="font-medium">Mail Us:</span>
+                <a href="mailto:info@gofloww.co">info@gofloww.co</a>
+              </li>
+            </ul>
+            <ul class="mt-15 md:mt-25">
+              <li class="inline-block mr-5 last:mr-0">
+                <a
+                  href="https://www.facebook.com/gofloww/"
+                  target="_blank"
+                  class="block w-35 rounded-full transition relative h-35 bg-[#4267B2] text-center hover:opacity-90"
+                >
+                  <img
+                    src="img/website/white-facebook.svg"
+                    class="w-8 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                    alt="Floww Facebook"
+                  />
+                </a>
+              </li>
+              <li class="inline-block mr-5 last:mr-0">
+                <a
+                  href="https://x.com/FlowwAPIs"
+                  style="cursor: pointer"
+                  class="block w-35 rounded-full transition relative h-35 bg-[#1DA1F2] text-center hover:opacity-90"
+                  target="_blank"
+                >
+                  <img
+                    src="img/website/white-twitter.svg"
+                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                    alt="Floww Twitter"
+                  />
+                </a>
+              </li>
+              <li class="inline-block mr-5 last:mr-0">
+                <a
+                  href="https://www.linkedin.com/company/gofloww"
+                  target="_blank"
+                  class="block w-35 rounded-full transition relative h-35 bg-[#2867B2] text-center hover:opacity-90"
+                >
+                  <img
+                    src="img/website/white-linkedin.svg"
+                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                    alt="Floww LinkedIn"
+                  />
+                </a>
+              </li>
+              <li class="inline-block mr-5 last:mr-0">
+                <a
+                  href="https://www.instagram.com/gofloww.co/"
+                  target="_blank"
+                  class="block w-35 rounded-full transition relative h-35 bg-instagram-gradient-color text-center hover:opacity-90"
+                >
+                  <img
+                    src="img/website/white-instagram.svg"
+                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                    alt="Floww Instagram"
+                  />
+                </a>
+              </li>
+              <li class="inline-block mr-5 last:mr-0">
+                <a
+                  href="https://www.youtube.com/@gofloww"
+                  target="_blank"
+                  class="block w-35 rounded-full transition relative h-35 bg-[#FF0000] text-center hover:opacity-100"
+                >
+                  <img
+                    src="img/website/youtube-brands-solid (1).svg"
+                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                    alt="Floww Youtube"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="right-[7%] bottom-[6%] absolute -z-1 hidden lg:inline"><img src="img/logo/small-primary-logo.png"
-                class="animate-custom-rotateme" alt="shape" style="width: 50px;"></div>
+      </div>
+      <div class="right-[7%] bottom-[6%] absolute -z-1 hidden lg:inline">
+        <img
+          src="img/logo/small-primary-logo.png"
+          class="animate-custom-rotateme"
+          alt="shape"
+          style="width: 50px"
+        />
+      </div>
     </footer>
     <!-- End Footer Area -->
 
     <!-- Copyright Area -->
-    <div class="copyright-area pt-25 md:pt-35 pb-25 md:pb-35 text-center lg:text-left bg-[#0f1216] ">
-        <div class="container ">
-            <div class="grid gap-5 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 ">
-                <div class="copyright">
-                    <p class="text-13px md:text-15px lg:text-16px text-[#e1e1e1]">&copy;2025 <a
-                            href="https://gofloww.co/" class="font-semibold bg-primary-gradient-color"
-                            target="_blank">Floww APIs Pvt. Ltd.</a></p>
-                </div>
-                <div class="copyright-info self-center">
-                    <ul class="lg:text-right">
-                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                            <a href="privacy-policy-web"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white">
-                                Privacy Policy
-                            </a>
-                        </li>
-                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                            <a href="refund-policy"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white">
-                                Refund Policy
-                            </a>
-                        </li>
-                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                            <a href="tnc"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white">
-                                Terms & Conditions
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <div
+      class="copyright-area pt-25 md:pt-35 pb-25 md:pb-35 text-center lg:text-left bg-[#0f1216]"
+    >
+      <div class="container">
+        <div
+          class="grid gap-5 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2"
+        >
+          <div class="copyright">
+            <p class="text-13px md:text-15px lg:text-16px text-[#e1e1e1]">
+              &copy;2025
+              <a
+                href="https://gofloww.co/"
+                class="font-semibold bg-primary-gradient-color"
+                target="_blank"
+                >Floww APIs Pvt. Ltd.</a
+              >
+            </p>
+          </div>
+          <div class="copyright-info self-center">
+            <ul class="lg:text-right">
+              <li
+                class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0"
+              >
+                <a
+                  href="privacy-policy-web"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li
+                class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0"
+              >
+                <a
+                  href="refund-policy"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white"
+                >
+                  Refund Policy
+                </a>
+              </li>
+              <li
+                class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0"
+              >
+                <a
+                  href="tnc"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white"
+                >
+                  Terms & Conditions
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
     <!-- End Copyright Area -->
 
     <!-- Go Top -->
     <div
-        class="progress-wrap bg-white rounded-full block z-50 cursor-pointer fixed w-[3rem] h-[3rem] right-24 bottom-24 opacity-0 invisible">
-        <svg xmlns="http://www.w3.org/2000/svg"
-            class="h-24 w-24 text-center m-auto absolute left-0 right-0 top-1/2 -translate-y-2/4" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
-        </svg>
+      class="progress-wrap bg-white rounded-full block z-50 cursor-pointer fixed w-[3rem] h-[3rem] right-24 bottom-24 opacity-0 invisible"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-24 w-24 text-center m-auto absolute left-0 right-0 top-1/2 -translate-y-2/4"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 7l4-4m0 0l4 4m-4-4v18"
+        />
+      </svg>
     </div>
 
     <!-- All JS Links -->
@@ -510,6 +765,5 @@
     <script src="js/template/main.js"></script>
     <!-- <script data-name="floww-contact-us" data-secret="SAoejpgNqtpCrF8W" data-template="temp01"
         src="https://floww0.blob.core.windows.net/websitegraphics/codes/popup/js/contact-us.js"></script> -->
-</body>
-
+  </body>
 </html>

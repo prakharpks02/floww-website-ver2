@@ -1,106 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- All CSS Links -->
-    <link rel="stylesheet" href="../css/template/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/template/swiper-bundle.min.css" />
     <!-- <link rel="stylesheet" href="css/odometer.min.css"> -->
-    <link rel="stylesheet" href="../css/template/meanmenu.min.css">
-    <link rel="stylesheet" href="../css/template/animate.min.css">
-    <link rel="stylesheet" href="../css/template/output.css">
+    <link rel="stylesheet" href="../css/template/meanmenu.min.css" />
+    <link rel="stylesheet" href="../css/template/animate.min.css" />
+    <link rel="stylesheet" href="../css/template/output.css" />
 
     <title>Floww</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/ico" href="../img/logo/favicon.ico">
+    <link rel="icon" type="image/ico" href="../img/logo/favicon.ico" />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
+  <body>
     <!-- Preloader -->
-    <div class="preloader-area text-center left-0 right-0 top-0 bottom-0 bg-white fixed z-9999">
-        <div class="preloader absolute -mt-20 left-0 right-0 top-1/2 m-auto -translate-y-2/4">
-            <div class="waviy font-bold text-50px">
-                <span class="text-black-color inline-block relative">F</span>
-                <span class="text-primary-color inline-block relative">L</span>
-                <span class="text-black-color inline-block relative">O</span>
-                <span class="text-primary-color inline-block relative">W</span>
-                <span class="text-black-color inline-block relative">W</span>
-            </div>
+    <div
+      class="preloader-area text-center left-0 right-0 top-0 bottom-0 bg-white fixed z-9999"
+    >
+      <div
+        class="preloader absolute -mt-20 left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+      >
+        <div class="waviy font-bold text-50px">
+          <span class="text-black-color inline-block relative">F</span>
+          <span class="text-primary-color inline-block relative">L</span>
+          <span class="text-black-color inline-block relative">O</span>
+          <span class="text-primary-color inline-block relative">W</span>
+          <span class="text-black-color inline-block relative">W</span>
         </div>
+      </div>
     </div>
     <!-- End Preloader -->
 
     <!-- Navbar Area -->
     <div class="navbar-area relative z-2 black-navbar bg-[#070707]">
-        <div class="togy-responsive-nav lg:hidden">
-            <div class="container">
-                <div class="togy-responsive-menu">
-                    <div class="logo">
-                        <a href="https://gofloww.co">
-                            <img src="../img/logo/logo.png" alt="logo" style="width: 132px;">
-                        </a>
-                    </div>
-                </div>
+      <div class="togy-responsive-nav lg:hidden">
+        <div class="container">
+          <div class="togy-responsive-menu">
+            <div class="logo">
+              <a href="https://gofloww.co">
+                <img
+                  src="../img/logo/logo.webp"
+                  alt="logo"
+                  style="width: 132px"
+                />
+              </a>
             </div>
+          </div>
         </div>
-        <div class="togy-nav hidden lg:block">
-            <div class="container xl:max-w-full 3xl:max-w-[1700px]">
-                <nav class="navbar flex flex-wrap">
-                    <a class="navbar-brand self-center" href="https://gofloww.co">
-                        <img src="../img/logo/logo.png" alt="logo" style="width: 132px;">
-                    </a>
-                    <div class="flex self-center grow basis-auto">
-                        <ul class="self-center flex flex-row ml-auto mr-auto">
-                            <li class="mr-12 xl:mr-15 relative group">
-                                <a href=""
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Home</a>
-                            </li>
-                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="/console"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Console</a>
-                            </li>
-                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="/integration"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">Integrations</a>
-                            </li>
-                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="/about-us"
-                                    class="active block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">About
-                                    Us</a>
-                            </li>
-                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="/faq"
-                                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30">FAQs</a>
-                            </li>
-                        </ul>
-                        <div class="self-center">
-                            <a href="https://console.gofloww.co" target="_blank"
-                                class="inline-block font-black font-semibold text-13px md:text-14px lg:text-15px rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">
-                                Login / SignUp</a>
-                        </div>
-                    </div>
-                </nav>
+      </div>
+      <div class="togy-nav hidden lg:block">
+        <div class="container xl:max-w-full 3xl:max-w-[1700px]">
+          <nav class="navbar flex flex-wrap">
+            <a class="navbar-brand self-center" href="https://gofloww.co">
+              <img
+                src="../img/logo/logo.webp"
+                alt="logo"
+                style="width: 132px"
+              />
+            </a>
+            <div class="flex self-center grow basis-auto">
+              <ul class="self-center flex flex-row ml-auto mr-auto">
+                <li class="mr-12 xl:mr-15 relative group">
+                  <a
+                    href=""
+                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30"
+                    >Home</a
+                  >
+                </li>
+                <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                  <a
+                    href="/console"
+                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30"
+                    >Console</a
+                  >
+                </li>
+                <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                  <a
+                    href="/integration"
+                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30"
+                    >Integrations</a
+                  >
+                </li>
+                <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                  <a
+                    href="/about-us"
+                    class="active block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30"
+                    >About Us</a
+                  >
+                </li>
+                <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
+                  <a
+                    href="/faq"
+                    class="block text-white font-semibold text-16px ease-in duration-300 relative pr-15 hover:text-primary-color hover:before:bg-primary-color hover:after:bg-primary-color pt-30 pb-30"
+                    >FAQs</a
+                  >
+                </li>
+              </ul>
+              <div class="self-center">
+                <a
+                  href="https://console.gofloww.co"
+                  target="_blank"
+                  class="inline-block font-black font-semibold text-13px md:text-14px lg:text-15px rounded-sm text-white pt-17 pb-13 pl-35 pr-35 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300"
+                >
+                  Login / SignUp</a
+                >
+              </div>
             </div>
+          </nav>
         </div>
+      </div>
     </div>
     <!-- End Navbar Area -->
 
     <!-- Navbar for Responsive -->
     <div class="navbar-for-responsive hidden">
-        <div class="mean-menu">
-            <ul class="navbar-nav">
-                <li>
-                    <a href="" class="">Home</a>
-                    <!-- <ul>
+      <div class="mean-menu">
+        <ul class="navbar-nav">
+          <li>
+            <a href="" class="">Home</a>
+            <!-- <ul>
                         <li>
                             <a href="index.html">Project Management</a>
                         </li>
@@ -111,217 +141,356 @@
                             <a href="index-3.html">Customer Support</a>
                         </li>
                     </ul> -->
-                </li>
-                <li>
-                    <a href="/console">Console</a>
-                </li>
-                <li>
-                    <a href="/integration">Integrations</a>
-                </li>
-                <li>
-                    <a href="/about-us" class="active">About Us</a>
-                </li>
-                <li>
-                    <a href="/faq">FAQs</a>
-                </li>
-            </ul>
-            <div class="absolute right-45 top-3 md:top-1 md:right-50">
-                <a href="https://console.gofloww.co" target="_blank" style="cursor: pointer;"
-                    class="inline-block font-semibold text-11px md:text-14px lg:text-15px rounded-sm text-white pt-13 pb-10 pl-15 pr-15 md:pl-25 md:pr-25 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300">Login
-                    / SignUp</a>
-            </div>
+          </li>
+          <li>
+            <a href="/console">Console</a>
+          </li>
+          <li>
+            <a href="/integration">Integrations</a>
+          </li>
+          <li>
+            <a href="/about-us" class="active">About Us</a>
+          </li>
+          <li>
+            <a href="/faq">FAQs</a>
+          </li>
+        </ul>
+        <div class="absolute right-45 top-3 md:top-1 md:right-50">
+          <a
+            href="https://console.gofloww.co"
+            target="_blank"
+            style="cursor: pointer"
+            class="inline-block font-semibold text-11px md:text-14px lg:text-15px rounded-sm text-white pt-13 pb-10 pl-15 pr-15 md:pl-25 md:pr-25 bg-primary-gradient-color shadow-custom-box-shadow hover:shadow-secondary-btn ease-in duration-300"
+            >Login / SignUp</a
+          >
         </div>
+      </div>
     </div>
     <!-- End Navbar for Responsive -->
 
     <!-- Page Title Area -->
-    <div class="relative z-1 text-center pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100">
-        <div class="container">
-            <h1 class="font-black text-25px md:text-35px lg:text-40px xl:text-48px 2xl:text-54px text-black-color mb-8">
-                Portfolio <span class="text-primary-color">Details</span></h1>
-            <p
-                class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8 text-optional-color">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet nulla duis ac. Id massa
-                scelerisque venenatis, massa gravida donec orci.</p>
-        </div>
-        <div class="left-0 top-25 absolute -z-1 hidden xl:inline"><img src="../img/website/shape34.png"
-                class="animate-custom-movebounce w-[100px]" alt="shape"></div>
-        <div class="right-0 bottom-20 absolute -z-1 hidden xl:inline"><img src="../img/website/shape35.png"
-                class="animate-custom-movebounce" alt="shape"></div>
+    <div
+      class="relative z-1 text-center pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100"
+    >
+      <div class="container">
+        <h1
+          class="font-black text-25px md:text-35px lg:text-40px xl:text-48px 2xl:text-54px text-black-color mb-8"
+        >
+          Portfolio <span class="text-primary-color">Details</span>
+        </h1>
+        <p
+          class="lg:text-16px md:text-15px text-13px lg:max-w-2xl lg:mx-auto leading-7 md:leading-8 text-optional-color"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          imperdiet nulla duis ac. Id massa scelerisque venenatis, massa gravida
+          donec orci.
+        </p>
+      </div>
+      <div class="left-0 top-25 absolute -z-1 hidden xl:inline">
+        <img
+          src="../img/website/shape34.png"
+          class="animate-custom-movebounce w-[100px]"
+          alt="shape"
+        />
+      </div>
+      <div class="right-0 bottom-20 absolute -z-1 hidden xl:inline">
+        <img
+          src="../img/website/shape35.png"
+          class="animate-custom-movebounce"
+          alt="shape"
+        />
+      </div>
     </div>
     <!-- End Page Title Area -->
 
     <!-- Portfolio Details Area -->
     <div class="pb-60 md:pb-80 lg:pb-100">
-        <div class="container">
-            <div class="xl:max-w-[1110px] xl:ml-auto xl:mr-auto">
-                <div class="grid mb-35 gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3">
-                    <div class="lg:col-span-2 xl:pr-50">
-                        <h3 class="font-black text-18px md:text-22px lg:text-25px xl:text-30px mb-10 lg:mb-15">Project
-                            Management Software</h3>
-                        <p
-                            class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas facilisis metus vitae
-                            mattis velit ac amet, mattis aenean. Quam eu aliquam quisque commodo feugiatedetti placerat
-                            elit. Eget mi, morbi tincidunt dolor.</p>
-                        <p
-                            class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas facilisis metus vitae
-                            mattis velit ac amet, mattis aenean. Quam eu aliquam quisqu. Quam eu aliquam quisq commodo
-                            feugiatedetti placerat elit. Eget mi, morbi.</p>
-                    </div>
-                    <div class="mt-0 lg:mt-10">
-                        <h3 class="font-bold text-15px md:text-17px lg:text-18px mb-15 lg:mb-25">Project Information
-                        </h3>
-                        <ul>
-                            <li
-                                class="text-13px md:text-15px lg:text-16px text-optional-color mb-15 lg:mb-18 last:mb-0">
-                                <span class="text-black-color font-semibold">Date:</span>
-                                January 23, 2022
-                            </li>
-                            <li
-                                class="text-13px md:text-15px lg:text-16px text-optional-color mb-15 lg:mb-18 last:mb-0">
-                                <span class="text-black-color font-semibold">Category:</span>
-                                Design, Development
-                            </li>
-                            <li
-                                class="text-13px md:text-15px lg:text-16px text-optional-color mb-15 lg:mb-18 last:mb-0">
-                                <span class="text-black-color font-semibold">Client:</span>
-                                Envytheme.com
-                            </li>
-                            <li
-                                class="text-13px md:text-15px lg:text-16px text-optional-color mb-15 lg:mb-18 last:mb-0">
-                                <span class="text-black-color font-semibold">Duration:</span>
-                                1 Month
-                            </li>
-                            <li
-                                class="text-13px md:text-15px lg:text-16px text-optional-color mb-15 lg:mb-18 last:mb-0">
-                                <span class="text-black-color font-semibold">Budget:</span>
-                                $ 5000
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <img src="../img/website/portfolio2.jpg" class="mb-25 lg:mb-30 rounded-sm md:rounded-md lg:rounded-lg"
-                    alt="portfolio-details">
-                <p
-                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas <strong>facilisis</strong> metus
-                    vitae mattis velit ac amet, mattis aenean. Quam eu aliquam quisque commodo feugiat placerat elit.
-                    Eget mi, morbi tincidunt dolor. Placerat enim rid iculus id feugiat faucibus non pulvinar tincidunt.
-                    Vulputate tincidunt sed interdum interdum porta enim.</p>
-                <h3 class="font-black text-18px md:text-22px lg:text-25px mb-12 mt-25 lg:mt-30">Problem That We Faced
-                </h3>
-                <p
-                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas facilisis metus vitae mattis velit
-                    ac amet, mattis aenean. Quam eu <strong>aliquam</strong> quisque commodo feugiat placerat elit. Eget
-                    mi, morbi tincidunt dolor. Placerat enim rid iculus id feugiat faucibus non pulvinar tincidunt.
-                    Vulputate tincidunt sed interdum interdum porta enim.</p>
-                <h3 class="font-black text-18px md:text-22px lg:text-25px mb-12 mt-25 lg:mt-30">How We Overcome</h3>
-                <p
-                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas facilisis metus vitae mattis velit
-                    ac amet, mattis aenean. Quam eu aliquam quisque commodo feugiat placerat elit. Eget mi, morbi
-                    tincidunt dolor.</p>
-                <p
-                    class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas facilisis metus vitae mattis velit
-                    ac amet, mattis aenean. Quam eu aliquam quisque commodo feugiat placerat elit. Eget mi, morbi
-                    tincidunt dolor. Placerat enim rid iculus id feugiat faucibus non pulvinar tincidunt. Vulputate
-                    tincidunt sed interdum interdum porta enim.</p>
-                <h3 class="font-black text-18px md:text-22px lg:text-25px mb-12 mt-25 lg:mt-30">Key Takeways</h3>
-                <ul class="mt-20 md:mt-25">
-                    <li
-                        class="text-[#2D2D2D] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                        <img src="../img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                            alt="check">
-                        Don’t try to create a project without proper research.
-                    </li>
-                    <li
-                        class="text-[#2D2D2D] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                        <img src="../img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                            alt="check">
-                        Create appropriate Timeframe for the Task
-                    </li>
-                    <li
-                        class="text-[#2D2D2D] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0">
-                        <img src="../img/website/tick-circle.svg" class="absolute left-0 -top-2 w-[18px] md:w-auto"
-                            alt="check">
-                        Get notified when task completed & handover the project in time.
-                    </li>
-                </ul>
-                <div class="border-t border-[#eeeeee] mt-30 md:mt-60 pt-30">
-                    <div class="grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-                        <div class="flex relative">
-                            <a href="portfolio-details.html"
-                                class="absolute block left-0 right-0 top-0 bottom-0 z-1"></a>
-                            <img src="../img/website/portfolio3.jpg" class="w-100 rounded-md" alt="portfolio-image">
-                            <div class="title self-center ml-20">
-                                <span
-                                    class="text-13px md:text-15px lg:text-16px block text-optional-color mb-8">Previous
-                                    Project</span>
-                                <h3 class="font-bold text-16px md:text-18px lg:text-20px">Dashboard Design</h3>
-                            </div>
-                        </div>
-                        <div class="flex relative justify-end text-right">
-                            <div class="title self-center mr-20">
-                                <span class="text-13px md:text-15px lg:text-16px block text-optional-color mb-8">Next
-                                    Project</span>
-                                <h3 class="font-bold text-16px md:text-18px lg:text-20px">Mobile App Development</h3>
-                            </div>
-                            <a href="portfolio-details.html"
-                                class="absolute block left-0 right-0 top-0 bottom-0 z-1"></a>
-                            <img src="../img/website/portfolio4.jpg" class="w-100 rounded-md" alt="portfolio-image">
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="xl:max-w-[1110px] xl:ml-auto xl:mr-auto">
+          <div
+            class="grid mb-35 gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3"
+          >
+            <div class="lg:col-span-2 xl:pr-50">
+              <h3
+                class="font-black text-18px md:text-22px lg:text-25px xl:text-30px mb-10 lg:mb-15"
+              >
+                Project Management Software
+              </h3>
+              <p
+                class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+                facilisis metus vitae mattis velit ac amet, mattis aenean. Quam
+                eu aliquam quisque commodo feugiatedetti placerat elit. Eget mi,
+                morbi tincidunt dolor.
+              </p>
+              <p
+                class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+                facilisis metus vitae mattis velit ac amet, mattis aenean. Quam
+                eu aliquam quisqu. Quam eu aliquam quisq commodo feugiatedetti
+                placerat elit. Eget mi, morbi.
+              </p>
             </div>
+            <div class="mt-0 lg:mt-10">
+              <h3
+                class="font-bold text-15px md:text-17px lg:text-18px mb-15 lg:mb-25"
+              >
+                Project Information
+              </h3>
+              <ul>
+                <li
+                  class="text-13px md:text-15px lg:text-16px text-optional-color mb-15 lg:mb-18 last:mb-0"
+                >
+                  <span class="text-black-color font-semibold">Date:</span>
+                  January 23, 2022
+                </li>
+                <li
+                  class="text-13px md:text-15px lg:text-16px text-optional-color mb-15 lg:mb-18 last:mb-0"
+                >
+                  <span class="text-black-color font-semibold">Category:</span>
+                  Design, Development
+                </li>
+                <li
+                  class="text-13px md:text-15px lg:text-16px text-optional-color mb-15 lg:mb-18 last:mb-0"
+                >
+                  <span class="text-black-color font-semibold">Client:</span>
+                  Envytheme.com
+                </li>
+                <li
+                  class="text-13px md:text-15px lg:text-16px text-optional-color mb-15 lg:mb-18 last:mb-0"
+                >
+                  <span class="text-black-color font-semibold">Duration:</span>
+                  1 Month
+                </li>
+                <li
+                  class="text-13px md:text-15px lg:text-16px text-optional-color mb-15 lg:mb-18 last:mb-0"
+                >
+                  <span class="text-black-color font-semibold">Budget:</span>
+                  $ 5000
+                </li>
+              </ul>
+            </div>
+          </div>
+          <img
+            src="../img/website/portfolio2.jpg"
+            class="mb-25 lg:mb-30 rounded-sm md:rounded-md lg:rounded-lg"
+            alt="portfolio-details"
+          />
+          <p
+            class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+            <strong>facilisis</strong> metus vitae mattis velit ac amet, mattis
+            aenean. Quam eu aliquam quisque commodo feugiat placerat elit. Eget
+            mi, morbi tincidunt dolor. Placerat enim rid iculus id feugiat
+            faucibus non pulvinar tincidunt. Vulputate tincidunt sed interdum
+            interdum porta enim.
+          </p>
+          <h3
+            class="font-black text-18px md:text-22px lg:text-25px mb-12 mt-25 lg:mt-30"
+          >
+            Problem That We Faced
+          </h3>
+          <p
+            class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+            facilisis metus vitae mattis velit ac amet, mattis aenean. Quam eu
+            <strong>aliquam</strong> quisque commodo feugiat placerat elit. Eget
+            mi, morbi tincidunt dolor. Placerat enim rid iculus id feugiat
+            faucibus non pulvinar tincidunt. Vulputate tincidunt sed interdum
+            interdum porta enim.
+          </p>
+          <h3
+            class="font-black text-18px md:text-22px lg:text-25px mb-12 mt-25 lg:mt-30"
+          >
+            How We Overcome
+          </h3>
+          <p
+            class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+            facilisis metus vitae mattis velit ac amet, mattis aenean. Quam eu
+            aliquam quisque commodo feugiat placerat elit. Eget mi, morbi
+            tincidunt dolor.
+          </p>
+          <p
+            class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+            facilisis metus vitae mattis velit ac amet, mattis aenean. Quam eu
+            aliquam quisque commodo feugiat placerat elit. Eget mi, morbi
+            tincidunt dolor. Placerat enim rid iculus id feugiat faucibus non
+            pulvinar tincidunt. Vulputate tincidunt sed interdum interdum porta
+            enim.
+          </p>
+          <h3
+            class="font-black text-18px md:text-22px lg:text-25px mb-12 mt-25 lg:mt-30"
+          >
+            Key Takeways
+          </h3>
+          <ul class="mt-20 md:mt-25">
+            <li
+              class="text-[#2D2D2D] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0"
+            >
+              <img
+                src="../img/website/tick-circle.svg"
+                class="absolute left-0 -top-2 w-[18px] md:w-auto"
+                alt="check"
+              />
+              Don’t try to create a project without proper research.
+            </li>
+            <li
+              class="text-[#2D2D2D] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0"
+            >
+              <img
+                src="../img/website/tick-circle.svg"
+                class="absolute left-0 -top-2 w-[18px] md:w-auto"
+                alt="check"
+              />
+              Create appropriate Timeframe for the Task
+            </li>
+            <li
+              class="text-[#2D2D2D] relative text-13px md:text-15px lg:text-16px font-medium pl-26 md:pl-34 mb-15 md:mb-20 last:mb-0"
+            >
+              <img
+                src="../img/website/tick-circle.svg"
+                class="absolute left-0 -top-2 w-[18px] md:w-auto"
+                alt="check"
+              />
+              Get notified when task completed & handover the project in time.
+            </li>
+          </ul>
+          <div class="border-t border-[#eeeeee] mt-30 md:mt-60 pt-30">
+            <div
+              class="grid gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2"
+            >
+              <div class="flex relative">
+                <a
+                  href="portfolio-details.html"
+                  class="absolute block left-0 right-0 top-0 bottom-0 z-1"
+                ></a>
+                <img
+                  src="../img/website/portfolio3.jpg"
+                  class="w-100 rounded-md"
+                  alt="portfolio-image"
+                />
+                <div class="title self-center ml-20">
+                  <span
+                    class="text-13px md:text-15px lg:text-16px block text-optional-color mb-8"
+                    >Previous Project</span
+                  >
+                  <h3 class="font-bold text-16px md:text-18px lg:text-20px">
+                    Dashboard Design
+                  </h3>
+                </div>
+              </div>
+              <div class="flex relative justify-end text-right">
+                <div class="title self-center mr-20">
+                  <span
+                    class="text-13px md:text-15px lg:text-16px block text-optional-color mb-8"
+                    >Next Project</span
+                  >
+                  <h3 class="font-bold text-16px md:text-18px lg:text-20px">
+                    Mobile App Development
+                  </h3>
+                </div>
+                <a
+                  href="portfolio-details.html"
+                  class="absolute block left-0 right-0 top-0 bottom-0 z-1"
+                ></a>
+                <img
+                  src="../img/website/portfolio4.jpg"
+                  class="w-100 rounded-md"
+                  alt="portfolio-image"
+                />
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- End Portfolio Details Area -->
 
-
     <!-- Support Area -->
     <div
-        class="support-area relative bg-secondary-gradient-color z-2 pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100">
-        <div class="container">
-            <div class="grid gap-18 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-                <div class="support-content xl:col-span-2">
-                    <h2 class="font-black text-22px md:text-30px lg:text-34px xl:text-40px mb-12 text-white">Grow with
-                        Floww</h2>
-                    <p class="text-13px md:text-15px lg:text-16px md:max-w-[700px] leading-7 md:leading-8 text-white">
-                        Our team is here to provide you with personalized and outstanding service. We also offer a range
-                        of self-learning tools in our support center.</p>
-                </div>
-                <div class="support-btn self-center lg:text-right">
-                    <a href=""
-                        class="inline-block font-semibold text-13px md:text-15px rounded-sm pt-17 pb-13 pl-25 md:pl-35 pr-25 md:pr-35 bg-white text-black-color ease-in duration-300 contact-us-button-hover">Get
-                        in Touch</a>
-                </div>
-            </div>
+      class="support-area relative bg-secondary-gradient-color z-2 pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100"
+    >
+      <div class="container">
+        <div
+          class="grid gap-18 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+        >
+          <div class="support-content xl:col-span-2">
+            <h2
+              class="font-black text-22px md:text-30px lg:text-34px xl:text-40px mb-12 text-white"
+            >
+              Grow with Floww
+            </h2>
+            <p
+              class="text-13px md:text-15px lg:text-16px md:max-w-[700px] leading-7 md:leading-8 text-white"
+            >
+              Our team is here to provide you with personalized and outstanding
+              service. We also offer a range of self-learning tools in our
+              support center.
+            </p>
+          </div>
+          <div class="support-btn self-center lg:text-right">
+            <a
+              href=""
+              class="inline-block font-semibold text-13px md:text-15px rounded-sm pt-17 pb-13 pl-25 md:pl-35 pr-25 md:pr-35 bg-white text-black-color ease-in duration-300 contact-us-button-hover"
+              >Get in Touch</a
+            >
+          </div>
         </div>
-        <div class="top-[-35%] left-[2%] 2xl:top-[-12%] absolute -z-1 hidden xl:inline"><img
-                src="../img/website/shape12.png" class="animate-custom-movebounce" alt="shape"></div>
-        <div class="right-[10%] bottom-[-30.4%] absolute -z-1 hidden xl:inline"><img src="../img/website/shape13.png"
-                class="animate-custom-moveleftbounce" alt="shape"></div>
-        <div class="top-[20%] left-[52%] absolute -z-1 hidden lg:inline"><img src="../img/website/shape14.png"
-                class="animate-custom-rotateme" alt="shape"></div>
+      </div>
+      <div
+        class="top-[-35%] left-[2%] 2xl:top-[-12%] absolute -z-1 hidden xl:inline"
+      >
+        <img
+          src="../img/website/shape12.png"
+          class="animate-custom-movebounce"
+          alt="shape"
+        />
+      </div>
+      <div class="right-[10%] bottom-[-30.4%] absolute -z-1 hidden xl:inline">
+        <img
+          src="../img/website/shape13.png"
+          class="animate-custom-moveleftbounce"
+          alt="shape"
+        />
+      </div>
+      <div class="top-[20%] left-[52%] absolute -z-1 hidden lg:inline">
+        <img
+          src="../img/website/shape14.png"
+          class="animate-custom-rotateme"
+          alt="shape"
+        />
+      </div>
     </div>
     <!-- End Support Area -->
 
     <!-- Footer Area -->
-    <footer class="footer-area pt-60 lg:pt-100 pb-60 lg:pb-100 relative z-1 bg-[#070707]">
-        <div class="container">
-            <div class="grid gap-25 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
-                <div class="single-footer-widget">
-                    <a href="index-6.html" class="logo inline-block mb-20 lg:mb-25">
-                        <img src="../img/logo/logo.png" alt="logo" style="width: 132px;">
-                    </a>
-                    <img src="../img/website/footer.png" alt="footer-image">
-                </div>
-                <div class="single-footer-widget md:pl-25">
-                    <!-- <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
+    <footer
+      class="footer-area pt-60 lg:pt-100 pb-60 lg:pb-100 relative z-1 bg-[#070707]"
+    >
+      <div class="container">
+        <div
+          class="grid gap-25 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4"
+        >
+          <div class="single-footer-widget">
+            <a href="index-6.html" class="logo inline-block mb-20 lg:mb-25">
+              <img
+                src="../img/logo/logo.webp"
+                alt="logo"
+                style="width: 132px"
+              />
+            </a>
+            <img src="../img/website/footer.png" alt="footer-image" />
+          </div>
+          <div class="single-footer-widget md:pl-25">
+            <!-- <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
                         Services
                     </h3>
                     <ul>
@@ -356,155 +525,254 @@
                             </a>
                         </li>
                     </ul> -->
-                </div>
-                <div class="single-footer-widget">
-                    <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
-                        Quick Links
-                    </h3>
-                    <ul>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a href="" target="_blank"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                About Us
-                            </a>
-                        </li>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a href="" target="_blank"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                Integrations
-                            </a>
-                        </li>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a href="" target="_blank"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                Pricing
-                            </a>
-                        </li>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a href="" target="_blank"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                FAQs
-                            </a>
-                        </li>
-                        <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
-                            <a href="https://play.google.com/store/apps/details?id=com.mycompany.flowwv01"
-                                target="_blank"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25">
-                                Download Apps
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="single-footer-widget md:-ml-35">
-                    <h3 class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white">
-                        Contact Us
-                    </h3>
-                    <ul>
-                        <li
-                            class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
-                            <img src="../img/website/phone-call.svg" class="absolute top-0 md:top-2 left-0" alt="icon">
-                            <span class="font-medium text-white">Call Us:</span>
-                            <a href="tel:+918879138857" class="text-[#e1e1e1] transition hover:text-white">+91
-                                8879138857</a>
-                        </li>
-                        <li
-                            class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
-                            <img src="../img/website/location-pin.svg" class="absolute top-0 md:top-2 left-0"
-                                alt="icon">
-                            <span class="font-medium text-white">Address:</span>
-                            <a target="_blank" class="text-[#e1e1e1] transition hover:text-white">1202, Gera Imperium
-                                Rise, Hinjewadi Phase 2, Pune - 411057</a>
-                        </li>
-                        <li
-                            class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25">
-                            <img src="../img/website/email.svg" class="absolute top-0 md:top-2 left-0" alt="icon">
-                            <span class="font-medium text-white">Mail Us:</span>
-                            <a href="mailto:info@gofloww.co">info@gofloww.co</a>
-                        </li>
-                    </ul>
-                    <ul class="mt-15 md:mt-25">
-                        <li class="inline-block mr-5 last:mr-0">
-                            <a href="#" target="_blank"
-                                class="block w-35 rounded-full transition relative h-35 bg-[#4267B2] text-center hover:opacity-90">
-                                <img src="../img/website/white-facebook.svg"
-                                    class="w-8 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="facebook">
-                            </a>
-                        </li>
-                        <li class="inline-block mr-5 last:mr-0">
-                            <a href="#" target="_blank"
-                                class="block w-35 rounded-full transition relative h-35 bg-[#1DA1F2] text-center hover:opacity-90">
-                                <img src="../img/website/white-twitter.svg"
-                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="twitter">
-                            </a>
-                        </li>
-                        <li class="inline-block mr-5 last:mr-0">
-                            <a href="#" target="_blank"
-                                class="block w-35 rounded-full transition relative h-35 bg-[#2867B2] text-center hover:opacity-90">
-                                <img src="../img/website/white-linkedin.svg"
-                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4" alt="linkedin">
-                            </a>
-                        </li>
-                        <li class="inline-block mr-5 last:mr-0">
-                            <a href="#" target="_blank"
-                                class="block w-35 rounded-full transition relative h-35 bg-instagram-gradient-color text-center hover:opacity-90">
-                                <img src="../img/website/white-instagram.svg"
-                                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
-                                    alt="instagram">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+          </div>
+          <div class="single-footer-widget">
+            <h3
+              class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white"
+            >
+              Quick Links
+            </h3>
+            <ul>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <a
+                  href=""
+                  target="_blank"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25"
+                >
+                  About Us
+                </a>
+              </li>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <a
+                  href=""
+                  target="_blank"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25"
+                >
+                  Integrations
+                </a>
+              </li>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <a
+                  href=""
+                  target="_blank"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25"
+                >
+                  Pricing
+                </a>
+              </li>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <a
+                  href=""
+                  target="_blank"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25"
+                >
+                  FAQs
+                </a>
+              </li>
+              <li class="mb-12 md:mb-15 lg:mb-20 last:mb-0">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.mycompany.flowwv01"
+                  target="_blank"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white relative before:absolute before:right-0 before:top-1/2 before:-translate-y-2/4 before:w-18 before:h-2 before:bg-primary-color before:opacity-0 before:invisible hover:before:opacity-100 hover:before:visible pr-25"
+                >
+                  Download Apps
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="single-footer-widget md:-ml-35">
+            <h3
+              class="font-bold text-18px md:text-20px lg:text-24px mb-15 md:mb-20 lg:mb-25 text-white"
+            >
+              Contact Us
+            </h3>
+            <ul>
+              <li
+                class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25"
+              >
+                <img
+                  src="../img/website/phone-call.svg"
+                  class="absolute top-0 md:top-2 left-0"
+                  alt="icon"
+                />
+                <span class="font-medium text-white">Call Us:</span>
+                <a
+                  href="tel:+918879138857"
+                  class="text-[#e1e1e1] transition hover:text-white"
+                  >+91 8879138857</a
+                >
+              </li>
+              <li
+                class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25"
+              >
+                <img
+                  src="../img/website/location-pin.svg"
+                  class="absolute top-0 md:top-2 left-0"
+                  alt="icon"
+                />
+                <span class="font-medium text-white">Address:</span>
+                <a
+                  target="_blank"
+                  class="text-[#e1e1e1] transition hover:text-white"
+                  >1202, Gera Imperium Rise, Hinjewadi Phase 2, Pune - 411057</a
+                >
+              </li>
+              <li
+                class="mb-15 md:mb-15 lg:mb-20 text-[#e1e1e1] last:mb-0 relative text-13px md:text-15px lg:text-16px pl-25"
+              >
+                <img
+                  src="../img/website/email.svg"
+                  class="absolute top-0 md:top-2 left-0"
+                  alt="icon"
+                />
+                <span class="font-medium text-white">Mail Us:</span>
+                <a href="mailto:info@gofloww.co">info@gofloww.co</a>
+              </li>
+            </ul>
+            <ul class="mt-15 md:mt-25">
+              <li class="inline-block mr-5 last:mr-0">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="block w-35 rounded-full transition relative h-35 bg-[#4267B2] text-center hover:opacity-90"
+                >
+                  <img
+                    src="../img/website/white-facebook.svg"
+                    class="w-8 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                    alt="facebook"
+                  />
+                </a>
+              </li>
+              <li class="inline-block mr-5 last:mr-0">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="block w-35 rounded-full transition relative h-35 bg-[#1DA1F2] text-center hover:opacity-90"
+                >
+                  <img
+                    src="../img/website/white-twitter.svg"
+                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                    alt="twitter"
+                  />
+                </a>
+              </li>
+              <li class="inline-block mr-5 last:mr-0">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="block w-35 rounded-full transition relative h-35 bg-[#2867B2] text-center hover:opacity-90"
+                >
+                  <img
+                    src="../img/website/white-linkedin.svg"
+                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                    alt="linkedin"
+                  />
+                </a>
+              </li>
+              <li class="inline-block mr-5 last:mr-0">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="block w-35 rounded-full transition relative h-35 bg-instagram-gradient-color text-center hover:opacity-90"
+                >
+                  <img
+                    src="../img/website/white-instagram.svg"
+                    class="w-15 absolute left-0 right-0 top-1/2 m-auto -translate-y-2/4"
+                    alt="instagram"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="right-[7%] bottom-[6%] absolute -z-1 hidden lg:inline"><img src="../img/logo/small-primary-logo.png"
-                class="animate-custom-rotateme" alt="shape" style="width: 50px;"></div>
+      </div>
+      <div class="right-[7%] bottom-[6%] absolute -z-1 hidden lg:inline">
+        <img
+          src="../img/logo/small-primary-logo.png"
+          class="animate-custom-rotateme"
+          alt="shape"
+          style="width: 50px"
+        />
+      </div>
     </footer>
     <!-- End Footer Area -->
 
     <!-- Copyright Area -->
-    <div class="copyright-area pt-25 md:pt-35 pb-25 md:pb-35 text-center lg:text-left bg-[#0f1216]">
-        <div class="container">
-            <div class="grid gap-5 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
-                <div class="copyright">
-                    <p class="text-13px md:text-15px lg:text-16px text-[#e1e1e1]">&copy;2022 <a
-                            href="https://gofloww.co/" class="font-semibold bg-primary-gradient-color"
-                            target="_blank">Floww APIs Pvt. Ltd.</a></p>
-                </div>
-                <div class="copyright-info self-center">
-                    <ul class="lg:text-right">
-                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                            <a href="privacy-policy-web"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white">
-                                Privacy Policy
-                            </a>
-                        </li>
-                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                            <a href="refund-policy"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white">
-                                Refund Policy
-                            </a>
-                        </li>
-                        <li class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0">
-                            <a href="tnc"
-                                class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white">
-                                Terms & Conditions
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <div
+      class="copyright-area pt-25 md:pt-35 pb-25 md:pb-35 text-center lg:text-left bg-[#0f1216]"
+    >
+      <div class="container">
+        <div
+          class="grid gap-5 md:gap-25 grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2"
+        >
+          <div class="copyright">
+            <p class="text-13px md:text-15px lg:text-16px text-[#e1e1e1]">
+              &copy;2022
+              <a
+                href="https://gofloww.co/"
+                class="font-semibold bg-primary-gradient-color"
+                target="_blank"
+                >Floww APIs Pvt. Ltd.</a
+              >
+            </p>
+          </div>
+          <div class="copyright-info self-center">
+            <ul class="lg:text-right">
+              <li
+                class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0"
+              >
+                <a
+                  href="privacy-policy-web"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li
+                class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0"
+              >
+                <a
+                  href="refund-policy"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white"
+                >
+                  Refund Policy
+                </a>
+              </li>
+              <li
+                class="inline-block mr-15 md:mr-20 lg:mr-25 last:mr-0 mt-10 md:mt-0"
+              >
+                <a
+                  href="tnc"
+                  class="inline-block text-[#e1e1e1] text-13px md:text-15px lg:text-16px transition hover:text-white"
+                >
+                  Terms & Conditions
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
     <!-- End Copyright Area -->
 
     <!-- Go Top -->
     <div
-        class="progress-wrap bg-white rounded-full block z-50 cursor-pointer fixed w-[3rem] h-[3rem] right-24 bottom-24 opacity-0 invisible">
-        <svg xmlns="http://www.w3.org/2000/svg"
-            class="h-24 w-24 text-center m-auto absolute left-0 right-0 top-1/2 -translate-y-2/4" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
-        </svg>
+      class="progress-wrap bg-white rounded-full block z-50 cursor-pointer fixed w-[3rem] h-[3rem] right-24 bottom-24 opacity-0 invisible"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-24 w-24 text-center m-auto absolute left-0 right-0 top-1/2 -translate-y-2/4"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 7l4-4m0 0l4 4m-4-4v18"
+        />
+      </svg>
     </div>
 
     <!-- All JS Links -->
@@ -516,6 +784,5 @@
     <script src="../js/template/meanmenu.min.js"></script>
     <!-- <script src="js/wow.min.js"></script> -->
     <script src="../js/template/main.js"></script>
-</body>
-
+  </body>
 </html>
