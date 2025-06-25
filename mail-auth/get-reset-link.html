@@ -191,7 +191,9 @@
         .then(responseData => {
           if (responseData && responseData.status) {
             flowwShowAlert("success", "Email Sent");
-            document.getElementById("main-headline-text").innerHTML = "Email with reset link is sent to <strong>"+responseData.message+"</strong>";
+            if("message" in responseData) {
+              document.getElementById("main-headline-text").innerHTML = "Email with reset link is sent to <strong>"+responseData.message+"</strong>";
+            };
 
             button.disabled = true;
             button.classList.add("disabled");
