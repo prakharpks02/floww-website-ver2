@@ -30,7 +30,7 @@
     <div class="container">
       <header>
         <img src="./images/logo-atom.png" alt="Floww Logo" class="logo">
-        <p>Enter your email and we'll send you a link to your secondary mail,
+        <p  id="main-headline-text">Enter your email and we'll send you a link to your secondary mail,
           to reset your password</p>
       </header>
       <main>
@@ -43,7 +43,9 @@
           <!-- <button type="submit" class="login-button" onClick="submitForm()">Submit</button> -->
           <button type="submit" id="submit-btn" class="login-button">Submit</button>
           <div class="footer-links">
-           <small><strong> <p id="cooldown-text" style="display: none;">You can request new mail after 02:00 mins.</p></small></strong>
+            <small><strong>
+                <p id="cooldown-text" style="display: none;">You can request new mail after 02:00 mins.</p>
+                </small></strong>
           </div>
         </form>
       </main>
@@ -137,8 +139,8 @@
 
 
   </script> -->
-  
-  
+
+
   <script>
     const apiUrl = "https://console.gofloww.co/api/mail/reset-password/";
 
@@ -180,56 +182,57 @@
         },
         body: JSON.stringify({ email: email }),
       })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("HTTP Error: " + response.status);
-        }
-        return response.json();
-      })
-      .then(responseData => {
-        if (responseData && responseData.status) {
-          flowwShowAlert("success", "Email Sent");
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("HTTP Error: " + response.status);
+          }
+          return response.json();
+        })
+        .then(responseData => {
+          if (responseData && responseData.status) {
+            flowwShowAlert("success", "Email Sent");
+            document.getElementById("main-headline-text").innerHTML = "Email with reset link is sent to <strong>"+responseData.message+"</strong>";
 
-          button.disabled = true;
-          button.classList.add("disabled");
+            button.disabled = true;
+            button.classList.add("disabled");
 
-         const cooldownText = document.getElementById("cooldown-text");
-let timeLeft = 120;
+            const cooldownText = document.getElementById("cooldown-text");
+            let timeLeft = 120;
 
-cooldownText.style.display = "block";
+            cooldownText.style.display = "block";
 
-const formatTime = (seconds) => {
-  const min = String(Math.floor(seconds / 60)).padStart(2, '0');
-  const sec = String(seconds % 60).padStart(2, '0');
-  return `${min}:${sec} mins.`;
-};
+            const formatTime = (seconds) => {
+              const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+              const sec = String(seconds % 60).padStart(2, '0');
+              return `${min}:${sec} mins.`;
+            };
 
-cooldownText.textContent = `You can request new mail after ${formatTime(timeLeft)}`;
+            cooldownText.textContent = `You can request new mail after ${formatTime(timeLeft)}`;
 
-const countdownInterval = setInterval(() => {
-  timeLeft--;
-  if (timeLeft > 0) {
-    cooldownText.textContent = `You can request new mail after ${formatTime(timeLeft)}`;
-  } else {
-    clearInterval(countdownInterval);
-    cooldownText.style.display = "none";
-    button.disabled = false;
-    button.classList.remove("disabled");
-  }
-}, 1000);
-        } else {
-          flowwShowAlert("error", responseData.message || "Something went wrong");
-        }
-        ToggleLoadingAnimation();
-      })
-      .catch(error => {
-        console.error("Fetch error:", error);
-        flowwShowAlert("error", "Email does not exist or API error");
-        ToggleLoadingAnimation();
-      });
+            const countdownInterval = setInterval(() => {
+              timeLeft--;
+              if (timeLeft > 0) {
+                cooldownText.textContent = `You can request new mail after ${formatTime(timeLeft)}`;
+              } else {
+                clearInterval(countdownInterval);
+                cooldownText.style.display = "none";
+                button.disabled = false;
+                button.classList.remove("disabled");
+              }
+            }, 1000);
+          } else {
+            flowwShowAlert("error", responseData.message || "Something went wrong");
+          }
+          ToggleLoadingAnimation();
+        })
+        .catch(error => {
+          console.error("Fetch error:", error);
+          flowwShowAlert("error", "Email does not exist or API error");
+          ToggleLoadingAnimation();
+        });
     });
   </script>
-  
+
   <script src="https://floww0.blob.core.windows.net/websitegraphics/codes/codeResource/js/alert.js"></script>
 </body>
 
