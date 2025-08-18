@@ -1,6 +1,6 @@
 const Teammembers = [
     {
-        profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Anish Profile.jpg",
+        profileLink: "https://cdn.gofloww.co/websitegraphics/website/floww/profile/Anish Profile.jpg",
         name: "Anish",
         role: "Co-Founder<br><span style='color:grey'>B.Tech + M.Tech IIT Bombay<span>",
         emailLink: "mailto:anish@gofloww.co",
@@ -9,7 +9,7 @@ const Teammembers = [
         fbinLink: "#",
     },
     {
-        profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Prakhar Profile.jpg",
+        profileLink: "https://cdn.gofloww.co/websitegraphics/website/floww/profile/Prakhar Profile.jpg",
         name: "Prakhar",
         role: "Co-Founder<br><span style='color:grey'>B.Tech + M.Tech IIT Bombay<span>",
         emailLink: "mailto:prakhar@gofloww.co",
@@ -18,7 +18,7 @@ const Teammembers = [
         fbinLink: "#",
     },
     {
-        profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Sandeep Sir Profile.jpg",
+        profileLink: "https://cdn.gofloww.co/websitegraphics/website/floww/profile/Sandeep Sir Profile.jpg",
         name: "Prof. Sandeep Kumar",
         role: "Mentor<br><span style='color:grey'>IIT Bombay Professor<span>",
         emailLink: "mailto:sandeep@gofloww.co",
@@ -27,7 +27,7 @@ const Teammembers = [
         fbinLink: "#",
     },
     {
-        profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Ashirwaad Sir Profile.jpg",
+        profileLink: "https://cdn.gofloww.co/websitegraphics/website/floww/profile/Ashirwaad Sir Profile.jpg",
         name: "Mr. Ashirwad Tillu",
         role: "Mentor<br><span style='color:grey'>VP Reliance Jio<span>",
         emailLink: "mailto:ashirwad@gofloww.co",
@@ -36,7 +36,7 @@ const Teammembers = [
         fbinLink: "#",
     },
     {
-        profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Love Sir Profile.jpg",
+        profileLink: "https://cdn.gofloww.co/websitegraphics/website/floww/profile/Love Sir Profile.jpg",
         name: "Dr. Love Sarin",
         role: "Mentor<br><span style='color:grey'>IIT Bombay Alumni<span>",
         emailLink: "mailto:love@gofloww.co",
@@ -45,7 +45,7 @@ const Teammembers = [
         fbinLink: "#",
     },
     // {
-    //     profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Snehal Profile.jpg",
+    //     profileLink: "https://cdn.gofloww.co/websitegraphics/website/floww/profile/Snehal Profile.jpg",
     //     name: "Snehal",
     //     role: "Marketing, Bengaluru<br>",
     //     emailLink: "mailto:snehal.p@gofloww.co",
@@ -54,7 +54,7 @@ const Teammembers = [
     //     fbinLink: "#",
     // },
     {
-        profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Sumon Profile.jpg",
+        profileLink: "https://cdn.gofloww.co/websitegraphics/website/floww/profile/Sumon Profile.jpg",
         name: "Sumon",
         role: "Operations<br><span style='color:grey'>Guwahati<span>",
         emailLink: "mailto:sumon.d@gofloww.co",
@@ -63,7 +63,7 @@ const Teammembers = [
         fbinLink: "#",
     },
     {
-        profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Aryan Profile.jpg",
+        profileLink: "https://cdn.gofloww.co/websitegraphics/website/floww/profile/Aryan Profile.jpg",
         name: "Aryan",
         role: "Biz Dev<br><span style='color:grey'>Patna<span>",
         emailLink: "mailto:aryan.k@gofloww.co",
@@ -72,7 +72,7 @@ const Teammembers = [
         fbinLink: "#",
     },
     {
-        profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Abhishek Profile.jpg",
+        profileLink: "https://cdn.gofloww.co/websitegraphics/website/floww/profile/Abhishek Profile.jpg",
         name: "Abhishek",
         role: "Frontend<br><span style='color:grey'>Pune<span>",
         emailLink: "mailto:abhishek.u@gofloww.co",
@@ -81,7 +81,7 @@ const Teammembers = [
         fbinLink: "#",
     },
     // {
-    //     profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Adesh Profile.jpg",
+    //     profileLink: "https://cdn.gofloww.co/websitegraphics/website/floww/profile/Adesh Profile.jpg",
     //     name: "Adesh",
     //     role: "Flutter, Pune<br>",
     //     emailLink: "mailto:adesh.m@gofloww.co",
@@ -90,7 +90,7 @@ const Teammembers = [
     //     fbinLink: "#",
     // },
     {
-        profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Prakhar G Profile.jpg",
+        profileLink: "https://cdn.gofloww.co/websitegraphics/website/floww/profile/Prakhar G Profile.jpg",
         name: "Prakhar G.",
         role: "Flutter<br><span style='color:grey'>Pune<span>",
         emailLink: "mailto:prakhar.g@gofloww.co",
@@ -99,7 +99,7 @@ const Teammembers = [
         fbinLink: "#",
     },
     // {
-    //     profileLink: "https://floww0.blob.core.windows.net/websitegraphics/website/floww/profile/Sumon Profile.jpg",
+    //     profileLink: "https://cdn.gofloww.co/websitegraphics/website/floww/profile/Sumon Profile.jpg",
     //     name: "Sumeet",
     //     role: "Biz Dev, Pune",
     //     emailLink: "mailto:sumeet.d@gofloww.co",
