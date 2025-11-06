@@ -56,90 +56,6 @@
       </div>
     </div>
   </div>
-  <!-- <script>
-    const apiUrl = "https://console.gofloww.co/api/mail/reset-password/";
-    // Toggle loading animation visibility
-    function ToggleLoadingAnimation() {
-      const overlay = document.getElementById("page-load-overlay");
-      if (overlay) {
-        overlay.classList.toggle("hide");
-      }
-    }
-
-    // Validate email address format
-    function ValidateEmail(emailval) {
-      const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-      return validRegex.test(emailval);
-    }
-
-    // Check if email is valid and perform actions accordingly
-    function checkFormValues() {
-      const email = document.querySelector('input[type="email"]').value;
-      if (ValidateEmail(email)) {
-        checkEmailValidity(email);
-      } else {
-        flowwShowAlert("warning", "Email Format Incorrect");
-      }
-    }
-
-    // Submit the form with the email (same function as checkEmailValidity for demonstration)
-    
-    function submitForm() {
-        event.preventDefault();
-
-
-        const email = document.getElementById("email").value;
-        const button = document.getElementById(".login-button").value;
-        console.log(email);
-        if (!email) {
-            flowwShowAlert("error", "Email is required");
-            return;
-        }
-
-        if (!ValidateEmail(email)) {
-            flowwShowAlert("warning", "Invalid Email Format");
-            return;
-        }
-
-        ToggleLoadingAnimation();
-
-        fetch(apiUrl, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email: email }),
-        })
-        .then(response => response.json())  // Convert response to JSON
-        .then(responseData => {
-            if (responseData && responseData.status) {
-                flowwShowAlert("success", "Email Sent");
-
-        button.disabled = true;
-        button.classList.add("disabled");
-
-        setTimeout(() => {
-            button.disabled = false;
-            button.classList.remove("disabled");
-        }, 120000);
-            } else {
-                flowwShowAlert("error", responseData.message || "Something went wrong");
-            }
-            ToggleLoadingAnimation();
-        })
-        .catch(error => {
-            console.error("Fetch error:", error);
-            flowwShowAlert("error", "Email does not exist or API error");
-            ToggleLoadingAnimation();
-        });
-    }
-
-
-
-
-
-  </script> -->
-
 
   <script>
     const apiUrl = "https://console.gofloww.co/api/mail/reset-password/";
@@ -189,11 +105,10 @@
           return response.json();
         })
         .then(responseData => {
-          if (responseData && responseData.status) {
+          console.log(responseData);
+          if (responseData.status=="success") {
             flowwShowAlert("success", "Email Sent");
-            if("message" in responseData) {
-              document.getElementById("main-headline-text").innerHTML = "Email with reset link is sent to <strong>"+responseData.message+"</strong>";
-            };
+            document.getElementById("main-headline-text").innerHTML = "Email with reset link is sent to <strong>"+responseData.message+"</strong>";
 
             button.disabled = true;
             button.classList.add("disabled");
@@ -229,7 +144,7 @@
         })
         .catch(error => {
           console.error("Fetch error:", error);
-          flowwShowAlert("error", "Email does not exist or API error");
+          flowwShowAlert("error", "Server Error");
           ToggleLoadingAnimation();
         });
     });
